@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_list_2line" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="46.0dip" android:cacheColorHint="@color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/datetime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(02827)\nX Wise CSI300 ETF" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.2">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="0.96" android:maxLines="2" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@color/change_green" android:ellipsize="end" android:id="@id/change" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="0.96%" android:maxLines="2" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/bid" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:maxLines="1" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/ask" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:maxLines="1" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center|right" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/oivol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="653" android:maxLines="2" />
+    </RelativeLayout>
+</LinearLayout>

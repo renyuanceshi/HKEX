@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>期权策略</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    
+
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+	<script src="../js/jquery-1.7.1.min.js"></script>
+    <!--script src="js/jquery.easing.1.3.js"></script-->
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script-->
+    
+    <!-- Fix IE -->
+	<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+	<script src="../js/functions.js"></script>
+    
+
+</head>
+
+<body>     
+
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>买入认购期权</h3>
+             <a href="option_strategies_gb.html" class="backBTN">返回</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+
+    <th>策略 </th>
+  </tr>
+  <tr>
+    <td>买入认购期权 </td>
+  </tr>
+
+  <tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+
+    <td>买入认购期权</td>
+  </tr>
+  <tr>
+
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+
+
+      <li>当正股价/指数水平升越打和点</li>
+      <li>无限；等如正股价/指数水平减去打和点</li>
+    </ul></td>
+  </tr>
+  <tr>
+
+
+    <th>最大亏损 </th>
+  </tr>
+  <tr>
+    <td>已付出的期权金总额</td>
+  </tr>
+  <tr>
+
+    <th>时间值影响</th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+
+    <td>行使价/水平加上已付出的期权金 </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">例子</h3>
+             
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="left"><div class="vtxt">盈<br>余/<br>亏<br>损</div></th>
+                   
+                    <td valign="middle"><img src="../images/chart_strategies_longcall.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">正股价格</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> 净持仓</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> +1 六月 200 认购</span></nobr> 
+                        
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>买入「ABC 六月 200元认购」 </td>
+  </tr>
+  <tr>
+
+    <th>期权金净额 </th>
+  </tr>
+  <tr>
+    <td>付出 20元 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+    <td>200元 + 20元 = 220元 </td>
+  </tr>
+  <tr>
+
+
+    <th>录得盈利 </th>
+  </tr>
+  <tr>
+    <td>当正股价升越 220元 </td>
+  </tr>
+  <tr>
+
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td>正股价 – 220元 </td>
+  </tr>
+  <tr>
+
+    <th>潜在亏损 </th>
+  </tr>
+  <tr>
+    <td>20元 </td>
+  </tr>
+  <tr>
+
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end Long Call -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_gb.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_gb.html">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>期权策略</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+
+    
+
+   
+
+</head>
+
+<body>     
+
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>背向比例跨价认沽期权</h3>
+             <a href="option_strategies_gb.html" class="backBTN">返回</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">策略</th>
+  </tr>
+  <tr>
+    <td>背向比例跨价认沽期权</td>
+  </tr>
+
+  <tr>
+    <th>成份 </th>
+  </tr>
+  <tr>
+    <td>沽出一张较高行使价/水平的认沽期权，再买入两张较低行使价/水平的认沽期权 <br>
+      1. 导致净期权金收入 <br>
+      2. <a href="strategies_ratioputback_paid_gb.html">导致净期权金支出</a></td>
+  </tr>
+  <tr>
+    <td colspan="2">导致净期权金收入： </td>
+    </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价/指数水平跌破较低打和点，可观并等如较低打和点减去正股价/指数水平 </li>
+      <li>当正股价/指数水平升越较高打和点，只限于已收取的期权金净额 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>最大亏损 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价/指数水平介乎两个打和点之间 </li>
+      <li>当正股价/指数水平等如较低行使价/水平，只限于行使价/水平之差减去已收取的期权金净额 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>较低打和点：较低行使价/水平减去行使价/水平之差再加上已收取的期权金净额 </li>
+      <li>较高打和点：较高行使价/水平减去已收取的期权金净额 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>备注 </th>
+  </tr>
+  <tr>
+    <td>与马鞍式组合长仓相比，背向比例跨价认沽期权(导致净期权金收入)在正股价/指数水平下跌时的盈利可以是极高的，但在正股价/指数水平上升时的盈利却是有限。 </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">例子</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="left"><div class="vtxt">盈<br>余/<br>亏<br>损</div></th>
+                   
+                    <td valign="middle"><img src="../images/chart_strategies_ratioputback_received.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">正股价格</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> 净持仓</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> -1 八月 200 认沽</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> +2 八月 180 认沽</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>沽出一张「ABC八月200元认沽」，收取 35元，同时买入两张每张 16元的「ABC八月180元认沽」，共付出 32元 </td>
+  </tr>
+  <tr>
+    <th>期权金净额 </th>
+  </tr>
+  <tr>
+    <td>收取 35元 – 32元 = 3元 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>较低打和点：180元 – (200元 – 180元) + 3元 = 163元 </li>
+      <li>较高打和点：200元 – 3元 = 197元 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>录得盈利 </th>
+  </tr>
+  <tr>
+    <td>当正股价跌破 163元或升越 197元 </td>
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价跌破 163元，163元 – 正股价 </li>
+      <li>当正股价升越 197元，只限于 3元 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>潜在亏损 </th>
+  </tr>
+  <tr>
+    <td>(200元 – 180元) – 3元 = 17元 </td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_gb.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_gb.html">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

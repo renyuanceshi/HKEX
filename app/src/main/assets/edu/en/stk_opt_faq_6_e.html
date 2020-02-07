@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>Chapter 6: Capital Adjustment</title>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script> 
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+
+</head>
+
+<body class="bg_gr">     
+
+     <div id="wrap">
+         <div class="top_bn">
+             <img src="../images/bg_top_faq.gif" alt="Options FAQ">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+         
+         <div class="faq">
+             <ul>                 
+                 <li class="navGradient"><div class="line"><p class="tit">What is capital adjustment? How does it affect the value of stock option contracts?</p></div>
+                     <div class="detail">
+                     <p>When a stock issuer makes changes to the capital structure of the stock by way of a special dividend, capital restructuring, rights issue, bonus issue, etc, the price at which the stock trades changes as soon as it trades ex-entitlement or on the effective date. This can affect open option positions.<br><br>
+                     All other things being equal, the value of a shareholder’s portfolio will not change on a stock's ex-date. But the same is not true of the holder (or writer) of an option on the stock, unless an appropriate adjustment is made to the terms of the option contract. Without a change to the strike price and/or the number of shares in the option contract, the stock price adjustment will arbitrarily and unfairly affect the value of the option position.<br><br>
+                       HKEX calculates the adjustment ratio that it believes is required to maintain the fair value of the option contracts in respect of any publicised corporate action. The strike prices of all series in that class are multiplied by the ratio and the number of shares in each contract is divided by the ratio. These adjustments will only be made for substantial changes (such as rights issues, bonus issues, stock splits, mergers and payments of special dividend amounting to 2 per cent or more, not for ordinary dividends. Options Trading Exchange Participants and Options Broker Exchange Participants are required to inform their client of these changes.<br><br>
+                       Capital adjustments are aimed at maintaining the original option value by adjusting the strike price and the contract size. In the case of a stock split, for example, if a company announces a 1-to-2 subdivision, its stock price will be adjusted to half the original price on the effective date if all other things are equal. In order to maintain the investment value, HKEX will reduce the strike price of all outstanding positions of its stock option series by half and double the contract size.
+                     </p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                    </div>
+                 </li>
+                 <!------>                
+                 <li class="navGradient"><div class="line"><p class="tit">If I have a Covered Call position, will I be affected if there is Capital Adjustment on the underlying stock?</p></div>
+                      <div class="detail">
+                      <p>Yes. The contract size of options will be altered after capital adjustment. The short call positions will be "De-covered" and hence the client may be required to deposit margin or additional stocks to fulfill the margin requirement. To minimise the margin requirement result from the "de-cover", client can instruct participants to re-enter cover call requests again on the Business Day immediately following the capital adjustment.</p>
+                      
+                      <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                      </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line"><p class="tit">The HKATS code of my option contract is altered after Capital Adjustment on the underlying stock?</p></div>
+                     <div class="detail">
+                     <p>Yes. The HKATS code of the original option contracts will be moved to a temporary HKATS code. The original HKATS code will be used for new standardized contracts.</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>           
+             </ul>
+         </div><!-- /.faq -->
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_5_e.html','Chapter 5: General information')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('stk_opt_faq_5_e.html','Chapter 5: General information')">Prev Chapter</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('stk_opt_faq_7_e.html','Chapter 7: Misconception')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_7_e.html','Chapter 7: Misconception')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

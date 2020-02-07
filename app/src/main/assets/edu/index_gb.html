@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+<TITLE>期权教育</TITLE>
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">	
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!-- CSS
+================================================== -->
+<link href="css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">    
+<!-- Use Google CDN for jQuery and jQuery UI 
+================================================== -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<!-- Fix IE -->
+<script src="js/selectivizr-and-extra-selectors.min.js"></script>
+<!-- some basic functions -->
+<script src="js/functions.js"></script>
+<script type="text/javascript">
+	function changePathAndTitle(url, title){
+		window.setTimeout("window.location.href='"+url+"';",100);
+		window.location.href="webview://settitle:"+title;
+	}
+</script>
+</head>
+
+<body class="bg_dbu">
+
+     <div id="wrap">
+         <div id="edu_landing">
+           <div id="left_nav">
+               <ul>
+                   <li>
+                       <a href="javascript:changePathAndTitle('gb/abc_landing_gb.html','Options ABC')">
+                          <img src="images/bg_landing_abc.gif" alt="期权 ABC">
+                          <img class="txt" src="images/txt_landing_abc_gb.gif" alt="期权 ABC"> 
+                       </a>
+                   </li>
+                   
+                   <li>
+                       <a href="javascript:changePathAndTitle('gb/option_strategies_gb.html','Options Strategies')">
+                          <img src="images/bg_landing_strategies.gif" alt="期权策略">
+                          <img class="txt" src="images/txt_landing_strategies_gb.gif" alt="期权策略">
+                       </a>
+                   </li>
+               </ul>
+           </div>
+           
+           
+           <div id="right_nav">
+               <ul>
+                   <li>
+                       <a href="webview://tvinterviews">
+                          <img src="images/bg_landing_tv.gif" alt="电视访问">
+                          <img class="txt" src="images/txt_landing_tv_gb.gif" alt="电视访问">
+                       </a>
+                   </li>
+                   
+                   <li>
+                       <a href="javascript:changePathAndTitle('gb/faq_landing_gb.html','FAQ')">
+                          <img src="images/bg_landing_faq.gif" alt="常见问题">
+                          <img class="txt" src="images/txt_landing_faq_gb.gif" alt="常见问题">
+                       </a>
+                 </li>
+                   
+                   <li>
+                       <a href="javascript:changePathAndTitle('gb/glossary_gb.html','Glossary')">
+                          <img src="images/bg_landing_glossary.gif" alt="期权词汇">
+                          <img class="txt" src="images/txt_landing_glossary_gb.gif" alt="期权词汇">
+                       </a>
+                   </li>                 
+                   
+             </ul>
+           </div>
+           
+         </div><!-- end #edu_landing -->
+
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

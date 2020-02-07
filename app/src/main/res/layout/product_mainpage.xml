@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgwhite">
+
+    <com.hkex.soma.basic.ClickControlContainer
+        android:id="@+id/portfolioContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="invisible" />
+
+    <com.hkex.soma.basic.ClickControlContainer
+        android:id="@+id/menuContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/appContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bgwhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/bg_header"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:src="@drawable/btn_menu" />
+
+            <TextView
+                android:id="@+id/pagetitle"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/head_product_info"
+                android:textColor="@color/textblue"
+                android:textSize="22.0sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnright"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:src="@drawable/btn_portfolio"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <com.hkex.soma.basic.ClickControlContainer
+            android:id="@+id/clickControlContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="31.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/market_report"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/tab_but"
+                        android:text="@string/head_market_report"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0dip" />
+
+                    <Button
+                        android:id="@+id/prod_update"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/tab_but"
+                        android:text="@string/head_subscription"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0dip" />
+
+                    <Button
+                        android:id="@+id/seminar"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/tab_but"
+                        android:text="@string/head_seminar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0dip" />
+
+                    <Button
+                        android:id="@+id/static_product"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/tab_last_but"
+                        android:text="@string/products"
+                        android:textAllCaps="false"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0dip" />
+                </LinearLayout>
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:clickable="true" />
+
+                <FrameLayout
+                    android:id="@+id/container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:clickable="true"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/footerContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </com.hkex.soma.basic.ClickControlContainer>
+    </LinearLayout>
+</RelativeLayout>

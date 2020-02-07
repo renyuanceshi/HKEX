@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>第三章：基本期权策略</TITLE>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->
+    <!--script src="js/jquery.bgiframe.js"></script-->
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>    
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body> 
+     <div id="wrap">
+         <div class="quizBN">
+              <img src="../images/abc_quizBN_bg.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+              <img class="btn" src="../images/abc_quizBN_btn.png">
+              <img class="txt" src="../images/abc_quizBN_txt_gb.png">
+         </div><!--- end banner -------------------->               
+         <div class="article">
+               <ol type="1" class="quiz">
+                 <li><p class="qtext">理论上，认购期权持有人的潜在收益是 _______ 的，而认购期权沽出者的潜在收益是 ______ 的。</p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">有限；有限<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">有限；无限<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">无限；有限<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">无限；无限<span class="qrst">&nbsp;</span></li>
+                     </ol>
+                     <em class="anstext">
+                         <h5>正确答案是 <b>"C"</b></h5>
+                         <p>解释：</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">
+                        理论上，只要正股的股价上升，认购期权持有人的潜在收益是无限的。不过，认购期权沽出者的潜在收益则只限于所收到的期权金。
+                     </em>
+                 </li>                 
+                 
+                 <li><p class="qtext">下列哪一项期权持仓在行使或指定分配后须购入正股? &#xD;<br><br>
+                    <span style="font-weight:normal">I. 买入认购  &#xD;</span><br><br>
+                    <span style="font-weight:normal">II. 买入认沽  &#xD;</span><br><br>
+                    <span style="font-weight:normal">III. 沽出认购  &#xD;</span><br><br>
+                    <span style="font-weight:normal">IV. 沽出认沽</span></p>
+                     <ol type="A" class="ansid">                        
+                        <li class="awrong">I 和 II<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">I 和 IV<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">II 和 III<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">II 和 IV<span class="qrst">&nbsp;</span></li>
+                     </ol>
+                     <em class="anstext">
+                         <h5>正确答案是 <b>"B"</b></h5>
+                         <p>解释：</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">认购期权的持有者有权以行使价购入正股；认沽期权的沽出者则有责任在期权被行使时以行使价购入正股。
+                     </em>
+                 </li>
+                 
+                 <li><p class="qtext">如果认沽期权长仓的持有者在行使期权时获得利润，有关正股的价格必定是：</p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">高于行使价<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">高于行使价加上已付出的期权金<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">低于行使价<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">低于行使价减去已付出的期权金<span class="qrst">&nbsp;</span></li>                        			
+                     </ol>
+                     <em class="anstext">
+                         <h5>正确答案是 <b>"D"</b></h5>
+                         <p>解释：</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">对认沽期权的持有人来说，打和点是期权的行使价减去已付出的期权金。
+                     </em>
+                 </li>
+                 
+                 <li><p class="qtext">认沽期权的卖方（沽出者）：</p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">有权以行使价沽出正股<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">有权以行使价购入正股<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">有责任在认沽期权被行使时以行使价购入正股<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">有责任在认购期权被行使时以行使价沽出正股<span class="qrst">&nbsp;</span></li>  	
+                     </ol>
+                     <em class="anstext">
+                         <h5>正确答案是 <b>"C"</b></h5>
+                         <p>解释：</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">该期权沽出者收取期权金以换取该认沽期权的责任。如期权买方行使其权利以行使价沽出正股，期权卖方便有责任以行使价向期权买方购入正股。
+                     </em>
+                 </li>
+                 
+                 <li><p class="qtext">以下哪一个 / 几个陈述是正确的?  &#xD;<br><br>
+                 <span style="font-weight:normal">I. 期权合约持有者可收取期权金  &#xD;</span><br><br>
+                 <span style="font-weight:normal">II. 期权合约沽出者有责任购入或沽出正股  &#xD;</span><br><br>
+                 <span style="font-weight:normal">III. 期权合约持有人所面对的风险是无限的  &#xD;</span><br><br>
+                 <span style="font-weight:normal">IV. 期权合约沽出者的潜在收益是无限的</span></p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">只是 I<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">只是 II<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">I 和 III<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">III 和 IV<span class="qrst">&nbsp;</span></li>  	
+                     </ol>
+                     <em class="anstext">
+                         <h5>正确答案是 <b>"B"</b></h5>
+                         <p>解释：</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">如认购期权被行使，期权沽出者有责任沽出正股；如认沽期权被行使，期权沽出者有责任购入正股。
+                     </em>
+                 </li>
+                 
+               </ol>
+             
+             <div class="clearfix"></div>         
+         </div><!--- end quiz -------------------->
+         
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_2_gb.html','第三章：基本期权策略')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_2_gb.html','第三章：基本期权策略')">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_4_gb.html','第四章：为何使用期权？')">下一章</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_4_gb.html','第四章：为何使用期权？')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer_portfolio"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgblack"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip">
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center|right"
+            android:background="@color/transparent"
+            android:src="@drawable/btn_close" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/landingcover"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.hkex.soma.basic.LoaderImageView
+            android:id="@+id/logoimage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:background="@color/transparent"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip" />
+    </RelativeLayout>
+</LinearLayout>

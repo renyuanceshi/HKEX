@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/containerlayout" android:background="@drawable/bg_list_2line" android:layout_width="fill_parent" android:layout_height="46.0dip" android:cacheColorHint="@color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/iconlayout" android:layout_width="46.0dip" android:layout_height="fill_parent">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_star" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/wtype" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Put" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/expiry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="01 May 2013" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="80.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/strike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="87.50" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="80.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/oivol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="653" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bgwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="15.0dip"
+        android:paddingTop="10.0dip"
+        android:paddingRight="15.0dip"
+        android:paddingBottom="10.0dip">
+
+        <TextView
+            android:id="@+id/seminar"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:minLines="3"
+            android:text="seminar"
+            android:textColor="@color/textgrey"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/speakers"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.0"
+            android:minLines="3"
+            android:text="speakers \nspeakers"
+            android:textColor="@color/textgrey"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:id="@+id/language"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:text="language"
+            android:textColor="@color/textgrey"
+            android:textSize="16.0sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:layout_marginLeft="8.0dip"
+        android:layout_marginRight="8.0dip"
+        android:background="@color/bglightlightgrey" />
+</LinearLayout>

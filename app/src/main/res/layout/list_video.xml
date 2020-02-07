@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/videolayout"
+    android:layout_width="fill_parent"
+    android:layout_height="106.0dip"
+    android:background="@drawable/bg_list_video"
+    android:cacheColorHint="@color/transparent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="106.0dip"
+        android:layout_height="106.0dip">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/video_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bgblack"
+            android:paddingLeft="4.0dip"
+            android:paddingRight="4.0dip"
+            android:text="12:00"
+            android:textColor="@color/textwhite"
+            android:textSize="10.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:padding="10.0dip">
+
+        <TextView
+            android:id="@+id/video_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:text="XXXXXXXXXX XXXXXXXXX XXXXXXX  XXXXX XXXX XXXXXXX  XXXXX"
+            android:textColor="@color/textgrey"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/video_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:text="14/07/2013"
+            android:textColor="@color/textlightblue"
+            android:textSize="13.0sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingRight="10.0dip"
+        android:src="@drawable/icon_video" />
+</LinearLayout>

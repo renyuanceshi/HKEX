@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>第六章：資本調整</title>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_c.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script> 
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+
+</head>
+
+<body class="bg_gr">     
+
+     <div id="wrap">
+         <div class="top_bn">
+             <img src="../images/bg_top_faq.gif" alt="Options FAQ">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+         
+         <div class="faq">
+             <ul>                 
+                 <li class="navGradient"><div class="line"><p class="tit">什麼是「資本調整」？它對股票期權合約的價值有什麼影響？</p></div>
+                     <div class="detail">
+                     <p>由於股票期權是由股票衍生而來，若相關股票涉及某些公司行動(例如上市公司派發特別股息、重組股本、供股、派發紅股等而令其資本結構改變，其股價會於除淨後，或於資本調整的生效當日改變，這會影響未平倉期權持倉。<br><br>
+                     在其他因素不變的情況下，在除淨日股票持有者之投資組合價值並不會改變。但對於該等股票的期權持有者（或沽出者），除非能對期權合約的細則作出修訂，否則其投資組合的價值將起變化。假如沒有對有關期權合約的行使價及所代表股數作出調整，股價調整將隨意及不公平地影響期權持倉的價值。<br><br>
+                       交易所會就一些已公布的公司行動相應計算出維持期權合約公平價值的調整比率，以達致公平原則。該期權類別所有系列的行使價會乘以此比率，而每張合約的股數則除以此比率。此等調整只會在變化較大的情況 (如供股、紅股發行、股票拆細、合併及派發2%或以上的特別股息) 下進行，而不會應用於普通的股息派發上。期權買賣交易所參與者及期權經紀交易所參與者須將該等調整通知其客戶。<br><br>
+                       資本調整的最終目的是透過調整期權的行使價及合約股數來維持原本的期權價值。以股票拆細為例，假若有關公司公布以一拆二的算式把公司股票拆細，即使其它因素不變，其股票價格理應在生效當日調低至原本價格的一半。為使投資價值得以維持，交易所會就其股票期權系列所有未平倉合約的行使價減至原本的一半價格，而合約股數則增加一倍。
+                     </p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                    </div>
+                 </li>
+                 <!------>                
+                 <li class="navGradient"><div class="line"><p class="tit">假設我沽出了備兌認購期權(Covered Call)，相關正股進行資本調整對我影響嗎？</p></div>
+                      <div class="detail">
+                      <p>有。資本調整會令投資者手上持有的期權倉位改變了合約股數，因此本身有正股作備兌的股票期權短倉(Short Call)會自動取消備兌 (De-covered)。投資者需要補付按金或存入額外正股以滿足按金要求。投資者可於資本調整後的下一個營業日向經紀行重新發出備兌認購期權的指示，以減低由自動取消備兌所引致的按金要求。</p>
+                      
+                      <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                      </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line"><p class="tit">相關正股進行資本調整後，手上持有的股票期權合約的HKATS代號不同了？</p></div>
+                     <div class="detail">
+                     <p>是的。進行資本調整後，舊有的期權合約會轉至一個臨時交易代號。新的標準期權系列將會以原有的交易代碼進行交易。</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>           
+             </ul>
+         </div><!-- /.faq -->
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_5_c.html','第五章：一般資訊')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('stk_opt_faq_5_c.html','第五章：一般資訊')">前一章</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('stk_opt_faq_7_c.html','第七章：常見誤解')">下一章</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_7_c.html','第七章：常見誤解')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

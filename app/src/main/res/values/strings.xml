@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="all">All</string>
+    <string name="appName">Futures &amp; Options</string>
+    <string name="ask">Ask</string>
+    <string name="assumption">ASSUMPTIONS</string>
+    <string name="atm">ATM</string>
+    <string name="average_daily_volume">Average Daily Volume *</string>
+    <string name="bid">Bid</string>
+    <string name="business_date">Date</string>
+    <string name="buy">Long</string>
+    <string name="cal_iv">I.V (%)#</string>
+    <string name="cal_iv4cal">I.V (%)</string>
+    <string name="calexplaintext">"\#Implied volatility (IV) is calculated from last traded price of selected option series. If there is no trade of both call and put options during the day, IV from last trading day will be retrieved. 
+*Interest Rate and Dividend information are provided by Reuters.
+
+ Dividend information includes both actual and forecast values.
+ Exercise style of Stock Options listed on HKEX is American style. Binomial model is used to evaluate American style option."</string>
+    <string name="calexplaintexthead">For default data:</string>
+    <string name="call">Call</string>
+    <string name="cancel">Cancel</string>
+    <string name="chart">Chart</string>
+    <string name="chart_underlying_index">Underlying Price</string>
+    <string name="code">Code</string>
+    <string name="contract">"Contract Size
+/ Multiplier"</string>
+    <string name="contracts">Contracts</string>
+    <string name="currency">Currency</string>
+    <string name="curreny_opt">Currency Options</string>
+    <string name="dataFail">Application lost network connection. Please retry your Operation.</string>
+    <string name="data_up_to">*Data up to</string>
+    <string name="date">Date</string>
+    <string name="day_session">(Day Session)</string>
+    <string name="day_text">日</string>
+    <string name="delaymessage">(15 mins delayed)</string>
+    <string name="delete">Delete</string>
+    <string name="details">Details</string>
+    <string name="dividend_yield">Dividend Yield (per year)%</string>
+    <string name="download">Download</string>
+    <string name="edit">Edit</string>
+    <string name="edu_title_faq">FAQ</string>
+    <string name="edu_title_glossary">Glossary</string>
+    <string name="edu_title_optionabc">Options ABC</string>
+    <string name="edu_title_strategies">Options Strategies</string>
+    <string name="empty" />
+    <string name="expired">Expired</string>
+    <string name="expiry">Expiry</string>
+    <string name="expiry4cal">Expiry</string>
+    <string name="expiry_month">Expiry</string>
+    <string name="failHead">Network Error</string>
+    <string name="footerline1">©2013 Hong Kong Exchanges and Clearing Limited.</string>
+    <string name="footerline2">Disclaimer</string>
+    <string name="future">Futures</string>
+    <string name="head_announcedate">Announced Date</string>
+    <string name="head_board">"No. of
+Board Lots"</string>
+    <string name="head_chng">Change</string>
+    <string name="head_cost">"Cost
+(HKD)"</string>
+    <string name="head_costnod">Cost</string>
+    <string name="head_csize">"Contact Size
+(shares)"</string>
+    <string name="head_details">Detail</string>
+    <string name="head_exdate">"EX-Date
+Payment Date"</string>
+    <string name="head_future">Futures</string>
+    <string name="head_gainloss">"Gain / Loss
+(HKD)"</string>
+    <string name="head_hcode">"HKATS
+Code"</string>
+    <string name="head_index">Index</string>
+    <string name="head_instrument">Stock / Option</string>
+    <string name="head_instrument2">"Stock /
+Option"</string>
+    <string name="head_last">Last</string>
+    <string name="head_last_traded">"Last
+Traded"</string>
+    <string name="head_lastchange">"Last (HKD) /
+Change (%)"</string>
+    <string name="head_lastd">"Last
+(HKD)"</string>
+    <string name="head_lastorchange">Last / Change(%)</string>
+    <string name="head_legs">Legs</string>
+    <string name="head_market_report">Publications</string>
+    <string name="head_oi">Open Interest</string>
+    <string name="head_pchng">Change (%)</string>
+    <string name="head_pchng2">"Change
+(%)"</string>
+    <string name="head_pricechange">"Price Change
+(HKD)"</string>
+    <string name="head_pricechangenod">Price Change</string>
+    <string name="head_product_info">Product Information</string>
+    <string name="head_qty">Qty</string>
+    <string name="head_seminar">Events</string>
+    <string name="head_static_product">Products</string>
+    <string name="head_stock">Stock</string>
+    <string name="head_subscription">News Alert</string>
+    <string name="head_totaloi">"Total Open
+Interest"</string>
+    <string name="head_turnover">"Turnover
+(HKD)"</string>
+    <string name="head_tvolume">"Total
+Volume"</string>
+    <string name="head_type">Type</string>
+    <string name="head_ucode">"SEHK
+Code"</string>
+    <string name="head_ulastchange">"Underlying Last (HKD) /
+Change(%)"</string>
+    <string name="head_volume">Volume</string>
+    <string name="high">High</string>
+    <string name="highlow">High / Low</string>
+    <string name="hint">Hint</string>
+    <string name="hkats_code">HKATS Code</string>
+    <string name="hkd">HKD</string>
+    <string name="important_note">Important Note</string>
+    <string name="index_last">Last</string>
+    <string name="index_underlying">Underlying</string>
+    <string name="index_underlying_code">Underlying</string>
+    <string name="index_underlying_price">Underlying Last</string>
+    <string name="indexoptions">Index Options</string>
+    <string name="indices_disclaimer">Disclaimer on Indices</string>
+    <string name="interestrate">Interest Rate (% per year)*</string>
+    <string name="itm">ITM</string>
+    <string name="iv">Implied Volatility</string>
+    <string name="language">Language</string>
+    <string name="last_price">Last Price</string>
+    <string name="last_traded">Last Traded</string>
+    <string name="last_traded_price">Last Traded Price</string>
+    <string name="lastupdate">Last Updated</string>
+    <string name="less">Less</string>
+    <string name="low">Low</string>
+    <string name="margin">"Margin
+(HKD)"</string>
+    <string name="market_reports">Item</string>
+    <string name="menu_search">Search Underlying Code</string>
+    <string name="month_text">月</string>
+    <string name="more">More</string>
+    <string name="mostpopular">Most Popular</string>
+    <string name="msg_close_program">Quit Apps</string>
+    <string name="msg_data_after0930">Data will be available after 9:30am</string>
+    <string name="msg_data_after0945">Data will be available after 9:45am</string>
+    <string name="msg_day_night">"Data shown for the previous night's session will be removed every day at 16:30 HKT."</string>
+    <string name="msg_invalid_date">Invalid Expiry Date, please enter again.</string>
+    <string name="msg_iv_zero">Volatility has to be greater than 0.</string>
+    <string name="msg_perform_comp">Prices rebased to 100 for comparison</string>
+    <string name="msg_strike_zero">Strike price has to be greater than 0.</string>
+    <string name="msg_ulast_zero">Stock price has to be greater than 0.</string>
+    <string name="name">Name</string>
+    <string name="neg_message">Negative number indicates cash inflow by selling a stock/option.</string>
+    <string name="night_session">(Night Session)</string>
+    <string name="no_data">-</string>
+    <string name="nodata_message">No related results is found</string>
+    <string name="nodatayet">Data will be available after 9:45am</string>
+    <string name="nooption_message">No Related Option is Found</string>
+    <string name="noseminar_message">No events at the moment. Please stay tuned.</string>
+    <string name="note">Note</string>
+    <string name="notional_hkd">"Notional
+(HKD)"</string>
+    <string name="oc_own_index_msg">*Black Scholes Model is used to evaluate Index Options.</string>
+    <string name="oc_own_stock_msg">*Binomial model is used to evaluate Stock Options.</string>
+    <string name="odlist1">Contract Notional Value</string>
+    <string name="odlist10">No. of Board Lot(s) of Underlying</string>
+    <string name="odlist11">Moneyness</string>
+    <string name="odlist12">Remaining day(s) until expiry</string>
+    <string name="odlist13">Gearing (x)</string>
+    <string name="odlist14">Delta</string>
+    <string name="odlist15">Theta(Daily)</string>
+    <string name="odlist16">Vega</string>
+    <string name="odlist2">Contract Size (Shares)</string>
+    <string name="odlist2index">Contract Multiplier</string>
+    <string name="odlist3">Strike</string>
+    <string name="odlist4">Expiry (D/M/Y)</string>
+    <string name="odlist5">Effective Gearing (x)</string>
+    <string name="odlist6">Implied Volatility (%)</string>
+    <string name="odlist7">Option Premium (%)</string>
+    <string name="odlist8">Previous Day Net Open Interest</string>
+    <string name="odlist9">Previous Day Gross Open Interest</string>
+    <string name="ok">OK</string>
+    <string name="optinoal">Optional</string>
+    <string name="optinoal_ch">選項</string>
+    <string name="optinoal_en">Optional</string>
+    <string name="optinoal_sc">选项</string>
+    <string name="option_detail_ucode">Underlying Index</string>
+    <string name="options_volume">Options Volume</string>
+    <string name="options_volume_statistics">Options Volume Statistics</string>
+    <string name="optiontype">Option Type</string>
+    <string name="others">Others...</string>
+    <string name="otm">OTM</string>
+    <string name="perf_comp_of_key">Performance Comparison</string>
+    <string name="period">Period</string>
+    <string name="portfolio_msg_error">You can only store up to %d stock/options into My Portfolio</string>
+    <string name="portfolio_msg_option">Added %s to your portfolio</string>
+    <string name="portfolio_msg_stock">Added %s to your portfolio</string>
+    <string name="position">Position</string>
+    <string name="price">Price (HKD)</string>
+    <string name="price_info">Price Information</string>
+    <string name="products">Products</string>
+    <string name="products_type">Products Type</string>
+    <string name="profile_footer_msg">*Total Margin is on a gross basis. Please consult your broker for actual margin.</string>
+    <string name="put">Put</string>
+    <string name="quantity">Quantity</string>
+    <string name="relatedoptions">Related Options</string>
+    <string name="remainday">Remaining day(s) until expiry</string>
+    <string name="search">Search</string>
+    <string name="search_menu_title">Search</string>
+    <string name="search_msg_all">All Underlyings</string>
+    <string name="search_msg_top20">Top 20 Traded Underlyings</string>
+    <string name="searchresult">Result</string>
+    <string name="sel_hhi">HHI - H-Shares Index Options</string>
+    <string name="sel_hsi">HSI - Hang Seng Index Options</string>
+    <string name="sel_mhi">MHI – Mini HSI Options</string>
+    <string name="sel_mosttradedcall">Top 10 Traded Calls</string>
+    <string name="sel_mosttradedclass">Top 10 Traded Classes</string>
+    <string name="sel_mosttradedoption">Top 10 Traded Options</string>
+    <string name="sel_mosttradedput">Top 10 Traded Puts</string>
+    <string name="sel_topgain">Top 10 Gainers</string>
+    <string name="sel_toploss">Top 10 Losers</string>
+    <string name="sel_topturnover">Top 10 by Turnover</string>
+    <string name="sell">Short</string>
+    <string name="seminar">Event</string>
+    <string name="seminar_date">Date: %s</string>
+    <string name="seminar_speakers">Speakers: %s</string>
+    <string name="seminar_time">Time: %s</string>
+    <string name="seminar_venue">Venue: %s</string>
+    <string name="set">Set</string>
+    <string name="set_date">Set Date</string>
+    <string name="setting_head1">LANGUAGES SETTING</string>
+    <string name="setting_head2">COLOR NOTATION</string>
+    <string name="setting_head3">TUTORIALS SETTING</string>
+    <string name="setting_head4">TERMS OF APPS</string>
+    <string name="setting_text1">English</string>
+    <string name="setting_text10">- Privacy Policy Statement</string>
+    <string name="setting_text11">Margin Table</string>
+    <string name="setting_text2">繁體中文</string>
+    <string name="setting_text3">简体中文</string>
+    <string name="setting_text4">Gain</string>
+    <string name="setting_text5">Loss</string>
+    <string name="setting_text6">Calculator</string>
+    <string name="setting_text7">Chart</string>
+    <string name="setting_text8">Search</string>
+    <string name="setting_text9">- Disclaimer</string>
+    <string name="speakers">Speakers</string>
+    <string name="sslist1">Bid / Ask</string>
+    <string name="sslist2">High / Low</string>
+    <string name="sslist3">Previous Close</string>
+    <string name="sslist4">Turnover (HKD) / Volume</string>
+    <string name="sslist5">Lot Size</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="stock">Stock</string>
+    <string name="stock_total_vol">Total %s Options Traded:</string>
+    <string name="stock_total_vol_call">Total %s Options Traded (Call):</string>
+    <string name="stock_total_vol_put">Total %s Options Traded (Put):</string>
+    <string name="stockoptions">Stock Options</string>
+    <string name="strike">Strike (HKD)</string>
+    <string name="strike2">"Strike
+(HKD)"</string>
+    <string name="strike4cal">Strike</string>
+    <string name="strikeshown">"No. of
+Strike Shown"</string>
+    <string name="strikeshown_one_line">Strike Shown</string>
+    <string name="tab_customised">Input your own</string>
+    <string name="tab_indexoptions">"Index
+Options"</string>
+    <string name="tab_indices">Indices</string>
+    <string name="tab_option">Option</string>
+    <string name="tab_options">Options</string>
+    <string name="tab_overview">Overview</string>
+    <string name="tab_predefined">Listed (Preset)</string>
+    <string name="tab_stock">Stock</string>
+    <string name="tab_stockoptions">"Stock
+Options"</string>
+    <string name="tab_stocks">Stocks</string>
+    <string name="theoprice">Theoretical Price</string>
+    <string name="title_classlist">Options Class List</string>
+    <string name="title_disclaimer">Disclaimer</string>
+    <string name="title_dividend">Dividend Search</string>
+    <string name="title_education">Education</string>
+    <string name="title_margin">Margin Table</string>
+    <string name="title_marketsnapshot">Market Snapshot</string>
+    <string name="title_optioncalculator">Option Calculator</string>
+    <string name="title_optiondetail">Option Detail</string>
+    <string name="title_optionscalculator">Options Calculator</string>
+    <string name="title_portfolio">My Portfolio</string>
+    <string name="title_portfolioadd">My Portfolio: Add</string>
+    <string name="title_portfolioedit">My Portfolio: Edit</string>
+    <string name="title_privacy">Privacy Policy</string>
+    <string name="title_quote">Quotes / Search</string>
+    <string name="title_realtimequote">Real Time Quote</string>
+    <string name="title_search">Quotes / Search</string>
+    <string name="title_setting">Settings</string>
+    <string name="title_tailor_made_combinations">Options Combo</string>
+    <string name="title_tvinterviews">TV Interviews</string>
+    <string name="title_updates">Updates</string>
+    <string name="title_video">Videos</string>
+    <string name="top10_gain">Top 10 Gainer</string>
+    <string name="top10_lose">Top 10 Loser</string>
+    <string name="top_vol_key">Trading Volume (Contracts)</string>
+    <string name="total">Total</string>
+    <string name="total_classes">Total number of classes:</string>
+    <string name="total_daily_volume">Total Daily Volume</string>
+    <string name="total_vol">Total Volume Traded:</string>
+    <string name="trade_direction">Trade Direction</string>
+    <string name="ucode">Underlying Code</string>
+    <string name="ucode_index">Underlying Index</string>
+    <string name="ulast">Underlying Last (HKD)</string>
+    <string name="ulast4cal">Underlying Last</string>
+    <string name="underlying">Underlying</string>
+    <string name="underlying_no">Total No. of Underlyings:</string>
+    <string name="update">Update</string>
+    <string name="updatedversion">"Some functions might not be fully supported in this version.
+Please update to v%s on App Store for the latest features."</string>
+    <string name="uprice">Underlying Price</string>
+    <string name="url_banner">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/popup_banner_json.aspx?lang=en</string>
+    <string name="url_banner_ch">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/popup_banner_json.aspx?lang=ch</string>
+    <string name="url_banner_en">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/popup_banner_json.aspx?lang=en</string>
+    <string name="url_banner_gb">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/popup_banner_json.aspx?lang=gb</string>
+    <string name="url_calculator">https://www.hkex.com.hk/eng/prod/drprod/so/soma/tools/calculator_stock_options.aspx</string>
+    <string name="url_calculator_index">https://www.hkex.com.hk/eng/prod/drprod/so/soma/tools/calculator_index_options.aspx</string>
+    <string name="url_class_list">https://www.hkex.com.hk/eng/prod/drprod/so/soma/js/classlist.htm</string>
+    <string name="url_common_list">https://www.hkex.com.hk/eng/prod/drprod/so/soma/common/common.aspx</string>
+    <string name="url_curreny_opt">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/overview.aspx?type=Link</string>
+    <string name="url_dividend">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/dividend_search.aspx</string>
+    <string name="url_domain">https://www.hkex.com.hk</string>
+    <string name="url_futures">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/futures.aspx?lang=en</string>
+    <string name="url_futures_chart_img">https://www.hkex.com.hk/eng/prod/drprod/so/soma/chart_data/futures_chart_json.aspx?lang=en</string>
+    <string name="url_futures_chart_webview">https://www.hkex.com.hk/eng/prod/drprod/so/soma/js/chart/futuresChart.html?lang=en</string>
+    <string name="url_index_class_list">https://www.hkex.com.hk/eng/prod/drprod/so/soma/js/indexclasslist.htm</string>
+    <string name="url_index_options">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/index_options.aspx</string>
+    <string name="url_indices_chart_webview">https://www.hkex.com.hk/eng/prod/drprod/so/soma/js/chart/indicesChart.html?lang=en</string>
+    <string name="url_margintable">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/margin_table.aspx</string>
+    <string name="url_market_indices">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/index.aspx?lang=en</string>
+    <string name="url_market_options">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/stock_options.aspx</string>
+    <string name="url_market_report">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/market_report.aspx?lang=en</string>
+    <string name="url_market_stock">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/stock.aspx</string>
+    <string name="url_msbanner">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/banner_json.aspx?lang=en</string>
+    <string name="url_option_class">https://www.hkex.com.hk/eng/prod/drprod/so/soma/js/optionclass.htm</string>
+    <string name="url_options_volume">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/options_volume.aspx</string>
+    <string name="url_options_volume_chart">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/options_volume_chart_json.aspx</string>
+    <string name="url_overvier_top">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/overview.aspx</string>
+    <string name="url_overviewChart">https://www.hkex.com.hk/eng/prod/drprod/so/soma/js/chart/overviewChart.html</string>
+    <string name="url_overview_data">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/overview.aspx?type=Highlight</string>
+    <string name="url_portfolio">https://www.hkex.com.hk/eng/prod/drprod/so/soma/quotes/portfolio.aspx</string>
+    <string name="url_prod_update">https://www.hkex.com.hk/eng/invest/user/login_e.aspx</string>
+    <string name="url_prod_update2">https://www.hkex.com.hk/eng/prod/drprod/so/soma/education/subscription.aspx?lang=en</string>
+    <string name="url_quote_optionsdetail">https://www.hkex.com.hk/eng/prod/drprod/so/soma/quotes/stock_option_detail.aspx</string>
+    <string name="url_quote_optionsresult">https://www.hkex.com.hk/eng/prod/drprod/so/soma/quotes/stock_option_search.aspx</string>
+    <string name="url_seminar">https://www.hkex.com.hk/eng/prod/drprod/so/soma/education/seminar.aspx?lang=en</string>
+    <string name="url_static_product_table">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/static_product.aspx?type=Table&amp;lang=en</string>
+    <string name="url_static_product_type">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/static_product.aspx?type=List&amp;lang=en</string>
+    <string name="url_subscription_opt">https://www.hkex.com.hk/eng/prod/drprod/so/soma/education/subscription.aspx?lang=en</string>
+    <string name="url_ticker">https://www.hkex.com.hk/eng/prod/drprod/so/soma/market/ticker_inpage.aspx?lang=en</string>
+    <string name="url_tmc">https://www.hkex.com.hk/eng/prod/drprod/so/soma/margin_data/tailor_made_combinations.aspx?lang=en</string>
+    <string name="url_tvInterview">https://www.hkex.com.hk/eng/prod/drprod/so/soma/education/tvInterview.aspx?lang=en</string>
+    <string name="url_video">https://www.hkex.com.hk/eng/prod/drprod/so/soma/video/video.aspx?lang=en</string>
+    <string name="url_video_table">https://www.hkex.com.hk/eng/prod/drprod/so/soma/video/video.aspx?lang=en&amp;type=Table</string>
+    <string name="url_video_type">https://www.hkex.com.hk/eng/prod/drprod/so/soma/video/video.aspx?lang=en</string>
+    <string name="volume">Volume</string>
+    <string name="webview_chart">file:///android_asset/en/chart/chart_e.html</string>
+    <string name="webview_disclaimer">file:///android_asset/en/disclaimer_e.html</string>
+    <string name="webview_disclaimerOnIndices">file:///android_asset/en/disclaimer_indices_e.html</string>
+    <string name="webview_edu">file:///android_asset/edu/index_e.html</string>
+    <string name="webview_futures_note">file:///android_asset/en/futures_note_e.html</string>
+    <string name="webview_importantNote">file:///android_asset/en/note_e.html</string>
+    <string name="webview_indexchart">file:///android_asset/en/chart/indexchart_e.html</string>
+    <string name="webview_landingdisclaimer">file:///android_asset/en/disclaimer_agree_e.html</string>
+    <string name="webview_landingdisclaimer_ch">file:///android_asset/ch/disclaimer_agree_c.html</string>
+    <string name="webview_landingdisclaimer_en">file:///android_asset/en/disclaimer_agree_e.html</string>
+    <string name="webview_landingdisclaimer_gb">file:///android_asset/gb/disclaimer_agree_gb.html</string>
+    <string name="webview_options_combo">file:///android_asset/edu/tmc_e.html</string>
+    <string name="webview_privacy">file:///android_asset/en/privacy_e.html</string>
+    <string name="webview_stockchart">file:///android_asset/en/chart/stockchart_e.html</string>
+    <string name="year_of_date">Year to date</string>
+    <string name="year_text">年</string>
+</resources>

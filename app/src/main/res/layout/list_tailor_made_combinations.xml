@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip"
+    android:background="@drawable/bg_list_portfolio"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="95.0dip"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/hkats_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="8.0dip"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="2.0"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip"
+        android:paddingBottom="8.0dip">
+
+        <TextView
+            android:id="@+id/legs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@+id/bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@+id/last_traded"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@+id/high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@+id/low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.75"
+        android:gravity="center_horizontal"
+        android:paddingTop="8.0dip">
+
+        <TextView
+            android:id="@+id/volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</LinearLayout>

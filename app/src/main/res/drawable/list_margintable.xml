@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_list_margintable" android:layout_width="fill_parent" android:layout_height="30.0dip" android:cacheColorHint="@color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.33">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:gravity="center" android:id="@id/call" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3,262" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.33">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:gravity="center" android:id="@id/strike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="55.00" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.33">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:gravity="center" android:id="@id/put" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4,654" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

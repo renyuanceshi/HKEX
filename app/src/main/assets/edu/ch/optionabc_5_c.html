@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>第五章：期權金</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="widTH=device-widTH, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>  
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+     
+
+     <div id="wrap">
+         <div class="pageBN c5">
+              <img src="../images/abc_top_c5_txt_c.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+             這章將談談期權交易的價格。這個價格我們通常稱之為期權金。 
+         </div><!--- end highlight --------------------> 
+         <div class="article">              
+             <h4 class="g0">期權金由兩部份組成，分別是內在值(Intrinsic Value)及時間值(Time Value)。</h4>  
+             <p class="g0 mb_0">
+                <img src="../images/abc_c5-01_bg.gif">     
+                <img src="../images/abc_c5-01_txt_c.gif" class="txt_img">                  
+             </p> 
+             <div class="clearfix"></div>  
+         </div>     
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">
+             <h4 class="g0">內在值 </h4>             
+             <p class="g0">
+                這是指正股市價/指數水平與期權行使價的差價。
+             </p> 
+             <div class="clearfix"></div>  
+             
+             <p class="g0 mb_0">舉例說，正股的市場價格 = $50</p>
+             <p class="g0">
+                <img src="../images/abc_c5-0200_bg.gif" class="mob_bg">    
+                <img src="../images/abc_c5-0201_bg.gif" class="txt_img mob_bg">                 
+                <img src="../images/abc_c5-0201_txt_c.gif" class="tips_img mob_bg"> 
+                <!--- tablet img --->
+                <img src="../images/abc_c5-0200_bg_tablet.gif" class="tablet_bg">
+                <img src="../images/abc_c5-0201_bg_tablet.gif" class="txt_img tablet_bg">               
+                <img src="../images/abc_c5-0201_txt_c_tablet.gif" class="tips_img tablet_bg">
+             </p>                          
+             <p class="g0">  
+                  <b class="tskybu">認購期權</b>方面，這差價是由股票現價/指數現水平減去行使價。
+<br><br>
+
+如股票現價/指數現水平低於行使價 (<b class="tskybu">市價 &lt; 行使價</b>)，該認購期權<b class="tskybu">並沒有內在值</b>及屬於<b class="tskybu">價外(OTM)</b>。<br><br>
+
+如股票現價/指數現水平等於行使價 (<b class="tskybu">市價 = 行使價</b>)，該認購期權<b class="tskybu">並沒有內在值</b>及屬於<b class="tskybu">等價(ATM)</b>。<br><br>
+
+如股票現價/指數現水平高於行使價 (<b class="tskybu">市價 &gt; 行使價</b>)，該認購期權<b class="tskybu">含有內在值</b>及屬於<b class="tskybu">價內(ITM)</b>。<br><br> 
+             </p>   
+                         
+             <div class="clearfix"></div>
+             <img class="hr" style="width:100%; height:4px; margin:auto 0;" src="../images/quiz_shadow.gif">  
+             
+             <p class="g0 mt_15p">
+                 <br>這是指期權行使價與正股市價/指數水平的差價。
+             </p> 
+             <div class="clearfix"></div>  
+             
+             <p class="g0 mb_0">舉例說，正股的市場價格 = $50</p>
+             <p class="g0">
+                <img src="../images/abc_c5-0200_bg.gif" class="mob_bg">    
+                <img src="../images/abc_c5-0202_bg.gif" class="txt_img mob_bg">                 
+                <img src="../images/abc_c5-0202_txt_c.gif" class="tips_img mob_bg"> 
+                <!--- tablet img --->
+                <img src="../images/abc_c5-0200_bg_tablet.gif" class="tablet_bg">
+                <img src="../images/abc_c5-0202_bg_tablet.gif" class="txt_img tablet_bg">               
+                <img src="../images/abc_c5-0202_txt_c_tablet.gif" class="tips_img tablet_bg">
+             </p>                          
+             <p class="g0">  
+                  <b class="tskybu">認沽期權</b>方面，這差價是由行使價減去股票現價/指數現水平。
+<br>
+                  <br>
+如行使價高於股票現價/指數現水平(<b class="tskybu">行使價 &gt; 市價</b>)，該認沽期權<b class="tskybu">含有內在值</b>及屬於<b class="tskybu">價內(ITM)</b>。<br><br>
+
+如行使價等於股票現價/指數現水平(<b class="tskybu">行使價 = 市價</b>)，該認沽期權<b class="tskybu">並沒有內在值</b>及屬於<b class="tskybu">等價(ATM)</b>。<br><br>
+
+如行使價低於股票現價/指數現水平(<b class="tskybu">行使價 &lt; 市價</b>)，該認沽期權<b class="tskybu">並沒有內在值</b>及屬於<b class="tskybu">價外(OTM)</b>。
+             </p>                
+             <div class="clearfix"></div>
+            <img class="hr" style="width:100%; height:4px; margin:auto 0;" src="../images/quiz_shadow.gif">
+            
+            
+            <p class="g0">
+            <h4 class="mb_0">總結</h4>
+            <small>這是指正股市價/指數水平與期權行使價的差價。</small></p>
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 widTH="100%">
+            <colgroup><col width="40%"><col width="30%"><col width="30%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH bgcolor="#cee3f8">&nbsp;</TH>
+            <TH bgcolor="#cee3f8">認購期權</TH>
+            <TH bgcolor="#cee3f8">認沽期權</TH></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">股票現價/指數現水平 &lt; 行使價</TH>
+            <TD>
+            內在值 = 0<br>
+            價值狀況 = 價外</TD>
+            <TD>
+            內在值 &gt; 0<br>
+            價值狀況 = 價內</TD></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">股票現價/指數現水平 = 行使價</TH>
+            <TD>
+            內在值 = 0<br>
+            價值狀況 = 等價</TD>
+            <TD>
+            內在值 = 0<br>
+            價值狀況 = 等價</TD></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">股票現價/指數現水平 &gt; 行使價</TH>
+            <TD>
+            內在值 > 0<br>
+            價值狀況 = 價內</TD>
+            <TD>
+            內在值 = 0<br>
+            價值狀況 = 價外</TD></TR></TBODY></TABLE>
+                                                    
+         </div><!--- end part1 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">    
+         
+         <div class="article">
+             <h4 class="g0">時間值</h4>             
+             <p class="g0">
+                 時間值指期權在合約期內，因正股價格/指數水平變動而趨向價內的可能性之價值。時間值會受兩大因素影響：<br>
+                 <img src="../images/abc_c5-03_bg.gif" class="sp_img fr"> 
+                  <ol class="flex-txt-nav" style="width:63%; margin-left:0;">
+                     <li><a href="#cp1">1) 距離到期日時間，以及</a></li>
+                     <li><a href="#cp2">2) 正股/指數水平的波幅</a></li>
+                  </ol> 
+             </p> 
+             <div class="clearfix"></div>
+              
+             <h4 class="g0" id="cp1">1) 距離到期日時間</h4>      
+             <p class="g1">
+                假設其他因素不變，如果期權<b class="tskybu">距離到期日時間越長</b>，它所含的時間值也越多。這是因為剩餘的時間越長，期權理論上會越多機會趨向價內，所以<b class="tskybu">期權的價值會越高</b>。<br><br>
+                時間值會隨時間消逝而減少，這叫作「<b class="tskybu">時間值耗損</b>」(Time Decay)。時間值耗損這特性<b class="tskybu">不利於期權買方而有利於期權賣方</b>。這是期權買賣中一個十分重要的概念。<br><br>
+               時間值耗損並不是固定的。<b class="tskybu">在期權越接近到期時，時間值耗損會越快</b>。 
+             </p>            
+             <p class="g1">
+                <img src="../images/abc_c5-04_bg.gif">
+                <img src="../images/abc_c5-04_txt_c.gif" class="txt_img">              
+             </p> 
+             
+             <div class="clearfix"></div>             
+              
+             <h4 class="g0" id="cp2">2) 正股/指數水平的波幅</h4>
+             <p class="g1">
+                <img src="../images/abc_c5-05_bg.gif">
+                <img src="../images/abc_c5-05_txt_c.gif" class="txt_img">              
+             </p>     
+             <p class="g1">
+                波幅指股價在某段時間內可能出現的波動幅度。<br><br>
+                波幅越大，正股價/指數水平上落的幅度也越大，認購期權及認沽期權成為「價內」的機會亦因而增加。期權的時間值已將這因素計算在內。因此，<b class="tskybu">波幅越大，時間值越高，而期權金亦會越高</b>。
+             </p> 
+             
+             <div class="clearfix"></div>
+                          
+             <p class="g0">波幅分為歷史波幅(Historical Volatility)及引伸波幅(Implied Volatility)兩種。</p>
+             <p class="g1">                
+                <b class="tskybu">歷史波幅</b>是指某正股/指數在<b class="tskybu">過去</b>某段特定時間內的股價/指數水平變動幅度。<br><br>
+                <b class="tskybu">引伸波幅則是由期權於市場交易的價格所推算出來</b>。
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c5-06_bg.gif">
+                <img src="../images/abc_c5-06_txt_c.gif" class="txt_img">              
+             </p> 
+             <div class="clearfix"></div> 
+              
+              <p class="g0">由於市場參與者對後市走勢意見不一，放入計價模式的波幅水平亦存有差異，算出來的價格因此亦各有不同。</p>
+             <p class="g1">
+                <img src="../images/abc_c5-07_bg.gif">
+                <img src="../images/abc_c5-07_txt_c.gif" class="txt_img">              
+             </p>             
+             <p class="g1">
+                期權投資者可以把某期權的市價輸入<span class="tips">期權定價模式</span> <em class="tips_pop">期權價格受多種因素所影響，包括相關資產價格、行使價、到期日、波幅、股息及利率。市場上有很多不同的期權定價模式，最普遍的是「二項式」(Binomial) 及「柏力克 - 舒爾斯」(Black-Scholes Model) 模式。</em>，從而估計報價者所用的波幅水平，亦即所謂的「引伸波幅」。 
+<br><br>
+                期權投資者可以將某個市價的引伸波幅與本身預期正股的波幅或其他可作比較的衍生產品的引伸波幅作一比較，才決定採用那種投資策略。
+             </p>                                               
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">             
+             <h4 class="g0">影響期權金的因素 </h4>             
+             <p class="g0">
+               下表載列了<b class="tskybu">六大影響期權金因素</b>。必需留意的是，每一個因素的影響均需獨立看待，其他因素需假設不變。
+             </p>
+             
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 width="100%">
+            <colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH class=aleft bgcolor="#b3d1ed">因素</TH>
+            <TH bgColor="#cee3f8">因素變化</TH>
+            <TH bgColor="#cee3f8">認購期權金變化</TH>
+            <TH bgColor="#cee3f8">認沽期權金變化</TH></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">相關資產價格</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">行使價</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">距離到期日時間*</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">波幅</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">股息</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">利率</b></STRONG></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD></TR></TBODY></TABLE>
+             
+             <p class="g0">
+               <span>*未必適用於極價內或極價外期權</span><br><br>
+               <!--請前往本網站內期權工具部份下的期權/權證計算機，試算一下不同因素對期權金的影響。-->
+             </p> 
+             <div class="clearfix"></div>               
+         </div><!--- end part3 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+                  
+         
+         <table class="pageNav" border="0" cellspacing="0" widTH="90%">
+             <colgroup>
+                <col widTH="6%"><col widTH="28%"> <col widTH="33%"> <col widTH="27%"><col widTH="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_4_c.html','第四章：為何使用期權？')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_4_c.html','第四章：為何使用期權？')">前一章</a>&nbsp;</td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_5_quize_c.html','第五章：期權金')"><img class="quizeBtn" src="../images/btn_start_quiz_c.png"></a></td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_6_c.html','第六章：期權是怎樣運作的？')">下一章</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_6_c.html','第六章：期權是怎樣運作的？')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->    
+         
+     </div><!-- end demo #wrap -->
+     
+</body>
+</html>
+  

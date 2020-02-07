@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>第八章：總結</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_c.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>        
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+
+
+     <div id="wrap">
+         <div class="pageBN c8">
+              <img src="../images/abc_top_c8_txt_c.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+              這章總結了本部份的一些重點:
+         </div><!--- end highlight -------------------->
+         
+         <div class="article">          
+              <ul class="strategiesli Btxt">
+                  <li>期權是一種關於決定權的合約。合約持有人擁有是否執行一項買賣相關資產的決定權。</li>
+                  
+                  <li><b class="tskybu">認購期權持有者有權</b>在到期日(註:歐式期權)/到期日或以前(註:美式期權)，<b class="tskybu">以行使價買入相關資產</b>。</li>
+                  
+                  <li>如果買方行使期權，<b class="tskybu">認購期權賣家</b>則<b class="tskybu">有責任以行使價賣出相關資產</b>。</li>
+                  
+                  <li><b class="tskybu">認沽期權持有者有權</b>在到期日(註:歐式期權)/到期日或以前(註:美式期權)，<b class="tskybu">以行使價賣出相關資產</b>。</li>
+                  
+                  <li>如果買方行使期權，<b class="tskybu">認沽期權賣家</b>則<b class="tskybu">有責任以行使價買入相關資產</b>。</li>
+                  
+                  <li>基本期權策略包括: 1) <b class="tskybu">認購期權長倉</b> 2) <b class="tskybu">認購期權短倉</b> 3) <b class="tskybu">認沽期權長倉</b> 4) <b class="tskybu">認沽期權短倉</b>。
+</li>
+                  
+                  <li><b class="tskybu">理論上，認購(沽)期權長倉的潛在盈利可以是無限(極大)的</b>。其<b class="tskybu">風險則是有限的</b>(最大損失為所投入的期權金)。</li>
+                  
+                  <li><b class="tskybu">認購(沽)期權短倉的潛在盈利是有限的</b>(最大盈利是所收取的期權金)。<b class="tskybu">理論上其風險則可以是無限(極大)的</b>。</li>
+                  
+                  <li>一張期權合約內最重要的元素是: 1) <b class="tskybu">相關資產</b> 2) <b class="tskybu">種類</b> 3) <b class="tskybu">行使價</b> 4) <b class="tskybu">到期日</b> 5) <b class="tskybu">行使方式</b> 6) <b class="tskybu">合約股數</b> 及 7) <b class="tskybu">交收方式</b>。</li>
+                  
+                  <li>兩大使用期權的主要原因: 1) 作方向買賣 2) 對沖持股。</li>
+                  
+                  <li>期權交易的價格稱之為<b class="tskybu">期權金</b>。它由兩部份組成，分別是內在值及時間值。</li>
+                  
+                  <li><b class="tskybu">內在值受相關資產的價格所影響，時間值則受距離到期日時間及相關資產的波幅所影響。</b></li>
+                  
+                  <li>下表載列了<b class="tskybu">六大影響期權金因素</b>。必需留意的是，每一個因素的影響均需獨立看待，其他因素需假設不變。 
+                    <p class="mb_0">&nbsp;</p>
+                      <table class="ms-rteTable-7" border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <colgroup><col width="28%"><col width="24%"><col width="24%"><col width="24%"></colgroup>
+                      <tbody>
+                      <tr>
+                      <th bgcolor="#b3d1ed">因素</th>
+                      <th align="center" bgcolor="#cee3f8">因素變化</th>
+                      <th align="center" bgcolor="#cee3f8">認購期權金變化</th>
+                      <th align="center" bgcolor="#cee3f8">認沽期權金變化</th></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">相關資產價格</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">行使價</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">距離到期日時間*</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">波幅</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">股息</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">利率</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td></tr>
+                      </tbody></table>
+                <p><span>*未必適用於極價內或極價外期權</span></p></li>
+                 <li>因為期權合約由結算所負責結算，所以<b class="tskybu">場內期權的交易對手風險是減到最低的</b>。</li>
+                 <li>在香港交易所設上市的期權，有關的股票期權合約由聯交所期權結算所(SEOCH)負責結算，而指數期權則由香港期貨結算有限公司(HKCC)負責結算。</li>
+                 <li><b class="tskybu">所有期權短倉均需要繳付按金。</b></li>
+             </ul>
+             
+             <div class="clearfix"></div>         
+         </div><!--- end part1 --------------------> 
+                  
+         <div class="article">
+             <p class="g0" style="color:#004080; text-align:center;">
+              <img src="../images/abc_c8-00_bg.gif">
+              恭喜您! 您已完成了期權ABC的課程! 相信您已能掌握期權的基礎知識，多謝您參與此課程。
+             </p>  
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">  
+         
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="28%"> <col width="33%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_7_c.html','第七章：在香港交易所買賣期權')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_7_c.html','第七章：在香港交易所買賣期權')">前一章</a>&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+</body>
+</html>
+  

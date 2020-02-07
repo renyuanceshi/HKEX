@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow android:id="@id/tableRow2" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.2" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.8"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:id="@id/timebar" android:background="@drawable/bg_timebar" android:layout_width="fill_parent" android:layout_height="20.0dip">
+            <ImageView android:id="@id/imageView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/footer_timeicon" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textdeepblue" android:id="@id/tv_update" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/lastupdate" android:layout_toRightOf="@id/imageView" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/textdeepblue" android:ellipsize="end" android:id="@id/tv_stime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="" android:lines="1" android:layout_toRightOf="@id/tv_update" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/textdeepblue" android:ellipsize="end" android:id="@id/tv_delay" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/delaymessage" android:lines="1" android:layout_toRightOf="@id/tv_stime" android:layout_centerVertical="true" />
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textdeepblue" android:id="@id/tv_disclaimer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="@string/indices_disclaimer" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:background="@drawable/bg_footer" android:layout_width="fill_parent" android:layout_height="29.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@color/textlightgrey" android:id="@id/TextView01" android:paddingRight="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/footerline2" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</TableRow>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_list_2line" android:layout_width="fill_parent" android:layout_height="160.0dip" android:cacheColorHint="@color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="100.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:gravity="center" android:id="@id/announcedate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="14/07/2013" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="100.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:gravity="center" android:id="@id/exdate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="31/07/2013\n05/08/2013" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:gravity="left" android:id="@id/details" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No 1st qt Div" android:maxLines="10" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip"
+    android:background="@drawable/bg_list_portfolio"
+    android:baselineAligned="false"
+    android:cacheColorHint="#00000000"
+    android:orientation="horizontal">
+    <RelativeLayout
+        android:id="@+id/dynamicLayout"
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+        <TextView
+            android:id="@+id/instrument1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="8.0dip"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+        <TextView
+            android:id="@+id/instrument2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:paddingLeft="10.0dip"
+            android:paddingBottom="8.0dip"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="55.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/expiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="@string/total"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="50.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text="--"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="80.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/contract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="30.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/qty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="70.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/notional"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="40.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="65.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:text=" "
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="65.0dip"
+        android:layout_height="fill_parent">
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:paddingRight="5.0dip"
+            android:scrollHorizontally="true"
+            android:text="--"
+            android:textColor="@color/change_green"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</LinearLayout>

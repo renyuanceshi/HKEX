@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchcontainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgwhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/bg_searchbar"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/img_searchbar_left" />
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="45.0dip"
+            android:layout_marginRight="45.0dip"
+            android:background="@color/transparent"
+            android:dropDownWidth="fill_parent"
+            android:dropDownHorizontalOffset="-45.0dip"
+            android:dropDownVerticalOffset="12.0dip"
+            android:popupBackground="@color/bgwhite"
+            android:singleLine="true"
+            android:text="@string/search"
+            android:textColor="@color/textwhite"
+            android:textSize="16.0sp" />
+
+        <ImageView
+            android:id="@+id/searchclose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/img_searchbar_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mostpopcontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bgwhite"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/top20_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/top20title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_menu_top"
+                android:gravity="center_vertical"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip"
+                android:singleLine="true"
+                android:text="@string/search_msg_top20"
+                android:textColor="@color/textwhite"
+                android:textSize="16.0sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgblue"
+                android:gravity="center_vertical"
+                android:paddingLeft="15.0dip"
+                android:paddingTop="3.0dip"
+                android:paddingRight="15.0dip"
+                android:paddingBottom="3.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/underlying_no"
+                    android:singleLine="true"
+                    android:text="@string/underlying_no"
+                    android:textColor="@color/textwhite"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/underlying_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="5.0dip"
+                    android:singleLine="true"
+                    android:text="0"
+                    android:textColor="@color/textwhite"
+                    android:textSize="16.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/mostpopcontainer_box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgblue"
+                android:paddingLeft="15.0dip"
+                android:paddingTop="10.0dip"
+                android:paddingRight="15.0dip"
+                android:paddingBottom="10.0dip"
+                android:singleLine="true"
+                android:text="@string/mostpopular"
+                android:textColor="@color/textwhite"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/mostpoplistView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchresultcontainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bgwhite"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/searchresultlistView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

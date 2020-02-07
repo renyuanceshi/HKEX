@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Options Strategies</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+    
+
+   
+
+</head>
+
+<body>
+     
+
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>Long Call Calendar Spread</h3>
+             <a href="option_strategies_e.html" class="backBTN">Back</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th>Strategies</th>
+  </tr>
+  <tr>
+    <td>Long Call Calendar Spread </td>
+  </tr>
+  <tr>
+    <th width="140">Component</th>
+  </tr>
+  <tr>
+    <td>Buy distant maturity call, sell nearby maturity call of the same strike price/level </td>
+  </tr>
+  <tr>
+    <th>Potential Profit </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>When the stock price/index level is at the strike price/level on the nearby expiry date</li>
+      <li>Limited to the time decay on the nearby call minus the time decay on the distant call </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Maximum Loss </th>
+  </tr>
+  <tr>
+    <td>Limited to net premium paid
+</td>
+  </tr>
+  <tr>
+    <th>Time Value Impact </th>
+  </tr>
+  <tr>
+    <td>Positive </td>
+  </tr>
+  <tr>
+    <th>Remarks </th>
+  </tr>
+  <tr>
+    <td>The features of Long Call Calendar Spread and Long Put Calendar Spread are quite similar. The major difference falls on the amount of net premium paid, depending on the strike price/level of the contracts chosen. Margin may be required. The short position might be assigned at any time before expiry. </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">Example</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="center"><div class="vtxt">Profit&nbsp;/&nbsp;Loss</div></th>
+                   
+                    <td  valign="middle"><img src="../images/chart_strategies_longcall_calendar.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">Stock Price</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> Net Position</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> +1 Mar 200 Call</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> -1 Jan 200 Call</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">Component</th>
+  </tr>
+  <tr>
+    <td>Buy ABC Mar $200 Call, pay $30, and sell ABC Jan $200 Call, receive $20 </td>
+  </tr>
+  <tr>
+    <th>Net Premium</th>
+  </tr>
+  <tr>
+    <td>Pay $30-$20=$10 </td>
+  </tr>
+  <tr>
+    <th>Profit when </th>
+  </tr>
+  <tr>
+    <td>Maximum when the stock price is $200 on the nearby expiry date </td>
+  </tr>
+  <tr>
+    <th>Potential Profit </th>
+  </tr>
+  <tr>
+    <td>Time decay (Jan call) - time decay (Mar call) </td>
+  </tr>
+  <tr>
+    <th>Potential Loss </th>
+  </tr>
+  <tr>
+    <td>$10 </td>
+  </tr>
+  <tr>
+    <th>Time Value Impact </th>
+  </tr>
+  <tr>
+    <td>Positive </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_e.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_e.html">Back</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

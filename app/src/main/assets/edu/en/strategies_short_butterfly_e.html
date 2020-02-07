@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Options Strategies</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+    
+
+   
+
+</head>
+
+<body>
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>Short Butterfly Spread</h3>
+             <a href="option_strategies_e.html" class="backBTN">Back</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th>Strategies</th>
+  </tr>
+  <tr>
+    <td>Short Butterfly Spread</td>
+  </tr>
+
+  <tr>
+    <th width="140">Component</th>
+  </tr>
+  <tr>
+    <td>Sell 1 call with lower strike price/level, buy 2 call with middle strike price/level and sell 1 call with higher strike price/index level </td>
+  </tr>
+  <tr>
+    <th>Potential Profit </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>When the stock price/index level is below the lower break-even point or above the upper break-even point </li>
+      <li>Limited to net premium received </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Maximum Loss </th>
+  </tr>
+  <tr>
+    <td> When the stock price/index level is between the two break-even points:
+    <ul class="strategiesli">
+      <li>When the stock price/index level is between the middle strike price &amp; upper break-even point, equals to upper break-even point minus stock price/index level </li>
+      <li>When the stock price/index level is between the lower break-even point &amp; the middle strike price, equals to the stock price/index level minus lower break-even point </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Time Value Impact </th>
+  </tr>
+  <tr>
+    <td>Neutral </td>
+  </tr>
+  <tr>
+    <th>Break-even </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>The lower break-even point equals to the lowest strike price/level plus net premium received </li>
+      <li>The upper break-even point equals to the highest strike price/level minus net premium received </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Remarks </th>
+  </tr>
+  <tr>
+    <td>Compared with a Long Straddle, a Short Butterfly Spread has limited profit potential. </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">Example</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="center"><div class="vtxt">Profit&nbsp;/&nbsp;Loss</div></th>
+                   
+                   <td  valign="middle"><img src="../images/chart_strategies_short_butterfly.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">Stock Price</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> Net Position</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> -1 Jun 180 Call</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> +2 Jun 200 Call</span></nobr> 
+                        <nobr><span class="chartMark green"><b>&mdash;</b> -1 Jun 220 Call</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">Component</th>
+  </tr>
+  <tr>
+    <td>Sell 1 ABC Jun $180 Call, receive $20 and buy 2 ABC Jun $200 Call each at $10, totally pay $20 and sell 1 ABC Jun $220 Call, receive $5 </td>
+  </tr>
+  <tr>
+    <th>Net Premium</th>
+  </tr>
+  <tr>
+    <td>Receive $20-$20+$5=$5 </td>
+  </tr>
+  <tr>
+    <th>Break-even </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>Lower: $180+$5=$185 </li>
+      <li>Upper: $220-$5=$215 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Profit when </th>
+  </tr>
+  <tr>
+    <td>Stock price is below $185 or above $215 </td>
+  </tr>
+  <tr>
+    <th>Potential Profit </th>
+  </tr>
+  <tr>
+    <td>$5 </td>
+  </tr>
+  <tr>
+    <th>Potential Loss </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>When the stock price is between $185 &amp; $200, stock price - $185 </li>
+      <li>When the stock price is between $200 &amp; $215, $215 - stock price </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Time Value Impact </th>
+  </tr>
+  <tr>
+    <td>Neutral </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_e.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_e.html">Back</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end #wrap -->
+</body>
+</html>
+  

@@ -1,0 +1,124 @@
+@charset "utf-8";
+/*  Version: v1.0
+    Last update: 2013-07-17 */
+	
+/*------------------------------------------------------------------
+   Reset & Clearfix
+--------------------------------------------------------------------*/
+/* Reset */
+html,body,div,span,applet,object,iframe,input,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0; padding:0; border:0; outline:0; font-weight:100; font-style:inherit; font-size:100%; font-family:inherit;}
+
+*{-webkit-text-size-adjust:none; -webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+/* slightly enhanced, universal clearfix hack */
+.clearfix:after {visibility: hidden;display:block;font-size:0;content:"";clear:both;height:0;}
+.clearfix {display:inline-block;}
+/* start commented backslash hack \*/
+* html .clearfix {height:1%;}
+.clearfix {display:block; }	
+
+
+/*------------------------------------------------------------------
+   Basic Styles 
+--------------------------------------------------------------------*/
+body {background-color:#dce0e3; color:black; font-family:Arial,Helvetica,sans-serif; margin:0 auto; }
+body.ipad{overflow-x:hidden;}
+body.ipad #wrap, body.ipad #wrapper{width:502px!important; margin:0;}
+html, body, textarea, input {font-size:12px; -webkit-font-smoothing:antialiased;  -webkit-text-size-adjust:none;}
+#wrap{position:relative; width:100%; margin:0; border-top:1px solid #f4f5f7;
+      background: #f4f5f7; /* Old browsers */
+	  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+	  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIyMCUiIHN0b3AtY29sb3I9IiNmNGY1ZjciIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZGNlMGUzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+	  background: -moz-linear-gradient(top,  #f4f5f7 20%, #dce0e3 100%); /* FF3.6+ */
+	  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%,#f4f5f7), color-stop(100%,#dce0e3)); /* Chrome,Safari4+ */
+	  background: -webkit-linear-gradient(top,  #f4f5f7 20%,#dce0e3 100%); /* Chrome10+,Safari5.1+ */
+	  background: -o-linear-gradient(top,  #f4f5f7 20%,#dce0e3 100%); /* Opera 11.10+ */
+	  background: -ms-linear-gradient(top,  #f4f5f7 20%,#dce0e3 100%); /* IE10+ */
+	  background: linear-gradient(to bottom,  #f4f5f7 20%,#dce0e3 100%); /* W3C */
+	  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f5f7', endColorstr='#dce0e3',GradientType=0 ); /* IE6-8 */}	  
+#wrapper{position:relative; width:100%; margin:0; border-top:1px solid #f4f5f7; background:url('../images/10_02_sp_back.png') repeat-x 0 0 #dce0e3;}
+/*------------------------------------------------------------------
+   generalBox
+--------------------------------------------------------------------*/	   
+    .generalBox{display:block; position:relative; margin:3.125% 3.125% 0 3.125%; padding:2.5%; }
+	.generalBox p{font-size:16px; font-weight:normal; color:#333; margin-bottom:6.25%; position:relative;color:#004485;}
+	.generalBox a{color:#004485;}	
+	.generalBox b, .generalBox strong{font-weight:bold;}	
+	
+     /* iphone */
+	 @media screen and (max-width:360px) and (min-width:1px) {
+		 .generalBox p{font-size:14px;}
+	 }
+	 
+	 /* #android */
+	 @media screen and (max-width:384px) and (min-width:361px) {
+		generalBox p{font-size:16px;}
+	 }
+	 
+	 /* ipad & tablet */
+	 @media screen and (max-width:1920px) and (min-width:385px) {
+	    .generalBox p{font-size:18px;}
+	 }
+
+
+/*------------------------------------------------------------------
+   spBox
+--------------------------------------------------------------------*/	   
+.spBox{display:block; position:relative; margin:3.125% 3.125% 0 3.125%; padding:2.5%; 
+	    }
+	.spBox p{font-size:14px; font-weight:normal; color:#333; margin-bottom:6.25%; position:relative;color:#004485;}
+	.spBox a{color:#004485;}	
+	.spBox b, .generalBox strong{font-weight:bold;}
+
+
+/*------------------------------------------------------------------
+   topBox
+--------------------------------------------------------------------*/		 
+   
+	.topBox{display:block; height:98px; width:100%; background:url('../images/10_02_bn_back.png') repeat-x 0 0; background-size:330px 98px; -webkit-background-size:330px 98px; position:relative; top:0; z-index:995; overflow:hidden;}
+	.topBox img{position:absolute;}
+	.topBox img.txt{left:0; top:0; z-index:996;height:98px;}
+	.topBox img.bg{right:0; top:0; z-index:995; width:320px; height:98px;}
+	
+	
+/*------------------------------------------------------------------
+   topBox delay
+--------------------------------------------------------------------*/		 
+   
+	.topBox_delay{display:block; height:39px; width:100%; background:url('../images/10_02_15mins_bg.png') repeat-x; background-size:320px 39px; -webkit-background-size:320px 39px; top:0; z-index:995; overflow:hidden; text-align:center}
+	.topBox_delay.ipad{display:block; height:45px; width:100%; background:url('../images/10_02_15mins_bg.png') repeat-x; background-size:502px 45px; -webkit-background-size:502px 45px; top:0; z-index:995; overflow:hidden; text-align:center}
+	.topBox_delay img.txt{z-index:996; height:39px;}
+	.topBox_delay.ipad img.txt{z-index:996; height:45px;}
+	 
+/*------------------------------------------------------------------
+   Button
+--------------------------------------------------------------------*/	 	
+	.agreeBtn{width:100%; height:70px; margin:0; position:fixed; text-align:center; bottom:0; background:#dce0e3;  z-index:995;}
+	.agreeBtn a{ text-decoration:none; position:relative; top:10px;}
+	.agreeBtn a img{width:278px; height:46px;}
+	
+	body.ipad .agreeBtn{width:502px!important; margin:0; background:none;}
+	
+/*------------------------------------------------------------------
+   List
+--------------------------------------------------------------------*/	 
+ul.number_list { list-style:decimal; margin-left:25px; font-size: 16px; color: #004485;}
+ul.number_list li { margin:0; padding:0; padding-bottom:20px;}
+
+ul.alpha_list { list-style:lower-alpha; margin-left:25px; font-size: 16px; color: #004485;}
+ul.alpha_list li { margin:0; padding:5px 0 0 0;}
+
+/* iphone */
+	 @media screen and (max-width:360px) and (min-width:1px) {
+		 ul.number_list, ul.alpha_list {font-size:14px; margin-left:20px;}
+	 }
+	 
+	 /* #android */
+	 @media screen and (max-width:384px) and (min-width:361px) {
+		ul.number_list, ul.alpha_list {font-size:16px; margin-left:20px;}
+	 }
+	 
+	 /* ipad & tablet */
+	 @media screen and (max-width:1920px) and (min-width:385px) {
+	    ul.number_list, ul.alpha_list {font-size:18px; margin-left:25px;}
+	 }

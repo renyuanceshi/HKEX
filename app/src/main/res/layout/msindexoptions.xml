@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hkex.soma.basic.MultiScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ViewFlipper
+                android:id="@+id/bannerContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/flipperPage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="158.0dip"
+                        android:orientation="vertical">
+
+                        <com.hkex.soma.basic.LoaderImageView
+                            android:id="@+id/bannerImage1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/flipperPage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="158.0dip"
+                        android:orientation="vertical">
+
+                        <com.hkex.soma.basic.LoaderImageView
+                            android:id="@+id/bannerImage2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/flipperPage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="158.0dip"
+                        android:orientation="vertical">
+
+                        <com.hkex.soma.basic.LoaderImageView
+                            android:id="@+id/bannerImage3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ViewFlipper>
+
+            <LinearLayout
+                android:id="@+id/nextBannerlayout"
+                android:layout_width="40.0dip"
+                android:layout_height="158.0dip"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/listViewHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="59.0dip"
+                android:background="@drawable/bg_landing_dropdown"
+                android:orientation="vertical">
+
+                <com.hkex.soma.element.SelectionList
+                    android:id="@+id/index_selectionList"
+                    text="@string/sel_mosttradedclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical" />
+
+                <com.hkex.soma.element.SelectionList
+                    android:id="@+id/selectionList"
+                    text="@string/sel_mosttradedclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="25.0dip"
+                android:background="@drawable/bg_stock_option_landing_dropdown"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/vol_trad_str"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:text="@string/total_vol"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/vol_trad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3.0dip"
+                    android:layout_toRightOf="@id/vol_trad_str"
+                    android:text=""
+                    android:textColor="@color/black" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/listTitleHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="34.0dip"
+                android:background="@drawable/list_header">
+
+                <RelativeLayout
+                    android:layout_width="46.0dip"
+                    android:layout_height="fill_parent" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/head_instrument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/tab_options"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="145.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_lastchange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/head_lastorchange"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="55.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_oivol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:paddingRight="5.0dip"
+                        android:text="@string/volume"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.hkex.soma.basic.MultiScrollListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#ffffffff"
+            android:dividerHeight="0.0px" />
+    </LinearLayout>
+</com.hkex.soma.basic.MultiScrollView>

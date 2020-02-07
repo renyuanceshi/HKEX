@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>第五章：期权金</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="widTH=device-widTH, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>  
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+     
+
+     <div id="wrap">
+         <div class="pageBN c5">
+              <img src="../images/abc_top_c5_txt_gb.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+             这章将谈谈期权交易的价格。这个价格我们通常称之为期权金。 
+         </div><!--- end highlight --------------------> 
+         <div class="article">              
+             <h4 class="g0">期权金由两部份组成，分别是内在值(Intrinsic Value)及时间值(Time Value)。</h4>  
+             <p class="g0 mb_0">
+                <img src="../images/abc_c5-01_bg.gif">     
+                <img src="../images/abc_c5-01_txt_gb.gif" class="txt_img">                  
+             </p> 
+             <div class="clearfix"></div>  
+         </div>     
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">
+             <h4 class="g0">内在值 </h4>             
+             <p class="g0">
+                这是指正股市价/指数水平与期权行使价的差价。
+             </p> 
+             <div class="clearfix"></div>  
+             
+             <p class="g0 mb_0">举例说，正股的市场价格 = $50</p>
+             <p class="g0">
+                <img src="../images/abc_c5-0200_bg.gif" class="mob_bg">    
+                <img src="../images/abc_c5-0201_bg.gif" class="txt_img mob_bg">                 
+                <img src="../images/abc_c5-0201_txt_gb.gif" class="tips_img mob_bg"> 
+                <!--- tablet img --->
+                <img src="../images/abc_c5-0200_bg_tablet.gif" class="tablet_bg">
+                <img src="../images/abc_c5-0201_bg_tablet.gif" class="txt_img tablet_bg">               
+                <img src="../images/abc_c5-0201_txt_gb_tablet.gif" class="tips_img tablet_bg">
+             </p>                          
+             <p class="g0">  
+                  <b class="tskybu">认购期权</b>方面，这差价是由股票现价/指数现水平减去行使价。
+<br><br>
+
+如股票现价/指数现水平低于行使价 (<b class="tskybu">市价 &lt; 行使价</b>)，该认购期权<b class="tskybu">并没有内在值</b>及属于<b class="tskybu">价外(OTM)</b>。<br><br>
+
+如股票现价/指数现水平等于行使价 (<b class="tskybu">市价 = 行使价</b>)，该认购期权<b class="tskybu">并没有内在值</b>及属于<b class="tskybu">等价(ATM)</b>。<br><br>
+
+如股票现价/指数现水平高于行使价 (<b class="tskybu">市价 &gt; 行使价</b>)，该认购期权<b class="tskybu">含有内在值</b>及属于<b class="tskybu">价内(ITM)</b>。<br><br> 
+             </p>   
+                         
+             <div class="clearfix"></div>  
+             <img class="hr" style="width:100%; height:4px; margin:auto 0;" src="../images/quiz_shadow.gif">
+             
+             
+            <p class="g0 mt_15p">
+                 <br>这是指期权行使价与正股市价/指数水平的差价。
+             </p> 
+             <div class="clearfix"></div>  
+             
+             
+             <p class="g0 mb_0">举例说，正股的市场价格 = $50</p>
+             <p class="g0">
+                <img src="../images/abc_c5-0200_bg.gif" class="mob_bg">    
+                <img src="../images/abc_c5-0202_bg.gif" class="txt_img mob_bg">                 
+                <img src="../images/abc_c5-0202_txt_gb.gif" class="tips_img mob_bg"> 
+                <!--- tablet img --->
+                <img src="../images/abc_c5-0200_bg_tablet.gif" class="tablet_bg">
+                <img src="../images/abc_c5-0202_bg_tablet.gif" class="txt_img tablet_bg">               
+                <img src="../images/abc_c5-0202_txt_gb_tablet.gif" class="tips_img tablet_bg">
+             </p>                          
+             <p class="g0">  
+                  <b class="tskybu">认沽期权</b>方面，这差价是由行使价减去股票现价/指数现水平。
+<br>
+                  <br>
+如行使价高于股票现价/指数现水平(<b class="tskybu">行使价 &gt; 市价</b>)，该认沽期权<b class="tskybu">含有内在值</b>及属于<b class="tskybu">价内(ITM)</b>。<br><br>
+
+如行使价等于股票现价/指数现水平(<b class="tskybu">行使价 = 市价</b>)，该认沽期权<b class="tskybu">并没有内在值</b>及属于<b class="tskybu">等价(ATM)</b>。<br><br>
+
+如行使价低于股票现价/指数现水平(<b class="tskybu">行使价 &lt; 市价</b>)，该认沽期权<b class="tskybu">并没有内在值</b>及属于<b class="tskybu">价外(OTM)</b>。
+             </p>                
+             <div class="clearfix"></div> 
+            <img class="hr" style="width:100%; height:4px; margin:auto 0;" src="../images/quiz_shadow.gif">
+            
+            
+            <p class="g0">
+            <h4 class="mb_0">总结</h4>
+            <small>这是指正股市价/指数水平与期权行使价的差价。</small></p>
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 widTH="100%">
+            <colgroup><col width="40%"><col width="30%"><col width="30%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH bgcolor="#cee3f8">&nbsp;</TH>
+            <TH bgcolor="#cee3f8">认购期权</TH>
+            <TH bgcolor="#cee3f8">认沽期权</TH></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">股票现价/指数现水平 &lt; 行使价</TH>
+            <TD>
+            内在值 = 0<br>
+            价值状况 = 价外</TD>
+            <TD>
+            内在值 &gt; 0<br>
+            价值状况 = 价内</TD></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">股票现价/指数现水平 = 行使价</TH>
+            <TD>
+            内在值 = 0<br>
+            价值状况 = 等价</TD>
+            <TD>
+            内在值 = 0<br>
+            价值状况 = 等价</TD></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">股票现价/指数现水平 &gt; 行使价</TH>
+            <TD>
+            內在值 > 0<br>
+            价值状况 = 价内</TD>
+            <TD>
+            内在值 = 0<br>
+            价值状况 = 价外</TD></TR></TBODY></TABLE>
+                                                    
+         </div><!--- end part1 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">    
+         
+         <div class="article">
+             <h4 class="g0">时间值</h4>             
+             <p class="g0">
+                 时间值指期权在合约期内，因正股价格/指数水平变动而趋向价内的可能性之价值。时间值会受两大因素影响：<br>
+                 <img src="../images/abc_c5-03_bg.gif" class="sp_img fr"> 
+                  <ol class="flex-txt-nav" style="width:63%; margin-left:0;">
+                     <li><a href="#cp1">1) 距离到期日时间，以及</a></li>
+                     <li><a href="#cp2">2) 正股/指数水平的波幅</a></li>
+                  </ol> 
+             </p> 
+             <div class="clearfix"></div>
+              
+             <h4 class="g0" id="cp1">1) 距离到期日时间</h4>      
+             <p class="g1">
+                假设其它因素不变，如果期权<b class="tskybu">距离到期日时间越长</b>，它所含的时间值也越多。这是因为剩余的时间越长，期权理论上会越多机会趋向价内，所以<b class="tskybu">期权的价值会越高</b>。<br><br>
+                时间值会随时间消逝而减少，这叫作「<b class="tskybu">时间值耗损</b>」(Time Decay)。时间值耗损这特性<b class="tskybu">不利于期权买方而有利于期权卖方</b>。这是期权买卖中一个十分重要的概念。<br><br>
+               时间值耗损并不是固定的。<b class="tskybu">在期权越接近到期时，时间值耗损会越快</b>。 
+             </p>            
+             <p class="g1">
+                <img src="../images/abc_c5-04_bg.gif">
+                <img src="../images/abc_c5-04_txt_gb.gif" class="txt_img">              
+             </p> 
+             
+             <div class="clearfix"></div>             
+              
+             <h4 class="g0" id="cp2">2) 正股/指数水平的波幅</h4>
+             <p class="g1">
+                <img src="../images/abc_c5-05_bg.gif">
+                <img src="../images/abc_c5-05_txt_gb.gif" class="txt_img">              
+             </p>     
+             <p class="g1">
+                波幅指股价在某段时间内可能出现的波动幅度。<br><br>
+                波幅越大，正股价/指数水平上落的幅度也越大，认购期权及认沽期权成为「价内」的机会亦因而增加。期权的时间值已将这因素计算在内。因此，<b class="tskybu">波幅越大，时间值越高，而期权金亦会越高</b>。
+             </p> 
+             
+             <div class="clearfix"></div>
+                          
+             <p class="g0">波幅分为历史波幅(Historical Volatility)及引伸波幅(Implied Volatility)两种。</p>
+             <p class="g1">                
+                <b class="tskybu">历史波幅</b>是指某正股/指数在<b class="tskybu">过去</b>某段特定时间内的股价/指数水平变动幅度。<br><br>
+                <b class="tskybu">引伸波幅则是由期权于市场交易的价格所推算出来</b>。
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c5-06_bg.gif">
+                <img src="../images/abc_c5-06_txt_gb.gif" class="txt_img">              
+             </p> 
+             <div class="clearfix"></div> 
+              
+              <p class="g0">由于市场参与者对后市走势意见不一，放入计价模式的波幅水平亦存有差异，算出来的价格因此亦各有不同。</p>
+             <p class="g1">
+                <img src="../images/abc_c5-07_bg.gif">
+                <img src="../images/abc_c5-07_txt_gb.gif" class="txt_img">              
+             </p>             
+             <p class="g1">
+                期权投资者可以把某期权的市价输入<span class="tips">期权定价模式</span> <em class="tips_pop">期权价格受多种因素所影响，包括相关资产价格、行使价、到期日、波幅、股息及利率。市场上有很多不同的期权定价模式，最普遍的是「二项式」(Binomial) 及「柏力克 - 舒尔斯」(Black-Scholes Model) 模式。</em>，从而估计报价者所用的波幅水平，亦即所谓的「引伸波幅」。 
+<br><br>
+                期权投资者可以将某个市价的引伸波幅与本身预期正股的波幅或其它可作比较的衍生产品的引伸波幅作一比较，才决定采用那种投资策略。
+             </p>                                               
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">             
+             <h4 class="g0">影响期权金的因素 </h4>             
+             <p class="g0">
+               下表载列了<b class="tskybu">六大影响期权金因素</b>。必需留意的是，每一个因素的影响均需独立看待，其它因素需假设不变。
+             </p>
+             
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 width="100%">
+            <colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH class=aleft bgcolor="#b3d1ed">因素</TH>
+            <TH bgColor="#cee3f8">因素变化</TH>
+            <TH bgColor="#cee3f8">认购期权金变化</TH>
+            <TH bgColor="#cee3f8">认沽期权金变化</TH></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">相关资产价格</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">行使价</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">距离到期日时间*</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">波幅</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">股息</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">利率</b></STRONG></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD></TR></TBODY></TABLE>
+             
+             <p class="g0">
+               <span>*未必适用于极价内或极价外期权</span><br><br>
+               <!--请前往本网站内期权工具部份下的期权/权证计算器，试算一下不同因素对期权金的影响。-->
+             </p> 
+             <div class="clearfix"></div>               
+         </div><!--- end part3 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+                  
+         
+         <table class="pageNav" border="0" cellspacing="0" widTH="90%">
+             <colgroup>
+                <col widTH="6%"><col widTH="28%"> <col widTH="33%"> <col widTH="27%"><col widTH="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_4_gb.html','第四章：为何使用期权？')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_4_gb.html','第四章：为何使用期权？')">前一章</a>&nbsp;</td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_5_quize_gb.html','第五章：期权金')"><img class="quizeBtn" src="../images/btn_start_quiz_gb.png"></a></td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_6_gb.html','第六章：期权是怎样运作的？')">下一章</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_6_gb.html','第六章：期权是怎样运作的？')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->    
+         
+     </div><!-- end demo #wrap -->
+     
+</body>
+</html>
+  

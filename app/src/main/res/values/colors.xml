@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bgblack">#ff000000</color>
+    <color name="bgblue">#ff013058</color>
+    <color name="bgdeepblue">#ff001e3d</color>
+    <color name="bggrey">#ff333333</color>
+    <color name="bglight3grey">#ffd7dfec</color>
+    <color name="bglightgrey">#ff666666</color>
+    <color name="bglightlightgrey">#ffababab</color>
+    <color name="bgmenublue">#ff00285f</color>
+    <color name="bgsettingline">#ff014da1</color>
+    <color name="bgtutorblack">#bb000000</color>
+    <color name="bgwhite">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="change_green">#ff009933</color>
+    <color name="change_red">#ffc02000</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="red">#ffff0000</color>
+    <color name="textblack">#ff000000</color>
+    <color name="textblue">#ff013058</color>
+    <color name="textbluegrey">#ff85aad7</color>
+    <color name="textdeepblue">#ff001e3d</color>
+    <color name="textdisable">#ff3562a3</color>
+    <color name="textgrey">#ff333333</color>
+    <color name="textlightblue">#ff006daf</color>
+    <color name="textlightgrey">#ff666666</color>
+    <color name="textnonselect">#ffced4e2</color>
+    <color name="textred">#ffc60204</color>
+    <color name="textwhite">#ffffffff</color>
+    <color name="titletextblue">#ff00379b</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+</resources>

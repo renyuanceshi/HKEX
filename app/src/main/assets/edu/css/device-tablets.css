@@ -1,0 +1,267 @@
+/*    Table of Content
+==================================================
+	  1.  Basic Styles
+	  2.  Typography
+	  3.  Structure
+	  4.  Page Nav
+	  5.  Table Style
+	  6.  Chart Style
+      ---------------------------
+      p1.  Landing 
+	  p2.  Primary Nav
+	  p3.  Banner & Highlight
+	  p4.  Article
+	  p5.  Quiz
+	  p6.  Strategies Table
+	  p7.  Glossary
+	  p8.  Slider Page
+================================================== */
+
+
+/*------------------------------------------------------------------
+    1. Basic Styles 
+--------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+    2. Typography 
+--------------------------------------------------------------------*/
+
+	
+/*------------------------------------------------------------------
+    3. Structure
+--------------------------------------------------------------------*/	
+	@media screen and (max-width:384px) and (min-width:1px) {		
+       .tablet_bg{display:none!important; }
+	   .sp_img{margin-bottom:-140px!important;}
+	}
+	/* Grid ---------*/
+	@media screen and (max-width:1920px) and (min-width:601px) {
+		.g0{width:100%!important;}
+		.g1{width:48.5%!important; }
+		.g2{width:25%!important;}
+		.g3{width:48.5%!important;}
+		table.calendar.g1{width:48.5%!important; margin:auto 0.75%; }
+		.mob_bg{display:none!important; }
+		.sp_img{margin-bottom:-180px!important;}
+	}
+	/* sp Grid ---------*/
+	@media screen and (max-width:600px) and (min-width:385px) {
+	   	.g0{width:100%!important;}
+		.g1{width:48.5%!important; }
+		.g2{width:25%!important;}
+		.g3{width:100%!important;}		
+		table.calendar.g1{width:48.5%!important;  margin:auto 0.75%; }		
+		.mob_bg{display:none!important; }
+		.sp_img{margin-bottom:-140px!important; }
+	}
+	
+	
+/*----------------------------------------------------------------------
+    4. Page Nav 
+----------------------------------------------------------------------*/ 
+     @media screen and (max-width:360px) and (min-width:1px) {
+		 .pageNav a{font-size:12px; bottom:2px;}
+	 }
+	 /* #android 5:3 */
+	 @media screen and (max-width:500px) and (min-width:361px) {
+		 .pageNav a{font-size:16px; bottom:2px;}
+	 }
+
+	 /* ipad mini & ipad & #android*/
+	 @media screen and (max-width:1920px) and (min-width:501px) {
+	   .pageNav a{font-size:20px!important;}
+	 }
+
+/*----------------------------------------------------------------------
+    5. Table Style
+----------------------------------------------------------------------*/
+ 	 /* iphone */
+	 @media screen and (max-width:360px) and (min-width:1px) {
+		 .ms-rteTable-7 th {padding:3px; font-size:12px;}
+	     .ms-rteTable-7 td{padding:6px 3px; font-size:12px;}	
+	 }
+	
+ 
+/*----------------------------------------------------------------------
+    6. Chart Style
+----------------------------------------------------------------------*/
+     /* iphone */
+	 @media screen and (max-width:360px) and (min-width:1px) {
+        .chartMark{font-size:12px; margin-right:12%; padding-left:4%;}
+	    .chartMark b{font-size:12px;}
+		.chartBg{background:url('../images/bg_str_chart.gif') no-repeat left -4; background-size:100% auto;}
+		.vtxt{font-size:10px; top:-1px;}
+		.labeltit{font-size:12px;}
+	 }
+	 /* #android 5:3 */
+	 @media screen and (max-width:500px) and (min-width:361px) {
+		 .chartMark{font-size:12px;}
+	     .chartMark b{font-size:16px;}
+		 .vtxt{font-size:14px; top:-1px;}
+		 .labeltit{font-size:14px;}		 
+	 }
+	 /* ipad mini & ipad & #android*/
+	 @media screen and (max-width:1920px) and (min-width:501px) {
+	     .chartMark{font-size:16px!important;}
+	     .chartMark b{font-size:20px!important;}
+		 .vtxt{font-size:16px; top:-1px!important;}
+		 .labeltit{font-size:16px!important;}
+	 }
+
+
+
+/*------------------------------------------------------------------
+   p1. Landing 
+--------------------------------------------------------------------*/   
+
+     /* iphone */
+	 @media screen and (max-width:360px) and (min-width:1px) {
+		
+	 }
+	 /* #android 5:3 */
+	 @media screen and (max-width:500px) and (min-width:361px) {
+		
+	 }
+	 /* ipad mini & ipad & #android*/
+	 @media screen and (max-width:1920px) and (min-width:501px) {
+	  
+	 }
+	 
+
+/*------------------------------------------------------------------
+   p2. Primary Nav
+--------------------------------------------------------------------*/
+     /* iphone */
+	 @media screen and (max-width:360px) and (min-width:1px) {
+	   .primaryNav li a{padding:6px 20px 6px 6px;}
+	   .primaryNav li a.list_main{padding:6px 6px 6px 32px;}
+	   
+	   .primaryNav li p{font-size:17px;}
+	   .top_txt p{font-size:14px;}
+	   .top_txt h5{font-size:17px;}	   
+	   .primaryNav li .arrow_main{left:6px; top:20px; width:20px; height:20px;}
+	   .primaryNav li .arrow_sub{right:6px; top:20px; width:13px; height:20px;}
+	 }
+	  /* #android 5:3 */
+	 @media screen and (max-width:500px) and (min-width:361px) {
+	   .primaryNav li a{padding:6px 20px 6px 6px;}
+	   .primaryNav li a.list_main{padding:6px 6px 6px 32px;}
+	   
+	   .primaryNav li p{font-size:17px;}
+	   .top_txt p{font-size:14px;}
+	   .top_txt h5{font-size:17px;}
+	   .primaryNav li .arrow_main{left:6px; top:20px; width:20px; height:20px;}
+	   .primaryNav li .arrow_sub{right:6px; top:20px; width:13px; height:20px;}
+	   .primaryNav li a{background-size:100% 1px;}
+	 }
+     /* ipad mini & ipad & #android tablet*/
+	 @media screen and (max-width:1920px) and (min-width:501px) {
+	   .primaryNav li a{padding:10px 40px 10px 10px;background-size:100% 2px;}
+	   .primaryNav li a.list_main{padding:10px 10px 10px 60px;}
+	   .primaryNav li p{font-size:35px;}
+	   .top_txt p{font-size:22px;}
+	   .top_txt h5{font-size:35px;}
+	   .top_txt, .faq li .line, .faq .detail, .glossary li .line, .glossary .detail,{background-size:100% 2px;}
+	   .top_bn img.line{heigh:4px;}
+	   .primaryNav li .arrow_main{left:10px; top:38px; width:40px; height:40px;}
+	   .primaryNav li .arrow_sub{right:10px; top:38px; width:26px; height:40px;}
+	   .primaryNav li a{background-size:100% 4px;}
+	 }
+   
+  
+/*------------------------------------------------------------------
+   p3. Banner & Highlight
+--------------------------------------------------------------------*/	   
+   @media screen and (max-width:384px) and (min-width:1px) {
+	   .hl_arrow{background-size:25px 13px; height:25px; }
+       .highlight li, .highlight p, highlight, ul.uLine li a{font-size:14px; }
+   }
+   @media screen and (max-width:1920px) and (min-width:385px) {
+       .highlight, .highlight li, .highlight p, highlight, ul.uLine li a{font-size:16px!important; }
+   } 
+   
+/*------------------------------------------------------------------
+   p4.  Article
+--------------------------------------------------------------------*/	 
+  @media screen and (max-width:384px) and (min-width:1px) {
+	   .article p{font-size:14px;}
+   }
+
+  @media screen and (max-width:1920px) and (min-width:385px) {
+	  .article p{font-size:16px;}
+   } 
+   		
+/*------------------------------------------------------------------
+   p5. Quiz
+--------------------------------------------------------------------*/	
+	
+
+/*------------------------------------------------------------------
+   p6. Strategies Table
+--------------------------------------------------------------------*/	
+		  /* iphone */
+		   @media screen and (max-width:360px) and (min-width:1px) {
+				.ddslick b{padding-left:6%;}
+				ul.ddlist li {width:94%; padding-left:6%; }
+				.tbRow li ul li{width:94%; padding-left:6%;}	
+			   
+			   .tit_l{width:35%; padding-left:2%; }
+			   .tit_r, .ddslick{width:66%; margin-left:-3%;}
+			   
+			   .tbRow li.landing{width:32%!important;  padding-left:2%;  }		
+		   }
+		   /* #android 5:3 */
+		   @media screen and (max-width:500px) and (min-width:361px) {
+	  
+		   }
+		   /* ipad mini(w) & ipad & #android(w)*/
+		   @media screen and (max-width:1920px) and (min-width:960px) {
+			  .tit_l, .tit_r, .ddslick, ul.ddlist li{font-size:18px;}
+			  .tbRow li, .tbRow li a, .tbRow li a:visited{font-size:16px;}
+		   }
+			
+/*------------------------------------------------------------------
+   p7. Glossary
+--------------------------------------------------------------------*/	
+
+
+
+/*------------------------------------------------------------------
+   p8.  FAQ 
+--------------------------------------------------------------------*/	
+@media screen and (max-width:1920px) and (min-width:501px) {
+	    .top_txt p{font-size:28px!important;}
+		ul.strategiesli li{font-size:16px!important; }
+		.tbRow li a, .tbRow li,.tit_l,.tit_r,.ddslick b #landing,ul.ddlist li{font-size:22px!important; }
+		h3.tgray{font-size:22px!important;}
+		
+		.tit_r,.ddslick{height:26px!important;}
+		.tit_l{height:52px!important;}
+		
+	   .faq .tit{font-size:28px!important; background-size: 30px 30px!important;}
+	   .faq .detail{font-size:22px!important;}
+	   .faq ul.strategiesli li{font-size:22px!important;}
+	   .faq .collapse{width: 30px!important;}
+	   
+	   .glossary .tit{font-size:28px!important;background-size: 30px 30px!important;}
+	    .glossary .detail, .glossary li.landing{font-size:22px!important;}
+	    .glossary ul.strategiesli li{font-size:22px!important;}
+		
+		.qtext, p.qtext{font-size:22px!important;  margin-bottom:30px!important;}
+		 ol.ansid li{ margin-bottom:20px!important; font-size:22px!important;}
+		 .anstext{font-size:16px!important; }
+		 
+		 .ms-rteTable-1, .ms-rteTable-7{font-size:16px!important; }
+		 .strategies .ms-rteTable-1 td{font-size:18px!important;}
+		 .strategies .ms-rteTable-1 th, .strategies .tbTit{font-size:20px!important;}
+	   
+	   	 }
+
+	
+/*------------------------------------------------------------------
+   p9. Slider Page
+--------------------------------------------------------------------*/	
+
+
+

@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>第六章：期權是怎樣運作的?</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_c.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>        
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+     <div id="wrap">
+         <div class="pageBN c6">
+              <img src="../images/abc_top_c6_txt_c.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+              來到本章，相信您已對期權基本的認識。這章我們將用一個例子來闡述在真實的環境中期權是怎樣運作的。
+         </div><!--- end highlight -------------------->
+           
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">             
+             <p class="g1">
+                <img src="../images/abc_c6-01_bg.gif">
+                <img src="../images/abc_c6-01_txt_c.gif" class="txt_img">                 
+                <img src="../images/abc_c6-01_tip.gif" class="tips_img">
+                <em class="tips_box">
+                   三月一日<br>
+                   XYZ市價 = $67<br>
+                   XYZ $70 五月認購期權市價 = $3
+                </em>  
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c6-02_bg.gif">
+                <img src="../images/abc_c6-02_txt_c.gif" class="txt_img">
+                <br>
+                假設有一名投資者看好股票XYZ。在3月1日，XYZ的股價為$67。當時XYZ五月到期，行使價為$70的認購期權的價格為$3。XYZ期權的合約股數為100股。因此，不計佣金及其他交易費用，該投資者需要付出$300(註:$3 x 100)<span class="tips">&nbsp;</span>
+                <em class="tips_pop">XYZ $70 五月認購期權市價 = $3<br>
+                        手上的合約價值 = $3 x 100 = $300</em>
+                來買入一張認購期權合約。<br><br>                
+                因為期權合約每股的成本為$3，而行使價為$70，所以這宗交易的打和價格就是正股價為$73(註: $3 + $70) 。
+             </p>
+             <div class="clearfix"></div>         
+         </div><!--- end part1 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">  
+         
+         <div class="article">
+             <p class="g1">
+                <img src="../images/abc_c6-03_bg.gif">
+                <img src="../images/abc_c6-03_txt_c.gif" class="txt_img">
+                <br>
+                假設一個月後，股價升至$80。<br><br>
+                認購期權的價格則升至$11，現在合約總值是$1100(註:$11 x 100)。<br><br>
+               在這時候，如果該投資者賣出合約平倉的話會有$800的盈利(註:$1100 - $300 = $800) 
+<span class="tips">&nbsp;</span>
+                <em class="tips_pop">XYZ $70 五月認購期權市價 = $11<br>
+                  手上的合約價值 = $11 x 100 = $1100<br>
+                  如賣出合約平倉可獲利 = $1100 - $300 = $800
+                </em>。
+             </p> 
+              <p class="g1">
+                <img src="../images/abc_c6-04_bg.gif">
+                <img src="../images/abc_c6-04_txt_c.gif" class="txt_img">                 
+                <img src="../images/abc_c6-04_tip.gif" class="tips_img">
+                <em class="tips_box">
+                   四月一日<br>
+                   XYZ市價 = $80<br>
+                   XYZ $70 五月認購期權市場 = $11
+                </em> 
+             </p>
+             <div class="clearfix"></div>         
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+         
+         <div class="article">             
+             <p class="g1">
+                <img src="../images/abc_c6-05_bg.gif">
+                <img src="../images/abc_c6-05_txt_c.gif" class="txt_img">                 
+                <img src="../images/abc_c6-05_tip.gif" class="tips_img">
+                <em class="tips_box">
+                   五月三十日<br>
+                   XYZ市價 = $68<br>
+                   XYZ $70 五月認購期權市價 = $0
+                </em>
+ 
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c6-02_bg.gif">
+                <img src="../images/abc_c6-06_txt_c.gif" class="txt_img">
+                <br>
+               可是，該投資者認為股價還會繼續上升，於是他選擇繼續持倉。<br><br>
+               在到期日時，不幸地XYZ的股價回落至$68。因為股價在到期時低於行使價($70)，所以認購期權變成價外，即是沒有任何價值。該投資者損失了投資在期權的$300<span class="tips">&nbsp;</span>。
+                <em class="tips_pop">
+                 XYZ $70 五月認購期權市價 = $0<br>
+                  手上的合約價值 = $0 x 100 = $0<br>
+                  損失$300期權金。</em>
+                <br><br>
+             </p>
+             <div class="clearfix"></div>         
+         </div><!--- end part3 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+         
+         <div class="article">             
+             <p class="g0">
+               下表是這個例子中的盈虧變化的總結：</p> 
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 width="100%">
+            <colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH align="center" bgColor="#cee3f8">日期</TH>
+            <TH align="center" bgColor="#cee3f8">3月1日 </TH>
+            <TH align="center" bgColor="#cee3f8">4月1日</TH>
+            <TH align="center" bgColor="#cee3f8">5月30日(到期日)</TH></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">股價</TD>
+            <TD align="center">$67</TD>
+            <TD align="center">$80</TD>
+            <TD align="center">$68</TD></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">認購期權價格</TD>
+            <TD align="center">$3</TD>
+            <TD align="center">$11</TD>
+            <TD align="center">$0</TD></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">合約價值</TD>
+            <TD align="center">$300 <span class="tips">&nbsp;</span>
+            <em class="tips_pop">合約價值 = $3 x 100</em></TD>
+            <TD align="center">$1100 <span class="tips">&nbsp;</span>
+            <em class="tips_pop">合約價值 = $11 x 100</em></TD>
+            <TD align="center" sizcache="0" sizset="159">$0 <span class="tips">&nbsp;</span>
+            <em class="tips_pop">合約價值 = $0 x 100</em></TD></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">理論盈/虧</TD>
+            <TD align="center">$0</TD>
+            <TD align="center">$800</TD>
+            <TD align="center">-$300</TD></TR></TBODY></TABLE>
+             
+             <div class="clearfix"></div>         
+         </div><!--- end part4 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">   
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="28%"> <col width="33%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_5_c.html','第五章：期權金')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_5_c.html','第五章：期權金')">前一章</a>&nbsp;</td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_6_quize_c.html','第六章：期權是怎樣運作的?')"><img class="quizeBtn" src="../images/btn_start_quiz_c.png"></a></td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_7_c.html','第七章：在香港交易所買賣期權')">下一章</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_7_c.html','第七章：在香港交易所買賣期權')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

@@ -1,0 +1,244 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>Chapter 1: Options Basics</title>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>        
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body class="bg_gr">     
+
+     <div id="wrap">
+         <div class="top_bn">
+             <img src="../images/bg_top_faq.gif" alt="Options FAQ">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+         
+         <div class="faq">
+             <ul>                 
+                 <li class="navGradient"><div class="line"><p class="tit">What is a stock option? </p></div>
+                     
+                     <div class="detail"><p>A stock option is a financial contract based on a single underlying stock which is traded on SEHK and cleared through the SEHK Options Clearing House Limited (SEOCH). <br><br>
+
+A call option buyer has the right to buy the underlying stock at the strike price (ie pre-determined price) on or before the expiry date, while a call option seller has the obligation to sell the underlying stock at the strike price upon exercise on or before the expiry day. <br><br>
+
+A put option buyer has the right to sell the underlying stock at the strike price (ie pre-determined price) on or before the expiry day, while a put option seller has the obligation to buy the underlying stock at the strike price upon exercise on or before the expiry day.</p>
+                    <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                    </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">What is option premium? </p></div>
+                     <div class="detail"><p>The option premium is the cost of an option, or the price it is traded at. The price of stock options traded on SEHK is quoted on a per share basis. It is the seller who receives the option premium.</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">What are the factors affecting the option premium? </p></div>
+                      <div class="detail"><p>The premium is determined by market forces but there are more factors affecting the market view of the option premium than is the case with prices of the underlying stocks. These factors include underlying stock price, time until expiration, dividend, interest rate, and volatility. <br><br>
+                      
+                      <b>Underlying stock price</b><br><br>
+                      The underlying stock price is normally the most significant factor affecting the price of an option. In-the-money options enable holders to buy or sell the underlying stock at a better price than the prevailing securities market price. They therefore cost more than the equivalent at-the-money and out-of-the-money options because there is more value in them. And whether an option is in-the-money depends solely on the underlying stock's price because the option's strike price is fixed. The difference between the strike price of an in-the-money option and the price of the underlying stock is called the intrinsic value. For example, a call option with a strike price of $45 when the underlying stock's price is $50 has an intrinsic value of $5. However, it is possible that the call option in this case will be traded above $5. Even out-of-the-money and at-the-money options, which have no intrinsic value, will normally have some value in the market. This is because there are other factors determining the value of the option. These are called "extrinsic" factors (or sometimes "time value" factors). The extrinsic factors are time until expiration, dividend expectation, interest rate and volatility. <br><br>
+                      
+                      <b>Time until expiration</b><br><br>
+                      All other things being equal, the value of an option will diminish as the option approaches expiry, and the rate at which it diminishes will be faster the closer it gets to expiry so that close-to-expiry, out-of-the-money options can lose their value very quickly. It is for this reason that an option is often referred to as a "wasting asset".<br><br>
+
+                      <b>Dividend</b><br><br>
+                      The dividend factor generally only applies to stock options because most other underlying assets do not pay dividends. All other things being equal, a cash dividend will lower the share price by the present value of the dividend on the day the stock first trades "ex-dividend". The larger the dividend, the more the stock price is expected to fall. This change in the stock price in turn affects the option premium.<br><br>
+                      A higher dividend results in a drop in the premium for the call but a higher premium for the put.<br><br>
+                      
+                      <b>Interest rate</b><br><br>
+                      A rise in interest rates will raise the value of call options, and lower the value of put options. Interest rates may be regarded as an opportunity cost. Since an option is a leveraged instrument, a call option holder does not need to pay the full value of the underlying stock, and can invest remaining funds in interest-bearing instruments.<br><br>
+                      
+                      <b>Volatility</b><br><br>
+                      Risk is the probability that the price of the underlying stock will move, within the life of the option, from its present value to a point where the option writer incurs losses. The greater the probability that this will happen, the greater the risk and hence the higher the premium, whether call or put.<br><br>
+                      The degree of expected fluctuation in the underlying stock price determines the extent of the risk. The measure of this fluctuation is most commonly referred to as "volatility". Implicit in any option premium are assumptions about the likely volatility of the stock. For this reason, one generally speaks of the "implied volatility" of the option premium, i.e. the likely volatility of the underlying stock is "implied" by the option premium. Expressed as a percentage, volatility is closely monitored by option market users as a vital indicator.<br><br>
+                      The impacts of the above factors on option premium are summarised below:</p><br>
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-7">
+                         <tbody><tr>
+                          <th bgcolor="#b3d1ed" class="aleft">Factors Affecting</th>
+                          <th width="26%" bgcolor="#cee3f8" class="acenter">Change in Factor</th>
+                          <th width="26%" bgcolor="#cee3f8" class="acenter">Change in Call Premium</th>
+                          <th width="26%" bgcolor="#cee3f8" class="acenter">Change in Put Premium</th>
+                         </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">Underlying Stock Price</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">Strike Price</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">Time to Expiration</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">Dividend</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">Interest Rate</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">Volatility</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                        </tbody>
+                     </table>
+                      <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                      <br>
+                      </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">What are the elements of a stock option contract? </p></div>
+                     <div class="detail"><p>A stock option contract has three important defining elements: the underlying stock, strike price and exercise period. <br><br>
+                     <b>Underlying stock</b><br><br>
+                     Every option is issued on an underlying instrument which can be one of a wide range of products - for example, a stock, a stock index, a commodity futures contract, a currency, etc. The underlying assets of stock options are individual stocks traded on SEHK.  However, not all stocks traded on SEHK are eligible to be underlying assets of stock options. A Stock Option Class List is available in the Derivatives Market section under the Product section on the HKEX website.<br><br>
+                     
+                     <b>Strike price</b><br><br>
+                     The strike price, also known as the exercise price, is the price at which the option buyer and seller agree to trade the underlying stock, if the option is exercised. A call option whose strike price is below the price of the underlying stock is in-the-money. Such an option allows the holder to buy the shares for less than the current market price. A call whose strike price is above the underlying stock's price is out-of-the-money. Conversely, a put whose strike price is above the underlying stock's price is in-the-money. This means the put holder can sell the stock for more than its current price. A put whose strike price is below the underlying stock's price is out-of-the-money.<br><br>
+                     It can be seen from this that only in-the-money options would generally be exercised by their holders because otherwise the holders can buy or sell the stock directly at a better price. If an option's strike price equals the price of its underlying stock, the option is said to be at-the-money (sometimes this term is applied to options whose strike price is very close to the underlying market price but not exactly equal). <br><br>
+                     
+                     <b>Exercise period (expiry day)</b><br><br>
+                     Stock options have an exercise period which limits their validity. After the expiry day of that exercise period, the option can no longer be traded or exercised. At the date of publication, option contracts with five different lengths of exercise periods were available for trading at HKEX: at any one time, there will be an expiry in the three nearest months and then the next two or three quarterly months (see Contract Specifications).<br><br>
+                     There are conventionally two categories of options in relation to exercise - American style and European style. An American style option can be exercised any time from its issuance up to its expiration. A European style option can only be exercised on the expiration day. An American style option offers more flexibility to its holders in terms of exercise; therefore it can command a higher premium than its equivalent European style option. At the date of this publication, stock options at HKEX were all American style. The expiry date is the trading day immediately preceding the last trading day of an expiry month.</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">What are in-the-money, at-the-money and out-of-the-money stock options? </p></div>
+                     <div class="detail">
+                     <p>An in-the-money option is an option that has intrinsic value. Intrinsic value refers to the amount netted by an option holder upon exercise of the option contract. In the case of call options, it is the price of the underlying stock minus the strike price. For put options, it is the strike price minus the underlying stock's price. In other words, an in-the-money call option has a strike price lower than the underlying stock's price while an in-the-money put option has a strike price higher than the underlying stock's price.<br><br>
+                     An at-the-money option is an option with a strike price equivalent or approximately the same as to the underlying stock's price. It is also called a near-the-money option.  There is little intrinsic value in at-the-money options.<br><br>
+                     Call options that have a strike price higher than the price of the underlying stock or put options that have a strike price lower than the underlying stock's price are regarded as out-of-the-money and have no intrinsic value, but they have time value.</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">What are the differences between a derivative warrant and a stock option? </p></div>
+                     <div class="detail">The table below compares stock options and derivatives warrants.<br>
+                     <table width="100%" class="ms-rteTable-1">
+                           <tbody><tr>
+                            <th width="50%" class="acenter">Stock Options</th>
+                            <th class="acenter">Derivative warrants</th>
+                            </tr>
+                           <tr>
+                            <td>Launched and traded on SEHK and guaranteed by SEOCH</td>
+                            <td>Launched by issuers and traded on SEHK</td>
+                           </tr>
+                           <tr>
+                            <td>Both long and short positions are allowed</td>
+                            <td>Only long positions are allowed</td>
+                           </tr>
+                           <tr>
+                            <td>A number of strike prices are available. There are at least two option series available with a strike price above or below that of the at-the-money option series. The number of strike prices increases when the market price goes up and down</td>
+                            <td>Each warrant has a strike price which is determined by the issuer</td>
+                           </tr>
+                           <tr>
+                            <td>Five or six expiry months are available, including the spot month, the next two calendar months, and the next two or three quarter months</td>
+                            <td>Each warrant has an expiry date which is determined by the issuer</td>
+                           </tr>
+                          </tbody>
+                    </table>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">What are the risks inherent in trading stock options? </p></div>
+                     <div class="detail">
+                       <p><b>Risks faced by option holders</b></p><br>
+                       <ol>
+                             <li><strong>Option holders run the risk of losing the full value of the premium they paid for the option.</strong><br>
+                The only way an option holder can avoid losing the entire premium is to close out the long position before expiry or to exercise the option before or at expiry. Unlike stocks, there is a limited time period in which to operate. It is therefore important to note the time frame in which the option might become profitable. If the option was acquired to hedge an underlying stock position, a loss of premium may be acceptable from the outset and seen effectively as the cost of insurance.</li>
+                 <li><strong>The closer an out-of-the-money option is to expiry, the greater the likelihood that it will be&nbsp;impossible to close out or exercise the option profitably.</strong><br>
+                Time is not on the side of the option holder, particularly in the case of out-of-the-money options, which might sometimes be tempting to buy because they look "cheap". In such cases, investors should remember there's a strong possibility that they will lose the entire premium paid. Many options might appear to be cheap for the good reason that they are very unlikely to ever be profitable. It is particularly important to think carefully before purchasing a large number of such options in the hope of a leveraged profit.</li>
+                             <li><strong>Stock options in Hong Kong are not always automatically exercised on expiry.</strong><br>
+                In order to realise any profits from a long option position prior to or on the expiry day in Hong Kong, is necessary for the investor to instruct his or her broker to exercise or close out the option before or on the expiry day. SEOCH does automatically exercise certain deep in-the-money options upon expiry, but brokers are able to override this automatic exercise function. If investors forget to exercise and brokers do not alert them, they may forgo all the profit that would otherwise have been realised.</li>
+                             <li><strong>If investors exercise an option which is not hedged in the stock market they must be prepared to&nbsp; pay for the full value of the stock under the terms of the option contract (in the case of a call option) or to deliver the stock (in the case of a put option).</strong><br>
+                Unless investors already have made arrangements to sell the stock immediately on their receipt (in the case of a call option) or already hold the stock (in the case of a put option), they must ensure that they have the funds to meet their delivery obligations.</li>
+                             <li><strong>An investor's broker may have the right to reject his or her exercise instruction.</strong><br>
+                Brokers may demand that investors deliver sufficient financial resources to make settlement in respect of an option position and may therefore refuse the investor's exercise instruction until the necessary payment has been made.</li>
+                       </ol>
+                       
+                       <p><b>Risks faced by option writers</b></p><br>
+                       <ol>
+                         <li><strong>The writers of call options are required to deliver stock on being assigned.</strong><br>
+             If a writer's call option is uncovered (ie the writer does not already hold the stock), the writer, on being assigned, will need to obtain the stock quickly either by buying it in the open market or borrowing it. In either case, the difference between the price at which the stock is acquired and the strike price of the assigned option may be substantial and could represent an outright loss.</li>
+                         <li><strong>The writers of put options are required to take delivery of and pay for stock on being assigned. </strong><br>
+             The writer of a put option, on being assigned, will be required to buy the stock at the strike price of that option. The writer may therefore be required to pay substantially more than the market price for the stock, thus incurring significant losses, which may be disproportionate to the income received when the put option was written.</li>
+                         <li><strong>Stock options traded on SEHK are American style and both call writers and put writers may be assigned at any time. </strong><br>
+             Although it is generally more profitable to sell an option than to exercise it early, there are exceptions where option holders will exercise early.<br>
+            <br>
+            Writers must be constantly aware of the possibility of early exercise, and the funding that may be required to meet the delivery and settlement obligations, which will generally be significantly greater than the option's premium value.</li>
+                         <li><strong>All short option positions are subject to sudden increases in margin requirements.</strong><br>
+            The leveraged nature of options means that option values and hence margin requirements can increase dramatically over a very short period. A broker is entitled to close out a position and seize any collateral to which the broker is legally entitled in the event that an investor is unable to meet a margin call.</li>
+                         <li><strong>Covered call writers lose the right to any upside in the stock price but remain exposed to losses in the event the stock price falls. </strong><br>
+            A covered call writer will not be exposed to losses due to the exercise of the stock option because the writer holds the underlying stock and thus is protected against the risk of being assigned. However, the writer cannot benefit from any upside as long as the short call option position is open. Moreover, if the stock price falls, the writer will suffer losses offset only by the value of the premium received when the option was written.</li>
+                       </ol>       
+                       
+                       <p><b>Other general risks</b></p><br>
+                       <ol>
+                                   <li><strong>It may not always be possible to liquidate an existing position. </strong><br>
+                       An option series can become illiquid for many reasons. If it becomes illiquid, it may be impossible to liquidate an open position and thus unexpected losses could result. Examples include:<br><br>Trading in a particular underlying stock may be suspended or trading in the whole market may be suspended. In this case, trading in all options on that stock will almost certainly be suspended. <br><br>Illiquidity may occur when trading in the option is not suspended.<br><br>Although the stock option market has a Market Maker system, it is possible that an extremely exceptional situation could arise where a Market Maker is not available or fails to meet its obligations.</li>
+                                  <li><strong>Stop loss orders may be ineffective as they may be harder to execute with stock options than with other exchange-traded products. </strong><br>
+                      For the reasons noted above and because of the inherent volatility of option prices, it is important not to place too much reliance on the successful execution of stop-loss orders in situations where failure to execute the stop-loss order would lead to options exposure increasing to unmanageable levels.</li>
+                      </ol>  
+                       
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 
+                 <!------ end "C" ------>
+                 
+             </ul>
+         </div><!-- /.faq -->
+
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="left" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('stk_opt_faq_2_e.html','Chapter 2: Trading and Margin')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_2_e.html','Chapter 2: Trading and Margin')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

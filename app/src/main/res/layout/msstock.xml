@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hkex.soma.basic.MultiScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/listViewHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="66.0dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:background="@drawable/list_topheader"
+                android:orientation="vertical">
+
+                <com.hkex.soma.element.SelectionList
+                    android:id="@+id/selectionList"
+                    text="@string/sel_mosttradedclass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="5.0dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="34.0dip"
+                android:background="@drawable/list_header">
+
+                <RelativeLayout
+                    android:layout_width="46.0dip"
+                    android:layout_height="fill_parent" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/head_stock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/head_stock"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_last"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/head_lastd"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_pchng"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/head_pchng2"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="70.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_turnover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/head_turnover"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.hkex.soma.basic.MultiScrollListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#ffffffff"
+            android:dividerHeight="0.0px" />
+    </LinearLayout>
+</com.hkex.soma.basic.MultiScrollView>

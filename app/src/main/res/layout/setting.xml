@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer_portfolio"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgblue"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/bg_oc_assumption"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip">
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:src="@drawable/btn_done_e" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="23.0dip"
+                android:background="@drawable/bg_setting_head"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23.0dip"
+                    android:gravity="center"
+                    android:text="@string/setting_head1"
+                    android:textColor="@color/textbluegrey"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text1"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="35.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <CheckBox
+                        android:id="@+id/checkBox1"
+                        style="@style/hkexcheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:focusable="false" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:id="@+id/textView01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text2"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="35.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <CheckBox
+                        android:id="@+id/checkBox2"
+                        style="@style/hkexcheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:focusable="false" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text3"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="35.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <CheckBox
+                        android:id="@+id/checkBox3"
+                        style="@style/hkexcheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:focusable="false" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/bgsettingline" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="23.0dip"
+                android:background="@drawable/bg_setting_head"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23.0dip"
+                    android:gravity="center"
+                    android:text="@string/setting_head2"
+                    android:textColor="@color/textbluegrey"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text4"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="35.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <CheckBox
+                        android:id="@+id/checkBox4"
+                        style="@style/hkexcheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/textView1"
+                    android:padding="7.0dip"
+                    android:src="@drawable/ic_green_up_big" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imageView1"
+                    android:text="@string/setting_text5"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/textView3"
+                    android:padding="7.0dip"
+                    android:src="@drawable/ic_red_down_big" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text4"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="35.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true">
+
+                    <CheckBox
+                        android:id="@+id/checkBox5"
+                        style="@style/hkexcheckbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:focusable="false" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/textView2"
+                    android:padding="7.0dip"
+                    android:src="@drawable/ic_red_up_big" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imageView2"
+                    android:text="@string/setting_text5"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@id/textView4"
+                    android:padding="7.0dip"
+                    android:src="@drawable/ic_green_down_big" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/bgsettingline" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="23.0dip"
+                android:background="@drawable/bg_setting_head"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23.0dip"
+                    android:gravity="center"
+                    android:text="@string/setting_head3"
+                    android:textColor="@color/textbluegrey"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text6"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <com.hkex.soma.element.OnOffButton
+                    android:id="@+id/onoffbutton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text7"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <com.hkex.soma.element.OnOffButton
+                    android:id="@+id/onoffbutton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text8"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <com.hkex.soma.element.OnOffButton
+                    android:id="@+id/onoffbutton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text11"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+
+                <com.hkex.soma.element.OnOffButton
+                    android:id="@+id/onoffbutton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/bgsettingline" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="23.0dip"
+                android:background="@drawable/bg_setting_head"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="23.0dip"
+                    android:gravity="center"
+                    android:text="@string/setting_head4"
+                    android:textColor="@color/textbluegrey"
+                    android:textSize="12.0sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/disclaimerlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text9"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/privacylayout"
+                android:layout_width="fill_parent"
+                android:layout_height="46.0dip"
+                android:background="@drawable/bg_list_menu"
+                android:orientation="vertical"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/setting_text10"
+                    android:textColor="@color/textwhite"
+                    android:textSize="20.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

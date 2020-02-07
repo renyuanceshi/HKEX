@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hkex.soma.basic.MultiScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="105.0dip"
+                android:background="@drawable/bg_searchstocks"
+                android:orientation="vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5.0dip"
+                        android:paddingTop="9.0dip"
+                        android:paddingBottom="9.0dip"
+                        android:text="@string/stock"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/portfolioicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8.0dip"
+                        android:paddingRight="7.0dip"
+                        android:src="@drawable/btn_star" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_lock" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="37.0dip"
+                        android:orientation="vertical"
+                        android:paddingLeft="5.0dip">
+
+                        <TextView
+                            android:id="@+id/textViewCode"
+                            android:layout_width="47.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:gravity="right"
+                            android:text="@string/code"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp" />
+
+                        <TextView
+                            android:id="@+id/textViewName"
+                            android:layout_width="47.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="right"
+                            android:text="@string/name"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="21.0dip"
+                            android:layout_alignParentTop="true"
+                            android:paddingLeft="55.0dip">
+
+                            <com.hkex.soma.element.SelectionList
+                                android:id="@+id/selectionListCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginTop="-4.0dip" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="21.0dip"
+                            android:layout_alignParentBottom="true"
+                            android:paddingLeft="55.0dip">
+
+                            <com.hkex.soma.element.SelectionList
+                                android:id="@+id/selectionListName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8.0dip"
+                    android:paddingBottom="8.0dip">
+
+                    <TextView
+                        android:id="@+id/label_lasttrade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="1.0dip"
+                        android:text="@string/last_traded_price"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp" />
+
+                    <TextView
+                        android:id="@+id/lastprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="13.0dip"
+                        android:layout_toRightOf="@id/label_lasttrade"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textwhite"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/chngTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textwhite"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/updown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_toLeftOf="@id/chngTextView"
+                        android:src="@drawable/ic_nochange" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/chartBut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingTop="8.0dip"
+                android:paddingRight="10.0dip"
+                android:src="@drawable/btn_chart" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:background="@drawable/bg_list_1line">
+
+            <TextView
+                android:id="@+id/stocktitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10.0dip"
+                android:text="@string/sslist1"
+                android:textColor="@color/textlightgrey"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/stockvalue1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/stocktitle1"
+                android:layout_alignParentRight="true"
+                android:paddingRight="15.0dip"
+                android:text="@string/no_data"
+                android:textColor="@color/textblack"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:background="@drawable/bg_list_1line">
+
+            <TextView
+                android:id="@+id/stocktitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10.0dip"
+                android:text="@string/sslist2"
+                android:textColor="@color/textlightgrey"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/stockvalue2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/stocktitle2"
+                android:layout_alignParentRight="true"
+                android:paddingRight="15.0dip"
+                android:text="@string/no_data"
+                android:textColor="@color/textblack"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:background="@drawable/bg_list_1line">
+
+            <TextView
+                android:id="@+id/stocktitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10.0dip"
+                android:text="@string/sslist3"
+                android:textColor="@color/textlightgrey"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/stockvalue3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/stocktitle3"
+                android:layout_alignParentRight="true"
+                android:paddingRight="15.0dip"
+                android:text="@string/no_data"
+                android:textColor="@color/textblack"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:background="@drawable/bg_list_1line">
+
+            <TextView
+                android:id="@+id/stocktitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10.0dip"
+                android:text="@string/sslist4"
+                android:textColor="@color/textlightgrey"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/stockvalue4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/stocktitle4"
+                android:layout_alignParentRight="true"
+                android:paddingRight="15.0dip"
+                android:text="@string/no_data"
+                android:textColor="@color/textblack"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="30.0dip"
+            android:background="@drawable/bg_list_1line">
+
+            <TextView
+                android:id="@+id/stocktitle5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10.0dip"
+                android:text="@string/sslist5"
+                android:textColor="@color/textlightgrey"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/stockvalue5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/stocktitle5"
+                android:layout_alignParentRight="true"
+                android:paddingRight="15.0dip"
+                android:text="@string/no_data"
+                android:textColor="@color/textblack"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/listViewHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="66.0dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:background="@drawable/list_topheader"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:paddingLeft="10.0dip"
+                    android:text="@string/relatedoptions"
+                    android:textColor="@color/textwhite"
+                    android:textSize="14.0sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="34.0dip"
+                android:background="@drawable/list_header"
+                android:baselineAligned="false">
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <TextView
+                        android:id="@+id/head_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingLeft="46.0dip"
+                        android:text="@string/head_type"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="100.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_expiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/expiry"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="80.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_strike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/strike"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="80.0dip"
+                    android:layout_height="fill_parent">
+
+                    <TextView
+                        android:id="@+id/head_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="@string/volume"
+                        android:textColor="@color/textwhite"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.hkex.soma.basic.MultiScrollListView
+            android:id="@+id/listView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="#ffffffff"
+            android:dividerHeight="0.0px" />
+    </LinearLayout>
+</com.hkex.soma.basic.MultiScrollView>

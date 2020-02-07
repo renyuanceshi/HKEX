@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Chapter 8: Summary</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>        
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+
+
+     <div id="wrap">
+         <div class="pageBN c8">
+              <img src="../images/abc_top_c8_txt_e.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+              Let's recap some key points in this section:
+         </div><!--- end highlight -------------------->
+         
+         <div class="article">          
+              <ul class="strategiesli Btxt">
+                  <li>An option is a contract for the right to determine whether to enforce a purchase/sales agreement for an underlying asset.</li>
+                  
+                  <li><b class="tskybu">Call option holder</b> has the <b class="tskybu">right to buy</b> the underlying asset at the strike price on expiry date (i.e. European Option) / at any time before expiry (i.e. American Option).</li>
+                  
+                  <li><b class="tskybu">Call option writer</b> has the <b class="tskybu">obligation to sell</b> the underlying asset at the strike price whenever the call is exercised.</li>
+                  
+                  <li><b class="tskybu">Put option holder</b> has the <b class="tskybu">right to sell</b> the underlying asset at the strike price on expiry date (i.e. European Option) / at any time before expiry (i.e. American Option).</li>
+                  
+                  <li><b class="tskybu">Put option writer</b> has the <b class="tskybu">obligation to buy</b> the underlying asset at the strike price whenever the put is exercised.</li>
+                  
+                  <li>Basic option strategies: 1) <b class="tskybu">long call</b>, 2) <b class="tskybu">short call</b>, 3) <b class="tskybu">long put</b>, 4) <b class="tskybu">short put</b>.</li>
+                  
+                  <li>The <b class="tskybu">upside potential</b> of <b class="tskybu">long call (put)</b> can be <b class="tskybu">theoretically unlimited (substantial)</b>. The associated <b class="tskybu">risk is limited</b> (i.e. losing the premium invested).</li>
+                  
+                  <li>The <b class="tskybu">upside potential</b> of <b class="tskybu">short call (put)</b> is <b class="tskybu">limited</b> (i.e. maximum profit is the premium received). The associated <b class="tskybu">risk can be theoretically unlimited (substantial)</b>.</li>
+                  
+                  <li>The most important elements of an option contract are 1) <b class="tskybu">Underlying Asset</b>, 2) <b class="tskybu">Type</b>, 3) <b class="tskybu">Strike Price (Exercise Price)</b>, 4) <b class="tskybu">Expiry Date</b>, 5) <b class="tskybu">Exercise Style</b>, 6) <b class="tskybu">Contract Size</b>, and 7) <b class="tskybu">Settlement Style</b>.</li>
+                  
+                  <li>Two main reasons to use options: 1) to profit from a market view, 2) to hedge underlying stocks against downside.</li>
+                  
+                  <li><b class="tskybu">Option premium</b> is the price of the option trade at. It has two components: Intrinsic Value and Time Value.</li>
+                  
+                  <li><b class="tskybu">Intrinsic value</b> is affected by <b class="tskybu">underlying price</b>, while <b class="tskybu">time value</b> is affected by <b class="tskybu">time to maturity</b> and <b class="tskybu">volatility of the underlying asset</b>.</li>
+                  
+                  <li>There are <b class="tskybu">six factors</b> which affects the value of option premium. The effect of each factor, keeping other factors constant, is summarised below:
+                    <p class="mb_0">&nbsp;</p>
+                      <table class="ms-rteTable-7" border="0" cellspacing="0" cellpadding="0" width="100%">
+                      <colgroup><col width="28%"><col width="24%"><col width="24%"><col width="24%"></colgroup>
+                      <tbody>
+                      <tr>
+                      <th bgcolor="#b3d1ed">Factor</th>
+                      <th align="center" bgcolor="#cee3f8">Change in Factor</th>
+                      <th align="center" bgcolor="#cee3f8">Change in Call Premium</th>
+                      <th align="center" bgcolor="#cee3f8">Change in Put Premium</th></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">Underlying Price</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">Strike Price</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">Time to Expiry*</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">Volatility</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">Dividend</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td></tr>
+                      <tr>
+                      <td bgcolor="#b3d1ed"><b class="tskybu">Interest Rate</b></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_up.gif" class="light_arrow"></td>
+                      <td align="center"><img src="../images/icon_graphic_down.gif" class="light_arrow"></td></tr>
+                      </tbody></table>
+                <p><span>*Not necessarily true for deep in-the-money or deep out-of-the-money options </span></p></li>
+                 <li><b class="tskybu">Counterparty risks of exchange-traded options are minimised</b> as the options contracts are cleared by clearing houses.</li>
+                 <li>At Hong Kong Exchanges and Clearing Limited (HKEX), The SEHK Options Clearing House (SEOCH) is responsible for clearing stock options while HKFE Clearing Corporation Limited (HKCC) is responsible for clearing index options.</li>
+                 <li><b class="tskybu">Margin deposits are required for all short option positions</b>.</li>
+             </ul>
+             
+             <div class="clearfix"></div>         
+         </div><!--- end part1 --------------------> 
+                  
+         <div class="article">
+             <p class="g0" style="color:#004080; text-align:center;">
+              <img src="../images/abc_c8-00_bg.gif">
+              Congratulations! You have completed Options ABC course! You should have acquired fundamental options knowledge. Thank you for your participation in this course.
+             </p>  
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">  
+         
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="28%"> <col width="33%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_7_e.html','Chapter 7: Trading options at HKEX')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_7_e.html','Chapter 7: Trading options at HKEX')">Prev Chapter</a>&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+</body>
+</html>
+  

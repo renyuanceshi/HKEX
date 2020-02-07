@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>期权策略</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+
+
+</head>
+
+<body>
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>沽出跨期认沽期权</h3>
+             <a href="option_strategies_gb.html" class="backBTN">返回</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th>策略 </th>
+  </tr>
+  <tr>
+    <td>沽出跨期认沽期权 </td>
+  </tr>
+  <tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>沽出远期月份认沽期权，并买入近期月份而相同行使价/水平的认沽期权</td>
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td>只限于已收取的期权金净额 </td>
+  </tr>
+  <tr>
+    <th>最大亏损 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价/指数水平在近期月份的到期时等如行使价/水平</li>
+      <li>只限于近期认沽期权的时间值亏损减去远期认沽期权的时间值亏损 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+  <tr>
+    <th>备注 </th>
+  </tr>
+  <tr>
+    <td>跨期认沽期权短仓和跨期认购期权短仓的特性大致相似，主要不同的地方为可收取的期权金净额数目，而数目的大小取决于行使价/水平的高低。此外，此策略或许需要缴付按金，而所持短仓亦有机会在到期日前被行使。 </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">例子</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="left"><div class="vtxt">盈<br>余/<br>亏<br>损</div></th>
+                   
+                    <td valign="middle"><img src="../images/chart_strategies_shortput_calendar.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">正股价格</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> 净持仓</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> -1 三月 200 认沽</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> +1 一月 200 认沽</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">策略 </th>
+  </tr>
+  <tr>
+    <td>沽出「ABC三月200元认沽」，收取 30元，并买入「ABC一月200元认沽」，付出 20元 </td>
+  </tr>
+  <tr>
+    <th>成份 </th>
+  </tr>
+  <tr>
+    <td>收取 30元 – 20元 = 10元 </td>
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td>当正股价在近期月份之到期日时远离于 200元 </td>
+  </tr>
+  <tr>
+    <th>最大亏损 </th>
+  </tr>
+  <tr>
+    <td>10元 </td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>一月份的认沽期权的时间值亏损减去三月份认沽期权的时间值亏损 </td>
+  </tr>
+  <tr>
+    <th>备注 </th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_gb.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_gb.html">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

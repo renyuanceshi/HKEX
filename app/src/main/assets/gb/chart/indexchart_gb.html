@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=[~scale]" />
+	<script src="jquery.js" type="text/javascript"></script>
+	<style>
+		*{ margin:0;	padding:0; font-family:Arial,Helvetica,sans-serif;overflow:hidden }
+		#charttitle{position:absolute;  padding:5px 20px 0 28px; font-size:12px; font-weight:bold; color:#fff;}
+		#charthead{position:absolute; padding:8px 0px 0px 28px;width:452px; color:#fff;font-weight:bold;font-size:12px;}
+		#charthead img{ margin-left:8px; margin-right:5px; width:12px; height:2px; padding-top:6px; }
+		.comparefield a{ margin-right: 5px; color: #00327e; background-image: url(icon_compare.png); background-repeat: no-repeat; padding: 3px 5px 4px 5px; float: left; width: 93px; text-align: center;}
+		.charttab{list-style:none; position:relative; left:58px;}
+		.charttab li{float:left; background:url(05_06_period_middle_off.png) no-repeat center; display:block; width:85px; height:24px; text-align:center; background-size: 85px 24px;}
+		.charttab li.selected{background:url(05_06_period_middle_on.png) no-repeat center;background-size: 85px 24px;}
+		.charttab li:first-child{background:url(05_06_period_left_off.png) no-repeat center; width:84px; background-size: 84px 24px;}
+		.charttab li:first-child.selected{background:url(05_06_period_left_on.png) no-repeat center;background-size: 84px 24px;}
+		.charttab li:last-child{background:url(05_06_period_right_off.png) no-repeat center;background-size: 85px 24px;}
+		.charttab li:last-child.selected{background:url(05_06_period_right_on.png) no-repeat center;background-size: 85px 24px;}
+		.charttab li a{ color:#fff; text-decoration:none; font-weight:bold; line-height:24px; display:block; width:84px}
+		.charttab li.selected a{color:#00327e;}
+	</style>
+	<script>
+		/*var oID = "38899";
+		var title = "00001 Cheung Kong";
+		var upColor = "#009933";
+		var downColor = "#c02000";
+		var domain = "http://sorc.dbpower.com.hk";
+		var type = "underlying";
+		var h = 360;//360;
+		var w = 640;//640;
+		var period = 3;
+		var offsetX = 1*/
+		
+		var oID = "[~oID]";
+		var title = "[~title]";
+		var upColor = "[~upColor]";
+		var downColor = "[~downColor]";
+		var domain = "[~domain]";
+		var type = "[~type]";
+		var h = [~height];
+		var w = [~width];
+		var period = [~period];
+		var offsetX = [~offset];
+		
+		var textUnderlyingPrice = "相关指数价格";
+		var textHKD = "";
+		var textIV = "引伸波幅";
+		var textOptionPrice = "期权价格";
+		var textCompare = "比较";
+		
+		var maindata;
+		var canvas;
+		var ctx;
+		var timer;
+		var updateStarted = false;
+		var touches = [];
+		var shadowPtrn;
+		var doubleback = new Image();
+		var singleback = new Image();
+
+		var gutterLeft = 94/2;//94/2;
+		var gutterRight = 96/2;//96/2;
+		var gutterTop = 125/2;//125/2;
+		var chartWidth = 758/2;//1350;//758/2;
+		var chartHeight = 330/2;//320;//330/2;
+		var barChartHeight = 87/2;
+		var border = 6/2;
+		
+		var chartBottomY = gutterTop + chartHeight + barChartHeight;	//227
+		var whiteLineY = 47;
+		var msgLabel1X = 65;
+		var msgLabel2X = 67;
+		var msgLabel1Y = 44;
+		var msgLabel2Y = 59;
+		
+		var sLabelW = 220;
+		var mLabelW = 250;
+		var LabelH = 34;
+		var LabelY = 30;
+		var toFixed = 0;
+		var BGColor = '#18326D';
+		var whiteLineColor = '#ffffff';
+		var orangeLineColor = '#ff8a00';
+		
+		$(document).ready(function(){
+			$(".footer").css("padding-left",offsetX);
+			$.getJSON(domain+'/eng/prod/drprod/so/soma/chart_data/option_price_chart_json.aspx?oID='+oID+'&type='+type+'&lang=gb&period='+period, function(data) {
+				maindata = data;
+				if (maindata.data.length <=1){
+					$("#errormsg").show();
+					$("#loadingmsg").hide();
+					return;
+				}
+				initCanvas($(".chart")[0],data);
+			}).fail(function() { $("#errormsg").show(); }).always(function() { $("#loadingmsg").hide(); });
+			$(".li_"+period+"m").addClass("selected");
+		});
+		function onChartTouch() {
+			if (updateStarted) return;
+			updateStarted = true;
+			ctx.clearRect(0, 0, w, h);
+			var i, len = touches.length;
+			if (len>=2){
+				var px1 = Math.min(touches[0].pageX , touches[1].pageX) - offsetX;
+				var px2 = Math.max(touches[0].pageX , touches[1].pageX) - offsetX;
+				
+				//px1 = Math.max(gutterLeft + border+ (chartWidth/(period*20-1))*(period*20- maindata.data.length) , px1);
+				px1 = Math.max(gutterLeft + border, px1);
+				px1 = Math.min(gutterLeft+chartWidth+border , px1);	
+				//px2 = Math.max(gutterLeft + border+ (chartWidth/(period*20-1))*(period*20- maindata.data.length) , px2);
+				px2 = Math.max(gutterLeft + border, px2);
+				px2 = Math.min(gutterLeft+chartWidth+border , px2);	
+				px1 = adjustXPos(px1);
+				px2 = adjustXPos(px2);
+				
+				ctx.fillStyle = shadowPtrn;
+				ctx.fillRect(px1, gutterTop, px2-px1, chartHeight);
+				ctx.fillStyle = BGColor;
+				ctx.fillRect(300,0,gutterRight+gutterLeft+chartWidth+border*2,30);	//chart double touch "Cover" (top right)
+				ctx.fillRect(0,30,gutterRight+gutterLeft+chartWidth+border*2,27);	//chart double touch "Cover" (Date + Price)
+				ctx.fill();
+				ctx.strokeStyle = orangeLineColor;		//orange line
+				ctx.lineWidth = 2;
+				ctx.beginPath();
+				ctx.moveTo(px1,whiteLineY);
+				ctx.lineTo(px1,chartBottomY);
+				
+
+				ctx.stroke();
+				ctx.beginPath();
+				ctx.moveTo(px2,whiteLineY);
+				ctx.lineTo(px2,chartBottomY);
+
+				ctx.stroke();
+				
+				ctx.strokeStyle = whiteLineColor;		//white line
+				ctx.lineWidth = 2;
+				ctx.beginPath();
+				ctx.moveTo(gutterLeft,whiteLineY);
+				ctx.lineTo(chartWidth+gutterLeft+border*2,whiteLineY);
+				ctx.stroke();
+				var legendpos = (px1+px2)/2-115;
+				legendpos =  Math.max(legendpos , gutterLeft-2);
+				legendpos =  Math.min(legendpos , gutterLeft+chartWidth+border*2 - mLabelW+2);
+				ctx.drawImage(doubleback, legendpos, LabelY, mLabelW, LabelH);
+				drawMultiLabels(px1-gutterLeft-border, px2-gutterLeft-border, legendpos);
+			}else{
+				var px1 = touches[0].pageX  - offsetX;
+				//px1 = Math.max(gutterLeft + border+ (chartWidth/(period*20-1))*(period*20- maindata.data.length) , px1);
+				px1 = Math.max(gutterLeft + border , px1);
+				px1 = Math.min(gutterLeft+chartWidth+border , px1);
+				px1 = adjustXPos(px1);
+				
+				ctx.fillStyle = BGColor;
+				ctx.fillRect(300,0,gutterRight+gutterLeft+chartWidth+border*2,30);	//chart double touch "Cover" (top right)
+				ctx.fillRect(0,30,gutterRight+gutterLeft+chartWidth+border*2,27);	//chart double touch "Cover" (Date + Price)
+				ctx.fill();
+				ctx.strokeStyle = orangeLineColor;		//orange line
+				ctx.lineWidth = 2;
+				ctx.beginPath();
+				ctx.moveTo(px1,whiteLineY);
+				ctx.lineTo(px1,chartBottomY);
+				ctx.stroke();
+				ctx.strokeStyle = whiteLineColor;		//white line
+				ctx.lineWidth = 2;
+				ctx.beginPath();
+				ctx.moveTo(gutterLeft,whiteLineY);
+				ctx.lineTo(chartWidth+gutterLeft+border*2,whiteLineY);
+				ctx.stroke();
+				var legendpos = px1-90;
+				legendpos =  Math.max(legendpos , gutterLeft-2);
+				legendpos =  Math.min(legendpos , gutterLeft+chartWidth+border*2 - sLabelW+2);
+				ctx.drawImage(singleback, legendpos, LabelY, sLabelW, LabelH);
+				drawSingleLabels(px1-gutterLeft-border,legendpos);
+			}
+			updateStarted = false;
+		}
+		function initCanvas(_target, _data){
+			$(_target).append("<div id='charttitle' style='position:absolute'>"+title+"<div>");
+			
+			var comparefield = "<div class='comparefield'><div style='float: right;'><a>"
+				+((type=="underlying")?textUnderlyingPrice:textIV)
+				+"</a><div></div></div><span style='float: right; padding:3px 5px 5px 5px;'>"+textCompare+": </span></div>";
+			var charthead = "<div id='charthead'><div style='height:32px'>"+comparefield+"</div><div style='clear:both'><span style='float:left'>"+_data["data"][0]["stime"];
+			charthead += "</span><img style='float:left' src='chart_green_line.png'/><span style='float:left; color:#01f51a;'>"+((type=="underlying")?textUnderlyingPrice+": "+(_data["data"][0]["ulast"]*1).toFixed(toFixed)+" "+ textHKD:textIV+": "+(_data["data"][0]["iv"]*1).toFixed(2));
+			charthead += "</span><img style='float:left' src='chart_white_line.png'/><span style='float:left'>"+textOptionPrice+": "+(_data["data"][0]["olast"]*1).toFixed(toFixed)+" "+ textHKD +"</span></div></div>";
+			
+			$(_target).append(charthead);
+			$(_target).append("<div id='mainchart' style='position:absolute;display:none'><img width='480'  height='320' src='data:image/png;base64,"+_data["imgdata0"]+"' /></div>");
+			doubleback.src = "chart_doubletouch_back.png";
+			singleback.src = "chart_singletouch_back.png";
+			$(_target).append("<canvas id='maincanvas'  style='position:absolute'></canvas>");
+
+
+			canvas =$(_target).find("#maincanvas")[0];
+			ctx = canvas.getContext('2d');
+			
+			var shadowline = new Image();
+			var tempCanvas = document.createElement("canvas");
+			var tCtx = tempCanvas.getContext("2d");
+			tempCanvas.width = 480;
+			tempCanvas.height = 320;
+			
+			shadowline.src = "data:image/png;base64,"+_data["imgdata1"];
+			shadowline.onload = function() {
+				tCtx.drawImage(shadowline,0,0,480,320);
+				shadowPtrn = ctx.createPattern(tempCanvas, 'no-repeat');
+			};
+			var _devicePixelRatio = window.devicePixelRatio;
+			if (_devicePixelRatio*1<1) {_devicePixelRatio=1;}
+			$(canvas).attr('width', 480*_devicePixelRatio);
+			$(canvas).attr('height', 295*_devicePixelRatio);
+			$(canvas).css('width', "480px" );
+			$(canvas).css('height', "295px" );
+			ctx.scale(_devicePixelRatio, _devicePixelRatio);
+			canvas.addEventListener('touchend', function() {
+				onChartTouchEnd();
+			});
+			canvas.addEventListener('touchmove', function(event) {
+				touches = event.touches;
+				if (!checkCompareClick(touches)){
+					event.preventDefault();
+					onChartTouch();
+				}
+			});
+			canvas.addEventListener('touchstart', function(event) {
+				touches = event.touches;
+				if (!checkCompareClick(touches)){
+					event.preventDefault();
+					onChartTouch();
+				}
+			});
+			$("#mainchart").show();
+		}
+		function checkCompareClick(touches){
+		//ctx.fillRect(w - offsetX - 350 ,0,350,25);
+			var i, len = touches.length;
+			var px = touches[0].pageX;
+			var py = touches[0].pageY;
+			//debugMessage(px + ", " + py);
+			if ((px >(w - offsetX - 150)) && (px < (w - offsetX)) && py<35){
+				window.location.href= "webview://compare";
+				return true;
+			}
+			return false;
+		}
+		function debugMessage(msg){
+			ctx.textAlign = 'right';
+			ctx.fillStyle = '#ffffff';
+			ctx.font = "13px Arial";
+			ctx.fillText(msg, chartWidth+gutterLeft, 22);
+		}
+		function drawMultiLabels(_p1,_p2, _pos){
+			_p1 = maindata.data.length - Math.round((_p1*(maindata.data.length-1))/chartWidth)-1;
+			_p2 = maindata.data.length - Math.round((_p2*(maindata.data.length-1))/chartWidth)-1;
+			/*_p1 = period*20 - Math.round((_p1*( period*20-1))/chartWidth)-1;
+			_p2 = period*20 - Math.round((_p2*( period*20-1))/chartWidth)-1;*/
+			_p1 = Math.max(0 , _p1);
+			_p1 = Math.min(maindata.data.length-1 , _p1);
+			_p2 = Math.max(0 , _p2);
+			_p2 = Math.min(maindata.data.length-1 , _p2);
+			
+			ctx.textAlign = 'right';
+			ctx.fillStyle = '#ffffff';
+			ctx.font = "13px Arial";
+			ctx.fillText(maindata["data"][_p1]["stime"] + " - " + maindata["data"][_p2]["stime"], chartWidth+gutterLeft+border*2, 22);
+			ctx.fillStyle = '#001e3d';
+			ctx.font = "bold 13px Arial";
+			ctx.fillText(textOptionPrice+":", _pos+gutterLeft+border+msgLabel1X, msgLabel1Y);
+			if(type=="underlying"){
+				ctx.fillText(textUnderlyingPrice+":", _pos+gutterLeft+border+msgLabel1X, msgLabel2Y);
+			} else {
+				ctx.fillText(textIV+":", _pos+gutterLeft+border+msgLabel1X, msgLabel2Y);
+			}
+			ctx.textAlign = 'left';
+			
+			
+			var chng = 0;
+			var pchng = 0;
+			
+			if(type=="underlying"){
+				if (maindata["data"][_p2]["olast"]*1>maindata["data"][_p1]["olast"]*1){
+					ctx.fillStyle = upColor;
+				}else if (maindata["data"][_p2]["olast"]*1<maindata["data"][_p1]["olast"]*1){
+					ctx.fillStyle = downColor;
+				}else{
+					ctx.fillStyle = '#001e3d';
+				}
+					chng = maindata["data"][_p2]["olast"]*1-maindata["data"][_p1]["olast"]*1;
+				pchng = 0;
+				if (maindata["data"][_p1]["olast"]>0){
+					pchng = (chng / maindata["data"][_p1]["olast"]*1)*100;
+				}
+				ctx.fillText(chng.toFixed(toFixed)+" "+textHKD + "("+pchng.toFixed(1)+"%)", _pos+gutterLeft+border+67, 44);
+				
+				if (maindata["data"][_p2]["ulast"]*1>maindata["data"][_p1]["ulast"]*1){
+					ctx.fillStyle = upColor;
+				}else if (maindata["data"][_p2]["ulast"]*1<maindata["data"][_p1]["ulast"]*1){
+					ctx.fillStyle = downColor;
+				}else{
+					ctx.fillStyle = '#001e3d';
+				}
+				chng = maindata["data"][_p2]["ulast"]*1-maindata["data"][_p1]["ulast"]*1;
+				pchng = 0;
+				if (maindata["data"][_p1]["ulast"]>0){
+					pchng = (chng / maindata["data"][_p1]["ulast"]*1)*100;
+				}
+				ctx.fillText(chng.toFixed(toFixed)+" "+textHKD + "("+pchng.toFixed(1)+"%)", _pos+gutterLeft+border+67, 59);
+			} else {
+				if (maindata["data"][_p2]["olast"]*1>maindata["data"][_p1]["olast"]*1){
+					ctx.fillStyle = upColor;
+				}else if (maindata["data"][_p2]["olast"]*1<maindata["data"][_p1]["olast"]*1){
+					ctx.fillStyle = downColor;
+				}else{
+					ctx.fillStyle = '#001e3d';
+				}
+					chng = maindata["data"][_p2]["olast"]*1-maindata["data"][_p1]["olast"]*1;
+				pchng = 0;
+				if (maindata["data"][_p1]["olast"]>0){
+					pchng = (chng / maindata["data"][_p1]["olast"]*1)*100;
+				}
+				ctx.fillText(chng.toFixed(toFixed)+" "+textHKD + "("+pchng.toFixed(1)+"%)", _pos+gutterLeft+border+67, 44);
+				
+				if (maindata["data"][_p2]["iv"]*1>maindata["data"][_p1]["iv"]*1){
+					ctx.fillStyle = upColor;
+				}else if (maindata["data"][_p2]["iv"]*1<maindata["data"][_p1]["iv"]*1){
+					ctx.fillStyle = downColor;
+				}else{
+					ctx.fillStyle = '#001e3d';
+				}
+				chng = maindata["data"][_p2]["iv"]*1-maindata["data"][_p1]["iv"]*1;
+				pchng = 0;
+				if (maindata["data"][_p1]["iv"]>0){
+					pchng = (chng / maindata["data"][_p1]["iv"]*1)*100;
+				}
+				ctx.fillText(chng.toFixed(toFixed) + "("+pchng.toFixed(1)+"%)", _pos+gutterLeft+border+67, 59);
+			}
+			
+		}
+		function drawSingleLabels(_p1, _pos){
+			//_p1 = period*20 - Math.round((_p1*( period*20-1))/chartWidth)-1;
+			_p1 = maindata.data.length - Math.round((_p1*( maindata.data.length-1))/chartWidth)-1;
+			_p1 = Math.max(0 , _p1);
+			_p1 = Math.min(maindata.data.length-1 , _p1);
+			
+			ctx.textAlign = 'right';
+			ctx.fillStyle = '#ffffff';
+			ctx.font = "13px Arial";
+			ctx.fillText(maindata["data"][_p1]["stime"], chartWidth+gutterLeft+border*2, 22);
+			ctx.fillStyle = '#001e3d';
+			ctx.font = "bold 13px Arial";
+			ctx.fillText(textOptionPrice+":", _pos+gutterLeft+border+msgLabel1X, msgLabel1Y);
+			if(type=="underlying"){
+				ctx.fillText(textUnderlyingPrice+":", _pos+gutterLeft+border+msgLabel1X, msgLabel2Y);
+			} else {
+				ctx.fillText(textIV+":", _pos+gutterLeft+border+msgLabel1X, msgLabel2Y);
+			}
+			
+			
+			ctx.textAlign = 'left';
+			ctx.fillText((maindata["data"][_p1]["olast"]*1).toFixed(toFixed)+" "+textHKD, _pos+gutterLeft+border+msgLabel2X, msgLabel1Y);
+			
+			if(type=="underlying"){
+				ctx.fillText((maindata["data"][_p1]["ulast"]*1).toFixed(toFixed)+" "+textHKD, _pos+gutterLeft+border+msgLabel2X, msgLabel2Y);
+			} else {
+				ctx.fillText((maindata["data"][_p1]["iv"]*1).toFixed(toFixed), _pos+gutterLeft+border+msgLabel2X, msgLabel2Y);
+			}
+		}
+		function onChartTouchEnd(){
+			ctx.clearRect(0, 0, w, h);
+			shadowctx.clearRect(0, 0, w, h);
+		}
+		function adjustXPos(_px){
+			var px = _px;
+			px = px-gutterLeft-border;
+			px = (Math.round((px*( maindata.data.length-1))/chartWidth)) * chartWidth/(maindata.data.length-1);
+			px = px + gutterLeft + border;
+			return px;
+		}
+	</script>
+	<body style="background-color:#04144F;">
+		<div class="chart" style="margin:0 auto;width:480px;height:320px;background-image:url(chart_bg.png);background-repeat:no-repeat;-webkit-background-size:480px 320px; "></div>
+		<div id="loadingmsg" style="position: absolute;top:0px;left:0px;width:100%;color:#ffffff;font-weight:bold;text-align:center;padding-top:140px;font-size:13px">载入中...</div>
+		<div id="errormsg" style="display:none;position: absolute;top:0px;left:0px;width:100%;color:#ffffff;font-weight:bold;text-align:center;padding-top:140px;font-size:13px">
+*新的股票期权系列需於两个交易日後才能提供图表
+		</div>
+		<div class="footer" style="width:480px;height:25px;position:fixed;bottom:5px">
+			<a href="webview://back" style="float:left;position:relative"><img width="23" height="16" src="chart_btn_back.png" style="padding:4px 2px 4px 10px"></a>
+			<ul class="charttab">
+				<li class="li_3m"><a href="webview://3m" >3月</a></li>
+				<li class="li_6m"><a href="webview://6m" >6月</a></li>
+				<li class="li_9m"><a href="webview://9m" >9月</a></li>
+				<li class="li_12m"><a href="webview://12m" >1年</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

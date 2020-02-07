@@ -1,0 +1,238 @@
+.
+<!DOCTYPE html>
+<!--[if IE 6]>                  <html class="ie6 no-js" lang="en">     <![endif]-->
+<!--[if IE 7]>                  <html class="ie7 no-js" lang="en">     <![endif]-->
+<!--[if lte IE 8]>              <html class="ie8 no-js" lang="en">     <![endif]-->
+<head>
+    <TITLE>期權策略</TITLE>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<link rel="apple-touch-icon-precomposed" href="../images/icons/index@2x.png" />
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_c.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery and jQuery UI 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    <!--script src="js/jquery.easing.1.3.js"></script-->
+	<!--script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/jquery-ui.min.js"></script-->
+    
+    <!-- Fix IE -->
+    <!--script src="js/jquery.bgiframe.js"></script-->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+    
+
+
+</head>
+
+<body>     
+
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p">
+             <p class="mb_0">本節概述一些常見期權買賣策略的構成及其理論上的應用。<br><br>
+                          
+                           理論上來說，任何預期的回報都可透過不同期權策略的組合所達成。惟在現實情況下，因各種原因例如交易成本所限會令某些策略可能難以實現。
+                         </p>
+         <div class="clearfix"></div>         
+         </div><!--- end part1 -------------------->
+         
+         <div class="article">
+                <div class="tbShadow">
+                    <div class="tit_l l fl">策略種類</div>
+                    <div class="tit_r c fl">對市場的看法</div>
+                    <!---end tit--->
+                    <div  class="ddslick l fl">
+                        <b><span id="landing">方向性 - 看好</span> <img class="ddarrow" src="../images/arrow_ddslick.png"></b>
+                        <ul class="ddlist">
+                            <li class="dd1 selected">方向性 - 看好</li>
+                            <li class="dd2">方向性 - 看淡</li>
+                            <li class="dd3">無方向 - 窄幅上落</li>
+                            <li class="dd4">無方向 - 波動</li>
+                        </ul>
+                    </div>
+                    <!---end ddslick--->
+                    
+                    <div class="tbStr">
+                              <div class="tbRow odd">
+                                  <ul>
+                                      <li class="landing">單一期權倉</li><!--1.0-->
+                                      
+                                      <li class="tbCol active">
+                                          <ul>
+                                              <li><a href="strategies_longcall_c.html">買入認購期權</a></li>
+                                              <li><a href="strategies_shortput_c.html">沽出認沽期權</a></li>
+                                          </ul>
+                                      </li><!--1.1-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li><a href="strategies_longput_c.html">買入認沽期權</a></li>
+                                              <li><a href="strategies_shortcall_c.html">沽出認購期權</a></li>
+                                          </ul>
+                                      </li><!--1.2-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li>&nbsp;</li>
+                                              <li>&nbsp;</li>
+                                          </ul>                                      
+                                      </li><!--1.3-->
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li>&nbsp;</li>
+                                              <li>&nbsp;</li>
+                                          </ul>                                      
+                                      </li><!--1.4-->
+                                  </ul>                                  
+                              </div><!-- row 1-->
+                              
+                              <div class="tbRow even">
+                                  <ul>
+                                      <li class="landing">跨價/跨期期權倉</li><!--2.0-->
+                                      
+                                      <li class="tbCol active">
+                                          <ul>
+                                              <li><a href="strategies_bullcall_c.html">看好跨價認購期權</a></li>
+                                              <li><a href="strategies_bullput_c.html">看好跨價認沽期權</a></li>
+                                              <li><a href="strategies_ratiocallback_received_c.html">背向比例跨價認購期權</a></li>
+                                              <li>&nbsp;</li>
+                                              <li>&nbsp;</li>
+                                          </ul>
+                                      </li><!--2.1-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                         <ul>
+                                             <li><a href="strategies_bearcall_c.html">看淡跨價認購期權</a></li>
+                                             <li><a href="strategies_bearput_c.html">看淡跨價認沽期權</a></li>
+                                             <li><a href="strategies_ratioputback_received_c.html">背向比例跨價認沽期權</a></li>
+                                             <li>&nbsp;</li>
+                                             <li>&nbsp;</li>
+                                         </ul>
+                                      </li><!--2.2-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li><a href="strategies_longcall_calendar_c.html">買入跨期認購期權</a></li>
+                                              <li><a href="strategies_longput_calendar_c.html">買入跨期認沽期權</a></li>
+                                              <li><a href="strategies_ratiocall_received_c.html">比例跨價認購期權</a></li>
+                                              <li><a href="strategies_ratioput_received_c.html">比例跨價認沽期權</a></li>
+                                              <li><a href="strategies_long_butterfly_c.html">買入蝴蝶式跨價組合</a></li>
+                                          </ul>
+                                      </li><!--2.3-->
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li><a href="strategies_shortcall_calendar_c.html">沽出跨期認購期權</a></li>
+                                              <li><a href="strategies_shortput_calendar_c.html">沽出跨期認沽期權</a></li>
+                                              <li>&nbsp;</li>
+                                              <li>&nbsp;</li>
+                                              <li><a href="strategies_short_butterfly_c.html">沽出蝴蝶式跨價組合</a></li>
+                                          </ul>
+                                      </li><!--2.4-->
+                                  </ul>                                      
+                              </div><!-- row 2-->
+                              
+                              <div class="tbRow odd">
+                                  <ul>
+                                      <li class="landing">組合期權倉</li><!--3.0-->
+                                      
+                                      <li class="tbCol active">
+                                          <ul>
+                                              <li><a href="strategies_synthetic_longstock_c.html">合成正股長倉</a></li>
+                                              <li>&nbsp;</li>
+                                          </ul>
+                                      </li><!--3.1-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                         <ul>
+                                             <li><a href="strategies_synthetic_shortstock_c.html">合成正股短倉</a></li>
+                                             <li>&nbsp;</li>
+                                         </ul>
+                                      </li><!--3.2-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li><a href="strategies_short_straddle_c.html">沽出馬鞍式組合</a></li>
+                                              <li><a href="strategies_short_strangle_c.html">沽出勒束式組合</a></li>
+                                          </ul>
+                                      </li><!--3.3-->
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li><a href="strategies_long_straddle_c.html">買入馬鞍式組合</a></li>
+                                              <li><a href="strategies_long_strangle_c.html">買入勒束式組合</a></li>
+                                          </ul>
+                                      </li><!--3.4-->
+                                  </ul>
+                              </div><!-- row 3-->
+                              
+                              <div class="tbRow even">
+                                  <ul>
+                                      <li class="landing">期權 + 股票組合</li><!--4.0-->
+                                      
+                                      <li class="tbCol active">
+                                          <ul>
+                                              <li><a href="strategies_synthetic_longcall_c.html">合成認購期權長倉</a></li>
+                                              <li>&nbsp;</li>
+                                          </ul>
+                                      </li><!--4.1-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                         <ul>
+                                             <li><a href="strategies_synthetic_longput_c.html">合成認沽期權長倉</a></li>
+                                             <li>&nbsp;</li>
+                                         </ul>
+                                      </li><!--4.2-->
+                                      
+                                      
+                                      <li class="tbCol">
+                                         <ul>
+                                             <li><a href="strategies_callwriting_c.html">沽出備兌認購期權</a></li>
+                                             <li><a href="strategies_protective_shortstock_c.html">防護性正股短倉</a></li>
+                                         </ul>
+                                      </li><!--4.3-->
+                                      
+                                      <li class="tbCol">
+                                          <ul>
+                                              <li>&nbsp;</li>
+                                              <li>&nbsp;</li>
+                                          </ul>                                      
+                                      </li><!--4.4-->
+                                  </ul>
+                              </div><!-- row 4-->         
+                    </div>
+                    <!---end ddslick--->
+                </div><!---end tbShadow--->
+         </div><!--- end part2 table -------------------->
+         
+         <div class="clearfix"></div>
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

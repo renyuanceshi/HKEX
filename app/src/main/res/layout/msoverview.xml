@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ViewFlipper
+                android:id="@+id/bannerContainer"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/flipperPage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="158.0dip"
+                        android:orientation="vertical">
+
+                        <com.hkex.soma.basic.LoaderImageView
+                            android:id="@+id/bannerImage1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/flipperPage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="158.0dip"
+                        android:orientation="vertical">
+
+                        <com.hkex.soma.basic.LoaderImageView
+                            android:id="@+id/bannerImage2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/flipperPage3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="158.0dip"
+                        android:orientation="vertical">
+
+                        <com.hkex.soma.basic.LoaderImageView
+                            android:id="@+id/bannerImage3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </ViewFlipper>
+
+            <LinearLayout
+                android:id="@+id/nextBannerlayout"
+                android:layout_width="40.0dip"
+                android:layout_height="158.0dip"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/listViewHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/listViewHeader_box"
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:background="@drawable/list_topheader"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/top_vol_key"
+                    android:textColor="@color/textwhite"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center|right">
+
+                    <ImageView
+                        android:id="@+id/day_nigth_but"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/day" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/product_keylist"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bgwhite"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:background="@drawable/list_topheader"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/perf_comp_of_key"
+                    android:textColor="@color/textwhite"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4"
+                    android:gravity="center|right">
+
+                    <ImageView
+                        android:id="@+id/btn_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/btn_note" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="186.0dip">
+
+            <WebView
+                android:id="@+id/chart_webview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/price_info_box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="32.0dip"
+                android:background="@drawable/list_topheader"
+                android:orientation="horizontal"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:text="@string/price_info"
+                    android:textColor="@color/textwhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listbox2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="34.0dip"
+                    android:background="@drawable/list_header"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip">
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/head_future"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/head_lastorchange"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/head_bid_box"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:id="@+id/head_bid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/bid"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/head_ask_box"
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:id="@+id/head_ask"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/ask"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.8"
+                        android:gravity="center|right">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="right"
+                            android:maxLines="2"
+                            android:text="@string/volume"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/datalist2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgwhite"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/futurestime_box"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20.0dip"
+                    android:background="@drawable/bg_timebar">
+
+                    <ImageView
+                        android:id="@+id/futurestime_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/footer_timeicon" />
+
+                    <TextView
+                        android:id="@+id/futurestime_tv_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@id/futurestime_imageView"
+                        android:text="@string/lastupdate"
+                        android:textColor="@color/textdeepblue"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/futurestime_tv_stime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@id/futurestime_tv_update"
+                        android:text=""
+                        android:textColor="@color/textdeepblue"
+                        android:textSize="12.0sp" />
+
+                    <TextView
+                        android:id="@+id/futurestime_tv_delay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@id/futurestime_tv_stime"
+                        android:text="@string/delaymessage"
+                        android:textColor="@color/textdeepblue"
+                        android:textSize="12.0sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listbox1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/listTitleHeader"
+                    android:layout_width="fill_parent"
+                    android:layout_height="34.0dip"
+                    android:background="@drawable/list_header"
+                    android:paddingLeft="20.0dip"
+                    android:paddingRight="20.0dip">
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="2.0">
+
+                        <TextView
+                            android:id="@+id/head_instrument"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:text="@string/tab_option"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.5">
+
+                        <TextView
+                            android:id="@+id/head_lastchange"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/head_lastorchange"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:id="@+id/head_oivol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:paddingRight="5.0dip"
+                            android:text="@string/head_volume"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/datalist1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgwhite"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/optionstime_box"
+                    android:layout_width="fill_parent"
+                    android:layout_height="20.0dip"
+                    android:background="@drawable/bg_timebar">
+
+                    <ImageView
+                        android:id="@+id/optionstime_imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/footer_timeicon" />
+
+                    <TextView
+                        android:id="@+id/optionstime_tv_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@id/optionstime_imageView"
+                        android:text="@string/lastupdate"
+                        android:textColor="@color/textdeepblue"
+                        android:textSize="12.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/optionstime_tv_stime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@id/optionstime_tv_update"
+                        android:text=""
+                        android:textColor="@color/textdeepblue"
+                        android:textSize="12.0sp" />
+
+                    <TextView
+                        android:id="@+id/optionstime_tv_delay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_toRightOf="@id/optionstime_tv_stime"
+                        android:text="@string/delaymessage"
+                        android:textColor="@color/textdeepblue"
+                        android:textSize="12.0sp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

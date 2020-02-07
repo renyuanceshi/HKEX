@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Options Strategies</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+    
+
+   
+
+</head>
+
+<body>
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>Short Strangle</h3>
+             <a href="option_strategies_e.html" class="backBTN">Back</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th>Strategies</th>
+  </tr>
+  <tr>
+    <td>Short Strangle</td>
+  </tr>
+
+  <tr>
+    <th width="140">Component</th>
+  </tr>
+  <tr>
+    <td>Sell lower strike price/level put, sell higher strike price/level call of the same month </td>
+  </tr>
+  <tr>
+    <th>Potential Profit </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>When the stock price/index level is between the upper and lower break-even points </li>
+      <li>Limited to total premium received </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Maximum Loss </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>When the stock price/index level is below the lower break-even point, substantial and equals to lower break-even point minus stock price/index level </li>
+      <li>When stock price/index level is above the upper break-even point, unlimited and equals to stock price/index level minus upper break-even point </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Time Value Impact </th>
+  </tr>
+  <tr>
+    <td>Positive </td>
+  </tr>
+  <tr>
+    <th>Break-even </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>The lower break-even point equals to lower strike price/level minus total premium received </li>
+      <li>The upper break-even point equals to higher strike price/level plus total premium received </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Remarks </th>
+  </tr>
+  <tr>
+    <td>Compared with Short Straddle, Short Strangle has less premium receivable but requires higher market volatility to result in a loss. </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">Example</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="center"><div class="vtxt">Profit&nbsp;/&nbsp;Loss</div></th>
+                   
+                    <td  valign="middle"><img src="../images/chart_strategies_short_strangle.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">Stock Price</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> Net Position</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> -1 Jun 180 Put</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> -1 Jun 200 Call</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">Component</th>
+  </tr>
+  <tr>
+    <td>Sell ABC Jun $180 Put, receive $5, and sell ABC Jun $200 Call, receive $10 </td>
+  </tr>
+  <tr>
+    <th>Net Premium</th>
+  </tr>
+  <tr>
+    <td>Receive $5+$10=$15 </td>
+  </tr>
+  <tr>
+    <th>Break-even </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>Lower: $180-$15=$165 </li>
+      <li>Upper: $200+$15=$215 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Profit when </th>
+  </tr>
+  <tr>
+    <td>Stock price is between $165 and $215 </td>
+  </tr>
+  <tr>
+    <th>Potential Profit </th>
+  </tr>
+  <tr>
+    <td>$15 </td>
+  </tr>
+  <tr>
+    <th>Potential Loss</th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>When the stock price is below $165, $165 - stock price </li>
+      <li>When the stock price is above $215, stock price - $215 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>Time Value Impact </th>
+  </tr>
+  <tr>
+    <td>Positive </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_e.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_e.html">Back</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

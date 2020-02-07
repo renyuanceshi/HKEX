@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Chapter 6: How options work?</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>        
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+     <div id="wrap">
+         <div class="pageBN c6">
+              <img src="../images/abc_top_c6_txt_e.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+              So far you have some basic understanding on options. Let's use an example to illustrate how option works in reality.
+         </div><!--- end highlight -------------------->
+           
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">             
+             <p class="g1">
+                <img src="../images/abc_c6-01_bg.gif">
+                <img src="../images/abc_c6-01_txt_e.gif" class="txt_img">                 
+                <img src="../images/abc_c6-01_tip.gif" class="tips_img">
+                <em class="tips_box">
+                   1st Mar<br>
+                   Market Price of XYZ = $67<br>
+                   Market Price of XYZ $70 May Call = $3
+                </em>  
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c6-02_bg.gif">
+                <img src="../images/abc_c6-02_txt_e.gif" class="txt_img">
+                <br>
+                Suppose an investor has a bullish view on the stock XYZ. On 1st March, the stock price of XYZ is $67. A call option of XYZ expires in May, with strike price of $70 is selling at $3. The contract size of XYZ option is 100 shares per contract. Therefore, ignoring commission and other fees, the investor needs to pay $300 (i.e. $3 x 100)<span class="tips">&nbsp;</span>
+                <em class="tips_pop">Price of XYZ $70 May Call Option = $3<br>
+                Contract value on hand = $3 x 100 = $300 </em>
+                to buy one contract of the call option.
+                <br><br>
+                As the cost of the option is $3 per share and the strike price is $70, the breakeven price of this trade is $73 (i.e. $3 + $70).
+             </p>
+             <div class="clearfix"></div>         
+         </div><!--- end part1 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">  
+         
+         <div class="article">
+             <p class="g1">
+                <img src="../images/abc_c6-03_bg.gif">
+                <img src="../images/abc_c6-03_txt_e.gif" class="txt_img">
+                <br>
+                Suppose one month later, the stock price goes up to $80.<br><br>
+                The price of the call option goes up to $11, i.e. the contract is now worth $11 x 100 = $1100.<br><br>
+                At this moment, the investor has a profit of $1100 - $300 = $800 <span class="tips">&nbsp;</span>
+                <em class="tips_pop">Price of XYZ $70 May Call Option = $11<br>
+                Contract value on hand = $11 x 100 = $1100<br>
+                Profit if sell to close the position = $1100 - $300 = $800
+                </em>
+                
+                should he chooses to close out the position by selling out this option contract.
+             </p> 
+              <p class="g1">
+                <img src="../images/abc_c6-04_bg.gif">
+                <img src="../images/abc_c6-04_txt_e.gif" class="txt_img">                 
+                <img src="../images/abc_c6-04_tip.gif" class="tips_img">
+                <em class="tips_box">
+                   1st Apr<br>
+                   Market Price of XYZ = $80<br>
+                   Market Price of XYZ $70 May Call = $11
+                </em> 
+             </p>
+             <div class="clearfix"></div>         
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+         
+         <div class="article">             
+             <p class="g1">
+                <img src="../images/abc_c6-05_bg.gif">
+                <img src="../images/abc_c6-05_txt_e.gif" class="txt_img">                 
+                <img src="../images/abc_c6-05_tip.gif" class="tips_img">
+                <em class="tips_box">
+                   30th May<br>
+                   Market Price of XYZ = $68<br>
+                   Market Price of XYZ $70 May Call = $0
+                </em>  
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c6-02_bg.gif">
+                <img src="../images/abc_c6-06_txt_e.gif" class="txt_img">
+                <br>
+               However, the investor thinks the stock price will continue to rise and keeps holding the option contract.<br><br>
+               By the expiration date, unfortunately the stock price drops to $68. The option becomes out-of-the-money, i.e. worthless, as it is below the strike price ($70) at expiry. The investor loses the $300<span class="tips">&nbsp;</span>
+                <em class="tips_pop">
+                Price of XYZ $70 May Call Option = $0<br>
+                Contract value on hand = $0 x 100 = $0<br>
+                Loss $300 invested in the option</em>
+                he invested.<br><br>
+             </p>
+             <div class="clearfix"></div>         
+         </div><!--- end part3 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+         
+         <div class="article">             
+             <p class="g0">
+               The profit and loss swing is best summarised in the following table:</p> 
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 width="100%">
+            <colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH align="center" bgColor="#cee3f8">Date</TH>
+            <TH align="center" bgColor="#cee3f8">1<SUP>st</SUP> March </TH>
+            <TH align="center" bgColor="#cee3f8">1<SUP>st</SUP> April</TH>
+            <TH align="center" bgColor="#cee3f8">30<SUP>th</SUP> May (Expiry Date)</TH></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">Stock Price</TD>
+            <TD align="center">$67</TD>
+            <TD align="center">$80</TD>
+            <TD align="center">$68</TD></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">Call Option Price</TD>
+            <TD align="center">$3</TD>
+            <TD align="center">$11</TD>
+            <TD align="center">$0</TD></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">Contract Value</TD>
+            <TD align="center">$300 <span class="tips">&nbsp;</span>
+            <em class="tips_pop">Contract value = $3 x 100</em></TD>
+            <TD align="center">$1100 <span class="tips">&nbsp;</span>
+            <em class="tips_pop">Contract value = $11 x 100</em></TD>
+            <TD align="center" sizcache="0" sizset="159">$0 <span class="tips">&nbsp;</span>
+            <em class="tips_pop">Contract value = $0 x 100</em></TD></TR>
+            <TR>
+            <TD align="center" bgColor="#b3d1ed">Theoretical Profit/Loss</TD>
+            <TD align="center">$0</TD>
+            <TD align="center">$800</TD>
+            <TD align="center">-$300</TD></TR></TBODY></TABLE>
+             
+             <div class="clearfix"></div>         
+         </div><!--- end part4 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">   
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="28%"> <col width="33%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_5_e.html','Chapter 5: Option Premium')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_5_e.html','Chapter 5: Option Premium')">Prev Chapter</a>&nbsp;</td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_6_quize_e.html','Chapter 6: How options work?')"><img class="quizeBtn" src="../images/btn_start_quiz.png"></a></td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_7_e.html','Chapter 7: Trading options at HKEX')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_7_e.html','Chapter 7: Trading options at HKEX')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

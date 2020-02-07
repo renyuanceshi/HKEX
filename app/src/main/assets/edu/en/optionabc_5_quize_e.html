@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Chapter 5: Option Premium</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>    
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+    
+</head>
+
+<body>
+     
+
+     <div id="wrap">
+         <div class="quizBN">
+              <img src="../images/abc_quizBN_bg.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+              <img class="btn" src="../images/abc_quizBN_btn.png">
+              <img class="txt" src="../images/abc_quizBN_txt_e.png">
+         </div><!--- end banner -------------------->
+ 
+               
+         <div class="article">
+               <ol type="1" class="quiz">
+                 <li><p class="qtext">As the implied volatility of a put option increases, the premium of this put option will generally</p>
+                     <ol type="A" class="ansid">
+                        <li class="acorrect">increase<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">decrease<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">remain the same<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">can't be determined<span class="qrst">&nbsp;</span></li>
+                     </ol>
+                     <em class="anstext">
+                         <h5>The correct answer is <b>"A"</b></h5>
+                         <p>Explanation</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">
+                        The premium of both put and call options will increase when the volatility of these options increases. The greater the volatility, the greater the probability that the options will become in-the-money.
+                     </em>
+                 </li>                 
+                 
+                 <li><p class="qtext">As the underlying stock price increases, keeping other factors constant, the premium of a put option</p>
+                     <ol type="A" class="ansid">                        
+                        <li class="awrong">will generally increase<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">will generally decrease<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">will remain the same<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">can't be determined<span class="qrst">&nbsp;</span></li>
+                     </ol>
+                     <em class="anstext">
+                         <h5>The correct answer is <b>"B"</b></h5>
+                         <p>Explanation</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">The premium of an option changes as the market price of the underlying security moves. If the stock price increases the premium of a put option will decrease as its intrinsic value decreases.</em>
+                 </li>
+                 
+                 <li><p class="qtext">A call is out-of-the-money when the market price of the underlying stock is</p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">equal to the strike price<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">above the strike price<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">below the strike price<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">equal to the strike price plus or minus the premium<span class="qrst">&nbsp;</span></li>                        			
+                     </ol>
+                     <em class="anstext">
+                         <h5>The correct answer is <b>"C"</b></h5>
+                         <p>Explanation</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">By definition, a call is out-of-the-money when the market price of the underlying stock is below the strike price, and there is no intrinsic value in the premium.
+                     </em>
+                 </li>
+                 
+                 <li><p class="qtext">XYZ stock is now trading at $70. XYZ APR $60 Put is trading at a premium of $1.5. What is the intrinsic value of these puts?</p>
+                     <ol type="A" class="ansid">
+                        <li class="acorrect">$0<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">$1.5<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">$10<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">can't be determined<span class="qrst">&nbsp;</span></li>  	
+                     </ol>
+                     <em class="anstext">
+                         <h5>The correct answer is <b>"A"</b></h5>
+                         <p>Explanation</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">Intrinsic value is the difference between the option's strike price and the price of the underlying stock. However, only in-the-money options would have intrinsic value. Here the XYZ Puts are out-of-the-money and they have no intrinsic value. 
+                     </em>
+                 </li>
+                 
+                 <li><p class="qtext">Which of the following strategies can be applied when you would like to benefit in a steady market? &#xD;<br><br>
+                 <span style="font-weight:normal">I. long call  &#xD;</span><br><br>
+                 <span style="font-weight:normal">II. long put  &#xD;</span><br><br>
+                 <span style="font-weight:normal">III. short call   &#xD;</span><br><br>
+                 <span style="font-weight:normal">IV. short put</span></p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">I and II<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">I and IV <span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">II and III<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">III and IV<span class="qrst">&nbsp;</span></li>  	
+                     </ol>
+                     <em class="anstext">
+                         <h5>The correct answer is <b>"D"</b></h5>
+                         <p>Explanation</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">In a steady market, the premium of an option will reduce over time. This is an expense for those who are long in both calls and puts, and a source of income for those who are short.
+                     </em>
+                 </li>
+                 
+                 <li><p class="qtext">Time decay of option value is favorable to</p>
+                     <ol type="A" class="ansid">
+                        <li class="awrong">option holders<span class="qrst">&nbsp;</span></li>
+                        <li class="acorrect">option writers<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">market makers<span class="qrst">&nbsp;</span></li>
+                        <li class="awrong">all of the above<span class="qrst">&nbsp;</span></li>  	
+                     </ol>
+                     <em class="anstext">
+                         <h5>The correct answer is <b>"B"</b></h5>
+                         <p>Explanation</p>
+                         <img class="hr" src="../images/quiz_shadow.gif">Time decay is unfavorable to the option holder, but favorable to the option writer. The less time remaining, the smaller the chance that the option will expire in-the-money.
+                     </em>
+                 </li>
+                 
+               </ol>
+             
+             <div class="clearfix"></div>         
+         </div><!--- end quiz -------------------->
+         
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_5_e.html','Chapter 5: Option Premium')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_5_e.html','Chapter 5: Option Premium')">Back</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_6_e.html','Chapter 6: How options work?')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_6_e.html','Chapter 6: How options work?')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+
+
+</body>
+</html>
+  

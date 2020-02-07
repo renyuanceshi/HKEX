@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>Chapter 2: Trading and Margin</title>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>  
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body class="bg_gr">     
+
+     <div id="wrap">
+         <div class="top_bn">
+             <img src="../images/bg_top_faq.gif" alt="Options FAQ">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+         
+         <div class="faq">
+             <ul>                 
+                 <li class="navGradient"><div class="line"><p class="tit">What should I do if I want to start trading stock options? </p></div>
+                     <div class="detail">
+                     <p>
+                          <ul class="strategiesli">
+                            <li>Select your brokerage firm (a list of Options Trading Exchange Participants (OTEPs) is available from the website of Hong Kong Exchanges and Clearing Limited)</li>
+                            <li>Consult the licensed representatives for the nature and risks of options trading.</li>
+                            <li>Sign the client agreement with the OTEP and follow the instructions as requested by the OTEP before trading commences.</li>
+                            <li>Familiarize yourself with the procedures for placing orders, exercise instruction, money and stock settlement and be prepared for margin calls during volatile market conditions (if you plan to write options). Keep in close contact with your broker.</li>
+                          </ul>
+                     </p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                    </div>
+                 </li>
+                 <!------>                 
+                 <li class="navGradient"><div class="line"><p class="tit">What expiry months of the options contracts are available for trading?</p></div>
+                     <div class="detail"><p>The spot month, the next two calendar months and the next three quarter months. The quarter months are always March, June, September and December. (The Exchange may introduce any other longer-dated expiry month in selected stock option classes as it deems necessary)</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>                 
+                 <li class="navGradient"><div class="line"><p class="tit">Once I buy a stock option, how could I close out my position?</p></div>
+                      <div class="detail">
+                      <p>You have three choices:<br>
+                          <ul class="strategiesli">
+                              <li>Sell the option in the market, or</li>
+                              <li><p>Exercise the option</p>
+                                  <ul class="strategiesli">
+                                      <li>to deliver or to receive the stock or</li>
+                                      <li>to deliver or to receive the stock and offset the position in the stock market.</li>
+                                  </ul>
+                              </li>
+                              <li>Let the option expire.</li>
+                          </ul>
+                      </p>
+                      <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                      </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line"><p class="tit">The option series that I am holding is missing from the market window screen, does it mean that I cannot close out my position?</p></div>
+                     <div class="detail"><p>No. As long as the series is not expired, any option series is available for trading though some far in or far out-of-the-money series may not be displayed on the market window screen due to limited space. These series are always available on the trading screens of HKATS.<p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line"><p class="tit">What kind of orders can I enter when trading options?</p></div>
+                     <div class="detail">
+                       <p>You can enter Combination Orders and Limit Orders when trading stock options at HKEX.</p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">What are combination orders?</p></div>
+                     <div class="detail">
+                       <p>A combination order is an order instruction for option strategies that comprise of more than one option contract. Hong Kong Futures Automated Trading System (HKATS) accepts combination orders but is limited to strategies involving two component option contracts. The order will only be executed when both of the component option contracts are simultaneously matched, otherwise the order will be cancelled.</p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">What are limit orders?</p></div>
+                     <div class="detail">
+                       <p>A limit order is a trading order instruction entered with a specific price. The order is to be matched at the price or better, depending on what is best available in the market. In addition, restriction or specified expiration date may be entered. The following are different types of limit orders :<br>
+                              <ul class="strategiesli">
+                                  <li>Good-for-day (with no expiration date specified. Unmatched order will automatically be cancelled at the end of the order entry date)</li>
+                                  <li>Good-till-date (with an expiration date specified such that the order, if unmatched, will be cancelled at the end of the specified date)</li>
+                                  <li>Good-till-cancelled (an order, once entered and if unmatched, will remain until cancelled or expired)</li>
+                                  <li>Fill-and-kill (any unmatched portion of the order will be cancelled immediately at the time of submission)</li>
+                                  <li>Fill-or-kill (the entire order will be cancelled immediately if the whole quantity is not matched at the time of submission)</li>
+                              </ul>
+                       </p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">How does HKATS select the best bid/ask price of an option series?</p></div>
+                     <div class="detail">
+                       <p>HKATS (Hong Kong Futures Automated Trading System) displays the best five bid and best five ask prices with quantities (if available) on its trading screen according to price and time priority. It can be illustrated as in the example below:<br><br>
+                       <table width="100%" class="ms-rteTable-1">
+                        <tbody><tr>
+                          <th>Market Maker A (MM A)</th>
+                          <th>Investor A (Inv A)</th>
+                          <th>Market Maker B (MM B)</th>
+                        </tr>
+                        <tr>
+                          <td><strong>At 10:15</strong></td>
+                          <td><strong>At 10:16</strong></td>
+                          <td><strong>At 10:17</strong></td>
+                        </tr>
+                        <tr>
+                          <td>Bid / Ask</td>
+                          <td>Bid </td>
+                          <td>Bid / Ask</td>
+                        </tr>
+                        <tr>
+                          <td><strong>5.80 / 6.12</strong></td>
+                          <td><strong>5.89</strong></td>
+                          <td><strong>5.89 / 6.20</strong></td>
+                        </tr>
+                      </tbody></table>
+                       <br>
+                       <table width="100%" class="ms-rteTable-1">
+                           <tbody><tr>
+                             <th>Market Quote At 10:15</th>
+                             </tr>
+                           <tr>
+                             <td>Bid / Ask<br>
+                               <strong>5.80 / 6.12<br>
+                               (MM A) / (MM A)                               </strong></td>
+                             </tr>
+                           <tr>
+                             <th>Market Quote At 10:16</th>
+                           </tr>
+                           <tr>
+                             <td>Bid / Ask<br>
+                               <strong>5.89 /</strong> 6.12<br>
+                               <strong>(Inv A) /</strong> (MM A)<br>
+                               5.80 / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                               (MM A) / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                           </tr>
+                           <tr>
+                             <th>Market Quote At 10:17</th>
+                           </tr>
+                           <tr>
+                             <td>Bid / Ask<br>
+                               <strong>5.89 /</strong> 6.12<br>
+                               <strong>(Inv A) /</strong> (MM A)<br>
+                               <strong>(MM B) / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                               </strong>5.80 / <strong>6.20</strong> <br>
+                               (MM A) /<strong> (MM B)</strong></td>
+                           </tr>
+                           <tr>
+                             <th>Market Quote At 10:17</th>
+                           </tr>
+                           <tr>
+                             <td>Bid / Ask<br>
+                               5.89 / 6.12<br>
+                               (Inv A) / (MM A)<br>
+                               (MM B) / &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                 5.89 / 6.20 <br>
+                               (MM A) / (MM B)</td>
+                           </tr>
+                         </tbody></table>
+                        <br>
+                        In the example, we see that the bid/ask prices shown on HKATS are always the best available in the market and the prices are not necessarily quoted by the same party.
+                       </p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">When there are no quotations indicated on the market window screen, does it mean that there is no market interest and I cannot trade in the market? </p></div>
+                     <div class="detail">
+                       <p>No. As different from an open-outcry trading system in which you can see the market makers standing amongst the crowd in the pit, you will not be able to be aware of the existence of the market makers physically through an electronic trading system. Therefore it does not mean that there is no interest in the market, nor you cannot trade in the market. You can always instruct your broker to input a quote request for the option series that you intend to trade into HKATS (Hong Kong Futures Automated Trading System). Market makers will offer two-way quotes in response to a quote request. You can then decide whether to enter your trade order. Alternatively, you may ask your broker to place your own limit orders into HKATS and wait for possible order matching in the market.</p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">Why do I have to sign a separate options client agreement apart from that for the stock market? </p></div>
+                     <div class="detail">
+                       <p>The stock options market operates separately from the stock market. The options client agreement describes trading and clearing arrangements such as payment of options premium and margin, stock delivery obligations as a result of exercise and assignment, and other options-related matters. The agreement includes a risk disclosure statement and a client information checklist. The former highlights the risks of options trading and helps to draw investors' attention to the high degree of risks associated with options trading while the latter helps the Options Trading Exchange Participant to assess the suitability of the client to trade options.</p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">What are margin calls and marking to market? </p></div>
+                     <div class="detail">
+                       <p>There is a margin requirement for all short option positions. After the close of trading each day, The SEHK Options Clearing House Limited (SEOCH), a subsidiary of HKEX, values all open positions with the settlement prices of each stock option series and assesses a margin requirement based on this valuation. This process is called marking to market. SEOCH collects this mark-to-market margin on a daily basis but may collect margin at other times as and when necessary. The mark-to-market margin represents SEOCH’s estimate of the cost of liquidating the open position at current market levels. <br><br>
+                       In addition, in order to provide a buffer against any movements in the market that may have a negative effect on the value of an option before the next margin calculation, SEOCH also collects an additional amount, over and above the mark-to-market margin. This is called additional margin. SEOCH may accept as margin collateral cash, letters of credit, bank guarantees, securities, Exchange Fund Bills and Notes, etc as designated by the HKEX Board (and subject to change by the Board from time to time) and in such form as may be required by the Board. Investors should ask their brokers about the forms of collateral the brokers will accept.</p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line">
+                     <p class="tit">Will I be subject to margin calls when I buy a stock option? </p></div>
+                     <div class="detail">
+                       <p>The option buyer, after paying the full amount of premium, represents no risk to the market. However, if he exercises the option contract, the resulting pending stock position may pose risk to the market. Therefore, there is no margin requirement for the option position, but margin may be required for the pending stock position after he has exercised the option.</p>
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>                 
+             </ul>
+         </div><!-- /.faq -->
+
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_1_e.html','Chapter 1: Options Basics')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('stk_opt_faq_1_e.html','Chapter 1: Options Basics')">Prev Chapter</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('stk_opt_faq_3_e.html','Chapter 3: Exercis, Settlement and Clearing')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_3_e.html','Chapter 3: Exercis, Settlement and Clearing')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

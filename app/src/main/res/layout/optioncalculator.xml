@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgwhite">
+
+    <LinearLayout
+        android:id="@+id/appContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bgwhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="44.0dip"
+            android:background="@drawable/bg_header"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:src="@drawable/btn_back" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/title_optioncalculator"
+                android:textColor="@color/textblue"
+                android:textSize="22.0sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnRight"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:background="@color/transparent"
+                android:paddingLeft="8.0dip"
+                android:paddingRight="8.0dip"
+                android:src="@drawable/btn_setting" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/clickControlContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="52.0dip"
+                android:background="@drawable/bg_cal_top"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingLeft="8.0dip"
+                android:paddingTop="8.0dip"
+                android:paddingRight="8.0dip"
+                android:paddingBottom="8.0dip">
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4">
+
+                    <TextView
+                        android:id="@+id/ucode_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ucode"
+                        android:textColor="@color/textgrey"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/ucode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textlightblue"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3">
+
+                    <TextView
+                        android:id="@+id/strike_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/strike"
+                        android:textColor="@color/textgrey"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/strike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textlightblue"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.4">
+
+                    <TextView
+                        android:id="@+id/expiry_str"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/expiry"
+                        android:textColor="@color/textgrey"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/expiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textlightblue"
+                        android:textSize="14.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="174.0dip"
+                android:background="@drawable/bg_cal_mid"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8.0dip"
+                    android:paddingRight="8.0dip"
+                    android:stretchColumns="1">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:paddingTop="5.0dip">
+
+                        <TextView
+                            android:id="@+id/ulast"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ulast"
+                            android:textColor="@color/textgrey"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="32.0dip">
+
+                        <EditText
+                            android:id="@+id/cal_ulast"
+                            style="@style/EditTextHoloTheme"
+                            android:layout_width="120.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:inputType="phone"
+                            android:textColor="@color/textlightblue"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_ulast"
+                            style="@style/SeekBarHoloTheme"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:paddingTop="5.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cal_iv"
+                            android:textColor="@color/textgrey"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="32.0dip">
+
+                        <EditText
+                            android:id="@+id/cal_iv"
+                            style="@style/EditTextHoloTheme"
+                            android:layout_width="120.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:inputType="phone"
+                            android:textColor="@color/textlightblue"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_iv"
+                            style="@style/SeekBarHoloTheme"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="20.0dip"
+                        android:paddingTop="5.0dip">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="2"
+                            android:text="@string/remainday"
+                            android:textColor="@color/textgrey"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="32.0dip">
+
+                        <EditText
+                            android:id="@+id/cal_tm"
+                            style="@style/EditTextHoloTheme"
+                            android:layout_width="120.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:inputType="phone"
+                            android:textColor="@color/textlightblue"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+
+                        <SeekBar
+                            android:id="@+id/seekbar_tm"
+                            style="@style/SeekBarHoloTheme"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_cal_result">
+
+                <LinearLayout
+                    android:layout_width="300.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="12.0dip"
+                        android:paddingTop="5.0dip"
+                        android:text="@string/theoprice"
+                        android:textColor="@color/textred"
+                        android:textSize="30.0sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/calculatedhkd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5.0dip"
+                            android:paddingLeft="12.0dip"
+                            android:paddingTop="9.0dip"
+                            android:text="@string/hkd"
+                            android:textColor="@color/textgrey"
+                            android:textSize="25.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/calculatedresult"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5.0dip"
+                            android:layout_toRightOf="@id/calculatedhkd"
+                            android:paddingLeft="12.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textgrey"
+                            android:textSize="35.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/btnReset"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:paddingLeft="8.0dip"
+                            android:paddingRight="8.0dip"
+                            android:src="@drawable/btn_reset_e" />
+
+                        <ImageButton
+                            android:id="@+id/btnCalculate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:paddingLeft="8.0dip"
+                            android:paddingRight="8.0dip"
+                            android:src="@drawable/btn_calculate_e" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/footerContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+</RelativeLayout>

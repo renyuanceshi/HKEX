@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>期权策略</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+
+    
+
+   
+
+</head>
+
+<body>
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>买入马鞍式组合</h3>
+             <a href="option_strategies_gb.html" class="backBTN">返回</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th>策略 </th>
+  </tr>
+  <tr>
+    <td>买入马鞍式组合 </td>
+  </tr>
+
+  <tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>买入相同月份、相同行使价/水平的认购期权和认沽期权 </td>
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价/指数水平高于较高的打和点：无限及等如正股价/指数水平减去较高打和点</li>
+      <li>当正股价/指数水平低于较低的打和点：可观及等如较低打和点减去正股价/指数水平 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>最大亏损 </th>
+  </tr>
+  <tr>
+    <td>已付出的期权金总额 </td>
+  </tr>
+  <tr>
+    <th>时间值影响</th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>较低打和点 : 行使价/水平减去总支出期权金额</li>
+      <li>较高打和点 : 行使价/水平加上总支出期权金额 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>备注</th>
+  </tr>
+  <tr>
+    <td>与利润有限的蝴蝶式跨价短仓相比，马鞍式组合长仓在正股低价时会有可观的盈利，而在正股高价时则盈利无限。与勒束式组合长仓相比，建立马鞍式组合长仓成本较高，但只需要较小的正股价/指数水平变动，已能获利。 </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">例子</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="left"><div class="vtxt">盈<br>余/<br>亏<br>损</div></th>
+                   
+                    <td valign="middle"><img src="../images/chart_strategies_long_straddle.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">正股价格</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> 净持仓</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> +1 七月 200 认沽</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> +1 七月 200 认购</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>买入「ABC七月200元认沽」，付出 15元，同时买入「ABC七月200元认购」，付出 10元 </td>
+  </tr>
+  <tr>
+    <th>期权金净额 </th>
+  </tr>
+  <tr>
+    <td>付出 10元 + 15元 = 25元 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>较低打和点：200元<span style="width:15px; display:inline-block; text-align:center"> – </span>25元 = 175元</li>
+      <li>较高打和点：200元<span style="width:15px; display:inline-block; text-align:center"> + </span>25元 = 225元</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>录得盈利 </th>
+  </tr>
+  <tr>
+    <td>当正股价跌破 175元或升越 225元 </td>
+
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价跌破 175元：175元 – 正股价</li>
+      <li>当正股价升越 225元：正股价 – 225元</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>潜在亏损 </th>
+  </tr>
+  <tr>
+    <td>25元 </td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>负面 </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_gb.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_gb.html">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

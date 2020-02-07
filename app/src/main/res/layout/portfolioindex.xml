@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_fullpage"
+    android:orientation="vertical"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5.0dip"
+        android:paddingTop="9.0dip"
+        android:paddingBottom="9.0dip"
+        android:text="@string/contracts"
+        android:textColor="@color/textwhite"
+        android:textSize="12.0sp" />
+
+    <com.hkex.soma.element.SelectionList
+        android:id="@+id/selectionListIndexCode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8.0dip"
+        android:paddingBottom="8.0dip">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/trade_direction"
+                android:textColor="@color/textwhite"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/optiontype"
+                android:textColor="@color/textwhite"
+                android:textSize="12.0sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.hkex.soma.element.SelectionList
+                android:id="@+id/selectionListTradeDirection"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5.0dip"
+                android:layout_weight="0.4" />
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6">
+
+                <com.hkex.soma.element.CallPutButton
+                    android:id="@+id/callputbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:src="@drawable/but_selected_call_c" />
+
+                <com.hkex.soma.element.SelectionList
+                    android:id="@+id/selectionListCPButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@drawable/bg_hline" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8.0dip"
+        android:paddingBottom="8.0dip">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/expiry"
+                android:textColor="@color/textwhite"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/strike"
+                android:textColor="@color/textwhite"
+                android:textSize="12.0sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.hkex.soma.element.SelectionList
+                android:id="@+id/selectionListExpiry"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4" />
+
+            <com.hkex.soma.element.SelectionList
+                android:id="@+id/selectionListStrike"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1.0dip"
+        android:background="@drawable/bg_hline" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8.0dip"
+        android:paddingBottom="8.0dip">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="@string/quantity"
+                android:textColor="@color/textwhite"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:text="@string/price"
+                android:textColor="@color/textwhite"
+                android:textSize="12.0sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.hkex.soma.element.SelectionList
+                android:id="@+id/selectionListQuantity"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4" />
+
+            <com.hkex.soma.element.SelectionList
+                android:id="@+id/selectionListPrice"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/neg_message"
+                android:layout_width="0.0dip"
+                android:layout_height="28.0dip"
+                android:layout_weight="0.6"
+                android:text="@string/neg_message"
+                android:textSize="8.0sp"
+                android:visibility="invisible" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:src="@drawable/btn_long_add_e" />
+
+        <ImageButton
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:src="@drawable/btn_long_done_e" />
+    </RelativeLayout>
+</LinearLayout>

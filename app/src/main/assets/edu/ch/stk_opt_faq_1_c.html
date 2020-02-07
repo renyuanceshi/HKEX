@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>第一章：期權基礎</title>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_c.css" rel="stylesheet" type="text/css" media="screen">    
+    <!-- Use Google CDN for jQuery
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>        
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body class="bg_gr">     
+
+     <div id="wrap">
+         <div class="top_bn">
+             <img src="../images/bg_top_faq.gif" alt="Options FAQ">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+         
+         <div class="faq">
+             <ul>                 
+                 <li class="navGradient"><div class="line"><p class="tit">什麼是股票期權?</p></div>
+                     
+                     <div class="detail"><p>股票期權是在交易所買賣及由結算所結算的一種以個別股票為基礎的金融合約，合約主要易分為認購期權及認沽期權。
+<br><br>
+
+認購期權的買家有權利以行使價(預先設定的價格)在合約到期日或之前買入正股；而認購期權的賣家被行使期權時，有責任以行使價在合約到期日或之前賣出正股。
+<br><br>
+
+認沽期權的買家有權利以行使價(預先設定的價格)在合約到期日或之前賣出正股；而認沽期權的賣家被行使期權時，有責任以行使價在合約到期日或之前買入正股。</p>
+                    <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                    </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">什麼是期權金?</p></div>
+                     <div class="detail"><p>期權金是期權的成本或期權交易的價格。於交易所買賣之股票期權，其價格通常是以每股為計算單位的。而賣家則收取期權金。</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">有哪些因素影響股票期權的期權金?</p></div>
+                      <div class="detail"><p>期權金由市場供求所決定，但比較正股市場，影響期權金的因素則更多。影響股票期權的期權金的因素包括：正股價、距離到期日時間、股息、利率、波幅。<br><br>
+                      
+                      <b>正股價</b><br><br>
+                      正股價通常是影響期權價格最重要的因素。價內期權持有者可以較現行市價更佳的價格買入或賣出相關股份。因為它具有較大的價值，其價格相對於等價及價外期權自然較高。由於行使價是固定不變的，故此一種期權是否屬價內便完全取決於正股價。價內期權的行使價與正股市價之差額稱為內在值。例如：認購期權的行使價是$45，正股市價是$50，內在值就是$5。然而，在此情況下，認購期權的價格可能高於$5。即使是沒有內在值的價外期權及等價期權，通常仍會有某些價值。這是因為正有其他因素決定期權的價值，該等因素統稱為「外在」因素（或往往稱為「時間值」因素），這些外在因素分別是距離到期日時間、對股息的估計、利率及波幅。<br><br>
+                      
+                      <b>距離到期日時間</b><br><br>
+                      在其他因素不變的情況下，當期權接近到期時，其價值便會下跌。愈接近到期日，下跌的速度亦愈快。所以接近期滿的價外期權可能很快就會失去其價值。因此，期權一般被視為「損耗性資產」。<br><br>
+
+                      <b>股息</b><br><br>
+                      股息因素一般只適用於股票相關的期權，原因是其他資產並不會派發股息。在其他因素不變的情況下，派發現金股息將使股價在除淨日隨著股息現值下跌。股息愈高，預期股價的跌幅會愈大，從而影響期權金。<br><br>
+                      股息上升會導致認購期權金下跌，而認沽期權金上升。<br><br>
+                      
+                      <b>利率</b><br><br>
+                      利率上升會令認購期權更有價值而認沽期權價值則會下降。利率可被視為機會成本。因為期權具槓桿效應，認購期權持有者毋需付出相關正股的總值，故此可將剩餘資金投資於具利息的工具。<br><br>
+                      
+                      <b>波幅</b><br><br>
+                      風險是正股價在期權到期前由現時的價值變動至令沽出者有所損失的水平之或然率。該情況出現的或然率愈高，風險便愈大，則無論是認購或認沽期權的期權金也就更高。<br><br>
+                      風險程度取決於正股價的預期波動。這種波動通常稱為「波幅」。期權金包含該股票的預期波幅， 因此，常有人談論期權金的「引伸波幅」，即由期權金「引伸」出正股的可能波幅。<br><br>
+                      波幅是以百份率顯示，並受期權市場用家密切留意及視為重要的指標。<br><br>
+                      上述因素對期權金的影響總括如下:</p><br>
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-7">
+                         <tbody><tr>
+                          <th bgcolor="#b3d1ed" class="aleft">影響期權價格因素</th>
+                          <th width="26%" bgcolor="#cee3f8" class="acenter">因素變動</th>
+                          <th width="26%" bgcolor="#cee3f8" class="acenter">認購期權金變動</th>
+                          <th width="26%" bgcolor="#cee3f8" class="acenter">認沽期權金變動</th>
+                         </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">正股價</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">行使價</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">距離到期日時間</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">股息</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">利率</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_down.gif"></td>
+                          </tr>
+                         <tr>
+                          <td bgcolor="#b3d1ed">波幅</td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          <td class="acenter"><img src="../images/icon_graphic_up.gif"></td>
+                          </tr>
+                        </tbody>
+                     </table>
+                      <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                      <br>
+                      </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">股票期權合約的要素是什麼？ 
+</p></div>
+                     <div class="detail"><p>股票期權合約有三項要素，分別為：正股、行使價及行使期。<br><br>
+                     <b>正股</b><br><br>
+                     期權發行於其相關資產上，這可以是多種不同的產品，例如股票、股票指數、商品期貨合約及貨幣等。股票期權的相關資產乃指在交易所上市的股份。然而，不是所有在交易所上市的股份都可成為期權的相關資產，可供買賣的股票期權名單見於香港交易所網站「產品」一欄下的「衍生產品市場」部分。<br><br>
+                     
+                     <b>行使價</b><br><br>
+                     行使價指行使期權時，期權買賣雙方同意以該價格買賣正股。行使價較正股現價為低的認購期權稱為價內。該期權容許持有者以低於市價的價錢購買股份。行使價較正股現價為高的認購期權稱為價外。相反，若行使價較正股現價高的認沽期權稱為價內，亦即持有者可以高於現時之市價出售該資產。而行使價低於正股現價的認沽期權則稱為價外。<br><br>
+                     由此可見，持有者通常只會行使價內期權，否則持有者可在市場以更佳的價格直接購買或沽售股份。若期權的行使價與相關資產之價格相同，便稱為等價（此亦用作形容行使價與相關資產的市價相當接近的期權）。<br><br>
+                     
+                     <b>行使期（到期日）</b><br><br>
+                     股票期權有一段限制其是否有效的行使期。在行使期的到期日後，期權便不能再作買賣或行使。截至現時，在香港交易所買賣的期權合約共有五或六個時間長短不同的行使期：在任何時間，均會有未來最近三個月及隨後的兩或三個季月的到期日（見合約細則）。<br><br>
+                     傳統上期權有兩種行使方式 ─ 分別是美式及歐式。美式期權可由發行日開始至期滿的任何時間內行使。歐式則只可在到期日行使；美式期權在行使方面給予持有者較大彈性，所以期權金較同類的歐式期權為高。截至現時，在香港交易所買賣的股票期權全為美式期權。到期日即到期月份最後一個交易日之前的一個交易日。<br><br>
+                     以上所述的全部特點會在期權合約內訂明，在正常情況下是不會在期權有效期內改變。然而，不同的期權會有不同的期權金，而且期權金會隨時間波動。</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">什麼是「價內」、「平價」和「價外」股票期權﹖</p></div>
+                     <div class="detail">
+                     <p>「價內」期權(即較現價有利)是有內在值的股票期權。內在值指期權持有人在期權合約行使時所得價值。就認購期權而言，內在值即正股市價減去行使價；認沽期權的內在值則為行使價減去正股價。換句話說，「價內」認購期權的行使價比正股價低，而「價內」認沽期權的行使價則比正股價高。<br><br>
+                     「平價」期權(即「等價」)指那些行使價和正股價相等或接近的期權，亦可稱為「近價」期權。這些期權通常只有很少的內在值。<br><br>
+                     當認購期權行使價比正股價高或認沽期權行使價較正股價低，它們被稱為「價外」期權(即較現價不利)。這些期權沒有任何內在值，而只有時間值。</p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">股票期權跟衍生權證有什麼分別﹖</p></div>
+                     <div class="detail">股票期權和衍生權證的分別表列如下：<br>
+                     <table width="100%" class="ms-rteTable-1">
+                           <tbody><tr>
+                            <th width="50%" class="acenter">股票期權</th>
+                            <th class="acenter">衍生權證</th>
+                            </tr>
+                           <tr>
+                            <td>由交易所推出並由結算所保證</td>
+                            <td>由發行商發行，在香港交易所證券市場買賣</td>
+                           </tr>
+                           <tr>
+                            <td>長倉或空倉均可</td>
+                            <td>只限長倉</td>
+                           </tr>
+                           <tr>
+                            <td>行使價有多個選擇，等價期權系列之上及之下至少有兩個系列供選擇，並會隨市價升跌而增加</td>
+                            <td>每一項權證由發行商決定一個行使價</td>
+                           </tr>
+                           <tr>
+                            <td>共有六個到期月份可供選擇，包括：即月、隨後兩個曆月、隨後三個季月</td>
+                            <td>每一項權證由發行商決定一個到期時限</td>
+                           </tr>
+                          </tbody>
+                    </table>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 <li class="navGradient"><div class="line"><p class="tit">股票期權有什麼風險？</p></div>
+                     <div class="detail">
+                       <p><b>期權持有者面對的風險</b></p><br>
+                       <ol>
+                              <li><strong>期權持有者需冒損失買入期權所支付的全部期權金。</strong><br>
+                期權持有者只有在到期前平倉，或在到期時或之前行使期權，才可避免損失所有期權金。與股票不同，期權運作有一定之時限。所以了解期權可能帶來利潤的時限是非常重要的。當然，若期權是用作與正股對沖，支出期權金作為一項保險的費用是可以接受的。 </li>
+                
+                              <li><strong>價外期權愈接近到期，愈沒有可能從沽出或行使中獲利。</strong><br>
+                時間對期權持有者不利。尤以價外期權為甚，由於看來價值「便宜」， 常常會吸引投資者購買。投資者應接受他會損失所有已支付的期權金的可能性。有很多期權單看價格很便宜，蓋因該等期權實際上可能帶來利潤的機會很低。透過買入大量該等期權，從而希望利用槓杆效應得到利潤者更應特別小心。</li>
+                
+                             <li><strong>香港的股票期權不會經常在到期時自動行使。</strong><br>
+                要在到期日或之前從期權長倉中賺取利潤，投資者必須指示你的經紀在到期日或之前行使或出售該期權。期權結算所可於期權到期日將極價內期權自動行使，但投資者的經紀亦有能力凌駕此自動行使功能。若投資者忘記行使及經紀並未有提醒，投資者便可能錯過賺取利潤的機會。 </li>
+                
+                             <li><strong>如投資者行使的期權並未在股票市場對沖，投資者必須預備按期權合約的細則支付全數正股價值（如屬認購期權）或交付正股（如屬認沽期權）。</strong><br>
+                除非投資者已安排收到股票後立即賣出（如屬認購期權）或已持有正股（如屬認沽期權）， 投資者必須肯定有足夠資金以應付有關之股票交收責任。</li>
+                
+                             <li><strong>閣下的經紀有權拒絕投資者的行使指示。</strong><br>
+                在以上的例子中，經紀可能因投資者未能交出足夠資金作交收股票之用，而拒絕投資者的行使指示，直至你能支付所需金額。</li>
+                       </ol>
+                       
+                       <p><b>期權沽出者面對的風險</b></p><br>
+                       <ol>
+                         <li><strong>認購期權沽出者必須在被指定分配後交付股票。</strong><br>
+             倘若沽出者並未為其認購期權作備兌（即沽出者並未持有正股），沽出者必須盡快在公開市場購買正股或借取正股。無論在那種情形下，購買正股的價格及被指定分配之期權的行使價相差可能很大，甚至可能已是直接損失。</li>
+             
+                         <li><strong>認沽期權的沽出者必須在被指定分配後支付金額及收取股票。</strong><br>
+             認沽期權的沽出者在被指定分配後，須以期權之行使價購買正股。期權沽出者可能須支付較正股的市價為高的款額，而蒙受損失，此與沽出認沽期權時的期權金收入可能不合比例。</li>
+             
+                         <li><strong>股票期權乃屬美式，認購及認沽期權沽出者可隨時被指定分配。</strong><br>
+             雖然通常沽出期權比提早行使期權有較大的利潤，但亦有例外情況使期權持有者提早行使期權。<br><br>
+             沽出者必須經常留意提早行使期權的可能性，及履行股票交收及金額交付責任所需的資金，通常這會遠較期權金價值為高。</li>
+            
+                         <li><strong>所有期權短倉可能遇上突然增收按金的要求。</strong><br>
+            期權的槓杆性質表示期權的價值及所需按金可在極短時間內激增。如投資者未能及時符合按金要求，經紀有權將投資者的持倉平倉及合法地沒收其他抵押品。</li>
+            
+                         <li><strong>備兌認購期權沽出者失去股價上升可獲的利益，同時仍需面對因股價下跌招致的損失。</strong><br>
+            備兌認購期權沽出者不會受認購期權被行使而有所損失，因正股可抵銷被指定分配的任何風險。然而，該風險的性質乃倘若期權短倉仍未平倉，沽出者則不能因正股上升而獲益。再者，若正股價下跌，沽出者的損失只可以靠在沽出期權時所收取的期權金作部份抵銷。</li>
+                       </ol>       
+                       
+                       <p><b>其他一般風險</b></p><br>
+                       <ol>
+                                   <li><strong>期權持倉未必能隨時平倉。</strong><br>
+                       很多原因可令某期權系列並不流通。若是如此，未平倉合約便無法平倉及須面對不能預料的風險。例如：<br><br>
+                       正股可能被暫停買賣或整個市場暫停買賣。在此情況下，此正股的所有期權幾乎肯定會同時暫停買賣。<br><br>
+                       縱使期權不至於暫停買賣，期權的流通量仍可能極低。<br><br>
+                       雖然股票期權市場實施莊家制度，但在極端情況下，亦可能會出現莊家不存在或不能履行責任的情況。</li>
+                                  <li><strong>止蝕盤未必有效，它們運用在股票期權上較其他在交易所買賣的工具更為困難。</strong><br>
+                      正因上述理由及期權價格潛在之波動，是不應過份依賴止蝕盤定能成功地切實執行，尤其若執行該指令失敗，會導致投資者的期權風險增加至無法控制的地步。</li>
+                      </ol>  
+                       
+                       <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 
+                 
+                 <!------ end "C" ------>
+                 
+             </ul>
+         </div><!-- /.faq -->
+
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="left" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('stk_opt_faq_2_c.html','第二章：交易及按金')">下一章</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_2_c.html','第二章：交易及按金')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

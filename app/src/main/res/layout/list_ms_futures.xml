@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip"
+    android:background="@drawable/bg_list_2line"
+    android:cacheColorHint="@color/transparent"
+    android:orientation="horizontal"
+    android:paddingLeft="20.0dip"
+    android:paddingRight="20.0dip">
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="(02827)\nX Wise CSI300 ETF"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.2">
+
+        <TextView
+            android:id="@+id/last"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8.0dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="0.96"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8.0dip"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="0.96%"
+            android:textColor="@color/change_green"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/bid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="-"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0"
+        android:gravity="center|right">
+
+        <TextView
+            android:id="@+id/oivol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="653"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</LinearLayout>

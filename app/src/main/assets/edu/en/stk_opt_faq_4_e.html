@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+
+<head>
+    <title>Chapter 4: Market Making</title>
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>    
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script> 
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+
+</head>
+
+<body class="bg_gr">     
+
+     <div id="wrap">
+         <div class="top_bn">
+             <img src="../images/bg_top_faq.gif" alt="Options FAQ">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+         
+         <div class="faq">
+             <ul>                 
+                 <li class="navGradient"><div class="line"><p class="tit">What are the roles of market makers in the stock options market?</p></div>
+                     <div class="detail">
+                     <p>Market makers provide liquidity and efficiency. They are obliged to provide two-way quotes when requested, or on a continual basis - when there is a lack of natural interest on one side of the market. Hence they are the buyer/seller of last resort.
+                     </p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                    </div>
+                 </li>
+                 <!------>                 
+                 <li class="navGradient"><div class="line"><p class="tit">Do I have to trade with market makers all the time?</p></div>
+                     <div class="detail">
+                     <p>No. When your order instructions are entered into HKATS, your order will be matched according to price and time priority with orders from other investors or quotes from market makers. You may also instruct your broker to enter your own limit orders at your desired prices into HKATS for matching.
+                     </p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>                 
+                 <li class="navGradient"><div class="line"><p class="tit">If the bid price of my order is equal to that of a market maker's quote would the market maker have an advantage over me?</p></div>
+                      <div class="detail">
+                      <p>No. HKATS prioritises quote and orders of the same price according to the input time, hence the market makers have no advantage over the other participants.<br><br>
+                       <table width="100%" class="ms-rteTable-1">
+                           <tbody><tr>
+                             <th>Market Maker A (MM A)</th>
+                             <th>Investor B (Inv B)</th>
+                             <th>Market Maker C (MM C)</th>
+                           </tr>
+                           <tr>
+                             <td><strong>At 10:15</strong></td>
+                             <td><strong>At 10:16</strong></td>
+                             <td><strong>At 10:17</strong></td>
+                           </tr>
+                           <tr>
+                             <td>Bid / Ask</td>
+                             <td>Bid </td>
+                             <td>Bid / Ask</td>
+                           </tr>
+                           <tr>
+                             <td><strong>5.91 </strong>/ 6.23</td>
+                             <td><strong>5.91</strong></td>
+                             <td><strong>5.91 </strong>/ 6.33</td>
+                           </tr>
+                         </tbody></table>
+                       <br>
+                       <table width="100%" class="ms-rteTable-1">
+                           <tbody><tr>
+                             <th>At 10:15</th>
+                           </tr>
+                           <tr>
+                             <td>Best Bid = <strong>5.91</strong><br>
+                               Prority Queue: <strong>Market Maker A</strong></td>
+                           </tr>
+                           <tr>
+                             <th>At 10:16</th>
+                           </tr>
+                           <tr>
+                             <td>Best Bid = <strong>5.91</strong><br>
+Prority Queue: <strong>Market Maker A, Investor B</strong></td>
+                           </tr>
+                           <tr>
+                             <th>At 10:17</th>
+                           </tr>
+                           <tr>
+                             <td>Best Bid = <strong>5.91</strong><br>
+Prority Queue: <strong>Market Maker A, Investor B, Market Maker C</strong></td>
+                           </tr>
+                         </tbody></table>                         
+                      </p>
+                      
+                      <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                      </div>
+                 </li>
+                 <!------>
+                 <li class="navGradient"><div class="line"><p class="tit">Could market makers manipulate option prices?</p></div>
+                     <div class="detail">
+                     <p>
+                     It will be very difficult for market makers to manipulate because:<br>
+                     <ul class="strategiesli">
+                        <li>all trades have to be matched in Hong Kong Futures Automated Trading System (HKATS) according to price and time priority;</li>
+                        <li>there are more than one market maker providing quotes, and so order matching may occur among themselves;</li>
+                        <li>quotes have to be two-way and market makers have no privileges in order execution;</li>
+                        <li>there is no limit to the quantity of open interest and the number of contracts available for trading; and</li>
+                        <li>investors may input their limit orders and they may enter into short as well as long positions.</li>
+                     </ul>
+                     </p>
+                     <p class="r"><img class="collapse" src="../images/collapse.gif"></p>
+                     </div>
+                 </li>
+                 <!------>           
+             </ul>
+         </div><!-- /.faq -->
+
+         <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_3_e.html','Chapter 3: Exercis, Settlement and Clearing')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('stk_opt_faq_3_e.html','Chapter 3: Exercis, Settlement and Clearing')">Prev Chapter</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('stk_opt_faq_5_e.html','Chapter 5: General information')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('stk_opt_faq_5_e.html','Chapter 5: General information')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  

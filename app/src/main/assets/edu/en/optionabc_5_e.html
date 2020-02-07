@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>Chapter 5: Option Premium</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="widTH=device-widTH, initial-scale=1.0, user-scalable=yes" />
+	<!-- CSS
+    ================================================== -->
+    <link href="../css/edu_e.css" rel="stylesheet" type="text/css" media="screen">
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <!-- Fix IE -->    
+    <script src="../js/selectivizr-and-extra-selectors.min.js"></script>  
+    <!-- some basic functions -->
+    <script src="../js/functions.js"></script>
+</head>
+
+<body>
+     
+
+     <div id="wrap">
+         <div class="pageBN c5">
+              <img src="../images/abc_top_c5_txt_e.gif">
+              <img class="shadow" src="../images/abc_top_shadow.png">
+         </div><!--- end banner -------------------->         
+         
+         <div class="hl_arrow"></div>
+         <div class="highlight">   
+             Now comes to the price of the option which is often called as option premium.       
+         </div><!--- end highlight --------------------> 
+         <div class="article">              
+             <h4 class="g0">It has two components: </h4>  
+             <p class="g0 mb_0">
+                <img src="../images/abc_c5-01_bg.gif">     
+                <img src="../images/abc_c5-01_txt_e.gif" class="txt_img">                  
+             </p> 
+             <div class="clearfix"></div>  
+         </div>     
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">
+             <h4 class="g0">Intrinsic Value </h4>             
+             <p class="g0">
+                It is the difference between the market price/level of the underlying stock/index and the strike price/level of an option.
+             </p> 
+             <div class="clearfix"></div>  
+             
+             <p class="g0 mb_0">Example, market price of the underlyoing stock = $50</p>
+             <p class="g0">
+                <img src="../images/abc_c5-0200_bg.gif" class="mob_bg">    
+                <img src="../images/abc_c5-0201_bg.gif" class="txt_img mob_bg">                 
+                <img src="../images/abc_c5-0201_txt_e.gif" class="tips_img mob_bg"> 
+                <!--- tablet img --->
+                <img src="../images/abc_c5-0200_bg_tablet.gif" class="tablet_bg">
+                <img src="../images/abc_c5-0201_bg_tablet.gif" class="txt_img tablet_bg">               
+                <img src="../images/abc_c5-0201_txt_e_tablet.gif" class="tips_img tablet_bg">
+             </p>                          
+             <p class="g0">  
+                  For <b class="tskybu">call option</b>, the difference is calculated by the market price/level of the underlying stock/index minus the strike price/level.<br><br>
+
+If the market price of the underlying stock is less than the strike price <b class="tskybu">(Market Price &lt; Strike Price</b>), the option is <b class="tskybu">out-of-the-money (OTM)</b> and <b class="tskybu">does not have intrinsic value</b>.<br><br>
+
+If the market price of the underlying stock is equal to the strike price (<b class="tskybu">Market Price = Strike Price</b>), the option is <b class="tskybu">at-the-money (ATM)</b> and <b class="tskybu">does not have intrinsic value</b>.<br><br>
+
+If the market price of the underlying stock is greater than the strike price (<b class="tskybu">Market Price &gt; Strike Price</b>), the option is <b class="tskybu">in-the-money (ITM)</b> and <b class="tskybu">has intrinsic value</b>.
+             </p>   
+                         
+             <div class="clearfix"></div>  
+             <img class="hr" style="width:100%; height:4px; margin:auto 0;" src="../images/quiz_shadow.gif">
+             
+             <p class="g0 mt_15p">
+                 <br>It is the difference between the strike price/level of an option and the market price/level of the underlying stock/index. 
+             </p> 
+             <div class="clearfix"></div>  
+             
+             <p class="g0 mb_0">Example, market price of the underlying stock = $50</p>
+             <p class="g0">
+                <img src="../images/abc_c5-0200_bg.gif" class="mob_bg">    
+                <img src="../images/abc_c5-0202_bg.gif" class="txt_img mob_bg">                 
+                <img src="../images/abc_c5-0202_txt_e.gif" class="tips_img mob_bg"> 
+                <!--- tablet img --->
+                <img src="../images/abc_c5-0200_bg_tablet.gif" class="tablet_bg">
+                <img src="../images/abc_c5-0202_bg_tablet.gif" class="txt_img tablet_bg">               
+                <img src="../images/abc_c5-0202_txt_e_tablet.gif" class="tips_img tablet_bg">
+             </p>                          
+             <p class="g0">  
+                  For <b class="tskybu">put option</b>, the difference is calculated by the strike price/level minus market price/level of the underlying stock/index.<br>
+                  <br>
+
+If the strike price is greater than the market price of the underlying stock (<b class="tskybu">Strike Price &gt; Market Price</b>), the option is <b class="tskybu">in-the-money (ITM)</b> and <b class="tskybu">has intrinsic value</b>.<br><br>
+
+If the strike price is equal to the market price of the underlying stock (<b class="tskybu">Strike Price = Market Price</b>), the option is <b class="tskybu">at-the-money (ATM)</b> and <b class="tskybu">does not have intrinsic value</b>.<br>
+<br>
+
+If the strike price is less than the market price of the underlying stock (<b class="tskybu">Strike Price &lt; Market Price</b>), the option is <b class="tskybu">out-of-the-money (OTM)</b> and <b class="tskybu">does not have intrinsic value</b>.
+             </p>                
+             <div class="clearfix"></div>             
+            <img class="hr" style="width:100%; height:4px; margin:auto 0;" src="../images/quiz_shadow.gif">
+            
+            
+            <p class="g0">
+            <h4 class="mb_0">Summary</h4>
+            <small>It is the difference between the market price/level of the underlying stock/index and the strike price/level of an option</small></p>
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 widTH="100%">
+            <colgroup><col width="40%"><col width="30%"><col width="30%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH bgcolor="#cee3f8">&nbsp;</TH>
+            <TH bgcolor="#cee3f8">Call Options</TH>
+            <TH bgcolor="#cee3f8">Put Options</TH></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">Market Price/Level of<br>Stock/Index &lt; Strike Price</TH>
+            <TD>
+            Intrinsic Value = 0<br>
+            Moneyness = Out-of-the-money</TD>
+            <TD>
+            Intrinsic Value is positive<br>
+            Moneyness = In-the-money</TD></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">Market Price/Level of<br>Stock/Index = Strike Price</TH>
+            <TD>
+            Intrinsic Value = 0<br>
+            Moneyness = At-the-money</TD>
+            <TD>
+            Intrinsic Value = 0<br>
+            Moneyness = At-the-money</TD></TR>
+            <TR>
+            <TH bgcolor="#b3d1ed">Market Price/Level of<br>Stock/Index &gt; Strike Price</TH>
+            <TD>
+            Intrinsic Value is positive<br>
+            Moneyness = In-the-money</TD>
+            <TD>
+            Intrinsic Value = 0<br>
+            Moneyness = Out-of-the-money</TD></TR></TBODY></TABLE>
+                                                    
+         </div><!--- end part1.2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">    
+         
+         <div class="article">
+             <h4 class="g0">Time Value</h4>             
+             <p class="g0">
+                 It is the extra amount which the option buyer is willing to pay for the probability that the option may become deeper in-the-money due to favourable movement in the underlying stock price/index level for the remaining life-span of the option. Time value is affected by two elements:<br>
+                 <img src="../images/abc_c5-03_bg.gif" class="sp_img fr"> 
+                  <ol class="flex-txt-nav" style="width:63%; margin-left:0;">
+                     <li><a href="#cp1">1) time to expiry, and </a></li>
+                     <li><a href="#cp2">2) volatility of the underlying stock/index.</a></li>
+                  </ol> 
+             </p> 
+             <div class="clearfix"></div>
+              
+             <h4 class="g0" id="cp1">1) Time to Expiry </h4>      
+             <p class="g1">
+                An option contains more time value as the time to expiry is longer, holding other factors constant. This is because <b class="tskybu">the longer the remaining time until expiry</b>, the greater the probability that the option can go in-the-money, and therefore <b class="tskybu">the more the option is worth.</b><br><br>
+                Time value reduces as time goes by, this is called "<b class="tskybu">Time decay</b>". Time decay is <b class="tskybu">NOT favourable to options HOLDERS</b> and is <b class="tskybu">favourable to options WRITERS</b>. This is a very important concept in options trading.<br><br>
+                Time decay is not constant. It <b class="tskybu">accelerates</b> when the option <b class="tskybu">approaches expiry</b>. 
+             </p>            
+             <p class="g1">
+                <img src="../images/abc_c5-04_bg.gif">
+                <img src="../images/abc_c5-04_txt_e.gif" class="txt_img">              
+             </p> 
+             
+             <div class="clearfix"></div>             
+              
+             <h4 class="g0" id="cp2">2) Volatility of the underlying stock/index </h4>
+             <p class="g1">
+                <img src="../images/abc_c5-05_bg.gif">
+                <img src="../images/abc_c5-05_txt_e.gif" class="txt_img">              
+             </p>     
+             <p class="g1">
+                Volatility can be defined as the degree to which the price of a stock or the level of an index tends to fluctuate over a specified period of time.<br><br>
+                Increases in volatility increases the magnitude of upward or downward movements of the underlying stock/index, and hence the probability of becoming in-the-money for calls and puts. Volatility is embedded in the time Value of an option. therefore <b class="tskybu">higher volatility results in higher time value and thus, the premium</b>.
+             </p> 
+             
+             <div class="clearfix"></div>
+                          
+             <p class="g0">There are two types of volatility, historical volatility and implied volatility.</p>
+             <p class="g1">                
+                <b class="tskybu">Historical Volatility</b> refers to the range of price/level movements that have been seen in a particular stock/index over a specified period of time in the <b class="tskybu">past</b>.<br><br>
+                <b class="tskybu">Implied Volatility</b> is deduced <b class="tskybu">from market traded option price</b>.
+             </p>
+             <p class="g1">
+                <img src="../images/abc_c5-06_bg.gif">
+                <img src="../images/abc_c5-06_txt_e.gif" class="txt_img">              
+             </p> 
+             <div class="clearfix"></div> 
+              
+              <p class="g0">As market participants have different views about future market movement, the levels of volatility used in their option pricing model vary and therefore will arrive at different prices.</p>
+             <p class="g1">
+                <img src="../images/abc_c5-07_bg.gif">
+                <img src="../images/abc_c5-07_txt_e.gif" class="txt_img">              
+             </p>             
+             <p class="g1">
+                Options investors input the market price of an option to an <span class="tips">option pricing model</span> <em class="tips_pop">Option price is complex to value. It depends on a number of different factors including underlying price, strike price, time to expiry, volatility, dividend and interest rate. There are many pricing models in use. Amongst the most common models are Black-Scholes model and Binomial Options Pricing Model.</em> so as to estimate the level of volatility used by the person who quotes the price. It is referred to as Implied Volatility. <br><br>
+                Options investors can then compare the implied volatility of a given market price with their own expectations about the volatility of the underlying shares or with the implied volatilities of other comparable derivative products to decide on the strategies to be used.
+             </p>                                               
+         </div><!--- end part2 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png">
+         
+         <div class="article">             
+             <h4 class="g0">Factors affecting stock option premium</h4>             
+             <p class="g0">
+               There are <b class="tskybu">six factors</b> which affects the value of option premium. The effects of the factors are summarized below. Please note that the remaining factors are assumed to be constant when reading the effect of moving the value of a single factor.
+             </p>
+             
+            <TABLE class="ms-rteTable-7" border=0 cellSpacing=0 cellPadding=0 width="100%">
+            <colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup>
+            <TBODY>
+            <TR>
+            <TH class=aleft bgcolor="#b3d1ed">Factor</TH>
+            <TH bgColor="#cee3f8">Change in Factor</TH>
+            <TH bgColor="#cee3f8">Change in Call Premium</TH>
+            <TH bgColor="#cee3f8">Change in Put Premium</TH></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">Underlying Price</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">Strike Price</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">Time to Expiry*</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">Volatility</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">Dividend</b></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD></TR>
+            <TR>
+            <TD bgcolor="#b3d1ed"><b class="tskybu">Interest Rate</b></STRONG></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_up.gif" class="light_arrow"></TD>
+            <TD align="center"><IMG src="../images/icon_graphic_down.gif" class="light_arrow"></TD></TR></TBODY></TABLE>
+             
+             <p class="g0">
+               <span>*Not necessarily true for deep in-the-money or deep out-of-the-money options</span><br><br>
+               <!--Please access Options/Warrants Calculator under Options tools section to try out the effect of different factors on option premium.-->
+             </p> 
+             <div class="clearfix"></div>               
+         </div><!--- end part3 -------------------->         
+         <img class="hr" src="../images/bu_re_line.png"> 
+                  
+         
+         <table class="pageNav" border="0" cellspacing="0" widTH="90%">
+             <colgroup>
+                <col widTH="6%"><col widTH="28%"> <col widTH="33%"> <col widTH="27%"><col widTH="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_4_e.html','Chapter 4: Why use options?')"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="javascript:changepage('optionabc_4_e.html','Chapter 4: Why use options?')">Prev Chapter</a>&nbsp;</td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_5_quize_e.html','Chapter 5: Option Premium')"><img class="quizeBtn" src="../images/btn_start_quiz.png"></a></td>
+                     <td align="right" valign="middle"><a href="javascript:changepage('optionabc_6_e.html','Chapter 6: How options work?')">Next Chapter</a></td>
+                     <td align="center" valign="middle"><a href="javascript:changepage('optionabc_6_e.html','Chapter 6: How options work?')"><img class="pgBtn" src="../images/btn_pgNext.png"></a></td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->    
+         
+     </div><!-- end demo #wrap -->
+     
+</body>
+</html>
+  

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/bg_list_2line" android:layout_width="fill_parent" android:layout_height="46.0dip" android:cacheColorHint="@color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/iconlayout" android:layout_width="46.0dip" android:layout_height="fill_parent">
+        <ImageView android:id="@id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_star" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/stock" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="(02827)\nX Wise CSI300 ETF" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="70.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.01" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="70.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/change_green" android:ellipsize="end" android:id="@id/pchng" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0.01" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="70.0dip" android:layout_height="fill_parent">
+        <TextView android:textSize="12.0sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@id/turnover" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="653K" android:maxLines="2" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

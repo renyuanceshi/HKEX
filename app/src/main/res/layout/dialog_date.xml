@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/bgdeepblue"
+    android:orientation="vertical"
+    android:padding="5.0dip">
+
+    <RelativeLayout
+        android:id="@+id/dialog_titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="33.0dip"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="18.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bgwhite"
+        android:orientation="vertical">
+
+        <DatePicker
+            android:id="@+id/dialog_datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bglightgrey"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="1.0dip">
+
+                <Button
+                    android:id="@+id/cancel_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgwhite"
+                    android:text="@string/cancel"
+                    android:textColor="@color/textgrey" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingTop="1.0dip"
+                android:paddingRight="1.0dip"
+                android:paddingBottom="1.0dip">
+
+                <Button
+                    android:id="@+id/set_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bgwhite"
+                    android:text="@string/set"
+                    android:textColor="@color/textgrey" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

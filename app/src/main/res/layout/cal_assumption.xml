@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/bg_oc_assumption"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:src="@drawable/btn_done_e" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="206.0dip"
+        android:background="@drawable/bg_oc_assumption_mid"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="23.0dip"
+            android:gravity="center"
+            android:text="@string/assumption"
+            android:textColor="@color/textbluegrey"
+            android:textSize="12.0sp" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="54.0dip"
+            android:orientation="vertical"
+            android:paddingTop="2.0dip">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/interestrate"
+                android:textColor="@color/textwhite"
+                android:textSize="14.0sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cal_rate"
+                    android:layout_width="60.0dip"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:padding="6.0dip"
+                    android:text="@string/no_data"
+                    android:textColor="@color/textwhite"
+                    android:textSize="14.0sp" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_irate"
+                    style="@style/SeekBarHoloTheme"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="64.0dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.48">
+
+                <ImageView
+                    android:id="@+id/divideDate1Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/txt_dividedate1_e" />
+
+                <com.hkex.soma.element.SelectionList
+                    android:id="@+id/selectionListDivideDate1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="-5.0dip"
+                android:background="@drawable/bg_cal_vline" />
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.52"
+                android:paddingLeft="8.0dip">
+
+                <ImageView
+                    android:id="@+id/divideDate2Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/txt_dividedate2_e" />
+
+                <com.hkex.soma.element.SelectionList
+                    android:id="@+id/selectionListDivideDate2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="64.0dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.48">
+
+                <ImageView
+                    android:id="@+id/divideAmount1Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/txt_divideamount1_e" />
+
+                <EditText
+                    android:id="@+id/cal_dividend1"
+                    style="@style/EditTextHoloTheme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:inputType="phone"
+                    android:textColor="@color/textwhite"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="1.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="-5.0dip"
+                android:background="@drawable/bg_cal_vline" />
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.52"
+                android:paddingLeft="8.0dip">
+
+                <ImageView
+                    android:id="@+id/divideAmount2Label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/txt_divideamount2_e" />
+
+                <EditText
+                    android:id="@+id/cal_dividend2"
+                    style="@style/EditTextHoloTheme"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:inputType="phone"
+                    android:textColor="@color/textwhite"
+                    android:textSize="14.0sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_assumption_end"
+        android:orientation="vertical"
+        android:paddingLeft="8.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="8.0dip">
+
+        <ImageButton
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:src="@drawable/btn_reset_e" />
+
+        <TextView
+            android:id="@+id/calculatedresult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="50.0dip"
+            android:text="@string/calexplaintexthead"
+            android:textColor="@color/textwhite"
+            android:textSize="10.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/calculatedresult2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="62.0dip"
+            android:text="@string/calexplaintext"
+            android:textColor="@color/textwhite"
+            android:textSize="10.0sp" />
+    </RelativeLayout>
+</LinearLayout>

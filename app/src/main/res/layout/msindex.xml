@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/chartContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:padding="0.0dip">
+
+            <TextView
+                android:id="@+id/chartTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:textColor="@color/textblue"
+                android:textSize="14.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginTop="5.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/last"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/textblue"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/chng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/textblue"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/chartImage"
+                android:layout_width="224.0dip"
+                android:layout_height="154.0dip"
+                android:background="@color/transparent"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="186.5dip">
+
+                <WebView
+                    android:id="@+id/chart_webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="186.5dip"
+                    android:layout_centerInParent="true"
+                    android:background="@color/transparent" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/indexMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="20.0dip"
+            android:text=""
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/textblack"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/listViewHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="34.0dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="34.0dip"
+            android:background="@drawable/list_header">
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/head_index"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="@string/head_index"
+                    android:textColor="@color/textwhite"
+                    android:textSize="12.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/head_last"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="@string/head_last"
+                    android:textColor="@color/textwhite"
+                    android:textSize="12.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/head_chng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="@string/head_chng"
+                    android:textColor="@color/textwhite"
+                    android:textSize="12.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="80.0dip"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/head_pchng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:text="@string/head_pchng"
+                    android:textColor="@color/textwhite"
+                    android:textSize="12.0sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#ffffffff"
+        android:dividerHeight="0.0px" />
+</LinearLayout>

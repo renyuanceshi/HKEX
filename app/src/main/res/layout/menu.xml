@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgmenublue"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/searchBar"
+        android:layout_width="fill_parent"
+        android:layout_height="45.0dip"
+        android:background="@drawable/bg_menu_top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_searchbar" />
+
+        <TextView
+            android:id="@+id/searchBartext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="42.0dip"
+            android:text="@string/menu_search"
+            android:textColor="@color/textwhite"
+            android:textSize="16.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.8">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/menu_row01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_snapshot" />
+
+                    <TextView
+                        android:id="@+id/textView01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView01"
+                        android:text="@string/title_marketsnapshot"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_ProductMainpage"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView_ProductMainpage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_product" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView_ProductMainpage"
+                        android:text="@string/head_product_info"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_portfolio" />
+
+                    <TextView
+                        android:id="@+id/textView02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView02"
+                        android:text="@string/title_portfolio"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_quote" />
+
+                    <TextView
+                        android:id="@+id/textView03"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView03"
+                        android:text="@string/title_quote"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row10"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_option_calculator" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView10"
+                        android:text="@string/title_optionscalculator"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row11"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_tmc" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView11"
+                        android:ellipsize="end"
+                        android:lines="1"
+                        android:text="@string/title_tailor_made_combinations"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row04"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_video" />
+
+                    <TextView
+                        android:id="@+id/textView04"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView04"
+                        android:text="@string/title_video"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row05"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_education" />
+
+                    <TextView
+                        android:id="@+id/textView05"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView05"
+                        android:text="@string/title_education"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row06"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_classlist" />
+
+                    <TextView
+                        android:id="@+id/textView06"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView06"
+                        android:text="@string/title_classlist"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row12"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_options_vol" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView12"
+                        android:text="@string/options_volume"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row07"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_margin" />
+
+                    <TextView
+                        android:id="@+id/textView07"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView07"
+                        android:text="@string/title_margin"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row08"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_dividend" />
+
+                    <TextView
+                        android:id="@+id/textView08"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView08"
+                        android:text="@string/title_dividend"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/menu_row09"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46.0dip"
+                    android:background="@drawable/bg_list_menu"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ImageView09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="7.0dip"
+                        android:src="@drawable/menu_setting" />
+
+                    <TextView
+                        android:id="@+id/textView09"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/ImageView09"
+                        android:text="@string/title_setting"
+                        android:textColor="@color/textwhite"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+</LinearLayout>

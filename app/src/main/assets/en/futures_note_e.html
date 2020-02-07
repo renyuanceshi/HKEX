@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<head>
+    <title>免責聲明</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- CSS
+    ================================================== --> 
+<link href="../css/other_e.css" rel="stylesheet" type="text/css" media="screen"> 
+</head>
+
+<body class="bg_gr">
+
+     <div id="wrap">
+        <div class="generalBox">
+		<p>Prices on the chart are indicative only. The indicative prices are determined by:</p>
+        <ul class="number_list">
+            <li>if the contract has been traded up to that time on the day:
+            	<ul class="alpha_list">
+                    <li>(when the current bid price is greater than the last recorded price), the current bid price; otherwise</li>
+                    <li>(when the current ask price is less than the last recorded price), the current ask price; otherwise</li>
+                    <li>where both (1)(a) and (1)(b) above do not apply, then the last recorded price; or</li>
+                </ul>
+            </li>
+            <li>if the contract has not been traded up to that time on the day:
+            	<ul class="alpha_list">
+                    <li>(when the current bid price is greater than the previous settlement price), the current bid price; otherwise</li>
+                    <li>(when the current ask price is less than the previous settlement price), the current ask price; otherwise</li>
+                    <li>where both (2)(a) and (2)(b) above do not apply, then the previous settlement price.</li>
+                </ul>
+            </li>
+        </ul>
+        <p id="night_msg">Data shown for the previous night's session will be removed every day at 16:30 HKT.</p>
+        </div>
+        
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
+  
+
+
+
+
+

@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainContainer"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bgwhite"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        android:background="@drawable/bg_header"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/title_optiondetail"
+            android:textColor="@color/textblue"
+            android:textSize="22.0sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnRight"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:src="@drawable/btn_calculator" />
+    </LinearLayout>
+
+    <com.hkex.soma.basic.MultiScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="77.0dip"
+                android:background="@drawable/bg_optiondetail_top"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="40.0dip"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/portfolioicon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="12.0dip"
+                        android:src="@drawable/btn_star" />
+
+                    <TextView
+                        android:id="@+id/optiontitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginBottom="2.0dip"
+                        android:layout_toRightOf="@id/portfolioicon"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textwhite"
+                        android:textSize="22.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="37.0dip">
+
+                    <ImageView
+                        android:id="@+id/chartBut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="11.0dip"
+                        android:src="@drawable/btn_chart" />
+
+                    <TextView
+                        android:id="@+id/uname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="48.0dip"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/no_data"
+                        android:textColor="@color/textwhite"
+                        android:textSize="18.0sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="135.0dip"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="18.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg_optiondetail_left" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_optiondetail_middle"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="13.0dip"
+                            android:paddingLeft="5.0dip">
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/last_traded"
+                                android:textColor="@color/textlightgrey"
+                                android:textSize="12.0sp" />
+
+                            <TextView
+                                android:id="@+id/last"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5.0dip"
+                                android:layout_toRightOf="@id/textView4"
+                                android:text="@string/no_data"
+                                android:textColor="@color/textblack"
+                                android:textSize="14.0sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/change"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/last"
+                                android:layout_alignLeft="@id/last"
+                                android:text="@string/no_data"
+                                android:textColor="@color/textblack"
+                                android:textSize="14.0sp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="10.0dip"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <TableLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.65"
+                                android:paddingLeft="5.0dip">
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <TextView
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.25"
+                                        android:text="@string/sslist1"
+                                        android:textColor="@color/textlightgrey"
+                                        android:textSize="12.0sp" />
+
+                                    <TextView
+                                        android:id="@+id/bid"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:gravity="right"
+                                        android:maxLines="1"
+                                        android:text="@string/no_data"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="2.0dip"
+                                        android:layout_marginRight="2.0dip"
+                                        android:text="/"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/ask"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:gravity="left"
+                                        android:maxLines="1"
+                                        android:text="@string/no_data"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <TextView
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.25"
+                                        android:text="@string/highlow"
+                                        android:textColor="@color/textlightgrey"
+                                        android:textSize="12.0sp" />
+
+                                    <TextView
+                                        android:id="@+id/high"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:gravity="right"
+                                        android:maxLines="1"
+                                        android:text="@string/no_data"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="2.0dip"
+                                        android:layout_marginRight="2.0dip"
+                                        android:text="/"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/low"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/no_data"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tableRow3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0.0dip"
+                                    android:layout_weight="1.0">
+
+                                    <TextView
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:text="@string/volume"
+                                        android:textColor="@color/textlightgrey"
+                                        android:textSize="12.0sp" />
+
+                                    <TextView
+                                        android:id="@+id/vol"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/no_data"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/currency_str"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:text="@string/currency"
+                                        android:textColor="@color/textlightgrey"
+                                        android:textSize="12.0sp" />
+
+                                    <TextView
+                                        android:id="@+id/currency"
+                                        android:layout_width="0.0dip"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0.2"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:text="@string/no_data"
+                                        android:textColor="@color/textblack"
+                                        android:textSize="12.0sp"
+                                        android:textStyle="bold" />
+                                </TableRow>
+                            </TableLayout>
+
+                            <LinearLayout
+                                android:layout_width="1.0dip"
+                                android:layout_height="54.0dip"
+                                android:layout_marginTop="5.0dip"
+                                android:background="@drawable/bg_optiondetail_vline" />
+
+                            <LinearLayout
+                                android:layout_width="0.0dip"
+                                android:layout_height="fill_parent"
+                                android:layout_weight="0.35"
+                                android:orientation="vertical"
+                                android:paddingLeft="5.0dip">
+
+                                <TextView
+                                    android:id="@+id/textView9"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="5.0dip"
+                                    android:text="@string/underlying"
+                                    android:textColor="@color/textlightgrey"
+                                    android:textSize="12.0sp" />
+
+                                <TextView
+                                    android:id="@+id/ulast"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="5.0dip"
+                                    android:text="@string/no_data"
+                                    android:textColor="@color/textblack"
+                                    android:textSize="12.0sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/uchange"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:paddingTop="5.0dip"
+                                    android:text="@string/no_data"
+                                    android:textColor="@color/textblack"
+                                    android:textSize="12.0sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageButton
+                        android:id="@+id/real_time_but"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="15.0dip"
+                        android:background="@color/transparent"
+                        android:src="@drawable/icon_real_time" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="18.0dip"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg_optiondetail_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist1"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle1"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist2"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle2"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist3"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle3"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/moreContainer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist4"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle4"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist5"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle5"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist6"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle6"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist7"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle7"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist8"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle8"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist9"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle9"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist10"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle10"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist11"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle11"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist12"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle12"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist13"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle13"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist14"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle14"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist15"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle15"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="30.0dip"
+                        android:background="@drawable/bg_list_1line">
+
+                        <TextView
+                            android:id="@+id/optiontitle16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/odlist16"
+                            android:textColor="@color/textlightgrey"
+                            android:textSize="15.0sp" />
+
+                        <TextView
+                            android:id="@+id/optionvalue16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@id/optiontitle16"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textblack"
+                            android:textSize="15.0sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listViewHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="66.0dip"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="33.0dip"
+                    android:background="@drawable/list_topheader"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="33.0dip"
+                        android:background="@drawable/bg_related_option"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:paddingLeft="10.0dip"
+                            android:text="@string/relatedoptions"
+                            android:textColor="@color/textwhite"
+                            android:textSize="14.0sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/morelayout"
+                        android:layout_width="85.0dip"
+                        android:layout_height="33.0dip"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/bg_related_option_more"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/moretv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingTop="7.0dip"
+                            android:paddingRight="15.0dip"
+                            android:text="@string/more"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="34.0dip"
+                    android:background="@drawable/list_header"
+                    android:baselineAligned="false">
+
+                    <RelativeLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0">
+
+                        <TextView
+                            android:id="@+id/head_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:paddingLeft="46.0dip"
+                            android:text="@string/head_type"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="100.0dip"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/head_expiry"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/expiry"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="80.0dip"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/head_strike"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/strike"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="80.0dip"
+                        android:layout_height="fill_parent">
+
+                        <TextView
+                            android:id="@+id/head_vol"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxLines="2"
+                            android:text="@string/head_volume"
+                            android:textColor="@color/textwhite"
+                            android:textSize="12.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.hkex.soma.basic.MultiScrollListView
+                android:id="@+id/listView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="#ffffffff"
+                android:dividerHeight="0.0px" />
+        </LinearLayout>
+    </com.hkex.soma.basic.MultiScrollView>
+
+    <LinearLayout
+        android:id="@+id/footerContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

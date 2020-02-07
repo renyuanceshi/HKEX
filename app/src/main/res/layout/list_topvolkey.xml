@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="25.0dip"
+    android:background="@drawable/bg_stock_option_landing_dropdown"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="10.0dip"
+    android:paddingRight="10.0dip">
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text=""
+            android:textColor="@color/textlightblue"
+            android:textSize="12.0dip" />
+
+        <TextView
+            android:id="@+id/no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.0dip"
+            android:text=""
+            android:textColor="@color/textlightblue"
+            android:textSize="12.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_weight="1.0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name2"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text=""
+            android:textColor="@color/textlightblue"
+            android:textSize="12.0dip" />
+
+        <TextView
+            android:id="@+id/no2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3.0dip"
+            android:text=""
+            android:textColor="@color/textlightblue"
+            android:textSize="12.0dip" />
+    </LinearLayout>
+</LinearLayout>

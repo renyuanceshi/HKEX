@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>期權策略</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_c.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+    
+
+   
+
+</head>
+
+<body>
+     
+
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>沽出跨期認購期權</h3>
+             <a href="option_strategies_c.html" class="backBTN">返回</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th>策略 </th>
+  </tr>
+  <tr>
+    <td>沽出跨期認購期權 </td>
+  </tr>
+  <tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>沽出遠期月份認購期權，並買入近期月份而相同行使價/水平的認購期權 </td>
+  </tr>
+  <tr>
+    <th>潛在盈利 </th>
+  </tr>
+  <tr>
+    <td>只限於已收取的期權金淨額 </td>
+  </tr>
+  <tr>
+    <th>最大虧損 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>當正股價/指數水平在近期月份的到期時等如行使價/水平 </li>
+      <li>只限於近期認購期權的時間值虧損減去遠期認購期權的時間值虧損 </li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>時間值影響 </th>
+  </tr>
+  <tr>
+    <td>負面 </td>
+  </tr>
+  <tr>
+    <th>備註 </th>
+  </tr>
+  <tr>
+    <td>跨期認購期權短倉和跨期認沽期權短倉的特性大致相似，主要不同的地方為可收取的期權金淨額數目，而數目的大小取決於行使價/水平的高低。此外，此策略或許需要繳付按金，而所持短倉亦有機會在到期日前被行使。 </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">例子</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="left"><div class="vtxt">盈<br>餘/<br>虧<br>損</div></th>
+                   
+                    <td valign="middle"><img src="../images/chart_strategies_shortcall_calendar.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">正股價格</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> 淨持倉</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> -1 三月 200 認購</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> +1 一月 200 認購</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>沽出「ABC三月200元認購」，收取 30元，並買入「ABC一月200元認購」，付出 20元 </td>
+  </tr>
+  <tr>
+    <th>期權金淨額 </th>
+  </tr>
+  <tr>
+    <td>收取 30元 – 20元 = 10元 </td>
+  </tr>
+  <tr>
+    <th>錄得盈利 </th>
+  </tr>
+  <tr>
+    <td>當正股價在近期月份之到期時遠離於 200元 </td>
+  </tr>
+  <tr>
+    <th>潛在盈利 </th>
+  </tr>
+  <tr>
+    <td>10元 </td>
+  </tr>
+  <tr>
+    <th>潛在虧損 </th>
+  </tr>
+  <tr>
+    <td>一月份認購期權的時間值虧損減去三月份認購期權的時間值虧損 </td>
+  </tr>
+  <tr>
+    <th>時間值影響</th>
+  </tr>
+  <tr>
+    <td>負面 </td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_c.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_c.html">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

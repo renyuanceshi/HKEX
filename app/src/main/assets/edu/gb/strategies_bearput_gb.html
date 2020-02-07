@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<head>
+    <TITLE>期权策略</TITLE>
+
+	<!-- Basic Page Needs
+    ================================================== -->
+	<meta charset="utf-8">	
+	<!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+	<!-- CSS
+    ================================================== -->
+<link href="../css/edu_gb.css" rel="stylesheet" type="text/css" media="screen">
+    
+    <!-- Use Google CDN for jQuery 
+    ================================================== -->
+<script src="../js/jquery-1.7.1.min.js"></script>
+    
+    <!-- Fix IE -->
+<script src="../js/selectivizr-and-extra-selectors.min.js"></script>
+    
+    
+    <!-- some basic functions -->
+<script src="../js/functions.js"></script>
+
+    
+
+   
+
+</head>
+
+<body>     
+
+     <div id="wrap">
+         <!--img class="top_shadow" src="../images/top_shadow.png"-->
+         <div class="top_bn">
+             <img src="../images/bg_top_strategies.gif" alt="Options Strategies">
+             <img class="line" src="../images/bu_re_line.png">
+         </div><!-- /.top_bn -->
+                  
+       <div class="article mt_15p strategies">
+             <h3>看淡跨价认沽期权</h3>
+             <a href="option_strategies_gb.html" class="backBTN">返回</a>
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">策略 </th>
+  </tr>
+  <tr>
+    <td>看淡跨价认沽期权 </td>
+  </tr>
+
+  <tr>
+    <th>成份 </th>
+  </tr>
+  <tr>
+    <td>沽出较低行使价/水平的认沽期权，并买入到期月份相同而较高行使价/水平的认沽期权 </td>
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td><ul class="strategiesli">
+      <li>当正股价/指数水平跌破打和点</li>
+      <li>只限于两个行使价/水平之差减去已付出的期权金净额</li>
+    </ul></td>
+  </tr>
+  <tr>
+    <th>最大亏损 </th>
+  </tr>
+  <tr>
+    <td>已付出的期权金净额 </td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>中性 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <tr>
+    <td>较高的行使价/水平减去已付出的期权金净额 </td>
+  </tr>
+  <tr>
+    <th>备注</th>
+  </tr>
+  <tr>
+    <td>与可收取期权金之看淡跨价认购期权相比，采用看淡跨价认沽期权需要付出期权金，因为较低行使价/水平的认沽期权金比较高行使价/水平的认沽期权金为低。 </td>
+  </tr>
+</tbody></table>   
+             <br><!--- end top table --->
+             
+             <h3 class="tgray">例子</h3>
+            
+             <div class="stChart">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <colgroup>
+                     <col width="2%"><col width="98%">
+                  </colgroup>
+                  <tr>
+                    <th scope="row"  valign="top" align="left"><div class="vtxt">盈<br>余/<br>亏<br>损</div></th>
+                   
+                    <td valign="middle"><img src="../images/chart_strategies_bearput.gif" width="768" height="320"></td>
+                  </tr>
+                 
+                  <tr>
+                    <th scope="row">&nbsp;</th>
+                    <td valign="middle" align="center"><b class="labeltit">正股价格</b></td>
+                  </tr>
+                  <tr><th scope="row" colspan="2">&nbsp;</th></tr>
+                  <tr>
+                    <td scope="row" colspan="2" align="left">
+                        <nobr><span class="chartMark"><b>&mdash;</b> 净持仓</span></nobr> 
+                        <nobr><span class="chartMark red"><b>&mdash;</b> -1 三月 180 认沽</span></nobr> 
+                        <nobr><span class="chartMark blue"><b>&mdash;</b> +1 三月 210 认沽</span></nobr>                   
+                    </th>
+                  </tr>
+                </table>
+             </div><!--- end chart --->
+             	
+             
+             <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ms-rteTable-1 strategiestable">
+  <tbody><tr>
+    <th width="140">成份 </th>
+  </tr>
+  <tr>
+    <td>沽出「ABC三月180元认沽」，收取 10元，并买入「ABC三月210元认沽」，付出 30元 </td>
+  </tr>
+  <tr>
+    <th>期权金净额 </th>
+  </tr>
+  <tr>
+    <td>付出 30元 – 10元 = 20元 </td>
+  </tr>
+  <tr>
+    <th>打和点 </th>
+  </tr>
+  <td>210元 – 20元 = 190元 </td>
+  </tr>
+  <tr>
+    <th>录得盈利 </th>
+  </tr>
+  <tr>
+    <td>当正股价跌破 190元 </td>
+  </tr>
+  <tr>
+    <th>潜在盈利 </th>
+  </tr>
+  <tr>
+    <td>(210元 – 180元) – 20元 = 10元 </td>
+  </tr>
+  <tr>
+    <th>潜在亏损 </th>
+  </tr>
+  <tr>
+    <td>20元 </td>
+  </tr>
+  <tr>
+    <th>时间值影响 </th>
+  </tr>
+  <tr>
+    <td>中性</td>
+  </tr>
+</tbody></table> 
+              <br>             
+         </div><!--- end chart -------------------->
+         
+         
+       <table class="pageNav" border="0" cellspacing="0" width="90%">
+             <colgroup>
+                <col width="6%"><col width="27%"> <col width="34%"> <col width="27%"><col width="6%">            
+             </colgroup>
+             <tbody>
+                 <tr>
+                     <td align="center" valign="middle"><a href="option_strategies_gb.html"><img class="pgBtn" src="../images/btn_pgPrep.png"></a></td>
+                     <td align="left" valign="middle"><a href="option_strategies_gb.html">返回</a></td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                     <td align="right" valign="middle">&nbsp;</td>
+                     <td align="center" valign="middle">&nbsp;</td>
+                 </tr>
+             </tbody>
+         </table><!--- end pageNav -------------------->
+         
+         
+         
+     </div><!-- end #wrap -->
+
+
+</body>
+</html>
+  

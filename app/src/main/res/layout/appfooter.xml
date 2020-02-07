@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/timebar"
+        android:layout_width="fill_parent"
+        android:layout_height="20.0dip"
+        android:background="@drawable/bg_timebar">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/footer_timeicon" />
+
+        <TextView
+            android:id="@+id/tv_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@id/imageView"
+            android:text="@string/lastupdate"
+            android:textColor="@color/textdeepblue"
+            android:textSize="12.0sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_stime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@id/tv_update"
+            android:text=""
+            android:textColor="@color/textdeepblue"
+            android:textSize="12.0sp" />
+
+        <TextView
+            android:id="@+id/tv_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@id/tv_stime"
+            android:text="@string/delaymessage"
+            android:textColor="@color/textdeepblue"
+            android:textSize="12.0sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_disclaimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5.0dip"
+            android:text="@string/indices_disclaimer"
+            android:textColor="@color/textdeepblue"
+            android:textSize="12.0sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="29.0dip"
+        android:background="@drawable/bg_footer">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/footer_logo" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="5.0dip"
+            android:text="@string/footerline2"
+            android:textColor="@color/textlightgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</LinearLayout>

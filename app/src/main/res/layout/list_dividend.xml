@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="160.0dip"
+    android:background="@drawable/bg_list_2line"
+    android:cacheColorHint="@color/transparent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="100.0dip"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/announcedate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10.0dip"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="14/07/2013"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100.0dip"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/exdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="31/07/2013\n05/08/2013"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="10"
+            android:text="No 1st qt Div"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</LinearLayout>

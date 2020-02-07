@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_ly"
+    android:layout_width="fill_parent"
+    android:layout_height="46.0dip"
+    android:background="@drawable/bg_list_2line"
+    android:cacheColorHint="@color/transparent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/iconlayout"
+        android:layout_width="46.0dip"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/btn_search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0.0dip"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.0">
+
+        <TextView
+            android:id="@+id/instrument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="(02827)\nX Wise CSI300 ETF"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="70.0dip"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/hcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="CKH"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="70.0dip"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/csize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="1,653"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="70.0dip"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:id="@+id/board"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="1"
+            android:textColor="@color/textgrey"
+            android:textSize="12.0sp" />
+    </RelativeLayout>
+</LinearLayout>

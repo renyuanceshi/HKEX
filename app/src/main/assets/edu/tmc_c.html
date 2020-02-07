@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+<TITLE>期權教育</TITLE>
+
+<!-- Basic Page Needs
+================================================== -->
+<meta charset="utf-8">	
+<!-- Mobile Specific Metas
+================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<!-- CSS
+================================================== -->
+<link href="css/tmc_c.css" rel="stylesheet" type="text/css" media="screen">    
+<!-- Use Google CDN for jQuery and jQuery UI 
+================================================== -->
+<script src="js/jquery-1.7.1.min.js"></script>
+<!-- Fix IE -->
+<script src="js/selectivizr-and-extra-selectors.min.js"></script>
+<!-- some basic functions -->
+<script src="js/functions.js"></script>
+<script type="text/javascript">
+	function changePathAndTitle(url, title){
+		window.setTimeout("window.location.href='"+url+"';",100);
+		window.location.href="webview://settitle:"+title;
+	}
+</script>
+</head>
+
+<body class="bg_dbu">
+  
+     <div id="wrap">
+         <div id="edu_landing">
+           <div id="left_nav" class="full">
+               <ul>
+				   <li>
+				       <div class="full_left"><a href="javascript:changePathAndTitle('ch/option_strategies_c.html','Options Strategies')">
+                          <img src="images/bg_landing_strategies.gif" alt="期權策略">
+                          <img class="txt" src="images/txt_landing_strategies_c.gif" alt="期權策略">
+                       </a></div>
+                       <!-- right start -->
+					   <div class="full_right"><h1>本頁載有不同期權策略的教學。</h1>
+					   <a href="javascript:changePathAndTitle('ch/option_strategies_c.html','Options Strategies')"><img class="enter_image" src="images/enter_c.png"></a></div>
+					   <!-- right end -->
+					   <div class="clear"></div>
+                   </li>
+				   
+                   <li>
+					   <div class="full_left"><a href="webview://tmc">
+                          <img src="images/bg_landing_tmc.gif" alt="自選組合功能 (TMC)">
+                          <img class="txt" src="images/txt_landing_tmc_c.gif" alt="自選組合功能 (TMC)">
+                       </a></div>
+					   <!-- right start -->
+                       <div class="full_right">
+					   <h1>現在可以一個淨價格執行牽涉多個期權組合的期權策略。本頁載有當天曾有價格資訊的自選組合資料。</h1>
+					   <a href="webview://tmc"><img class="enter_image" src="images/enter_c.png"></a> </div>
+					   <!-- right end -->
+					   <div class="clear"></div>
+                   </li>
+               </ul>
+           </div>           
+           
+         </div><!-- end #edu_landing -->
+
+     </div><!-- end demo #wrap -->
+
+</body>
+</html>
