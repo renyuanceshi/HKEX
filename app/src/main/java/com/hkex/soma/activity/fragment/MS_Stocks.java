@@ -75,7 +75,7 @@ public class MS_Stocks extends MasterFragment {
 
     public void initUI() {
         this.listView = (MultiScrollListView) this.fragmentView.findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(2131165570);
+        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(R.id.scrollView);
         SelectionList selectionList = (SelectionList) this.fragmentView.findViewById(R.id.selectionList);
         String string = getString(R.string.sel_topturnover);
         String string2 = getString(R.string.sel_topgain);

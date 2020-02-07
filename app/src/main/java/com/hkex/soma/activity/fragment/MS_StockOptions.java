@@ -395,7 +395,7 @@ public class MS_StockOptions extends MasterFragment {
             }
         };
         this.listView = (MultiScrollListView) this.fragmentView.findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(2131165570);
+        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(R.id.scrollView);
         this.selectionList2 = (SelectionList) this.fragmentView.findViewById(R.id.selectionList2);
         this.selectionList3 = (SelectionList) this.fragmentView.findViewById(R.id.selectionList3);
         this.listViewHeader_box = (LinearLayout) this.fragmentView.findViewById(R.id.listViewHeader_box);

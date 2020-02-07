@@ -134,7 +134,7 @@ public class Search_Stocks extends MasterFragment {
 
     public void initUI() {
         this.listView = (MultiScrollListView) this.fragmentView.findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(2131165570);
+        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(R.id.scrollView);
         this.selectionListCode = (SelectionList) this.fragmentView.findViewById(R.id.selectionListCode);
         this.selectionListName = (SelectionList) this.fragmentView.findViewById(R.id.selectionListName);
         this.setOnItemClickListener = new AdapterView.OnItemClickListener() {

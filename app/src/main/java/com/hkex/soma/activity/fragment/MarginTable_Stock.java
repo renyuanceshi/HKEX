@@ -177,7 +177,7 @@ public class MarginTable_Stock extends MasterFragment {
             Log.v("MarginTable_Stock", sb.toString());
             this.uname = Commons.MapUnderlyingName(this.ucode);
             this.listView = (MultiScrollListView) getView().findViewById(R.id.listView);
-            this.scrollView = (RelativeLayout) getView().findViewById(2131165570);
+            this.scrollView = (RelativeLayout) getView().findViewById(R.id.scrollView);
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
             Calendar instance = Calendar.getInstance();
             if (this.datamap != null && this.datamap.containsKey("year") && this.datamap.containsKey("month") && this.datamap.containsKey("day")) {

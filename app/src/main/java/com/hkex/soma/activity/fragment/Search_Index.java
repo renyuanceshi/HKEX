@@ -179,7 +179,7 @@ public class Search_Index extends MasterFragment {
 
     public void initUI() {
         this.listView = (MultiScrollListView) this.fragmentView.findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(2131165570);
+        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(R.id.scrollView);
         this.selectionListExpiry = (SelectionList) this.fragmentView.findViewById(R.id.selectionListExpiry);
         this.selectionListStrike = (SelectionList) this.fragmentView.findViewById(R.id.selectionListStrike);
         this.callputbutton = (CallPutButton) this.fragmentView.findViewById(R.id.callput);

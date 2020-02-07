@@ -31,52 +31,38 @@ public class MarginTable_Index extends MasterFragment {
     public static final String TAG = "MarginTable_Index";
     private MS_IndexOptionsResult.mainData[] data;
     private HashMap datamap = null;
-    /* access modifiers changed from: private */
-    public int day = 0;
+    private int day = 0;
     private int expiryIndex = 0;
     private View fragmentView;
     private Handler handler = new Handler();
-    /* access modifiers changed from: private */
-    public String hcode;
-    /* access modifiers changed from: private */
-    public String[] hcode_array;
+    private String hcode;
+    private String[] hcode_array;
     private String[] index_items;
     private String[] index_items_val;
     private SelectionList index_selectionList;
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
-    /* access modifiers changed from: private */
-    public MarginTable.OnOptionClickListener listener = null;
-    /* access modifiers changed from: private */
-    public MarginTable marginTable;
-    /* access modifiers changed from: private */
-    public String mdate = "";
-    /* access modifiers changed from: private */
-    public String[] mdate_array;
+    private MultiScrollListView listView;
+    private MarginTable.OnOptionClickListener listener = null;
+    private MarginTable marginTable;
+    private String mdate = "";
+    private String[] mdate_array;
     private MenuContainer menu;
-    /* access modifiers changed from: private */
-    public int month = 0;
-    /* access modifiers changed from: private */
-    public int positionIndex = 0;
+    private int month = 0;
+    private int positionIndex = 0;
     private SelectionList positionList;
     private String[] position_items;
     private String[] position_items_val = {"L", "S"};
     private RelativeLayout scrollView;
-    /* access modifiers changed from: private */
-    public String selectedDate;
+    private String selectedDate;
     private SelectionList selectionListDate;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListExpiry;
+    private SelectionList selectionListExpiry;
     private SelectionList selectionListPosition;
     private TextView stock_but;
     private int tagIndex = 0;
-    /* access modifiers changed from: private */
-    public String tempucode;
+    private String tempucode;
     private String ucode;
     private int ucodeIndex = 0;
     private String uname;
-    /* access modifiers changed from: private */
-    public int year = 0;
+    private int year = 0;
 
     public MarginTable_Index(MarginTable marginTable2) {
         this.marginTable = marginTable2;
@@ -192,7 +178,7 @@ public class MarginTable_Index extends MasterFragment {
             this.ucode = Commons.defaultUnderlyingCode;
             this.uname = Commons.MapUnderlyingName(this.ucode);
             this.listView = (MultiScrollListView) getView().findViewById(R.id.listView);
-            this.scrollView = (RelativeLayout) getView().findViewById(2131165570);
+            this.scrollView = (RelativeLayout) getView().findViewById(R.id.scrollView);
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
             Calendar instance = Calendar.getInstance();
             if (this.datamap != null && this.datamap.containsKey("year") && this.datamap.containsKey("month") && this.datamap.containsKey("day")) {

@@ -11,8 +11,7 @@ import com.hkex.soma.R;
 import com.hkex.soma.basic.MasterActivity;
 
 public class WebViewPage2 extends MasterActivity {
-    /* access modifiers changed from: private */
-    public boolean daynight;
+    private boolean daynight;
     public String ptitle = "";
 
     public void onCreate(Bundle bundle) {

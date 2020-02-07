@@ -235,7 +235,7 @@ public class MS_IndexOptions extends MasterFragment {
 
     public void initUI() {
         this.listView = (MultiScrollListView) this.fragmentView.findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(2131165570);
+        this.scrollView = (MultiScrollView) this.fragmentView.findViewById(R.id.scrollView);
         SelectionList selectionList = (SelectionList) this.fragmentView.findViewById(R.id.selectionList);
         SelectionList selectionList2 = (SelectionList) this.fragmentView.findViewById(R.id.index_selectionList);
         String string = getString(R.string.sel_mosttradedcall);
