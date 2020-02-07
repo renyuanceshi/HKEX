@@ -27,21 +27,17 @@ import java.util.ArrayList;
 public class SeminarFragment extends MasterFragment {
     public static final String TAG = "SeminarFragment";
     private static SeminarFragment fragment;
-    /* access modifiers changed from: private */
-    public AnimatedFragmentActivity _self;
+    private AnimatedFragmentActivity _self;
     private AppFooter appfooter;
-    /* access modifiers changed from: private */
-    public ArrayList<Seminar_Result.mainData> data = new ArrayList<>();
+    private ArrayList<Seminar_Result.mainData> data = new ArrayList<>();
     private LinearLayout footerContainer;
     private View fragmentView;
     private Handler handler = new Handler();
     private ImageButton leftbtn;
-    /* access modifiers changed from: private */
-    public ListView listview;
+    private ListView listview;
     private MenuContainer menu;
     private ImageButton rightbtn;
-    /* access modifiers changed from: private */
-    public SeminarListAdapter seminarlistadapter;
+    private SeminarListAdapter seminarlistadapter;
     private SlideRightAnimationHandler slideRightAnimationHandler;
 
     private void getview() {

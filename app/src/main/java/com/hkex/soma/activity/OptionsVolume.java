@@ -28,35 +28,24 @@ import com.hkex.soma.utils.Commons;
 public class OptionsVolume extends AnimatedFragmentActivity {
     public static final String TAG = "TailorMadeCombinations";
     private Activity _self = this;
-    /* access modifiers changed from: private */
-    public TextView advdata_mvol;
-    /* access modifiers changed from: private */
-    public TextView advdata_time;
-    /* access modifiers changed from: private */
-    public TextView advdata_yvol;
-    /* access modifiers changed from: private */
-    public LoaderImageView chart;
+    private TextView advdata_mvol;
+    private TextView advdata_time;
+    private TextView advdata_yvol;
+    private LoaderImageView chart;
     private String[] index_items;
-    /* access modifiers changed from: private */
     public String[] index_items_val;
     private SelectionList index_selectionList;
     private ImageButton leftbtn;
     private ListView listView;
     private MenuContainer menu;
-    /* access modifiers changed from: private */
-    public String[] months = {"January", "February", "March", "Apri", "May", "June", "July", "August", "September", "October", "November", "December"};
+    private String[] months = {"January", "February", "March", "Apri", "May", "June", "July", "August", "September", "October", "November", "December"};
     private PortfolioHalf portfolio;
     private ImageButton rightbtn;
-    /* access modifiers changed from: private */
-    public SlideRightAnimationHandler slideRightAnimationHandler;
-    /* access modifiers changed from: private */
-    public TextView totaldata_time;
-    /* access modifiers changed from: private */
-    public TextView totaldata_vol;
-    /* access modifiers changed from: private */
-    public int ucodeIndex = 0;
-    /* access modifiers changed from: private */
-    public TextView update_datetime;
+    private SlideRightAnimationHandler slideRightAnimationHandler;
+    private TextView totaldata_time;
+    private TextView totaldata_vol;
+    private int ucodeIndex = 0;
+    private TextView update_datetime;
 
     private void getview() {
         String str;

@@ -46,68 +46,49 @@ import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class MS_Futures extends MasterFragment {
     public static final String TAG = "MS_Futures";
-    /* access modifiers changed from: private */
-    public MarketSnapshot MSFragmentActivity;
-    /* access modifiers changed from: private */
-    public boolean aht = false;
+    private MarketSnapshot MSFragmentActivity;
+    private boolean aht = false;
     private int bannerIndex = 0;
     private Runnable bannerRunnable = null;
     private ArrayList<MSBanner.banner> banners = new ArrayList<>();
     private TextView chart_title;
     private WebView chart_webview;
     /* access modifiers changed from: private */
-    public int clist_index = 0;
+    private int clist_index = 0;
     /* access modifiers changed from: private */
-    public FuturesCList_Result.mainData[] clistdata;
+    private FuturesCList_Result.mainData[] clistdata;
     private MS_IndexOptionsResult.mainData[] data;
     /* access modifiers changed from: private */
-    public boolean data1done = false;
+    private boolean data1done = false;
     /* access modifiers changed from: private */
-    public boolean data2done = false;
-    /* access modifiers changed from: private */
-    public ImageView day_nigth_but;
-    /* access modifiers changed from: private */
-    public String daynight = "d";
+    private boolean data2done = false;
+    private ImageView day_nigth_but;
+    private String daynight = "d";
     private View fragmentView;
     private Handler handler = new Handler();
     private RelativeLayout head_ask_box;
     private RelativeLayout head_bid_box;
     private String[] index_items;
     private String[] index_items_val;
-    /* access modifiers changed from: private */
-    public boolean isshowdnmsg = true;
+    private boolean isshowdnmsg = true;
     private boolean istickeron = false;
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
-    /* access modifiers changed from: private */
-    public int mlist_index = 0;
-    /* access modifiers changed from: private */
+    private MultiScrollListView listView;
+    private int mlist_index = 0;
     public FuturesList_Result.mainData[] mlistdata;
     private MSBanner msBanenr;
-    /* access modifiers changed from: private */
-    public boolean noItemClick = false;
+    private boolean noItemClick = false;
     private ImageView note_but;
-    /* access modifiers changed from: private */
-    public int plist_index = 0;
-    /* access modifiers changed from: private */
-    public FuturesPList_Result.mainData[] plistdata;
+    private int plist_index = 0;
+    private FuturesPList_Result.mainData[] plistdata;
     private ImageView reload;
-    /* access modifiers changed from: private */
-    public String[] select_list_array1;
-    /* access modifiers changed from: private */
-    public String[] select_list_array2;
-    /* access modifiers changed from: private */
-    public SelectionList selectionList1;
-    /* access modifiers changed from: private */
-    public TextView selectionList1_str;
-    /* access modifiers changed from: private */
-    public SelectionList2line selectionList2;
-    /* access modifiers changed from: private */
-    public TextView selectionList2_str;
-    /* access modifiers changed from: private */
-    public int tagIndex = 0;
-    /* access modifiers changed from: private */
-    public String[] type_array = {"All", "MTCall", "MTPut"};
+    private String[] select_list_array1;
+    private String[] select_list_array2;
+    private SelectionList selectionList1;
+    private TextView selectionList1_str;
+    private SelectionList2line selectionList2;
+    private TextView selectionList2_str;
+    private int tagIndex = 0;
+    private String[] type_array = {"All", "MTCall", "MTPut"};
     private int ucodeIndex = 0;
 
     private void initBanner(final MSBanner.banner banner, int i) {
@@ -136,8 +117,7 @@ public class MS_Futures extends MasterFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public void load_clist(String str, boolean z, String str2) {
+    private void load_clist(String str, boolean z, String str2) {
         String str3;
         this.data1done = false;
         GenericJSONParser genericJSONParser = new GenericJSONParser(FuturesCList_Result.class);
@@ -186,8 +166,7 @@ public class MS_Futures extends MasterFragment {
         this.MSFragmentActivity.dataLoading();
     }
 
-    /* access modifiers changed from: private */
-    public void load_plist(String str) {
+    private void load_plist(String str) {
         GenericJSONParser genericJSONParser = new GenericJSONParser(FuturesPList_Result.class);
         genericJSONParser.setOnJSONCompletedListener(new GenericJSONParser.OnJSONCompletedListener<FuturesPList_Result>() {
             public void OnJSONCompleted(FuturesPList_Result futuresPList_Result) {
@@ -215,8 +194,7 @@ public class MS_Futures extends MasterFragment {
         }
     }
 
-    /* access modifiers changed from: private */
-    public void update_title_chart(int i) {
+    private void update_title_chart(int i) {
         Date date;
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM");
         if (Commons.language.equals("en_US")) {

@@ -30,45 +30,29 @@ import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class Search_Index extends MasterFragment {
     public static final String TAG = "Search_Index";
-    /* access modifiers changed from: private */
-    public CallPutButton callputbutton;
-    /* access modifiers changed from: private */
-    public SO_Result.mainData2[] data2;
-    /* access modifiers changed from: private */
-    public String expiry;
-    /* access modifiers changed from: private */
-    public View fragmentView;
+    private CallPutButton callputbutton;
+    private SO_Result.mainData2[] data2;
+    private String expiry;
+    private View fragmentView;
     private Handler handler = new Handler();
     private String[] index_items;
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
-    /* access modifiers changed from: private */
-    public String[] mdate_array;
-    /* access modifiers changed from: private */
-    public String[] num_array = {"0", "9", "11", "13"};
-    /* access modifiers changed from: private */
-    public MultiScrollView scrollView;
-    /* access modifiers changed from: private */
-    public Search searchFragmentActivity;
+    private MultiScrollListView listView;
+    private String[] mdate_array;
+    private String[] num_array = {"0", "9", "11", "13"};
+    private MultiScrollView scrollView;
+    private Search searchFragmentActivity;
     private SelectionList selectionListCode;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListExpiry;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListStrike;
+    private SelectionList selectionListExpiry;
+    private SelectionList selectionListStrike;
     private AdapterView.OnItemClickListener setOnItemClickListener;
-    /* access modifiers changed from: private */
-    public String strikenum = "11";
-    /* access modifiers changed from: private */
-    public String ucode = "";
+    private String strikenum = "11";
+    private String ucode = "";
     private String uname;
     private float underlyingLast = 0.0f;
-    /* access modifiers changed from: private */
-    public TextView underlying_name;
-    /* access modifiers changed from: private */
-    public String wtype = "C";
+    private TextView underlying_name;
+    private String wtype = "C";
 
-    /* access modifiers changed from: private */
-    public void runUpdate(SO_Result sO_Result) {
+    private void runUpdate(SO_Result sO_Result) {
         SO_Result.indexInfo[] indexInfo = sO_Result.getmainData()[0].getIndexInfo();
         TextView textView = (TextView) this.fragmentView.findViewById(R.id.textView2);
         TextView textView2 = (TextView) this.fragmentView.findViewById(R.id.textView3);

@@ -28,13 +28,12 @@ public class PortfolioAdd extends MasterFragmentActivity {
     private boolean editMode = false;
     private Portfolio_Index indexFragment;
     private TabHost mTabHost;
-    /* access modifiers changed from: private */
     public TabManager mTabManager;
     private Portfolio_Options optionsFragment;
     private Portfolio_Stocks stocksFragment;
 
     public void initTab() {
-        this.mTabHost = (TabHost) findViewById(16908306);
+        this.mTabHost = (TabHost) findViewById(android.R.id.tabhost);
         this.mTabHost.setup();
         this.mTabHost.getTabWidget().setDividerDrawable((Drawable) null);
         this.mTabManager = new TabManager(this, this.mTabHost, R.id.realtabcontent);

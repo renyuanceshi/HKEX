@@ -21,19 +21,13 @@ import java.util.Locale;
 
 public class TailorMadeCombinations extends AnimatedFragmentActivity {
     public static final String TAG = "TailorMadeCombinations";
-    /* access modifiers changed from: private */
-    public Activity _self = this;
-    /* access modifiers changed from: private */
-    public String[] index_items;
-    /* access modifiers changed from: private */
-    public String[] index_items_name;
-    /* access modifiers changed from: private */
-    public SelectionList index_selectionList;
+    private Activity _self = this;
+    private String[] index_items;
+    private String[] index_items_name;
+    private SelectionList index_selectionList;
     private ImageButton leftbtn;
-    /* access modifiers changed from: private */
-    public ListView listView;
-    /* access modifiers changed from: private */
-    public int ucodeIndex = 0;
+    private ListView listView;
+    private int ucodeIndex = 0;
 
     private void getview() {
         this.leftbtn = (ImageButton) findViewById(R.id.btnLeft);

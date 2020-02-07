@@ -25,10 +25,8 @@ import java.util.ArrayList;
 
 public class MarketReports extends AnimatedFragmentActivity {
     public static final String TAG = "MarketReports";
-    /* access modifiers changed from: private */
-    public Activity _self = this;
-    /* access modifiers changed from: private */
-    public ArrayList<MarketReport_Result.mainData> data = new ArrayList<>();
+    private Activity _self = this;
+    private ArrayList<MarketReport_Result.mainData> data = new ArrayList<>();
     private Handler handler = new Handler();
     private ImageButton leftbtn;
     private ListView listview;

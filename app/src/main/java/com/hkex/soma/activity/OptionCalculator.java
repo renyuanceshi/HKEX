@@ -25,37 +25,23 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class OptionCalculator extends MasterActivity {
-    /* access modifiers changed from: private */
-    public String amount1;
-    /* access modifiers changed from: private */
-    public String amount2;
-    /* access modifiers changed from: private */
-    public Calculator_Result data_result;
-    /* access modifiers changed from: private */
-    public Calculator_Result data_result2;
-    /* access modifiers changed from: private */
-    public String date1;
-    /* access modifiers changed from: private */
-    public String date2;
+    private String amount1;
+    private String amount2;
+    private Calculator_Result data_result;
+    private Calculator_Result data_result2;
+    private String date1;
+    private String date2;
     private String hcode;
-    /* access modifiers changed from: private */
-    public String initCalculatedValue = "";
+    private String initCalculatedValue = "";
     private String iv;
-    /* access modifiers changed from: private */
-    public String mdate;
-    /* access modifiers changed from: private */
-    public String originaldate1;
-    /* access modifiers changed from: private */
-    public String originaldate2;
-    /* access modifiers changed from: private */
-    public String originalrate;
-    /* access modifiers changed from: private */
-    public String rate;
-    /* access modifiers changed from: private */
-    public String strike;
+    private String mdate;
+    private String originaldate1;
+    private String originaldate2;
+    private String originalrate;
+    private String rate;
+    private String strike;
     private String tm;
-    /* access modifiers changed from: private */
-    public String ucode;
+    private String ucode;
     private String ulast;
     private String wtype;
 

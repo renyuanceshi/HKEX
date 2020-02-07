@@ -15,10 +15,8 @@ import com.hkex.soma.dataModel.Video_Result;
 import com.hkex.soma.utils.Commons;
 
 public class TVInterviews extends MasterActivity {
-    /* access modifiers changed from: private */
-    public Video_Result.mainData[] data = null;
-    /* access modifiers changed from: private */
-    public ListView listView;
+    private Video_Result.mainData[] data = null;
+    private ListView listView;
 
     public void dataResult(final Video_Result video_Result) {
         this.handler.post(new Runnable() {

@@ -30,10 +30,8 @@ public class MarginTable extends AnimatedFragmentActivity {
     public static final String TAG = "MarginTable";
     private String hcode;
     private String[] hcode_array;
-    /* access modifiers changed from: private */
-    public HashMap index_data = null;
-    /* access modifiers changed from: private */
-    public MarginTable_Index index_fragment;
+    private HashMap index_data = null;
+    private MarginTable_Index index_fragment;
     public boolean isstocknow = true;
     private MultiScrollListView listView;
     private Fragment mContent;

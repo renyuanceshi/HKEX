@@ -10,6 +10,8 @@ import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.LinearLayout.LayoutParams;
+
+import com.hkex.soma.R;
 import com.hkex.soma.basic.ClickControlContainer;
 import com.hkex.soma.basic.CustomWebViewClient;
 import com.hkex.soma.element.MenuContainer;
@@ -22,25 +24,25 @@ public class Education extends AnimatedFragmentActivity {
    private MenuContainer menu;
 
    public void initUI() {
-      this.setContentView(2131296292);
+      this.setContentView(R.layout.education);
       this.menu = new MenuContainer(this);
-      this.mainContainer = this.findViewById(2131165452);
-      this.clickControlContainer = (ClickControlContainer)this.findViewById(2131165294);
-      ClickControlContainer var1 = (ClickControlContainer)this.findViewById(2131165459);
+      this.mainContainer = this.findViewById(R.id.mainContainer);
+      this.clickControlContainer = (ClickControlContainer)this.findViewById(R.id.clickControlContainer);
+      ClickControlContainer var1 = (ClickControlContainer)this.findViewById(R.id.menuContainer);
       LayoutParams var2 = new LayoutParams(-1, -1);
       var1.addView(this.menu, var2);
       this.initFooter();
       this.updateFooterStime("");
-      this.mainView = this.findViewById(2131165234);
+      this.mainView = this.findViewById(R.id.appContainer);
       this.leftView = var1;
       final SlideLeftAnimationHandler var3 = new SlideLeftAnimationHandler(this);
-      final ImageButton var4 = (ImageButton)this.mainView.findViewById(2131165251);
-      final WebView var7 = (WebView)this.findViewById(2131165727);
+      final ImageButton var4 = (ImageButton)this.mainView.findViewById(R.id.btnLeft);
+      final WebView var7 = (WebView)this.findViewById(R.id.webView1);
       final OnClickListener var5 = new OnClickListener() {
          public void onClick(View var1) {
             if (!var7.canGoBackOrForward(-2)) {
-               ((TextView)Education.this.findViewById(2131165235)).setText(Education.this.getString(2131362067));
-               var4.setImageResource(2131099802);
+               ((TextView)Education.this.findViewById(R.id.app_title)).setText(Education.this.getString(R.string.title_education));
+               var4.setImageResource(R.drawable.btn_menu);
                var4.setOnClickListener(var3);
                Education.this.clickControlContainer.setCanSwipe(true);
             } else {
@@ -77,21 +79,21 @@ public class Education extends AnimatedFragmentActivity {
             if (var3 >= 0) {
                String var5x = var1.substring(var2).replace("/", "").replace("settitle:", "");
                if (var5x.equals("Options ABC")) {
-                  var1 = Education.this.getString(2131361856);
+                  var1 = Education.this.getString(R.string.edu_title_optionabc);
                } else if (var5x.equals("FAQ")) {
-                  var1 = Education.this.getString(2131361854);
+                  var1 = Education.this.getString(R.string.edu_title_faq);
                } else if (var5x.equals("Options Strategies")) {
-                  var1 = Education.this.getString(2131361857);
+                  var1 = Education.this.getString(R.string.edu_title_strategies);
                } else {
                   var1 = var5x;
                   if (var5x.equals("Glossary")) {
-                     var1 = Education.this.getString(2131361855);
+                     var1 = Education.this.getString(R.string.edu_title_glossary);
                   }
                }
 
-               var4.setImageResource(2131099777);
+               var4.setImageResource(R.drawable.btn_back);
                var4.setOnClickListener(var5);
-               ((TextView)Education.this.findViewById(2131165235)).setText(var1);
+               ((TextView)Education.this.findViewById(R.id.app_title)).setText(var1);
                Education.this.clickControlContainer.setCanSwipe(false);
             } else if (var1.substring(var2).replace("/", "").indexOf("tvinterviews") >= 0) {
                Education.this.goActivity(TVInterviews.class);
@@ -128,7 +130,7 @@ public class Education extends AnimatedFragmentActivity {
       }) {
       });
       StringBuilder var6 = new StringBuilder();
-      var6.append(this.getString(2131362150));
+      var6.append(this.getString(R.string.webview_edu));
       var6.append("?a=b");
       var7.loadUrl(var6.toString());
    }

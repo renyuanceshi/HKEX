@@ -38,51 +38,35 @@ public class MarginTable_Stock extends MasterFragment {
     private MS_IndexOptionsResult.mainData[] data;
     private boolean data1done = false;
     private boolean data2done = false;
-    /* access modifiers changed from: private */
-    public HashMap datamap = null;
-    /* access modifiers changed from: private */
-    public int day;
+    private HashMap datamap = null;
+    private int day;
     private View fragmentView;
     private Handler handler = new Handler();
-    /* access modifiers changed from: private */
-    public String hcode;
-    /* access modifiers changed from: private */
-    public String[] hcode_array;
-    /* access modifiers changed from: private */
-    public int hcode_index = 0;
+    private String hcode;
+    private String[] hcode_array;
+    private int hcode_index = 0;
     private TextView index_but;
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
-    /* access modifiers changed from: private */
-    public MarginTable.OnOptionClickListener listener = null;
-    /* access modifiers changed from: private */
-    public MarginTable marginTable;
-    /* access modifiers changed from: private */
-    public String mdate;
-    /* access modifiers changed from: private */
-    public String[] mdate_array;
+    private MultiScrollListView listView;
+    private MarginTable.OnOptionClickListener listener = null;
+    private MarginTable marginTable;
+    private String mdate;
+    private String[] mdate_array;
     private MenuContainer menu;
-    /* access modifiers changed from: private */
-    public int month;
+    private int month;
     private MSBanner msBanenr;
     private RelativeLayout scrollView;
-    /* access modifiers changed from: private */
-    public String selectedDate;
+    private String selectedDate;
     private SelectionList selectionListCode;
     private SelectionList selectionListDate;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListExpiry;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListHKATS;
+    private SelectionList selectionListExpiry;
+    private SelectionList selectionListHKATS;
     private SelectionListShort selectionListName;
     private int tagIndex = 0;
     private String[] type_array = {"MTCall", "MTPut", "All"};
-    /* access modifiers changed from: private */
     public String ucode;
     private int ucodeIndex = 0;
     private String uname;
-    /* access modifiers changed from: private */
-    public int year;
+    private int year;
 
     public MarginTable_Stock(MarginTable marginTable2) {
         this.marginTable = marginTable2;

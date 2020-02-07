@@ -16,20 +16,14 @@ import com.hkex.soma.element.SelectionList;
 import com.hkex.soma.utils.Commons;
 
 public class Portfolio_Stocks extends MasterFragment {
-    /* access modifiers changed from: private */
-    public Bundle bundle;
+    private Bundle bundle;
     private View fragmentView;
-    /* access modifiers changed from: private */
-    public PortfolioAdd portfolioFragmentActivity;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListCode;
+    private PortfolioAdd portfolioFragmentActivity;
+    private SelectionList selectionListCode;
     private SelectionList selectionListName;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListPrice;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListQuantity;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListTradeDirection;
+    private SelectionList selectionListPrice;
+    private SelectionList selectionListQuantity;
+    private SelectionList selectionListTradeDirection;
 
     private void initSelectionListPrice() {
         this.selectionListPrice = (SelectionList) this.fragmentView.findViewById(R.id.selectionListPrice);

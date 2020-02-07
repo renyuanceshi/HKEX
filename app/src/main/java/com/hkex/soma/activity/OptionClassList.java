@@ -19,13 +19,10 @@ import com.hkex.soma.utils.Commons;
 import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class OptionClassList extends AnimatedFragmentActivity {
-    /* access modifiers changed from: private */
-    public ClassList.mainData[] data = null;
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
+    private ClassList.mainData[] data = null;
+    private MultiScrollListView listView;
     private MenuContainer menu;
-    /* access modifiers changed from: private */
-    public MultiScrollView scrollView;
+    private MultiScrollView scrollView;
 
     public void dataResult(final ClassList classList) {
         this.handler.post(new Runnable() {
@@ -77,7 +74,7 @@ public class OptionClassList extends AnimatedFragmentActivity {
             }
         });
         this.listView = (MultiScrollListView) findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) findViewById(2131165570);
+        this.scrollView = (MultiScrollView) findViewById(R.id.scrollView);
     }
 
     public void loadJSON() {

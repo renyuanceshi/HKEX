@@ -30,8 +30,7 @@ public class Search extends AnimatedFragmentActivity {
     public String currenttag;
     private Search_Index indexFragment;
     private TabHost mTabHost;
-    /* access modifiers changed from: private */
-    public TabManager mTabManager;
+    private TabManager mTabManager;
     private MenuContainer menu;
     private Search_Options optionsFragment;
     private String scode = "";
@@ -57,7 +56,7 @@ public class Search extends AnimatedFragmentActivity {
     }
 
     public void initTab() {
-        this.mTabHost = (TabHost) findViewById(16908306);
+        this.mTabHost = (TabHost) findViewById(android.R.id.tabhost);
         this.mTabHost.setup();
         this.mTabHost.getTabWidget().setDividerDrawable((Drawable) null);
         this.mTabManager = new TabManager(this, this.mTabHost, R.id.realtabcontent);

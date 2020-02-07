@@ -25,30 +25,19 @@ import com.hkex.soma.utils.Commons;
 import java.util.ArrayList;
 
 public class Video extends AnimatedFragmentActivity {
-    /* access modifiers changed from: private */
-    public ArrayList<TextView> butlist = new ArrayList<>();
-    /* access modifiers changed from: private */
-    public Video_Result.mainData[] data = null;
-    /* access modifiers changed from: private */
-    public int fulllong = 0;
-    /* access modifiers changed from: private */
-    public HorizontalScrollView horizontalscrollview;
-    /* access modifiers changed from: private */
-    public ImageView left_arrow;
-    /* access modifiers changed from: private */
-    public ListView listView;
+    private ArrayList<TextView> butlist = new ArrayList<>();
+    private Video_Result.mainData[] data = null;
+    private int fulllong = 0;
+    private HorizontalScrollView horizontalscrollview;
+    private ImageView left_arrow;
+    private ListView listView;
     private int maxScrollX;
-    /* access modifiers changed from: private */
-    public int maxitemlong = 0;
+    private int maxitemlong = 0;
     private MenuContainer menu;
-    /* access modifiers changed from: private */
-    public ImageView right_arrow;
-    /* access modifiers changed from: private */
-    public LinearLayout tablist;
-    /* access modifiers changed from: private */
-    public LinearLayout tablist2;
-    /* access modifiers changed from: private */
-    public RelativeLayout tablist_box;
+    private ImageView right_arrow;
+    private LinearLayout tablist;
+    private LinearLayout tablist2;
+    private RelativeLayout tablist_box;
 
     public void dataResult(final Video_Result video_Result) {
         this.handler.post(new Runnable() {

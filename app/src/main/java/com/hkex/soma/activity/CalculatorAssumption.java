@@ -18,16 +18,13 @@ import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.StringFormatter;
 
 public class CalculatorAssumption extends MasterActivity {
-    /* access modifiers changed from: private */
-    public EditText cal_dividend1;
-    /* access modifiers changed from: private */
-    public EditText cal_dividend2;
+    private EditText cal_dividend1;
+    private EditText cal_dividend2;
     private String divAmount1;
     private String divAmount2;
     private String divDate1;
     private String divDate2;
-    /* access modifiers changed from: private */
-    public TextView irText;
+    private TextView irText;
     private String rate;
     private SelectionList selectionListDivideDate1;
     private SelectionList selectionListDivideDate2;

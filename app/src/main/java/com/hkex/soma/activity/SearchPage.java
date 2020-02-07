@@ -36,18 +36,13 @@ import java.util.TimerTask;
 
 @SuppressLint({"DefaultLocale"})
 public class SearchPage extends MasterActivity {
-    /* access modifiers changed from: private */
-    public AutoCompleteTextView acTextView;
-    /* access modifiers changed from: private */
-    public AdapterView.OnItemClickListener onItemClickListener;
-    /* access modifiers changed from: private */
-    public TextView top20title;
-    /* access modifiers changed from: private */
-    public int typecode;
+    private AutoCompleteTextView acTextView;
+    private AdapterView.OnItemClickListener onItemClickListener;
+    private TextView top20title;
+    private int typecode;
     private TextView underlying_no;
 
-    /* access modifiers changed from: private */
-    public void ACfinishGoActivity(String str) {
+    private void ACfinishGoActivity(String str) {
         Commons.noResumeAction = false;
         Intent intent = new Intent().setClass(this, Search.class);
         intent.putExtra("index", "2");
@@ -55,8 +50,7 @@ public class SearchPage extends MasterActivity {
         startActivity(intent);
     }
 
-    /* access modifiers changed from: private */
-    public void ACfinishWithResult(String str) {
+    private void ACfinishWithResult(String str) {
         Commons.noResumeAction = true;
         Intent intent = new Intent();
         intent.putExtra("typecode", this.typecode);

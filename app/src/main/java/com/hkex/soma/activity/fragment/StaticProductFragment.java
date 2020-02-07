@@ -26,24 +26,17 @@ import java.util.ArrayList;
 public class StaticProductFragment extends MasterFragment {
     public static final String TAG = "StaticProductFragment";
     private static StaticProductFragment fragment;
-    /* access modifiers changed from: private */
-    public AnimatedFragmentActivity animatedfragmentactivity;
+    private AnimatedFragmentActivity animatedfragmentactivity;
     private View fragmentView;
     private Handler handler = new Handler();
-    /* access modifiers changed from: private */
-    public String[] index_items;
-    /* access modifiers changed from: private */
-    public SelectionList index_selectionList;
+    private String[] index_items;
+    private SelectionList index_selectionList;
     private ListView listview;
     private SlideRightAnimationHandler slideRightAnimationHandler;
-    /* access modifiers changed from: private */
-    public StaticProductListAdapter staticproductlistadapter;
-    /* access modifiers changed from: private */
-    public ArrayList<StaticProductTable_Result.mainData> table_data = new ArrayList<>();
-    /* access modifiers changed from: private */
-    public ArrayList<StaticProductType_Result.mainData> type_data = new ArrayList<>();
-    /* access modifiers changed from: private */
-    public int ucodeIndex = 0;
+    private StaticProductListAdapter staticproductlistadapter;
+    private ArrayList<StaticProductTable_Result.mainData> table_data = new ArrayList<>();
+    private ArrayList<StaticProductType_Result.mainData> type_data = new ArrayList<>();
+    private int ucodeIndex = 0;
 
     private void getview() {
         this.index_selectionList = (SelectionList) this.fragmentView.findViewById(R.id.index_selectionList);

@@ -14,10 +14,8 @@ import com.hkex.soma.dataModel.Banner_Result;
 import com.hkex.soma.utils.Commons;
 
 public class BannerPage extends MasterActivity {
-    /* access modifiers changed from: private */
-    public String url_bannerimage = "";
-    /* access modifiers changed from: private */
-    public String url_bannerurl = "";
+    private String url_bannerimage = "";
+    private String url_bannerurl = "";
 
     private void initClickHandler() {
         ((ImageView) findViewById(R.id.btnLeft)).setOnClickListener(new View.OnClickListener() {

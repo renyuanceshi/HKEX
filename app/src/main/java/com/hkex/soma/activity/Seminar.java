@@ -24,19 +24,15 @@ import java.util.ArrayList;
 
 public class Seminar extends AnimatedFragmentActivity {
     public static final String TAG = "Seminar";
-    /* access modifiers changed from: private */
-    public Activity _self = this;
-    /* access modifiers changed from: private */
-    public ArrayList<Seminar_Result.mainData> data = new ArrayList<>();
+    private Activity _self = this;
+    private ArrayList<Seminar_Result.mainData> data = new ArrayList<>();
     private Handler handler = new Handler();
     private ImageButton leftbtn;
     private ListView listview;
     private MenuContainer menu;
     private ImageButton rightbtn;
-    /* access modifiers changed from: private */
-    public SeminarListAdapter seminarlistadapter;
-    /* access modifiers changed from: private */
-    public SlideRightAnimationHandler slideRightAnimationHandler;
+    private SeminarListAdapter seminarlistadapter;
+    private SlideRightAnimationHandler slideRightAnimationHandler;
 
     private void getview() {
         this.leftbtn = (ImageButton) findViewById(R.id.btnLeft);

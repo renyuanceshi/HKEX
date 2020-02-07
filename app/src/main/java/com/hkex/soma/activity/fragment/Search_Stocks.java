@@ -28,29 +28,19 @@ import com.hkex.soma.utils.StringFormatter;
 import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class Search_Stocks extends MasterFragment {
-    /* access modifiers changed from: private */
-    public SS_Result.mainData[] data_array;
-    /* access modifiers changed from: private */
-    public View fragmentView;
+    private SS_Result.mainData[] data_array;
+    private View fragmentView;
     private Handler handler = new Handler();
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
-    /* access modifiers changed from: private */
-    public MultiScrollView scrollView;
-    /* access modifiers changed from: private */
-    public Search searchFragmentActivity;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListCode;
-    /* access modifiers changed from: private */
-    public SelectionList selectionListName;
+    private MultiScrollListView listView;
+    private MultiScrollView scrollView;
+    private Search searchFragmentActivity;
+    private SelectionList selectionListCode;
+    private SelectionList selectionListName;
     private String selectionListName_en = "";
-    /* access modifiers changed from: private */
-    public AdapterView.OnItemClickListener setOnItemClickListener;
-    /* access modifiers changed from: private */
-    public String ucode;
+    private AdapterView.OnItemClickListener setOnItemClickListener;
+    private String ucode;
     private String uname;
-    /* access modifiers changed from: private */
-    public float underlyingLast = 0.0f;
+    private float underlyingLast = 0.0f;
 
     private void updateSelectionListCode() {
         this.selectionListCode.setSelectedText(this.ucode);
@@ -165,10 +155,10 @@ public class Search_Stocks extends MasterFragment {
                 if (Portfolio.AddStockToPortfolio(Search_Stocks.this.searchFragmentActivity, Search_Stocks.this.selectionListCode.getSelectedText(), Commons.MapUnderlyingName(Search_Stocks.this.selectionListCode.getSelectedText(), false), Commons.MapUnderlyingName(Search_Stocks.this.selectionListCode.getSelectedText(), true), "0", "0", "0")) {
                     Search access$000 = Search_Stocks.this.searchFragmentActivity;
                     String string = Search_Stocks.this.searchFragmentActivity.getString(R.string.portfolio_msg_stock);
-                    Toast.makeText(access$000, String.format(string, new Object[]{Search_Stocks.this.selectionListName.getSelectedText() + "(" + Search_Stocks.this.selectionListCode.getSelectedText() + ")"}), 1).show();
+                    Toast.makeText(access$000, String.format(string, new Object[]{Search_Stocks.this.selectionListName.getSelectedText() + "(" + Search_Stocks.this.selectionListCode.getSelectedText() + ")"}), Toast.LENGTH_LONG).show();
                     return;
                 }
-                Toast.makeText(Search_Stocks.this.searchFragmentActivity, String.format(Search_Stocks.this.searchFragmentActivity.getString(R.string.portfolio_msg_error), new Object[]{20}), 1).show();
+                Toast.makeText(Search_Stocks.this.searchFragmentActivity, String.format(Search_Stocks.this.searchFragmentActivity.getString(R.string.portfolio_msg_error), new Object[]{20}), Toast.LENGTH_LONG).show();
             }
         });
         this.selectionListCode.initItems(SelectionList.PopTypes.SCODE, "code", false);

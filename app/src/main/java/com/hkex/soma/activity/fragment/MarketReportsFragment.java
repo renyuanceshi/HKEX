@@ -25,16 +25,13 @@ import java.util.ArrayList;
 public class MarketReportsFragment extends MasterFragment {
     public static final String TAG = "MarketReportsFragment";
     private static MarketReportsFragment fragment;
-    /* access modifiers changed from: private */
-    public AnimatedFragmentActivity _self;
-    /* access modifiers changed from: private */
-    public ArrayList<MarketReport_Result.mainData> data = new ArrayList<>();
+    private AnimatedFragmentActivity _self;
+    private ArrayList<MarketReport_Result.mainData> data = new ArrayList<>();
     private View fragmentView;
     private Handler handler = new Handler();
     private ImageButton leftbtn;
     private ListView listview;
-    /* access modifiers changed from: private */
-    public MarketReportsListAdapter marketreportslistadapter;
+    private MarketReportsListAdapter marketreportslistadapter;
     private MenuContainer menu;
     private ImageButton rightbtn;
     private SlideRightAnimationHandler slideRightAnimationHandler;

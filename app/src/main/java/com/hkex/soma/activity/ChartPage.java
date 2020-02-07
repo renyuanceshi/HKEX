@@ -24,10 +24,8 @@ import java.io.InputStream;
 @SuppressLint({"SetJavaScriptEnabled"})
 public class ChartPage extends MasterActivity {
     private String chartHtml;
-    /* access modifiers changed from: private */
-    public String period = "3";
-    /* access modifiers changed from: private */
-    public String type = "underlying";
+    private String period = "3";
+    private String type = "underlying";
     private WebView webView;
 
     /* access modifiers changed from: private */

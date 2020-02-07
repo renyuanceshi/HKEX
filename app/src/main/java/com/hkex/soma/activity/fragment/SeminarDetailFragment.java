@@ -58,9 +58,9 @@ public class SeminarDetailFragment extends MasterFragment {
 
     private void getview() {
         this.leftbtn = (ImageButton) this.fragmentView.findViewById(R.id.btnLeft);
-        this.title = (TextView) this.fragmentView.findViewById(2131165685);
+        this.title = (TextView) this.fragmentView.findViewById(R.id.title);
         this.date = (TextView) this.fragmentView.findViewById(R.id.date);
-        this.time = (TextView) this.fragmentView.findViewById(2131165683);
+        this.time = (TextView) this.fragmentView.findViewById(R.id.time);
         this.venue = (TextView) this.fragmentView.findViewById(R.id.venue);
         this.speakers = (TextView) this.fragmentView.findViewById(R.id.speakers);
         this.detail = (TextView) this.fragmentView.findViewById(R.id.detail);

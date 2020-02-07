@@ -30,19 +30,14 @@ import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class Portfolio extends AnimatedFragmentActivity implements interface_changemode {
     public static final String TAG = "Portfolio";
-    /* access modifiers changed from: private */
-    public List<Portfolio_Result.mainData> data_array = null;
-    /* access modifiers changed from: private */
-    public boolean island = false;
-    /* access modifiers changed from: private */
-    public Portfolio_List listFragment;
+    private List<Portfolio_Result.mainData> data_array = null;
+    private boolean island = false;
+    private Portfolio_List listFragment;
     private MenuContainer menu;
     private View.OnClickListener onAddButtonClickListener;
     private String portfolioRawData;
-    /* access modifiers changed from: private */
-    public SlideLeftAnimationHandler slideLeftAnimationHandler;
-    /* access modifiers changed from: private */
-    public int status;
+    private SlideLeftAnimationHandler slideLeftAnimationHandler;
+    private int status;
 
     public static boolean AddOptionToPortfolio(Context context, String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, String str9) {
         String value = SharedPrefsUtil.getValue(context, "portfolio", "");

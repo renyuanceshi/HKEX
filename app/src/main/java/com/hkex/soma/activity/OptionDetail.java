@@ -36,41 +36,24 @@ public class OptionDetail extends MasterActivity {
     private static final String KEY_ALGORITHM = "AES";
     private static final String TAG = "RealTimeQuoteDialog";
     private ArrayList<String> codeStack = new ArrayList<>();
-    /* access modifiers changed from: private */
-    public OptionDetail_Result.mainData[] data;
+    private OptionDetail_Result.mainData[] data;
     private Handler handler = new Handler();
-    /* access modifiers changed from: private */
-    public String hcode;
-    /* access modifiers changed from: private */
-    public int headerOffset = 0;
-    /* access modifiers changed from: private */
-    public boolean infoloaded = false;
-    /* access modifiers changed from: private */
-    public boolean isShowMore = false;
-    /* access modifiers changed from: private */
-    public boolean isindex = false;
-    /* access modifiers changed from: private */
-    public MultiScrollListView listView;
-    /* access modifiers changed from: private */
-    public String mdate;
-    /* access modifiers changed from: private */
-    public String oid;
-    /* access modifiers changed from: private */
-    public ImageButton real_time_but;
-    /* access modifiers changed from: private */
-    public boolean relatedloaded = false;
-    /* access modifiers changed from: private */
-    public RealTimeQuoteDialog rt_dialog;
-    /* access modifiers changed from: private */
-    public MultiScrollView scrollView;
-    /* access modifiers changed from: private */
-    public String strike;
-    /* access modifiers changed from: private */
-    public String ucode;
-    /* access modifiers changed from: private */
-    public String uname = Commons.MapUnderlyingName(this.ucode);
-    /* access modifiers changed from: private */
-    public String wtype;
+    private String hcode;
+    private int headerOffset = 0;
+    private boolean infoloaded = false;
+    private boolean isShowMore = false;
+    private boolean isindex = false;
+    private MultiScrollListView listView;
+    private String mdate;
+    private String oid;
+    private ImageButton real_time_but;
+    private boolean relatedloaded = false;
+    private RealTimeQuoteDialog rt_dialog;
+    private MultiScrollView scrollView;
+    private String strike;
+    private String ucode;
+    private String uname = Commons.MapUnderlyingName(this.ucode);
+    private String wtype;
 
     public static byte[] decrypt(byte[] bArr, Key key) throws Exception {
         return decrypt(bArr, key, DEFAULT_CIPHER_ALGORITHM);
@@ -397,7 +380,7 @@ public class OptionDetail extends MasterActivity {
             }
         });
         this.listView = (MultiScrollListView) findViewById(R.id.listView);
-        this.scrollView = (MultiScrollView) findViewById(2131165570);
+        this.scrollView = (MultiScrollView) findViewById(R.id.scrollView);
         this.listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long j) {
                 OptionDetail.this.gotoNewOption(OptionDetail.this.data[i].getOid(), OptionDetail.this.ucode, OptionDetail.this.mdate, OptionDetail.this.wtype, OptionDetail.this.data[i].getStrike());
@@ -417,10 +400,10 @@ public class OptionDetail extends MasterActivity {
                 String callputText = Commons.callputText(optionDetail, str);
                 String str2 = OptionDetail.this.uname + MinimalPrettyPrinter.DEFAULT_ROOT_VALUE_SEPARATOR + OptionDetail.this.strike + MinimalPrettyPrinter.DEFAULT_ROOT_VALUE_SEPARATOR + callputText;
                 if (Portfolio.AddOptionToPortfolio(OptionDetail.this, OptionDetail.this.ucode, Commons.MapUnderlyingName(OptionDetail.this.ucode, false), Commons.MapUnderlyingName(OptionDetail.this.ucode, true), callputText, OptionDetail.this.strike, OptionDetail.this.mdate, "0", "0", "0")) {
-                    Toast.makeText(OptionDetail.this, String.format(OptionDetail.this.getString(R.string.portfolio_msg_option), new Object[]{str2}), 1).show();
+                    Toast.makeText(OptionDetail.this, String.format(OptionDetail.this.getString(R.string.portfolio_msg_option), new Object[]{str2}), Toast.LENGTH_LONG).show();
                     return;
                 }
-                Toast.makeText(OptionDetail.this, String.format(OptionDetail.this.getString(R.string.portfolio_msg_error), new Object[]{20}), 1).show();
+                Toast.makeText(OptionDetail.this, String.format(OptionDetail.this.getString(R.string.portfolio_msg_error), new Object[]{20}), Toast.LENGTH_LONG).show();
             }
         });
         this.rt_dialog = new RealTimeQuoteDialog(this, this.oid, this.isindex ? "index" : "stock");

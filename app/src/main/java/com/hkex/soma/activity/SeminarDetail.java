@@ -25,38 +25,28 @@ import com.hkex.soma.utils.Commons;
 public class SeminarDetail extends AnimatedFragmentActivity {
     public static final String TAG = "SeminarDetail";
     private Activity _self = this;
-    /* access modifiers changed from: private */
-    public TextView date;
-    /* access modifiers changed from: private */
-    public TextView detail;
-    /* access modifiers changed from: private */
-    public ImageView enroll;
-    /* access modifiers changed from: private */
-    public String id = "";
+    private TextView date;
+    private TextView detail;
+    private ImageView enroll;
+    private String id = "";
     private ImageButton leftbtn;
     private ListView listview;
     private MenuContainer menu;
     private ImageButton rightbtn;
-    /* access modifiers changed from: private */
-    public SlideRightAnimationHandler slideRightAnimationHandler;
-    /* access modifiers changed from: private */
-    public TextView speakers;
-    /* access modifiers changed from: private */
-    public TextView time;
-    /* access modifiers changed from: private */
-    public TextView title;
-    /* access modifiers changed from: private */
-    public String type = "";
-    /* access modifiers changed from: private */
-    public TextView venue;
+    private SlideRightAnimationHandler slideRightAnimationHandler;
+    private TextView speakers;
+    private TextView time;
+    private TextView title;
+    private String type = "";
+    private TextView venue;
 
     private void getview() {
         this.leftbtn = (ImageButton) findViewById(R.id.btnLeft);
         this.rightbtn = (ImageButton) findViewById(R.id.btnright);
         this.canBack = true;
-        this.title = (TextView) findViewById(2131165685);
+        this.title = (TextView) findViewById(R.id.title);
         this.date = (TextView) findViewById(R.id.date);
-        this.time = (TextView) findViewById(2131165683);
+        this.time = (TextView) findViewById(R.id.time);
         this.venue = (TextView) findViewById(R.id.venue);
         this.speakers = (TextView) findViewById(R.id.speakers);
         this.detail = (TextView) findViewById(R.id.detail);

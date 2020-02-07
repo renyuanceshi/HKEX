@@ -18,10 +18,8 @@ import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.StringFormatter;
 
 public class CalculatorIndexAssumption extends MasterActivity {
-    /* access modifiers changed from: private */
-    public EditText dividend_yield;
-    /* access modifiers changed from: private */
-    public TextView irText;
+    private EditText dividend_yield;
+    private TextView irText;
     private String rate;
     private String yield;
 

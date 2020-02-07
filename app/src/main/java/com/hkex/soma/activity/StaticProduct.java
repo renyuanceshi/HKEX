@@ -26,26 +26,18 @@ import java.util.ArrayList;
 
 public class StaticProduct extends AnimatedFragmentActivity {
     public static final String TAG = "StaticProduct";
-    /* access modifiers changed from: private */
-    public Activity _self = this;
-    /* access modifiers changed from: private */
-    public String[] index_items;
-    /* access modifiers changed from: private */
-    public SelectionList index_selectionList;
+    private Activity _self = this;
+    private String[] index_items;
+    private SelectionList index_selectionList;
     private ImageButton leftbtn;
     private ListView listview;
     private MenuContainer menu;
     private ImageButton rightbtn;
-    /* access modifiers changed from: private */
-    public SlideRightAnimationHandler slideRightAnimationHandler;
-    /* access modifiers changed from: private */
-    public StaticProductListAdapter staticproductlistadapter;
-    /* access modifiers changed from: private */
-    public ArrayList<StaticProductTable_Result.mainData> table_data = new ArrayList<>();
-    /* access modifiers changed from: private */
-    public ArrayList<StaticProductType_Result.mainData> type_data = new ArrayList<>();
-    /* access modifiers changed from: private */
-    public int ucodeIndex = 0;
+    private SlideRightAnimationHandler slideRightAnimationHandler;
+    private StaticProductListAdapter staticproductlistadapter;
+    private ArrayList<StaticProductTable_Result.mainData> table_data = new ArrayList<>();
+    private ArrayList<StaticProductType_Result.mainData> type_data = new ArrayList<>();
+    private int ucodeIndex = 0;
 
     private void getview() {
         this.leftbtn = (ImageButton) findViewById(R.id.btnLeft);
