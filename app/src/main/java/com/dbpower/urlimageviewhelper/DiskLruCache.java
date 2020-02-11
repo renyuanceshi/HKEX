@@ -1,10 +1,12 @@
 package com.dbpower.urlimageviewhelper;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedWriter;
 import java.io.Closeable;
 import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.FilterOutputStream;
@@ -623,8 +625,45 @@ public final class DiskLruCache implements Closeable {
    }
 
    private void readJournal() throws IOException {
-      // $FF: Couldn't be decompiled
+      final BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(this.journalFile));
+      try {
+         final String asciiLine = readAsciiLine(bufferedInputStream);
+         final String asciiLine2 = readAsciiLine(bufferedInputStream);
+         final String asciiLine3 = readAsciiLine(bufferedInputStream);
+         final String asciiLine4 = readAsciiLine(bufferedInputStream);
+         final String asciiLine5 = readAsciiLine(bufferedInputStream);
+         if ("libcore.io.DiskLruCache".equals(asciiLine) && "1".equals(asciiLine2) && Integer.toString(this.appVersion).equals(asciiLine3) && Integer.toString(this.valueCount).equals(asciiLine4)) {
+            if ("".equals(asciiLine5)) {
+// !LC
+//               Label_0113: {
+//                  break Label_0113;
+//                  try {
+//                     while (true) {
+//                        this.readJournalLine(readAsciiLine(bufferedInputStream));
+//                     }
+//                  }
+//                  catch (EOFException ex) {
+//                     return;
+//                  }
+//               }
+            }
+         }
+         final StringBuilder sb = new StringBuilder("unexpected journal header: [");
+         sb.append(asciiLine);
+         sb.append(", ");
+         sb.append(asciiLine2);
+         sb.append(", ");
+         sb.append(asciiLine4);
+         sb.append(", ");
+         sb.append(asciiLine5);
+         sb.append("]");
+         throw new IOException(sb.toString());
+      }
+      finally {
+         closeQuietly(bufferedInputStream);
+      }
    }
+
 
    private void readJournalLine(String var1) throws IOException {
       String[] var2 = var1.split(" ");
@@ -861,10 +900,41 @@ public final class DiskLruCache implements Closeable {
 
    }
 
-   public DiskLruCache.Snapshot get(String param1) throws IOException {
-      // $FF: Couldn't be decompiled
-      return null;
+   public Snapshot get(final String s) throws IOException {
+      synchronized (this) {
+         this.checkNotClosed();
+         this.validateKey(s);
+         final Entry entry = (Entry)this.lruEntries.get(s);
+         if (entry == null) {
+            return null;
+         }
+         if (!entry.readable) {
+            return null;
+         }
+         final InputStream[] array = new InputStream[this.valueCount];
+         int i = 0;
+         try {
+            while (i < this.valueCount) {
+               array[i] = new FileInputStream(entry.getCleanFile(i));
+               ++i;
+            }
+            ++this.redundantOpCount;
+            final Writer journalWriter = this.journalWriter;
+            final StringBuilder sb = new StringBuilder("READ ");
+            sb.append(s);
+            sb.append('\n');
+            journalWriter.append((CharSequence)sb.toString());
+            if (this.journalRebuildRequired()) {
+               this.executorService.submit(this.cleanupCallable);
+            }
+            return new Snapshot(s, entry.sequenceNumber, array, (Snapshot)null);
+         }
+         catch (FileNotFoundException ex) {
+            return null;
+         }
+      }
    }
+
 
    public File getDirectory() {
       return this.directory;

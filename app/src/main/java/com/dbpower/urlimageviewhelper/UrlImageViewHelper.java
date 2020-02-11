@@ -220,7 +220,7 @@ public final class UrlImageViewHelper {
    }
 
    private static int getHeapSize(Context var0) {
-      return ((ActivityManager)var0.getSystemService("activity")).getMemoryClass() * 1024 * 1024;
+      return ((ActivityManager)var0.getSystemService(Context.ACTIVITY_SERVICE)).getMemoryClass() * 1024 * 1024;
    }
 
    public static UrlImageViewHelper.RequestPropertiesCallback getRequestPropertiesCallback() {
@@ -260,7 +260,7 @@ public final class UrlImageViewHelper {
    private static void prepareResources(Context var0) {
       if (mMetrics == null) {
          mMetrics = new DisplayMetrics();
-         ((WindowManager)var0.getSystemService("window")).getDefaultDisplay().getMetrics(mMetrics);
+         ((WindowManager)var0.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(mMetrics);
          mResources = new Resources(var0.getAssets(), mMetrics, var0.getResources().getConfiguration());
       }
    }

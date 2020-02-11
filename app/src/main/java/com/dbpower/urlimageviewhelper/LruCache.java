@@ -29,71 +29,87 @@ public class LruCache<K, V> {
         throw new IllegalStateException("Negative size: " + k + "=" + v);
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:9:0x0030, code lost:
-        throw new java.lang.IllegalStateException(java.lang.String.valueOf(getClass().getName()) + ".sizeOf() is reporting inconsistent results!");
-     */
-    /* Code decompiled incorrectly, please refer to instructions dump. */
-    private void trimToSize(int r5) {
-        /*
-            r4 = this;
-        L_0x0000:
-            monitor-enter(r4)
-            int r0 = r4.size     // Catch:{ all -> 0x0031 }
-            if (r0 < 0) goto L_0x0011
-            java.util.LinkedHashMap<K, V> r0 = r4.map     // Catch:{ all -> 0x0031 }
-            boolean r0 = r0.isEmpty()     // Catch:{ all -> 0x0031 }
-            if (r0 == 0) goto L_0x0034
-            int r0 = r4.size     // Catch:{ all -> 0x0031 }
-            if (r0 == 0) goto L_0x0034
-        L_0x0011:
-            java.lang.IllegalStateException r0 = new java.lang.IllegalStateException     // Catch:{ all -> 0x0031 }
-            java.lang.StringBuilder r1 = new java.lang.StringBuilder     // Catch:{ all -> 0x0031 }
-            java.lang.Class r2 = r4.getClass()     // Catch:{ all -> 0x0031 }
-            java.lang.String r2 = r2.getName()     // Catch:{ all -> 0x0031 }
-            java.lang.String r2 = java.lang.String.valueOf(r2)     // Catch:{ all -> 0x0031 }
-            r1.<init>(r2)     // Catch:{ all -> 0x0031 }
-            java.lang.String r2 = ".sizeOf() is reporting inconsistent results!"
-            r1.append(r2)     // Catch:{ all -> 0x0031 }
-            java.lang.String r1 = r1.toString()     // Catch:{ all -> 0x0031 }
-            r0.<init>(r1)     // Catch:{ all -> 0x0031 }
-            throw r0     // Catch:{ all -> 0x0031 }
-        L_0x0031:
-            r0 = move-exception
-            monitor-exit(r4)     // Catch:{ all -> 0x0031 }
-            throw r0
-        L_0x0034:
-            int r0 = r4.size     // Catch:{ all -> 0x0031 }
-            if (r0 <= r5) goto L_0x0040
-            java.util.LinkedHashMap<K, V> r0 = r4.map     // Catch:{ all -> 0x0031 }
-            boolean r0 = r0.isEmpty()     // Catch:{ all -> 0x0031 }
-            if (r0 == 0) goto L_0x0042
-        L_0x0040:
-            monitor-exit(r4)     // Catch:{ all -> 0x0031 }
-            return
-        L_0x0042:
-            java.util.LinkedHashMap<K, V> r0 = r4.map     // Catch:{ all -> 0x0031 }
-            java.util.Set r0 = r0.entrySet()     // Catch:{ all -> 0x0031 }
-            java.util.Iterator r0 = r0.iterator()     // Catch:{ all -> 0x0031 }
-            java.lang.Object r0 = r0.next()     // Catch:{ all -> 0x0031 }
-            java.util.Map$Entry r0 = (java.util.Map.Entry) r0     // Catch:{ all -> 0x0031 }
-            java.lang.Object r1 = r0.getKey()     // Catch:{ all -> 0x0031 }
-            java.lang.Object r0 = r0.getValue()     // Catch:{ all -> 0x0031 }
-            java.util.LinkedHashMap<K, V> r2 = r4.map     // Catch:{ all -> 0x0031 }
-            r2.remove(r1)     // Catch:{ all -> 0x0031 }
-            int r2 = r4.size     // Catch:{ all -> 0x0031 }
-            int r3 = r4.safeSizeOf(r1, r0)     // Catch:{ all -> 0x0031 }
-            int r2 = r2 - r3
-            r4.size = r2     // Catch:{ all -> 0x0031 }
-            int r2 = r4.evictionCount     // Catch:{ all -> 0x0031 }
-            int r2 = r2 + 1
-            r4.evictionCount = r2     // Catch:{ all -> 0x0031 }
-            monitor-exit(r4)     // Catch:{ all -> 0x0031 }
-            r2 = 1
-            r3 = 0
-            r4.entryRemoved(r2, r1, r0, r3)
-            goto L_0x0000
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.dbpower.urlimageviewhelper.LruCache.trimToSize(int):void");
+    private void trimToSize(int var1) {
+        while(true) {
+            synchronized(this){}
+
+            Throwable var10000;
+            boolean var10001;
+            label463: {
+                label465: {
+                    try {
+                        if (this.size >= 0 && (!this.map.isEmpty() || this.size == 0)) {
+                            break label465;
+                        }
+                    } catch (Throwable var45) {
+                        var10000 = var45;
+                        var10001 = false;
+                        break label463;
+                    }
+
+                    try {
+                        StringBuilder var3 = new StringBuilder(String.valueOf(this.getClass().getName()));
+                        var3.append(".sizeOf() is reporting inconsistent results!");
+                        IllegalStateException var2 = new IllegalStateException(var3.toString());
+                        throw var2;
+                    } catch (Throwable var44) {
+                        var10000 = var44;
+                        var10001 = false;
+                        break label463;
+                    }
+                }
+
+                label466: {
+                    try {
+                        if (this.size > var1 && !this.map.isEmpty()) {
+                            break label466;
+                        }
+                    } catch (Throwable var43) {
+                        var10000 = var43;
+                        var10001 = false;
+                        break label463;
+                    }
+
+                    try {
+                        return;
+                    } catch (Throwable var42) {
+                        var10000 = var42;
+                        var10001 = false;
+                        break label463;
+                    }
+                }
+
+                Object var47;
+                Object var49;
+                try {
+                    Map.Entry var46 = (Map.Entry)this.map.entrySet().iterator().next();
+                    var49 = var46.getKey();
+                    var47 = var46.getValue();
+                    this.map.remove(var49);
+                    this.size -= this.safeSizeOf((K)var49, (V)var47);
+                    ++this.evictionCount;
+                } catch (Throwable var41) {
+                    var10000 = var41;
+                    var10001 = false;
+                    break label463;
+                }
+
+                this.entryRemoved(true, (K)var49, (V)var47, (V)null);
+                continue;
+            }
+
+            while(true) {
+                Throwable var48 = var10000;
+
+                try {
+                    throw var48;
+                } catch (Throwable var40) {
+                    var10000 = var40;
+                    var10001 = false;
+                    continue;
+                }
+            }
+        }
     }
 
     /* access modifiers changed from: protected */
@@ -125,115 +141,127 @@ public class LruCache<K, V> {
         return i;
     }
 
-    /* JADX WARNING: Code restructure failed: missing block: B:11:0x0022, code lost:
-        r1 = create(r5);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:12:0x0026, code lost:
-        if (r1 != null) goto L_0x002a;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:13:0x0028, code lost:
-        return null;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:14:0x002a, code lost:
-        monitor-enter(r4);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:16:?, code lost:
-        r4.createCount++;
-        r0 = r4.map.put(r5, r1);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:17:0x0037, code lost:
-        if (r0 == null) goto L_0x0046;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:18:0x0039, code lost:
-        r4.map.put(r5, r0);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:19:0x003e, code lost:
-        monitor-exit(r4);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:20:0x003f, code lost:
-        if (r0 == null) goto L_0x0053;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:21:0x0041, code lost:
-        entryRemoved(false, r5, r1, r0);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:23:?, code lost:
-        r4.size += safeSizeOf(r5, r1);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:27:0x0053, code lost:
-        trimToSize(r4.maxSize);
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:36:?, code lost:
-        return r0;
-     */
-    /* JADX WARNING: Code restructure failed: missing block: B:37:?, code lost:
-        return r1;
-     */
-    /* Code decompiled incorrectly, please refer to instructions dump. */
-    public final V get(K r5) {
-        /*
-            r4 = this;
-            if (r5 != 0) goto L_0x000a
-            java.lang.NullPointerException r0 = new java.lang.NullPointerException
-            java.lang.String r1 = "key == null"
-            r0.<init>(r1)
-            throw r0
-        L_0x000a:
-            monitor-enter(r4)
-            java.util.LinkedHashMap<K, V> r0 = r4.map     // Catch:{ all -> 0x005a }
-            java.lang.Object r0 = r0.get(r5)     // Catch:{ all -> 0x005a }
-            if (r0 == 0) goto L_0x001b
-            int r1 = r4.hitCount     // Catch:{ all -> 0x005a }
-            int r1 = r1 + 1
-            r4.hitCount = r1     // Catch:{ all -> 0x005a }
-            monitor-exit(r4)     // Catch:{ all -> 0x005a }
-        L_0x001a:
-            return r0
-        L_0x001b:
-            int r0 = r4.missCount     // Catch:{ all -> 0x005a }
-            int r0 = r0 + 1
-            r4.missCount = r0     // Catch:{ all -> 0x005a }
-            monitor-exit(r4)     // Catch:{ all -> 0x005a }
-            java.lang.Object r1 = r4.create(r5)
-            if (r1 != 0) goto L_0x002a
-            r0 = 0
-            goto L_0x001a
-        L_0x002a:
-            monitor-enter(r4)
-            int r0 = r4.createCount     // Catch:{ all -> 0x0050 }
-            int r0 = r0 + 1
-            r4.createCount = r0     // Catch:{ all -> 0x0050 }
-            java.util.LinkedHashMap<K, V> r0 = r4.map     // Catch:{ all -> 0x0050 }
-            java.lang.Object r0 = r0.put(r5, r1)     // Catch:{ all -> 0x0050 }
-            if (r0 == 0) goto L_0x0046
-            java.util.LinkedHashMap<K, V> r2 = r4.map     // Catch:{ all -> 0x0050 }
-            r2.put(r5, r0)     // Catch:{ all -> 0x0050 }
-        L_0x003e:
-            monitor-exit(r4)     // Catch:{ all -> 0x0050 }
-            if (r0 == 0) goto L_0x0053
-            r2 = 0
-            r4.entryRemoved(r2, r5, r1, r0)
-            goto L_0x001a
-        L_0x0046:
-            int r2 = r4.size     // Catch:{ all -> 0x0050 }
-            int r3 = r4.safeSizeOf(r5, r1)     // Catch:{ all -> 0x0050 }
-            int r2 = r2 + r3
-            r4.size = r2     // Catch:{ all -> 0x0050 }
-            goto L_0x003e
-        L_0x0050:
-            r0 = move-exception
-            monitor-exit(r4)     // Catch:{ all -> 0x0050 }
-            throw r0
-        L_0x0053:
-            int r0 = r4.maxSize
-            r4.trimToSize(r0)
-            r0 = r1
-            goto L_0x001a
-        L_0x005a:
-            r0 = move-exception
-            monitor-exit(r4)     // Catch:{ all -> 0x005a }
-            throw r0
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.dbpower.urlimageviewhelper.LruCache.get(java.lang.Object):java.lang.Object");
+    public final Object get(Object var1) {
+        if (var1 == null) {
+            throw new NullPointerException("key == null");
+        } else {
+            synchronized(this){}
+
+            Throwable var10000;
+            boolean var10001;
+            Throwable var94;
+            label843: {
+                Object var2;
+                try {
+                    var2 = this.map.get(var1);
+                } catch (Throwable var93) {
+                    var10000 = var93;
+                    var10001 = false;
+                    break label843;
+                }
+
+                if (var2 != null) {
+                    label836:
+                    try {
+                        ++this.hitCount;
+                        return var2;
+                    } catch (Throwable var91) {
+                        var10000 = var91;
+                        var10001 = false;
+                        break label836;
+                    }
+                } else {
+                    label849: {
+                        try {
+                            ++this.missCount;
+                        } catch (Throwable var92) {
+                            var10000 = var92;
+                            var10001 = false;
+                            break label849;
+                        }
+
+                        Object var3 = this.create((K)var1);
+                        if (var3 == null) {
+                            return null;
+                        }
+
+                        synchronized(this){}
+
+                        label850: {
+                            label851: {
+                                try {
+                                    ++this.createCount;
+                                    var2 = this.map.put((K)var1, (V)var3);
+                                } catch (Throwable var90) {
+                                    var10000 = var90;
+                                    var10001 = false;
+                                    break label851;
+                                }
+
+                                if (var2 != null) {
+                                    try {
+                                        this.map.put((K)var1, (V)var2);
+                                    } catch (Throwable var89) {
+                                        var10000 = var89;
+                                        var10001 = false;
+                                        break label851;
+                                    }
+                                } else {
+                                    try {
+                                        this.size += this.safeSizeOf((K)var1, (V)var3);
+                                    } catch (Throwable var88) {
+                                        var10000 = var88;
+                                        var10001 = false;
+                                        break label851;
+                                    }
+                                }
+
+                                label819:
+                                try {
+                                    break label850;
+                                } catch (Throwable var87) {
+                                    var10000 = var87;
+                                    var10001 = false;
+                                    break label819;
+                                }
+                            }
+
+                            while(true) {
+                                var94 = var10000;
+
+                                try {
+                                    throw var94;
+                                } catch (Throwable var86) {
+                                    var10000 = var86;
+                                    var10001 = false;
+                                    continue;
+                                }
+                            }
+                        }
+
+                        if (var2 != null) {
+                            this.entryRemoved(false, (K)var1, (V)var3, (V)var2);
+                            return var2;
+                        }
+
+                        this.trimToSize(this.maxSize);
+                        return var3;
+                    }
+                }
+            }
+
+            while(true) {
+                var94 = var10000;
+
+                try {
+                    throw var94;
+                } catch (Throwable var85) {
+                    var10000 = var85;
+                    var10001 = false;
+                    continue;
+                }
+            }
+        }
     }
 
     public final int hitCount() {
