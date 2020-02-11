@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.dipen.pricer.Calculations.American;
 import com.hkex.soma.JSONParser.CalculatorJSONParser;
 import com.hkex.soma.R;
 import com.hkex.soma.basic.MasterActivity;
@@ -21,6 +24,7 @@ import com.hkex.soma.element.TutorialDialog;
 import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.SharedPrefsUtil;
 import com.hkex.soma.utils.StringFormatter;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -312,6 +316,13 @@ public class OptionCalculator extends MasterActivity {
                 OptionCalculator.this.calculateResultRequest();
             }
         });
+        ImageButton imageButton3 = (ImageButton) findViewById(R.id.btnCalculate1);
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                OptionCalculator.this.calculateResultRequestOffline();
+            }
+        });
+
     }
 
     public void loadJSON(final String str) {
@@ -384,4 +395,22 @@ public class OptionCalculator extends MasterActivity {
             SharedPrefsUtil.putValue((Context) this, "tutor_cal", Commons.tutor_cal + "");
         }
     }
+
+    private void calculateResultRequestOffline() {
+        double [] para = new double[6]; // SpotPrice, StrikePrice, Maturity, InterestRate, Yield, Type
+        para[0] = 250;
+        para[1] = 255;
+        para[2] = 3;
+        para[4] = 163;
+        para[5] = 0;
+        para[6] = 0;
+        American american = new American(para);
+
+        TextView tv = findViewById(R.id.calculatedresult1);
+        tv.setText("HELLO");
+        Log.d("HELLO", "price"+american.callPrice());
+        american.callPrice();
+
+    }
+
 }

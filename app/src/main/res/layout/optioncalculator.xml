@@ -324,8 +324,8 @@
                     </RelativeLayout>
 
                     <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:orientation="horizontal">
 
                         <ImageButton
@@ -346,6 +346,51 @@
                             android:paddingRight="8.0dip"
                             android:src="@drawable/btn_calculate_e" />
                     </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/calculatedhkd1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5.0dip"
+                            android:paddingLeft="12.0dip"
+                            android:paddingTop="9.0dip"
+                            android:text="@string/hkd"
+                            android:textColor="@color/textgrey"
+                            android:textSize="25.0sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/calculatedresult1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5.0dip"
+                            android:layout_toRightOf="@id/calculatedhkd1"
+                            android:paddingLeft="12.0dip"
+                            android:text="@string/no_data"
+                            android:textColor="@color/textgrey"
+                            android:textSize="35.0sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/btnCalculate1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/transparent"
+                            android:paddingLeft="8.0dip"
+                            android:paddingRight="8.0dip"
+                            android:src="@drawable/btn_calculate_e" />
+                    </LinearLayout>
+
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
