@@ -51,7 +51,7 @@ public class MS_StockAdapter extends ArrayAdapter {
             TextView unused2 = viewHolder2.last = (TextView) view.findViewById(R.id.last);
             TextView unused3 = viewHolder2.pchng = (TextView) view.findViewById(R.id.pchng);
             TextView unused4 = viewHolder2.turnover = (TextView) view.findViewById(R.id.turnover);
-            ImageView unused5 = viewHolder2.searchImg = (ImageView) view.findViewById(2131165401); // !LC
+            ImageView unused5 = viewHolder2.searchImg = (ImageView) view.findViewById(R.id.icon); // !LC
             RelativeLayout unused6 = viewHolder2.icon = (RelativeLayout) view.findViewById(R.id.iconlayout);
             view.setTag(viewHolder2);
             viewHolder = viewHolder2;

@@ -56,7 +56,7 @@ public class MS_IndexOptionsAdapter extends ArrayAdapter {
             var19.last = (TextView) var4.findViewById(R.id.last);
             var19.pchng = (TextView) var4.findViewById(R.id.change);
             var19.vol = (TextView) var4.findViewById(R.id.oivol);
-            var19.searchImg = (ImageView) var4.findViewById(2131165401);        // !LC
+            var19.searchImg = (ImageView) var4.findViewById(R.id.icon);        // !LC
             var19.icon = (RelativeLayout) var4.findViewById(R.id.iconlayout);
             var4.setTag(var19);
         } else {

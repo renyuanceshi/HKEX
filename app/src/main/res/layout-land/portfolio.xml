@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mainContainer" android:background="@color/bgwhite" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.hkex.soma.basic.ClickControlContainer android:orientation="vertical" android:id="@+id/menuContainer" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/appContainer" android:background="@color/bgwhite" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/headerContainer" android:background="@drawable/bg_header" android:layout_width="match_parent" android:layout_height="44dp">
+            <ImageButton android:id="@+id/btnLeft" android:background="@color/transparent" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/btn_menu"/>
+            <TextView android:textSize="22sp" android:textStyle="bold" android:textColor="@color/textblue" android:ellipsize="end" android:gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="@string/title_portfolio" android:maxLines="1" android:layout_weight="1"/>
+            <ImageButton android:id="@+id/btnRight" android:background="@color/transparent" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:src="@drawable/btn_edit_e"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/list_header1" android:background="@drawable/list_header" android:visibility="visible" android:layout_width="match_parent" android:layout_height="34dp" android:baselineAligned="false">
+            <RelativeLayout android:gravity="center_vertical" android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:id="@+id/head_instrument" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_instrument2" android:maxLines="2" android:layout_alignParentLeft="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="75dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:id="@+id/head_expiry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/expiry_month" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="50dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:id="@+id/head_margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/margin" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="80dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:id="@+id/head_contract" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contract" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="30dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_qty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_qty" android:maxLines="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="70dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_notional" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notional_hkd" android:maxLines="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="40dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_last" android:maxLines="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="65dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_costnod" android:maxLines="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:layout_width="65dp" android:layout_height="match_parent">
+                <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_gainloss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_gainloss" android:maxLines="2" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/list_header2" android:background="@drawable/list_header" android:visibility="gone" android:layout_width="match_parent" android:layout_height="34dp" android:baselineAligned="false">
+            <RelativeLayout android:clickable="true" android:layout_width="35dp" android:layout_height="match_parent"/>
+            <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                <RelativeLayout android:gravity="center_vertical" android:paddingLeft="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_instrument2" android:maxLines="2" android:layout_alignParentLeft="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="75dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/expiry_month" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="50dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/margin" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="80dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/contract" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="30dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_qty" android:maxLines="2" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="70dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/notional_hkd" android:maxLines="2" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="40dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_last" android:maxLines="2" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:gravity="center" android:layout_width="65dp" android:layout_height="match_parent">
+                    <TextView android:textSize="12sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_costnod" android:maxLines="2" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout android:clickable="true" android:layout_width="35dp" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <com.hkex.soma.basic.ClickControlContainer android:id="@+id/clickControlContainer" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/controlPanel" android:background="@drawable/bg_footer_panel" android:visibility="gone" android:layout_width="match_parent" android:layout_height="46dp">
+            <ImageButton android:id="@+id/btn_selectall" android:background="@color/transparent" android:paddingLeft="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_selectall_e" android:layout_centerVertical="true"/>
+            <ImageButton android:id="@+id/btn_selectnone" android:background="@color/transparent" android:paddingLeft="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_selectnone_e" android:layout_toRightOf="@+id/btn_selectall" android:layout_centerVertical="true"/>
+            <ImageButton android:id="@+id/btn_delete" android:background="@color/transparent" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/btn_delete_e" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <TextView android:textColor="@color/textblack" android:id="@+id/footer_msg" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/profile_footer_msg"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/footerContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>

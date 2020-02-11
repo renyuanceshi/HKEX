@@ -46,15 +46,14 @@ public class RealTimeQuoteDialog extends Dialog implements DialogInterface.OnSho
     public RealTimeQuoteDialog(Context context2, String str, String str2) {
         super(context2);
         this.context = context2;
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         this.oid = str;
         this.wtype = str2;
         init();
         setOnShowListener(this);
     }
 
-    /* access modifiers changed from: private */
-    public void dataResult(final OptionDetail_Result optionDetail_Result) {
+    private void dataResult(final OptionDetail_Result optionDetail_Result) {
         this.handler.post(new Runnable() {
             public void run() {
                 double d;

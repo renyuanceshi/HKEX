@@ -22,7 +22,7 @@ public class CustomDialog extends Dialog {
     }
 
     private void init() {
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
     }
 
     public void onAttachedToWindow() {

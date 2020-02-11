@@ -106,7 +106,7 @@ public class MarginTable extends AnimatedFragmentActivity {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         setContentView(R.layout.margintable);
     }
 

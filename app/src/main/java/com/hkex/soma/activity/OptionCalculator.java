@@ -45,8 +45,7 @@ public class OptionCalculator extends MasterActivity {
     private String ulast;
     private String wtype;
 
-    /* access modifiers changed from: private */
-    public void calculateResultRequest() {
+    private void calculateResultRequest() {
         double d;
         EditText editText = (EditText) findViewById(R.id.cal_iv);
         this.ulast = ((EditText) findViewById(R.id.cal_ulast)).getText().toString();
@@ -60,8 +59,7 @@ public class OptionCalculator extends MasterActivity {
         loadJSON("getPrice");
     }
 
-    /* access modifiers changed from: private */
-    public void initIVSeekBar() {
+    private void initIVSeekBar() {
         float parseFloat = Float.parseFloat(this.data_result.getIv());
         final int max = Math.max(50, Math.round(parseFloat) * 2);
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekbar_iv);
@@ -106,8 +104,7 @@ public class OptionCalculator extends MasterActivity {
         });
     }
 
-    /* access modifiers changed from: private */
-    public void initTMSeekBar() {
+    private void initTMSeekBar() {
         final int parseInt = Integer.parseInt(this.data_result.getTm());
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekbar_tm);
         final EditText editText = (EditText) findViewById(R.id.cal_tm);
@@ -149,8 +146,7 @@ public class OptionCalculator extends MasterActivity {
         });
     }
 
-    /* access modifiers changed from: private */
-    public void initUnderlyingSeekBar() {
+    private void initUnderlyingSeekBar() {
         final float parseFloat = Float.parseFloat(this.data_result.getUlast());
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekbar_ulast);
         final EditText editText = (EditText) findViewById(R.id.cal_ulast);
@@ -192,8 +188,7 @@ public class OptionCalculator extends MasterActivity {
         });
     }
 
-    /* access modifiers changed from: private */
-    public void resetField() {
+    private void resetField() {
         this.originalrate = this.data_result.getRate();
         this.originaldate1 = this.data_result.getDivDate1();
         this.originaldate2 = this.data_result.getDivDate2();
@@ -343,8 +338,7 @@ public class OptionCalculator extends MasterActivity {
         dataLoading();
     }
 
-    /* access modifiers changed from: protected */
-    public void onActivityResult(int i, int i2, Intent intent) {
+    protected void onActivityResult(int i, int i2, Intent intent) {
         super.onActivityResult(i, i2, intent);
         if (i2 == -1 && intent != null) {
             Bundle extras = intent.getExtras();

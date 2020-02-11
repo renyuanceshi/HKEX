@@ -90,7 +90,7 @@ public class ChartPage extends MasterActivity {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         getWindow().setFlags(1024, 1024);
         Commons.noResumeAction = true;
     }

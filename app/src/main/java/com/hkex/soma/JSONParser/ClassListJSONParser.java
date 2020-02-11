@@ -18,10 +18,8 @@ import org.codehaus.jackson.map.DeserializationConfig;
 import org.codehaus.jackson.map.ObjectMapper;
 
 public class ClassListJSONParser {
-    /* access modifiers changed from: private */
-    public OnJSONCompletedListener onJSONCompletedListener;
-    /* access modifiers changed from: private */
-    public OnJSONFailedListener onJSONFailedListener;
+    private OnJSONCompletedListener onJSONCompletedListener;
+    private OnJSONFailedListener onJSONFailedListener;
     private Executor singleTp = Executors.newSingleThreadExecutor();
 
     public interface OnJSONCompletedListener {

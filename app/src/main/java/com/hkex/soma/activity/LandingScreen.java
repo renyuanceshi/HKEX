@@ -71,17 +71,20 @@ public class LandingScreen extends MasterActivity {
         String locale = getResources().getConfiguration().locale.toString();
         Log.v("current2", "current2 " + locale + " : " + Commons.language);
         if (Commons.language.equals("en_US")) {
-            imageView.setImageResource(R.drawable.landing_logo_e);
+            imageView.setImageResource(R.drawable.landing_back);
+//            imageView.setImageResource(R.drawable.landing_logo_e);
             this.url_landingdisclaimer = getString(R.string.webview_landingdisclaimer_en);
             SharedPrefsUtil.putValue((Context) this, "language", "en_US");
             Commons.language = "en_US";
         } else if (Commons.language.equals("zh_CN")) {
-            imageView.setImageResource(R.drawable.landing_logo_gb);
+            imageView.setImageResource(R.drawable.landing_back);
+//            imageView.setImageResource(R.drawable.landing_logo_e);
             this.url_landingdisclaimer = getString(R.string.webview_landingdisclaimer_gb);
             SharedPrefsUtil.putValue((Context) this, "language", "zh_CN");
             Commons.language = "zh_CN";
         } else {
-            imageView.setImageResource(R.drawable.landing_logo_c);
+            imageView.setImageResource(R.drawable.landing_back);
+//            imageView.setImageResource(R.drawable.landing_logo_e);
             this.url_landingdisclaimer = getString(R.string.webview_landingdisclaimer_ch);
             SharedPrefsUtil.putValue((Context) this, "language", "zh_TW");
             Commons.language = "zh_TW";
@@ -91,8 +94,10 @@ public class LandingScreen extends MasterActivity {
             public void onDataCompleted() {
                 LandingScreen.this.handler.post(new Runnable() {
                     public void run() {
-                        LandingScreen.this.initWebView();
-                        LandingScreen.this.loadJSON();
+                        // skip disclaimer and banner message, goto marketsnapshot
+                        LandingScreen.this.goActivity(MarketSnapshot.class);
+//                        LandingScreen.this.initWebView();
+//                        LandingScreen.this.loadJSON();
                     }
                 });
             }
@@ -142,13 +147,12 @@ public class LandingScreen extends MasterActivity {
         Commons.tutor_search = Integer.parseInt(SharedPrefsUtil.getValue((Context) this, "tutor_search", "1"));
         Commons.tutor_margin = Integer.parseInt(SharedPrefsUtil.getValue((Context) this, "tutor_margin", "1"));
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         Commons.timeoutConnection = 30000;
         Commons.timeoutSocket = 30000;
     }
 
-    /* access modifiers changed from: protected */
-    public void onResume() {
+    protected void onResume() {
         Commons.CommonsListRequireUpdate = false;
         super.onResume();
         setContentView(R.layout.landingscreen);

@@ -8,9 +8,13 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+
     <application
         android:icon="@drawable/ic_launcher"
         android:label="@string/appName">
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
         <activity
             android:name="com.hkex.soma.activity.LandingScreen"
             android:label="@string/appName"

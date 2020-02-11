@@ -464,8 +464,7 @@ public class OptionDetail extends MasterActivity {
         }
     }
 
-    /* access modifiers changed from: protected */
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         if (!Commons.noResumeAction) {
             initUI();

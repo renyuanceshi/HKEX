@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:background="@drawable/bg_list_portfolio" android:layout_width="match_parent" android:layout_height="46dp" android:cacheColorHint="#00000000" android:baselineAligned="false">
+    <RelativeLayout android:layout_width="35dp" android:layout_height="match_parent">
+        <CheckBox android:id="@+id/checkBox" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_centerInParent="true" style="@style/hkexcheckbox"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <RelativeLayout android:id="@+id/dynamicLayout" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/instrument1" android:paddingLeft="10dp" android:paddingTop="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/instrument2" android:paddingLeft="10dp" android:paddingBottom="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="75dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/expiry" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="50dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/margin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="80dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/contract" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="30dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/qty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="70dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/notional" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="40dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="65dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/textgrey" android:ellipsize="end" android:id="@+id/cost" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:visibility="gone" android:layout_width="65dp" android:layout_height="match_parent">
+            <TextView android:textSize="12sp" android:textColor="@color/change_green" android:ellipsize="end" android:id="@+id/gainloss" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-" android:lines="1" android:scrollHorizontally="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@+id/drag_handle" android:layout_width="35dp" android:layout_height="match_parent">
+        <ImageView android:background="@drawable/ic_drag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</LinearLayout>

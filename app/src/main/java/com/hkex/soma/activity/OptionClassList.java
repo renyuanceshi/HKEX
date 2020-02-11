@@ -18,6 +18,7 @@ import com.hkex.soma.slideAnimator.SlideLeftAnimationHandler;
 import com.hkex.soma.utils.Commons;
 import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
+
 public class OptionClassList extends AnimatedFragmentActivity {
     private ClassList.mainData[] data = null;
     private MultiScrollListView listView;
@@ -35,7 +36,7 @@ public class OptionClassList extends AnimatedFragmentActivity {
                         textView.setText(OptionClassList.this.getString(R.string.no_data));
                         OptionClassList.this.updateFooterStime_nodelay(MinimalPrettyPrinter.DEFAULT_ROOT_VALUE_SEPARATOR);
                     } else {
-                        ClassList.mainData[] unused = OptionClassList.this.data = classList.getmainData();
+                        OptionClassList.this.data = classList.getmainData();
                         OptionClassList.this.listView.setAdapter(new ClassListAdapter(OptionClassList.this, R.layout.list_classlist, OptionClassList.this.data));
                         textView.setText(OptionClassList.this.data.length + "");
                         OptionClassList.this.updateFooterStime_nodelay(OptionClassList.this.data[0].getStime());
@@ -98,11 +99,10 @@ public class OptionClassList extends AnimatedFragmentActivity {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
     }
 
-    /* access modifiers changed from: protected */
-    public void onResume() {
+    protected void onResume() {
         super.onResume();
         if (!Commons.noResumeAction) {
             this.leftViewOut = false;

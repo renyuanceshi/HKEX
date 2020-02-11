@@ -125,7 +125,7 @@ public class OptionsCombo extends AnimatedFragmentActivity {
 
     public void onCreate(Bundle var1) {
         super.onCreate(var1);
-        this.requestWindowFeature(1);
+        this.requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
     }
 
     protected void onResume() {

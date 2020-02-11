@@ -122,7 +122,7 @@ public class MasterActivity extends Activity {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
         this.loadingDialog = new LoadingDialog(this);
         this.loadingDialog.setOnLoadingBackPressListener(new LoadingDialog.OnLoadingBackPressListener() {

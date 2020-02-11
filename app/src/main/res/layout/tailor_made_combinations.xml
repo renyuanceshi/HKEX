@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:id="@id/mainContainer" android:background="@color/bgwhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<RelativeLayout android:id="@+id/mainContainer" android:background="@color/bgwhite" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.hkex.soma.basic.ClickControlContainer android:orientation="vertical" android:id="@id/menuContainer" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    <LinearLayout android:orientation="vertical" android:id="@id/appContainer" android:background="@color/bgwhite" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <RelativeLayout android:id="@id/headerContainer" android:background="@drawable/bg_header" android:layout_width="fill_parent" android:layout_height="44.0dip">
-            <ImageButton android:id="@id/btnLeft" android:background="@color/transparent" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/btn_back" android:layout_alignParentLeft="true" />
+    <com.hkex.soma.basic.ClickControlContainer android:orientation="vertical" android:id="@+id/menuContainer" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:id="@+id/appContainer" android:background="@color/bgwhite" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@+id/headerContainer" android:background="@drawable/bg_header" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <ImageButton android:id="@+id/btnLeft" android:background="@color/transparent" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/btn_back" android:layout_alignParentLeft="true" />
             <TextView android:textSize="22.0sp" android:textStyle="bold" android:textColor="@color/textblue" android:ellipsize="end" android:gravity="center" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="@string/title_tailor_made_combinations" />
         </RelativeLayout>
         <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_title_tmc" android:layout_width="fill_parent" android:layout_height="50.0dip">
-            <com.hkex.soma.element.SelectionList android:gravity="center_vertical" android:id="@id/index_selectionList" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" text="@string/sel_mosttradedclass" />
+            <com.hkex.soma.element.SelectionList android:gravity="center_vertical" android:id="@+id/index_selectionList" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" text="@string/sel_mosttradedclass" />
         </LinearLayout>
         <LinearLayout android:background="@drawable/list_header" android:layout_width="fill_parent" android:layout_height="34.0dip" android:baselineAligned="false">
             <RelativeLayout android:layout_width="95.0dip" android:layout_height="fill_parent">
@@ -24,7 +24,7 @@
                 <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ask" android:maxLines="2" android:layout_centerInParent="true" />
             </RelativeLayout>
             <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@id/head_gainloss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_last_traded" android:maxLines="2" android:layout_centerInParent="true" />
+                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_gainloss" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_last_traded" android:maxLines="2" android:layout_centerInParent="true" />
             </RelativeLayout>
             <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
                 <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/high" android:maxLines="2" android:layout_centerInParent="true" />
@@ -36,6 +36,6 @@
                 <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/volume" android:maxLines="2" android:layout_centerInParent="true" />
             </RelativeLayout>
         </LinearLayout>
-        <ListView android:id="@id/listview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ListView android:id="@+id/listview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     </LinearLayout>
 </RelativeLayout>

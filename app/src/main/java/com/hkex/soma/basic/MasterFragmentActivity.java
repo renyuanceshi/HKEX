@@ -160,7 +160,7 @@ public class MasterFragmentActivity extends FragmentActivity {
 
    public void onCreate(Bundle var1) {
       super.onCreate(var1);
-      this.requestWindowFeature(1);
+      this.requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
       Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
       this.loadingDialog = new LoadingDialog(this);
       this.loadingDialog.setOnLoadingBackPressListener(new LoadingDialog.OnLoadingBackPressListener() {
@@ -270,7 +270,48 @@ public class MasterFragmentActivity extends FragmentActivity {
 
    }
 
-   public void updateFooterStime_nodelay(String param1) {
-      // $FF: Couldn't be decompiled
+   public void updateFooterStime_nodelay(String string2) {
+      try {
+         RelativeLayout relativeLayout = (RelativeLayout)this.footerContainer.findViewById(R.id.timebar);
+         TextView textView = (TextView)this.footerContainer.findViewById(R.id.tv_stime);
+         TextView textView2 = (TextView)this.footerContainer.findViewById(R.id.tv_delay);
+         TextView textView3 = (TextView)this.footerContainer.findViewById(R.id.tv_disclaimer);
+         TextView textView4 = (TextView)this.footerContainer.findViewById(R.id.tv_update);
+         relativeLayout.setVisibility(View.VISIBLE);
+         textView.setVisibility(View.VISIBLE);
+         textView2.setVisibility(View.VISIBLE);
+         textView3.setVisibility(View.VISIBLE);
+         if (string2.equals("")) {
+            relativeLayout.setVisibility(View.GONE);
+         } else if (string2.equals(" ")) {
+            relativeLayout.setVisibility(View.VISIBLE);
+            textView2.setVisibility(View.GONE);
+            textView3.setVisibility(View.GONE);
+            textView.setText(R.string.no_data);
+         } else if (string2.equals("nodatayet")) {
+            textView2.setVisibility(View.GONE);
+            textView3.setVisibility(View.GONE);
+            textView4.setVisibility(View.GONE);
+            textView.setText(R.string.nodatayet);
+         } else if (string2.equals("msg_data_after0930")) {
+            textView2.setVisibility(View.GONE);
+            textView3.setVisibility(View.GONE);
+            textView4.setVisibility(View.GONE);
+            textView.setText(R.string.msg_data_after0930);
+         } else {
+            if (string2.length() > 12) {
+               textView2.setVisibility(View.VISIBLE);
+            }
+            relativeLayout.setVisibility(View.VISIBLE);
+            textView3.setVisibility(View.GONE);
+            textView.setText((CharSequence)string2);
+         }
+         textView2.setVisibility(View.GONE);
+         return;
+      }
+      catch (Exception exception) {
+         Commons.LogDebug("updateFooterStime", exception.getMessage());
+         return;
+      }
    }
 }

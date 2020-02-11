@@ -44,12 +44,12 @@ public class ClassListAdapter extends ArrayAdapter {
         if (view == null) {
             view = layoutInflater.inflate(R.layout.list_classlist, (ViewGroup) null);
             ViewHolder viewHolder2 = new ViewHolder();
-            TextView unused = viewHolder2.instrument = (TextView) view.findViewById(R.id.instrument);
-            TextView unused2 = viewHolder2.hcode = (TextView) view.findViewById(R.id.hcode);
-            TextView unused3 = viewHolder2.csize = (TextView) view.findViewById(R.id.csize);
-            TextView unused4 = viewHolder2.board = (TextView) view.findViewById(R.id.board);
-            ImageView unused5 = viewHolder2.searchImg = (ImageView) view.findViewById(2131165401);  //!LC
-            LinearLayout unused6 = viewHolder2.list_ly = (LinearLayout) view.findViewById(R.id.list_ly);
+            viewHolder2.instrument = (TextView) view.findViewById(R.id.instrument);
+            viewHolder2.hcode = (TextView) view.findViewById(R.id.hcode);
+            viewHolder2.csize = (TextView) view.findViewById(R.id.csize);
+            viewHolder2.board = (TextView) view.findViewById(R.id.board);
+            viewHolder2.searchImg = (ImageView) view.findViewById(R.id.icon);
+            viewHolder2.list_ly = (LinearLayout) view.findViewById(R.id.list_ly);
             view.setTag(viewHolder2);
             viewHolder = viewHolder2;
         } else {

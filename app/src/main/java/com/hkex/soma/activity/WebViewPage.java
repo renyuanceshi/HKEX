@@ -15,7 +15,7 @@ public class WebViewPage extends MasterActivity {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
         setContentView(R.layout.webviewpage);
         ((ImageView) findViewById(R.id.btnLeft)).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

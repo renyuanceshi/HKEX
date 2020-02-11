@@ -227,7 +227,7 @@ public class Video extends AnimatedFragmentActivity {
 
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        requestWindowFeature(1);
+        requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
     }
 
     /* access modifiers changed from: protected */

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hkex.soma.basic.MultiScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent"
+<com.hkex.soma.basic.MultiScrollView android:id="@+id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <LinearLayout android:orientation="vertical" android:background="@drawable/bg_searchoptions" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="177.0dip">
-            <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:id="@id/textView1" android:paddingLeft="5.0dip" android:paddingTop="9.0dip" android:paddingBottom="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/underlying" />
+            <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:id="@+id/textView1" android:paddingLeft="5.0dip" android:paddingTop="9.0dip" android:paddingBottom="9.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/underlying" />
             <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
                 <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/img_lock" />
                 <RelativeLayout android:orientation="vertical" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="37.0dip">
-                    <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:gravity="right" android:id="@id/textViewCode" android:layout_width="47.0dip" android:layout_height="wrap_content" android:text="@string/code" android:layout_alignParentTop="true" />
-                    <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:gravity="right" android:id="@id/textViewName" android:layout_width="47.0dip" android:layout_height="wrap_content" android:text="@string/name" android:layout_alignParentBottom="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:gravity="right" android:id="@+id/textViewCode" android:layout_width="47.0dip" android:layout_height="wrap_content" android:text="@string/code" android:layout_alignParentTop="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:gravity="right" android:id="@+id/textViewName" android:layout_width="47.0dip" android:layout_height="wrap_content" android:text="@string/name" android:layout_alignParentBottom="true" />
                     <RelativeLayout android:paddingLeft="55.0dip" android:layout_width="fill_parent" android:layout_height="21.0dip" android:layout_alignParentTop="true">
-                        <com.hkex.soma.element.SelectionList android:id="@id/selectionListCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_alignParentTop="true" />
+                        <com.hkex.soma.element.SelectionList android:id="@+id/selectionListCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:layout_alignParentTop="true" />
                     </RelativeLayout>
                     <RelativeLayout android:paddingLeft="55.0dip" android:layout_width="fill_parent" android:layout_height="21.0dip" android:layout_alignParentBottom="true">
-                        <com.hkex.soma.element.SelectionList android:id="@id/selectionListName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                        <com.hkex.soma.element.SelectionList android:id="@+id/selectionListName" android:layout_width="wrap_content" android:layout_height="wrap_content" />
                     </RelativeLayout>
                 </RelativeLayout>
             </LinearLayout>
             <RelativeLayout android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:id="@id/label_lasttrade" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/last_traded_price" />
-                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:text="@string/no_data" android:layout_toRightOf="@id/label_lasttrade" android:layout_alignParentTop="true" />
-                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_data" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
-                <ImageView android:id="@id/updown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_nochange" android:layout_toLeftOf="@id/textView3" android:layout_centerVertical="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:id="@+id/label_lasttrade" android:paddingTop="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/last_traded_price" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13.0dip" android:text="@string/no_data" android:layout_toRightOf="@id/label_lasttrade" android:layout_alignParentTop="true" />
+                <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:id="@+id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_data" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                <ImageView android:id="@+id/updown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_nochange" android:layout_toLeftOf="@id/textView3" android:layout_centerVertical="true" />
             </RelativeLayout>
             <LinearLayout android:background="@drawable/bg_hline" android:layout_width="fill_parent" android:layout_height="1.0dip" />
             <TableLayout android:clipChildren="false" android:layout_width="fill_parent" android:layout_height="75.0dip">
@@ -31,29 +31,29 @@
                     <TextView android:textSize="12.0sp" android:textColor="@color/textwhite" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="-4.0dip" android:text="@string/strikeshown" android:layout_weight="0.2" />
                 </TableRow>
                 <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content">
-                    <com.hkex.soma.element.CallPutButton android:id="@id/callput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="-5.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/but_selected_call_e" android:layout_weight="0.4" />
-                    <com.hkex.soma.element.SelectionList android:id="@id/selectionListExpiry" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.35" />
-                    <com.hkex.soma.element.SelectionList android:id="@id/selectionListStrike" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.2" />
+                    <com.hkex.soma.element.CallPutButton android:id="@+id/callput" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="-5.0dip" android:layout_marginTop="0.0dip" android:src="@drawable/but_selected_call_e" android:layout_weight="0.4" />
+                    <com.hkex.soma.element.SelectionList android:id="@+id/selectionListExpiry" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.35" />
+                    <com.hkex.soma.element.SelectionList android:id="@+id/selectionListStrike" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.2" />
                 </TableRow>
             </TableLayout>
         </LinearLayout>
-        <LinearLayout android:orientation="vertical" android:id="@id/listViewHeader" android:layout_width="fill_parent" android:layout_height="34.0dip">
-            <LinearLayout android:id="@id/listTitleHeader" android:background="@drawable/list_header" android:layout_width="fill_parent" android:layout_height="34.0dip" android:baselineAligned="false">
+        <LinearLayout android:orientation="vertical" android:id="@+id/listViewHeader" android:layout_width="fill_parent" android:layout_height="34.0dip">
+            <LinearLayout android:id="@+id/listTitleHeader" android:background="@drawable/list_header" android:layout_width="fill_parent" android:layout_height="34.0dip" android:baselineAligned="false">
                 <RelativeLayout android:layout_width="46.0dip" android:layout_height="fill_parent" />
                 <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:id="@id/head_strike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strike2" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:id="@+id/head_strike" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/strike2" android:maxLines="2" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
                 </RelativeLayout>
                 <RelativeLayout android:layout_width="75.0dip" android:layout_height="fill_parent">
-                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@id/head_last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_lastd" android:maxLines="2" android:layout_centerInParent="true" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_last" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_lastd" android:maxLines="2" android:layout_centerInParent="true" />
                 </RelativeLayout>
                 <RelativeLayout android:layout_width="80.0dip" android:layout_height="fill_parent">
-                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@id/head_change" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_pricechange" android:maxLines="2" android:layout_centerInParent="true" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_change" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_pricechange" android:maxLines="2" android:layout_centerInParent="true" />
                 </RelativeLayout>
                 <RelativeLayout android:layout_width="80.0dip" android:layout_height="fill_parent">
-                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@id/head_oivol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_volume" android:maxLines="2" android:layout_centerInParent="true" />
+                    <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/textwhite" android:ellipsize="end" android:gravity="center" android:id="@+id/head_oivol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/head_volume" android:maxLines="2" android:layout_centerInParent="true" />
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
-        <com.hkex.soma.basic.MultiScrollListView android:id="@id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffffffff" android:dividerHeight="0.0px" />
+        <com.hkex.soma.basic.MultiScrollListView android:id="@+id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffffffff" android:dividerHeight="0.0px" />
     </LinearLayout>
 </com.hkex.soma.basic.MultiScrollView>

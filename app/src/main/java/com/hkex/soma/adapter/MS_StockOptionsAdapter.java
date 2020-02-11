@@ -48,7 +48,7 @@ public class MS_StockOptionsAdapter extends ArrayAdapter {
          var16.last = (TextView)var4.findViewById(R.id.last);
          var16.pchng = (TextView)var4.findViewById(R.id.change);
          var16.vol = (TextView)var4.findViewById(R.id.oivol);
-         var16.searchImg = (ImageView)var4.findViewById(2131165401);    //!LC
+         var16.searchImg = (ImageView)var4.findViewById(R.id.icon);    //!LC
          var16.icon = (RelativeLayout)var4.findViewById(R.id.iconlayout);
          var4.setTag(var16);
       } else {

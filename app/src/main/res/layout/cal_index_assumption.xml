@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <ImageButton
-            android:id="@id/btnLeft"
+            android:id="@+id/btnLeft"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:background="@color/transparent"
@@ -56,7 +56,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@id/cal_rate"
+                    android:id="@+id/cal_rate"
                     android:layout_width="60.0dip"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
@@ -66,7 +66,7 @@
                     android:textSize="14.0sp" />
 
                 <SeekBar
-                    android:id="@id/seekbar_irate"
+                    android:id="@+id/seekbar_irate"
                     style="@style/SeekBarHoloTheme"
                     android:layout_width="0.0dip"
                     android:layout_height="wrap_content"
