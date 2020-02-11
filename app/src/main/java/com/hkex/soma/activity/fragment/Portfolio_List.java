@@ -213,7 +213,7 @@ public class Portfolio_List extends ListFragment {
     }
 
     public void changeListAdapter(int i) {
-        this.editMode = i == 2131296313;
+        this.editMode = i == R.layout.list_portfolio_edit;
         this.adapter = new Portfolio_Adapter(getActivity(), i, this.data_array);
         setListAdapter(this.adapter);
     }
@@ -363,7 +363,7 @@ public class Portfolio_List extends ListFragment {
     }
 
     public void setDataArray(List<Portfolio_Result.mainData> list, int i) {
-        this.editMode = i == 2131296313;
+        this.editMode = i == R.layout.list_portfolio_edit;
         this.data_array = list;
         this.adapter = new Portfolio_Adapter(getActivity(), i, list);
         setListAdapter(this.adapter);
