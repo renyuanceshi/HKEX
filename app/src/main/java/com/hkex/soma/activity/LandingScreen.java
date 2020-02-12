@@ -22,6 +22,10 @@ import com.hkex.soma.dataModel.Banner_Result;
 import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.SharedPrefsUtil;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class LandingScreen extends MasterActivity {
@@ -175,6 +179,22 @@ public class LandingScreen extends MasterActivity {
         Log.d("Options", "Call EU:" + impliedVol.callEu());
         Log.d("Options", "Put EU:" + impliedVol.putEu());
 
+        Date sdate = null;
+        try {
+            sdate = (new SimpleDateFormat("yyyy-MM-dd")).parse("2020-02-27");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Log.d("Options", "Days:" + getDaysDifference(sdate));
         initUI();
     }
+
+    public static int getDaysDifference(Date toDate) {
+        if (toDate == null)
+            return 0;
+
+        Date today =  Calendar.getInstance().getTime();
+        return (int) ((toDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+    }
+
 }

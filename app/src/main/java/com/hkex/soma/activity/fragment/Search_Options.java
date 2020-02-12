@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.hkex.soma.JSONParser.SO_ResultJSONParser;
 import com.hkex.soma.R;
 import com.hkex.soma.activity.OptionDetail;
@@ -24,7 +25,13 @@ import com.hkex.soma.element.CallPutButton;
 import com.hkex.soma.element.SelectionList;
 import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.StringFormatter;
+
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class Search_Options extends MasterFragment {
@@ -48,6 +55,7 @@ public class Search_Options extends MasterFragment {
     private String uname;
     private float underlyingLast = 0.0f;
     private String wtype = "C";
+    private SO_Result.underlyingInfo[] underlyingInfos;
 
     private void runUpdate(SO_Result sO_Result) {
         SO_Result.underlyingInfo[] underlyingInfo = sO_Result.getmainData()[0].getUnderlyingInfo();
@@ -76,7 +84,7 @@ public class Search_Options extends MasterFragment {
                     i = i2;
                 }
             }
-            this.listView.setAdapter(new SO_ResultAdapter(this.searchFragmentActivity, R.layout.list_so_optionsresult, this.data2, this.ucode, this.wtype, this.expiry, i));
+            this.listView.setAdapter(new SO_ResultAdapter(this.searchFragmentActivity, R.layout.list_so_optionsresult, this.data2, this.ucode, this.wtype, this.expiry, i, sO_Result.getmainData()[0].getUnderlyingInfo()));
             this.listView.setOnItemClickListener(this.setOnItemClickListener);
             this.listView.setDividerHeight(0);
             this.searchFragmentActivity.updateFooterStime(sO_Result.getstime());
@@ -259,5 +267,14 @@ public class Search_Options extends MasterFragment {
             default:
                 return;
         }
+    }
+
+
+    public static int getDaysDifference(Date toDate) {
+        if (toDate == null)
+            return 0;
+
+        Date today =  Calendar.getInstance().getTime();
+        return (int) ((toDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
     }
 }

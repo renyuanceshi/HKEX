@@ -138,7 +138,7 @@ public class ImpliedVol extends OneAsset {
         this.K = dArr[1];                       // Strike Price
         this.T = dArr[2];                       // Maturity(Year)
         this.r = dArr[3] / 100.0d;              // Interest Rate
-        this.q = dArr[4] / 100.0d;              // Annunal Yield
+        this.q = dArr[4] / 100.0d;              // Annual Yield
         this.price = dArr[5];                   // Current Price
         prepare();
     }

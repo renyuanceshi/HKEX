@@ -10,11 +10,13 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.dipen.pricer.Calculations.ImpliedVol;
 import com.hkex.soma.R;
 import com.hkex.soma.activity.Portfolio;
 import com.hkex.soma.dataModel.SO_Result;
 import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.StringFormatter;
+
 import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class SO_ResultAdapter extends ArrayAdapter {
@@ -25,6 +27,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
     private boolean isstock = true;
     private String ucode;
     private String wtype;
+    private SO_Result.underlyingInfo[] underlyingInfos;
 
     static class ViewHolder {
         private TextView change;
@@ -38,7 +41,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
         }
     }
 
-    public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2) {
+    public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, SO_Result.underlyingInfo[] underlyingInfosArr) {
         super(context2, i, maindata2Arr);
         this.context = context2;
         this.data = maindata2Arr;
@@ -46,6 +49,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
         this.wtype = str2;
         this.expiry = str3;
         this.atmIndex = i2;
+        this.underlyingInfos = underlyingInfosArr;
     }
 
     public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, boolean z) {
@@ -87,12 +91,13 @@ public class SO_ResultAdapter extends ArrayAdapter {
         } else {
             view.findViewById(R.id.containerlayout).setBackgroundResource(R.drawable.bg_list_2line);
         }
+
         final String str2 = this.ucode;
         final String str3 = (this.isstock ? Commons.MapUnderlyingName(this.ucode) : Commons.MapIndexName(this.ucode)) + MinimalPrettyPrinter.DEFAULT_ROOT_VALUE_SEPARATOR + this.data[i].getStrike() + MinimalPrettyPrinter.DEFAULT_ROOT_VALUE_SEPARATOR + str;
         final String str4 = this.wtype.contains("C") ? "Call" : "Put";
         final String strike = this.data[i].getStrike();
         final String str5 = this.expiry;
-        viewHolder.strike.setText(this.data[i].getStrike());
+        viewHolder.strike.setText(this.data[i].getStrike() + "\n" + underlyingInfos[0].getUlast());
         viewHolder.last.setText(this.data[i].getLast());
         TextView unused7 = viewHolder.change = StringFormatter.formatChng(viewHolder.change, this.data[i].getChng());
         viewHolder.vol.setText(this.data[i].getVol());
