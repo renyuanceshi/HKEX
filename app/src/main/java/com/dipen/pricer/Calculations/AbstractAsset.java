@@ -3,61 +3,61 @@ package com.dipen.pricer.Calculations;
 public class AbstractAsset {
     public functionArray[][] allFunctions = {this.callFunctions, this.putFunctions};
     functionArray[] callFunctions = {new functionArray() {
-        public double function(double x) {
+        public double function(double d) {
             return AbstractAsset.this.callPrice();
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.callDelta(x);
+        public double function(double d) {
+            return AbstractAsset.this.callDelta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.callGamma(x);
+        public double function(double d) {
+            return AbstractAsset.this.callGamma(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.callVega(x);
+        public double function(double d) {
+            return AbstractAsset.this.callVega(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.callTheta(x);
+        public double function(double d) {
+            return AbstractAsset.this.callTheta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.callRho(x);
+        public double function(double d) {
+            return AbstractAsset.this.callRho(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.callElasticity(x);
+        public double function(double d) {
+            return AbstractAsset.this.callElasticity(d);
         }
     }};
     functionArray[] putFunctions = {new functionArray() {
-        public double function(double x) {
+        public double function(double d) {
             return AbstractAsset.this.putPrice();
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.putDelta(x);
+        public double function(double d) {
+            return AbstractAsset.this.putDelta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.putGamma(x);
+        public double function(double d) {
+            return AbstractAsset.this.putGamma(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.putVega(x);
+        public double function(double d) {
+            return AbstractAsset.this.putVega(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.putTheta(x);
+        public double function(double d) {
+            return AbstractAsset.this.putTheta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.putRho(x);
+        public double function(double d) {
+            return AbstractAsset.this.putRho(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return AbstractAsset.this.putElasticity(x);
+        public double function(double d) {
+            return AbstractAsset.this.putElasticity(d);
         }
     }};
 
@@ -68,68 +68,83 @@ public class AbstractAsset {
     public AbstractAsset() {
     }
 
-    public AbstractAsset(double[] x) {
+    public AbstractAsset(double[] dArr) {
     }
 
-    protected void prepare() {
-    }
-
-    public void reconstruct(double[] x) {
-    }
-
-    protected double callPrice() {
+    /* access modifiers changed from: protected */
+    public double callDelta(double d) {
         return 0.0d;
     }
 
-    protected double putPrice() {
+    /* access modifiers changed from: protected */
+    public double callElasticity(double d) {
         return 0.0d;
     }
 
-    protected double callDelta(double ds) {
+    /* access modifiers changed from: protected */
+    public double callGamma(double d) {
         return 0.0d;
     }
 
-    protected double putDelta(double ds) {
+    /* access modifiers changed from: protected */
+    public double callPrice() {
         return 0.0d;
     }
 
-    protected double callGamma(double ds) {
+    /* access modifiers changed from: protected */
+    public double callRho(double d) {
         return 0.0d;
     }
 
-    protected double putGamma(double ds) {
+    /* access modifiers changed from: protected */
+    public double callTheta(double d) {
         return 0.0d;
     }
 
-    protected double callVega(double dv) {
+    /* access modifiers changed from: protected */
+    public double callVega(double d) {
         return 0.0d;
     }
 
-    protected double putVega(double dv) {
+    /* access modifiers changed from: protected */
+    public void prepare() {
+    }
+
+    /* access modifiers changed from: protected */
+    public double putDelta(double d) {
         return 0.0d;
     }
 
-    protected double callTheta(double dt) {
+    /* access modifiers changed from: protected */
+    public double putElasticity(double d) {
         return 0.0d;
     }
 
-     protected double putTheta(double dt) {
+    /* access modifiers changed from: protected */
+    public double putGamma(double d) {
         return 0.0d;
     }
 
-    protected double callRho(double dr) {
+    /* access modifiers changed from: protected */
+    public double putPrice() {
         return 0.0d;
     }
 
-    protected double putRho(double dr) {
+    /* access modifiers changed from: protected */
+    public double putRho(double d) {
         return 0.0d;
     }
 
-    protected double callElasticity(double dr) {
+    /* access modifiers changed from: protected */
+    public double putTheta(double d) {
         return 0.0d;
     }
 
-    protected double putElasticity(double dr) {
+    /* access modifiers changed from: protected */
+    public double putVega(double d) {
         return 0.0d;
+    }
+
+    public void reconstruct(double[] dArr) {
     }
 }

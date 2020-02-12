@@ -1,162 +1,203 @@
 package com.dipen.pricer.Calculations;
 
-import java.lang.reflect.Array;
-
 public class NN {
-    public static double SHOCK = 0.01d;
-    public static double TIMESHOCK = 0.001d;
+   public static double SHOCK = 0.01D;
+   public static double TIMESHOCK = 0.001D;
 
-    static double N(double x) {
-        return 0.398942280401433d * Math.exp(((-x) * x) / 2.0d);
-    }
+   static double C(double var0) {
+      double[] var2 = new double[]{0.31938153D, -0.356563782D, 1.781477937D, -1.821255978D, 1.330274429D};
+      double var3;
+      if (var0 < -7.0D) {
+         var3 = N(var0) / Math.sqrt(1.0D + var0 * var0);
+      } else if (var0 > 7.0D) {
+         var3 = 1.0D - C(-var0);
+      } else {
+         var3 = 1.0D / (1.0D + 0.2316419D * Math.abs(var0));
+         double var5 = 1.0D - N(var0) * (var2[0] + (var2[1] + (var2[2] + (var2[3] + var2[4] * var3) * var3) * var3) * var3) * var3;
+         var3 = var5;
+         if (var0 <= 0.0D) {
+            var3 = 1.0D - var5;
+         }
+      }
 
-    static double IC(double u) {
-        double[] a = {2.50662823884d, -18.61500062529d, 41.39119773534d, -25.44106049637d};
-        double[] b = {-8.4735109309d, 23.08336743743d, -21.06224101826d, 3.13082909833d};
-        double[] c = {0.3374754822726147d, 0.9761690190917186d, 0.1607979714918209d, 0.0276438810333863d, 0.0038405729373609d, 3.951896511919E-4d, 3.21767881768E-5d, 2.888167364E-7d, 3.960315187E-7d};
-        double x = u - 0.5d;
-        if (Math.abs(x) < 0.42d) {
-            double y = x * x;
-            return (((((((a[3] * y) + a[2]) * y) + a[1]) * y) + a[0]) * x) / ((((((((b[3] * y) + b[2]) * y) + b[1]) * y) + b[0]) * y) + 1.0d);
-        }
-        double r = u;
-        if (x > 0.0d) {
-            r = 1.0d - u;
-        }
-        double r2 = Math.log(-Math.log(r));
-        double r3 = c[0] + ((c[1] + ((c[2] + ((c[3] + ((c[4] + ((c[5] + ((c[6] + ((c[7] + (c[8] * r2)) * r2)) * r2)) * r2)) * r2)) * r2)) * r2)) * r2);
-        if (x < 0.0d) {
-            return -r3;
-        }
-        return r3;
-    }
+      return var3;
+   }
 
-    static double C(double x) {
-        double[] a = {0.31938153d, -0.356563782d, 1.781477937d, -1.821255978d, 1.330274429d};
-        if (x < -7.0d) {
-            return N(x) / Math.sqrt(1.0d + (x * x));
-        }
-        if (x > 7.0d) {
-            return 1.0d - C(-x);
-        }
-        double tmp = 1.0d / (1.0d + (0.2316419d * Math.abs(x)));
-        double result = 1.0d - (N(x) * ((a[0] + ((a[1] + ((a[2] + ((a[3] + (a[4] * tmp)) * tmp)) * tmp)) * tmp)) * tmp));
-        if (x <= 0.0d) {
-            return 1.0d - result;
-        }
-        return result;
-    }
+   static double IC(double var0) {
+      double[] var2 = new double[]{2.50662823884D, -18.61500062529D, 41.39119773534D, -25.44106049637D};
+      double[] var3 = new double[]{-8.4735109309D, 23.08336743743D, -21.06224101826D, 3.13082909833D};
+      double[] var4 = new double[]{0.3374754822726147D, 0.9761690190917186D, 0.1607979714918209D, 0.0276438810333863D, 0.0038405729373609D, 3.951896511919E-4D, 3.21767881768E-5D, 2.888167364E-7D, 3.960315187E-7D};
+      double var5 = var0 - 0.5D;
+      if (Math.abs(var5) < 0.42D) {
+         var0 = var5 * var5;
+         var0 = (((var2[3] * var0 + var2[2]) * var0 + var2[1]) * var0 + var2[0]) * var5 / ((((var3[3] * var0 + var3[2]) * var0 + var3[1]) * var0 + var3[0]) * var0 + 1.0D);
+      } else {
+         double var7 = var0;
+         if (var5 > 0.0D) {
+            var7 = 1.0D - var0;
+         }
 
-    static double M(double x, double y, double rho) {
-        int NG;
-        int LG;
-        double[][] XX = (double[][]) Array.newInstance(Double.TYPE, new int[]{11, 4});
-        double[][] W = (double[][]) Array.newInstance(Double.TYPE, new int[]{11, 4});
-        W[1][1] = 4595340635650841579L;
-        XX[1][1] = -0.932469514203152d;
-        W[2][1] = 4600170522661702673L;
-        XX[2][1] = -0.661209386466265d;
-        W[3][1] = 4602100808003438037L;
-        XX[3][1] = -0.238619186083197d;
-        W[1][2] = 4586959503511678347L;
-        XX[1][2] = -0.981560634246719d;
-        W[2][2] = 4592370211202425186L;
-        XX[2][2] = -0.904117256370475d;
-        W[3][2] = 4594935449896758663L;
-        XX[3][2] = -0.769902674194305d;
-        W[4][2] = 4596487898268806005L;
-        XX[4][2] = -0.587317954286617d;
-        W[5][2] = 4597580475494918844L;
-        XX[5][2] = -0.36783149899818d;
-        W[6][2] = 4598144488632021037L;
-        XX[6][2] = -0.125233408511469d;
-        W[1][3] = 4580734113311680682L;
-        XX[1][3] = -0.993128599185095d;
-        W[2][3] = 4586012103727625849L;
-        XX[2][3] = -0.963971927277914d;
-        W[3][3] = 4589180417679549559L;
-        XX[3][3] = -0.912234428251326d;
-        W[4][3] = 4590665142300500557L;
-        XX[4][3] = -0.839116971822219d;
-        W[5][3] = 4592009259857192961L;
-        XX[5][3] = -0.746331906460151d;
-        W[6][3] = 4593181234264750890L;
-        XX[6][3] = -0.636053680726515d;
-        W[7][3] = 4593912603514924556L;
-        XX[7][3] = -0.510867001950827d;
-        W[8][3] = 4594287572170351924L;
-        XX[8][3] = -0.37370608871542d;
-        W[9][3] = 4594542543540869531L;
-        XX[9][3] = -0.227785851141645d;
-        W[10][3] = 4594671541069427574L;
-        XX[10][3] = -0.0765265211334973d;
-        if (Math.abs(rho) < 0.3d) {
-            NG = 1;
-            LG = 3;
-        } else if (Math.abs(rho) < 0.75d) {
-            NG = 2;
-            LG = 6;
-        } else {
-            NG = 3;
-            LG = 10;
-        }
-        double h = -x;
-        double k = -y;
-        double hk = h * k;
-        double BVN = 0.0d;
-        if (Math.abs(rho) < 0.925d) {
-            if (Math.abs(rho) > 0.0d) {
-                double hs = 0.5d * ((h * h) + (k * k));
-                double asr = Math.asin(rho);
-                for (int i = 1; i <= LG; i++) {
-                    for (int ISs = -1; ISs <= 1; ISs += 2) {
-                        double sn = Math.sin((((((double) ISs) * XX[i][NG]) + 1.0d) * asr) / 2.0d);
-                        BVN += W[i][NG] * Math.exp(((sn * hk) - hs) / (1.0d - (sn * sn)));
-                    }
-                }
-                BVN = (BVN * asr) / (4.0d * 3.141592653589793d);
+         var0 = Math.log(-Math.log(var7));
+         var7 = var4[0] + (var4[1] + (var4[2] + (var4[3] + (var4[4] + (var4[5] + (var4[6] + (var4[7] + var4[8] * var0) * var0) * var0) * var0) * var0) * var0) * var0) * var0;
+         var0 = var7;
+         if (var5 < 0.0D) {
+            var0 = -var7;
+         }
+      }
+
+      return var0;
+   }
+
+   static double M(double var0, double var2, double var4) {
+      double[][] var6 = new double[11][4];
+      double[][] var7 = new double[11][4];
+      var7[1][1] = 0.17132449237917D;
+      var6[1][1] = -0.932469514203152D;
+      var7[2][1] = 0.360761573048138D;
+      var6[2][1] = -0.661209386466265D;
+      var7[3][1] = 0.46791393457269D;
+      var6[3][1] = -0.238619186083197D;
+      var7[1][2] = 0.0471753363865118D;
+      var6[1][2] = -0.981560634246719D;
+      var7[2][2] = 0.106939325995318D;
+      var6[2][2] = -0.904117256370475D;
+      var7[3][2] = 0.160078328543346D;
+      var6[3][2] = -0.769902674194305D;
+      var7[4][2] = 0.203167426723066D;
+      var6[4][2] = -0.587317954286617D;
+      var7[5][2] = 0.233492536538355D;
+      var6[5][2] = -0.36783149899818D;
+      var7[6][2] = 0.249147045813403D;
+      var6[6][2] = -0.125233408511469D;
+      var7[1][3] = 0.0176140071391521D;
+      var6[1][3] = -0.993128599185095D;
+      var7[2][3] = 0.0406014298003869D;
+      var6[2][3] = -0.963971927277914D;
+      var7[3][3] = 0.0626720483341091D;
+      var6[3][3] = -0.912234428251326D;
+      var7[4][3] = 0.0832767415767048D;
+      var6[4][3] = -0.839116971822219D;
+      var7[5][3] = 0.10193011981724D;
+      var6[5][3] = -0.746331906460151D;
+      var7[6][3] = 0.118194531961518D;
+      var6[6][3] = -0.636053680726515D;
+      var7[7][3] = 0.131688638449177D;
+      var6[7][3] = -0.510867001950827D;
+      var7[8][3] = 0.142096109318382D;
+      var6[8][3] = -0.37370608871542D;
+      var7[9][3] = 0.149172986472604D;
+      var6[9][3] = -0.227785851141645D;
+      var7[10][3] = 0.152753387130726D;
+      var6[10][3] = -0.0765265211334973D;
+      byte var8;
+      byte var9;
+      if (Math.abs(var4) < 0.3D) {
+         var8 = 1;
+         var9 = 3;
+      } else if (Math.abs(var4) < 0.75D) {
+         var8 = 2;
+         var9 = 6;
+      } else {
+         var8 = 3;
+         var9 = 10;
+      }
+
+      double var10 = -var0;
+      double var12 = -var2;
+      double var14 = var10 * var12;
+      var0 = 0.0D;
+      int var16;
+      int var17;
+      if (Math.abs(var4) < 0.925D) {
+         var2 = var0;
+         if (Math.abs(var4) > 0.0D) {
+            var2 = Math.asin(var4);
+            var16 = 1;
+
+            while(true) {
+               if (var16 > var9) {
+                  var2 = var0 * var2 / (4.0D * 3.141592653589793D);
+                  break;
+               }
+
+               for(var17 = -1; var17 <= 1; var17 += 2) {
+                  var4 = Math.sin(((double)var17 * var6[var16][var8] + 1.0D) * var2 / 2.0D);
+                  var0 += var7[var16][var8] * Math.exp((var4 * var14 - 0.5D * (var10 * var10 + var12 * var12)) / (1.0D - var4 * var4));
+               }
+
+               ++var16;
             }
-            return BVN + (C(-h) * C(-k));
-        }
-        if (rho < 0.0d) {
-            k = -k;
-            hk = -hk;
-        }
-        if (Math.abs(rho) < 1.0d) {
-            double Ass = (1.0d - rho) * (1.0d + rho);
-            double A = Math.sqrt(Ass);
-            double bs = (h - k) * (h - k);
-            double c = (4.0d - hk) / 8.0d;
-            double d = (12.0d - hk) / 16.0d;
-            double asr2 = (-((bs / Ass) + hk)) / 2.0d;
-            if (asr2 > -100.0d) {
-                BVN = Math.exp(asr2) * A * ((1.0d - ((((bs - Ass) * c) * (1.0d - ((d * bs) / 5.0d))) / 3.0d)) + ((((c * d) * Ass) * Ass) / 5.0d));
+         }
+
+         var0 = var2 + C(-var10) * C(-var12);
+      } else {
+         double var18 = var14;
+         double var20 = var12;
+         if (var4 < 0.0D) {
+            var20 = -var12;
+            var18 = -var14;
+         }
+
+         var2 = var0;
+         if (Math.abs(var4) < 1.0D) {
+            double var22 = (1.0D - var4) * (1.0D + var4);
+            double var24 = Math.sqrt(var22);
+            double var26 = (var10 - var20) * (var10 - var20);
+            var12 = (4.0D - var18) / 8.0D;
+            var14 = (12.0D - var18) / 16.0D;
+            var2 = -(var26 / var22 + var18) / 2.0D;
+            if (var2 > -100.0D) {
+               var0 = Math.exp(var2) * var24 * (1.0D - (var26 - var22) * var12 * (1.0D - var14 * var26 / 5.0D) / 3.0D + var12 * var14 * var22 * var22 / 5.0D);
             }
-            if ((-hk) < 100.0d) {
-                double B = Math.sqrt(bs);
-                BVN -= (((Math.exp((-hk) / 2.0d) * 2.506628274631d) * C((-B) / A)) * B) * (1.0d - (((c * bs) * (1.0d - ((d * bs) / 5.0d))) / 3.0d));
+
+            var2 = var0;
+            if (-var18 < 100.0D) {
+               var2 = Math.sqrt(var26);
+               var2 = var0 - Math.exp(-var18 / 2.0D) * 2.506628274631D * C(-var2 / var24) * var2 * (1.0D - var12 * var26 * (1.0D - var14 * var26 / 5.0D) / 3.0D);
             }
-            double A2 = A * 0.5d;
-            for (int i2 = 1; i2 <= LG; i2++) {
-                for (int iss = -1; iss <= 1; iss += 2) {
-                    double xs = A2 * ((((double) iss) * XX[i2][NG]) + 1.0d);
-                    double xs2 = Math.abs(xs * xs);
-                    double rs = Math.sqrt(1.0d - xs2);
-                    double asr3 = (-((bs / xs2) + hk)) / 2.0d;
-                    if (asr3 > -100.0d) {
-                        BVN += W[i2][NG] * A2 * Math.exp(asr3) * ((Math.exp(((-hk) * (1.0d - rs)) / (2.0d * (1.0d + rs))) / rs) - (1.0d + ((c * xs2) * (1.0d + (d * xs2)))));
-                    }
-                }
+
+            var24 *= 0.5D;
+            var16 = 1;
+            var0 = var2;
+
+            while(true) {
+               if (var16 > var9) {
+                  var2 = -var0 / (2.0D * 3.141592653589793D);
+                  break;
+               }
+
+               for(var17 = -1; var17 <= 1; var0 = var2) {
+                  var2 = var24 * ((double)var17 * var6[var16][var8] + 1.0D);
+                  double var28 = Math.abs(var2 * var2);
+                  var22 = Math.sqrt(1.0D - var28);
+                  double var30 = -(var26 / var28 + var18) / 2.0D;
+                  var2 = var0;
+                  if (var30 > -100.0D) {
+                     var2 = var0 + var7[var16][var8] * var24 * Math.exp(var30) * (Math.exp(-var18 * (1.0D - var22) / (2.0D * (1.0D + var22))) / var22 - (1.0D + var12 * var28 * (1.0D + var14 * var28)));
+                  }
+
+                  var17 += 2;
+               }
+
+               ++var16;
             }
-            BVN = (-BVN) / (2.0d * 3.141592653589793d);
-        }
-        if (rho > 0.0d) {
-            return BVN + C(-Math.max(h, k));
-        }
-        double BVN2 = BVN * -1.0d;
-        if (k > h) {
-            return (C(k) + BVN2) - C(h);
-        }
-        return BVN2;
-    }
+         }
+
+         if (var4 > 0.0D) {
+            var0 = var2 + C(-Math.max(var10, var20));
+         } else {
+            var2 *= -1.0D;
+            var0 = var2;
+            if (var20 > var10) {
+               var0 = C(var20) + var2 - C(var10);
+            }
+         }
+      }
+
+      return var0;
+   }
+
+   static double N(double var0) {
+      return 0.398942280401433D * Math.exp(-var0 * var0 / 2.0D);
+   }
 }

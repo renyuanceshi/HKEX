@@ -1,80 +1,72 @@
 package com.dipen.pricer.Calculations;
 
 public class OneAsset extends AbstractAsset {
-
     protected double K;
-
     protected double T;
     public functionArray[][] allFunctions = {this.callFunctions, this.putFunctions};
-
     protected double b;
     functionArray[] callFunctions = {new functionArray() {
-        public double function(double x) {
+        public double function(double d) {
             return OneAsset.this.callPrice();
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.callDelta(x);
+        public double function(double d) {
+            return OneAsset.this.callDelta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.callGamma(x);
+        public double function(double d) {
+            return OneAsset.this.callGamma(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.callVega(x);
+        public double function(double d) {
+            return OneAsset.this.callVega(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.callTheta(x);
+        public double function(double d) {
+            return OneAsset.this.callTheta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.callRho(x);
+        public double function(double d) {
+            return OneAsset.this.callRho(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.callElasticity(x);
+        public double function(double d) {
+            return OneAsset.this.callElasticity(d);
         }
     }};
-
     protected double d1;
-
     protected double d2;
     functionArray[] putFunctions = {new functionArray() {
-        public double function(double x) {
+        public double function(double d) {
             return OneAsset.this.putPrice();
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.putDelta(x);
+        public double function(double d) {
+            return OneAsset.this.putDelta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.putGamma(x);
+        public double function(double d) {
+            return OneAsset.this.putGamma(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.putVega(x);
+        public double function(double d) {
+            return OneAsset.this.putVega(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.putTheta(x);
+        public double function(double d) {
+            return OneAsset.this.putTheta(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.putRho(x);
+        public double function(double d) {
+            return OneAsset.this.putRho(d);
         }
     }, new functionArray() {
-        public double function(double x) {
-            return OneAsset.this.putElasticity(x);
+        public double function(double d) {
+            return OneAsset.this.putElasticity(d);
         }
     }};
-
     protected double q;
-
     protected double r;
-
     protected double s0;
     protected double sig;
 
@@ -85,145 +77,160 @@ public class OneAsset extends AbstractAsset {
     OneAsset() {
     }
 
-    OneAsset(double[] x) {
-        this.s0 = x[0];
-        this.K = x[1];
-        this.T = x[2];
-        this.r = x[3] / 100.0d;
-        this.q = x[4] / 100.0d;
-        this.sig = x[5] / 100.0d;
+    OneAsset(double[] dArr) {
+        this.s0 = dArr[0];
+        this.K = dArr[1];
+        this.T = dArr[2];
+        this.r = dArr[3] / 100.0d;
+        this.q = dArr[4] / 100.0d;
+        this.sig = dArr[5] / 100.0d;
         prepare();
     }
 
-    protected void prepare() {
+    /* access modifiers changed from: protected */
+    public double callDelta(double d) {
+        double d3 = this.s0;
+        this.s0 += d;
+        double callPrice = callPrice();
+        this.s0 -= 2.0d * d;
+        double callPrice2 = callPrice();
+        this.s0 = d3;
+        return (callPrice - callPrice2) / (2.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double callElasticity(double d) {
+        return (callDelta(d) * this.s0) / callPrice();
+    }
+
+    /* access modifiers changed from: protected */
+    public double callGamma(double d) {
+        double d3 = this.s0;
+        this.s0 += d;
+        double callDelta = callDelta(d);
+        this.s0 -= 2.0d * d;
+        double callDelta2 = callDelta(d);
+        this.s0 = d3;
+        return (callDelta - callDelta2) / (2.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double callPrice() {
+        return 0.0d;
+    }
+
+    /* access modifiers changed from: protected */
+    public double callRho(double d) {
+        double d3 = this.r;
+        this.r += d;
+        double callPrice = callPrice();
+        this.r -= 2.0d * d;
+        double callPrice2 = callPrice();
+        this.r = d3;
+        return (callPrice - callPrice2) / (200.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double callTheta(double d) {
+        double d3 = this.T;
+        this.T += d;
+        double callPrice = callPrice();
+        this.T -= 2.0d * d;
+        double callPrice2 = callPrice();
+        this.T = d3;
+        return (-(callPrice - callPrice2)) / (730.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double callVega(double d) {
+        double d3 = this.sig;
+        this.sig += d;
+        double callPrice = callPrice();
+        this.sig -= 2.0d * d;
+        double callPrice2 = callPrice();
+        this.sig = d3;
+        return (callPrice - callPrice2) / (200.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public void prepare() {
         this.b = this.r - this.q;
         this.d1 = (1.0d / (this.sig * Math.sqrt(this.T))) * (Math.log(this.s0 / this.K) + ((this.b + (0.5d * this.sig * this.sig)) * this.T));
         this.d2 = this.d1 - (this.sig * Math.sqrt(this.T));
     }
 
-    public void reconstruct(double[] x) {
-        this.s0 = x[0];
-        this.K = x[1];
-        this.T = x[2];
-        this.r = x[3] / 100.0d;
-        this.q = x[4] / 100.0d;
-        this.sig = x[5] / 100.0d;
+    /* access modifiers changed from: protected */
+    public double putDelta(double d) {
+        double d3 = this.s0;
+        this.s0 += d;
+        double putPrice = putPrice();
+        this.s0 -= 2.0d * d;
+        double putPrice2 = putPrice();
+        this.s0 = d3;
+        return (putPrice - putPrice2) / (2.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double putElasticity(double d) {
+        return (putDelta(d) * this.s0) / putPrice();
+    }
+
+    /* access modifiers changed from: protected */
+    public double putGamma(double d) {
+        double d3 = this.s0;
+        this.s0 += d;
+        double putDelta = putDelta(d);
+        this.s0 -= 2.0d * d;
+        double putDelta2 = putDelta(d);
+        this.s0 = d3;
+        return (putDelta - putDelta2) / (2.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double putPrice() {
+        return 0.0d;
+    }
+
+    /* access modifiers changed from: protected */
+    public double putRho(double d) {
+        double d3 = this.r;
+        this.r += d;
+        double putPrice = putPrice();
+        this.r -= 2.0d * d;
+        double putPrice2 = putPrice();
+        this.r = d3;
+        return (putPrice - putPrice2) / (200.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double putTheta(double d) {
+        double d3 = this.T;
+        this.T += d;
+        double putPrice = putPrice();
+        this.T -= 2.0d * d;
+        double putPrice2 = putPrice();
+        this.T = d3;
+        return (-(putPrice - putPrice2)) / (730.0d * d);
+    }
+
+    /* access modifiers changed from: protected */
+    public double putVega(double d) {
+        double d3 = this.sig;
+        this.sig += d;
+        double putPrice = putPrice();
+        this.sig -= 2.0d * d;
+        double putPrice2 = putPrice();
+        this.sig = d3;
+        return (putPrice - putPrice2) / (200.0d * d);
+    }
+
+    public void reconstruct(double[] dArr) {
+        this.s0 = dArr[0];
+        this.K = dArr[1];
+        this.T = dArr[2];
+        this.r = dArr[3] / 100.0d;
+        this.q = dArr[4] / 100.0d;
+        this.sig = dArr[5] / 100.0d;
         prepare();
-    }
-
-    protected double callPrice() {
-        return 0.0d;
-    }
-
-    protected double putPrice() {
-        return 0.0d;
-    }
-
-    protected double callDelta(double ds) {
-        double temp = this.s0;
-        this.s0 += ds;
-        double price1 = callPrice();
-        this.s0 -= 2.0d * ds;
-        double price2 = callPrice();
-        this.s0 = temp;
-        return (price1 - price2) / (2.0d * ds);
-    }
-
-    protected double putDelta(double ds) {
-        double temp = this.s0;
-        this.s0 += ds;
-        double price1 = putPrice();
-        this.s0 -= 2.0d * ds;
-        double price2 = putPrice();
-        this.s0 = temp;
-        return (price1 - price2) / (2.0d * ds);
-    }
-
-    protected double callGamma(double ds) {
-        double temp = this.s0;
-        this.s0 += ds;
-        double price1 = callDelta(ds);
-        this.s0 -= 2.0d * ds;
-        double price2 = callDelta(ds);
-        this.s0 = temp;
-        return (price1 - price2) / (2.0d * ds);
-    }
-
-    protected double putGamma(double ds) {
-        double temp = this.s0;
-        this.s0 += ds;
-        double price1 = putDelta(ds);
-        this.s0 -= 2.0d * ds;
-        double price2 = putDelta(ds);
-        this.s0 = temp;
-        return (price1 - price2) / (2.0d * ds);
-    }
-
-    protected double callVega(double dv) {
-        double temp = this.sig;
-        this.sig += dv;
-        double price1 = callPrice();
-        this.sig -= 2.0d * dv;
-        double price2 = callPrice();
-        this.sig = temp;
-        return (price1 - price2) / (200.0d * dv);
-    }
-
-    protected double putVega(double dv) {
-        double temp = this.sig;
-        this.sig += dv;
-        double price1 = putPrice();
-        this.sig -= 2.0d * dv;
-        double price2 = putPrice();
-        this.sig = temp;
-        return (price1 - price2) / (200.0d * dv);
-    }
-
-    protected double callTheta(double dt) {
-        double temp = this.T;
-        this.T += dt;
-        double price1 = callPrice();
-        this.T -= 2.0d * dt;
-        double price2 = callPrice();
-        this.T = temp;
-        return (-(price1 - price2)) / (730.0d * dt);
-    }
-
-    protected double putTheta(double dt) {
-        double temp = this.T;
-        this.T += dt;
-        double price1 = putPrice();
-        this.T -= 2.0d * dt;
-        double price2 = putPrice();
-        this.T = temp;
-        return (-(price1 - price2)) / (730.0d * dt);
-    }
-
-    public double callRho(double dr) {
-        double temp = this.r;
-        this.r += dr;
-        double price1 = callPrice();
-        this.r -= 2.0d * dr;
-        double price2 = callPrice();
-        this.r = temp;
-        return (price1 - price2) / (200.0d * dr);
-    }
-
-    protected double putRho(double dr) {
-        double temp = this.r;
-        this.r += dr;
-        double price1 = putPrice();
-        this.r -= 2.0d * dr;
-        double price2 = putPrice();
-        this.r = temp;
-        return (price1 - price2) / (200.0d * dr);
-    }
-
-    protected double callElasticity(double ds) {
-        return (callDelta(ds) * this.s0) / callPrice();
-    }
-
-    protected double putElasticity(double ds) {
-        return (putDelta(ds) * this.s0) / putPrice();
     }
 }

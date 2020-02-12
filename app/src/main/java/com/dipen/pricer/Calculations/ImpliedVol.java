@@ -1,130 +1,145 @@
 package com.dipen.pricer.Calculations;
 
+import com.dipen.pricer.Calculations.OneAsset;
+
 public class ImpliedVol extends OneAsset {
-    public functionArray[][] allFunctions = {this.euFunctions, this.amFunctions};
-    public functionArray[] amFunctions = {new functionArray() {
-        public double function(double x) {
+    public OneAsset.functionArray[][] allFunctions = {this.euFunctions, this.amFunctions};
+    public OneAsset.functionArray[] amFunctions = {new OneAsset.functionArray() {
+        public double function(double d) {
             return ImpliedVol.this.callAm();
         }
-    }, new functionArray() {
-        public double function(double x) {
+    }, new OneAsset.functionArray() {
+        public double function(double d) {
             return ImpliedVol.this.putAm();
         }
     }};
-    public functionArray[] euFunctions = {new functionArray() {
-        public double function(double x) {
+    public OneAsset.functionArray[] euFunctions = {new OneAsset.functionArray() {
+        public double function(double d) {
             return ImpliedVol.this.callEu();
         }
-    }, new functionArray() {
-        public double function(double x) {
+    }, new OneAsset.functionArray() {
+        public double function(double d) {
             return ImpliedVol.this.putEu();
         }
     }};
     protected double price;
 
-    public ImpliedVol(double[] x) {
-        reconstruct(x);
+    public ImpliedVol(double[] dArr) {
+        reconstruct(dArr);
     }
 
-    protected void prepare() {
+    /* access modifiers changed from: protected */
+    public double callAm() {
+        prepare();
+        double d = 0.05d;
+        double d2 = 0.95d;
+        double d3 = 1.0d;
+        double d4 = 1.0d;
+        double d5 = 0.0d;
+        while (d3 > 1.0E-6d && d4 < 1000.0d) {
+            double d6 = this.s0;
+            double d7 = this.K;
+            double d8 = this.T;
+            double d9 = this.r;
+            double d10 = this.q;
+            double d11 = this.s0;
+            double d12 = this.K;
+            double d13 = this.T;
+            double d14 = this.r;
+            double d15 = this.q;
+            American american = new American(new double[]{d6, d7, d8, 100.0d * d9, 100.0d * d10, 100.0d * d});
+            American american2 = new American(new double[]{d11, d12, d13, 100.0d * d14, 100.0d * d15, 100.0d * d2});
+            double callPrice = american.callPrice();
+            d5 = (((this.price - callPrice) * (d2 - d)) / (american2.callPrice() - callPrice)) + d;
+            double callPrice2 = new American(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * d5}).callPrice();
+            if (callPrice2 < this.price) {
+                d = d5;
+            } else {
+                d2 = d5;
+            }
+            d3 = Math.abs(callPrice2 - this.price);
+            d4 += 1.0d;
+        }
+        return 100.0d * d5;
+    }
+
+    /* access modifiers changed from: protected */
+    public double callEu() {
+        prepare();
+        double d = 1.0d;
+        double d2 = 1.0d;
+        double sqrt = this.b == 0.0d ? Math.sqrt((Math.abs(Math.log(this.s0 / this.K)) * 2.0d) / this.T) : Math.sqrt((Math.abs(Math.log(this.s0 / this.K) + (this.r * this.T)) * 2.0d) / this.T);
+        while (d > 1.0E-6d && d2 < 1000.0d) {
+            BSM bsm = new BSM(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * sqrt});
+            sqrt -= (bsm.callPrice() - this.price) / (bsm.vega(0.0d) * 100.0d);
+            d = Math.abs(bsm.callPrice() - this.price);
+            d2 = 1.0d + d2;
+        }
+        return 100.0d * sqrt;
+    }
+
+    /* access modifiers changed from: protected */
+    public void prepare() {
         this.b = this.r - this.q;
     }
 
-    public void reconstruct(double[] x) {
-        this.s0 = x[0];
-        this.K = x[1];
-        this.T = x[2];
-        this.r = x[3] / 100.0d;
-        this.q = x[4] / 100.0d;
-        this.price = x[5];
+    /* access modifiers changed from: protected */
+    public double putAm() {
         prepare();
-    }
-
-    protected double callEu() {
-        double initial;
-        prepare();
-        if (this.b == 0.0d) {
-            initial = Math.sqrt((Math.abs(Math.log(this.s0 / this.K)) * 2.0d) / this.T);
-        } else {
-            initial = Math.sqrt((Math.abs(Math.log(this.s0 / this.K) + (this.r * this.T)) * 2.0d) / this.T);
-        }
-        double error = 1.0d;
-        double iterations = 1.0d;
-        while (error > 1.0E-6d && iterations < 1000.0d) {
-            BSM bsm = new BSM(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * initial});
-            initial -= (bsm.callPrice() - this.price) / (bsm.vega(0.0d) * 100.0d);
-            error = Math.abs(bsm.callPrice() - this.price);
-            iterations += 1.0d;
-        }
-        return 100.0d * initial;
-    }
-
-    protected double putEu() {
-        double initial;
-        prepare();
-        if (this.b == 0.0d) {
-            initial = Math.sqrt((Math.abs(Math.log(this.s0 / this.K)) * 2.0d) / this.T);
-        } else {
-            initial = Math.sqrt((Math.abs(Math.log(this.s0 / this.K) + (this.r * this.T)) * 2.0d) / this.T);
-        }
-        double error = 1.0d;
-        double iterations = 1.0d;
-        while (error > 1.0E-6d && iterations < 1000.0d) {
-            BSM bsm = new BSM(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * initial});
-            initial -= (bsm.putPrice() - this.price) / (bsm.vega(0.0d) * 100.0d);
-            error = Math.abs(bsm.putPrice() - this.price);
-            iterations += 1.0d;
-        }
-        return 100.0d * initial;
-    }
-
-    protected double callAm() {
-        prepare();
-        double low = 0.05d;
-        double high = 0.95d;
-        double error = 1.0d;
-        double iterations = 1.0d;
-        double next = 0.0d;
-        while (error > 1.0E-6d && iterations < 1000.0d) {
-            double[] p2 = {this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * high};
-            American am1 = new American(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * low});
-            American am2 = new American(p2);
-            double price1 = am1.callPrice();
-            next = low + (((this.price - price1) * (high - low)) / (am2.callPrice() - price1));
-            double price3 = new American(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * next}).callPrice();
-            if (price3 < this.price) {
-                low = next;
+        double d = 0.05d;
+        double d2 = 0.95d;
+        double d3 = 1.0d;
+        double d4 = 1.0d;
+        double d5 = 0.0d;
+        while (d3 > 1.0E-6d && d4 < 1000.0d) {
+            double d6 = this.s0;
+            double d7 = this.K;
+            double d8 = this.T;
+            double d9 = this.r;
+            double d10 = this.q;
+            double d11 = this.s0;
+            double d12 = this.K;
+            double d13 = this.T;
+            double d14 = this.r;
+            double d15 = this.q;
+            American american = new American(new double[]{d6, d7, d8, 100.0d * d9, 100.0d * d10, 100.0d * d});
+            American american2 = new American(new double[]{d11, d12, d13, 100.0d * d14, 100.0d * d15, 100.0d * d2});
+            double putPrice = american.putPrice();
+            d5 = (((this.price - putPrice) * (d2 - d)) / (american2.putPrice() - putPrice)) + d;
+            double putPrice2 = new American(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * d5}).putPrice();
+            if (putPrice2 < this.price) {
+                d = d5;
             } else {
-                high = next;
+                d2 = d5;
             }
-            error = Math.abs(price3 - this.price);
-            iterations += 1.0d;
+            d3 = Math.abs(putPrice2 - this.price);
+            d4 += 1.0d;
         }
-        return 100.0d * next;
+        return 100.0d * d5;
     }
 
-    protected double putAm() {
+    /* access modifiers changed from: protected */
+    public double putEu() {
         prepare();
-        double low = 0.05d;
-        double high = 0.95d;
-        double error = 1.0d;
-        double iterations = 1.0d;
-        double next = 0.0d;
-        while (error > 1.0E-6d && iterations < 1000.0d) {
-            double[] p2 = {this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * high};
-            American am1 = new American(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * low});
-            American am2 = new American(p2);
-            double price1 = am1.putPrice();
-            next = low + (((this.price - price1) * (high - low)) / (am2.putPrice() - price1));
-            double price3 = new American(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * next}).putPrice();
-            if (price3 < this.price) {
-                low = next;
-            } else {
-                high = next;
-            }
-            error = Math.abs(price3 - this.price);
-            iterations += 1.0d;
+        double d = 1.0d;
+        double d2 = 1.0d;
+        double sqrt = this.b == 0.0d ? Math.sqrt((Math.abs(Math.log(this.s0 / this.K)) * 2.0d) / this.T) : Math.sqrt((Math.abs(Math.log(this.s0 / this.K) + (this.r * this.T)) * 2.0d) / this.T);
+        while (d > 1.0E-6d && d2 < 1000.0d) {
+            BSM bsm = new BSM(new double[]{this.s0, this.K, this.T, this.r * 100.0d, this.q * 100.0d, 100.0d * sqrt});
+            sqrt -= (bsm.putPrice() - this.price) / (bsm.vega(0.0d) * 100.0d);
+            d = Math.abs(bsm.putPrice() - this.price);
+            d2 = 1.0d + d2;
         }
-        return 100.0d * next;
+        return 100.0d * sqrt;
+    }
+
+    public void reconstruct(double[] dArr) {
+        this.s0 = dArr[0];                      // Spot Price
+        this.K = dArr[1];                       // Strike Price
+        this.T = dArr[2];                       // Maturity(Year)
+        this.r = dArr[3] / 100.0d;              // Interest Rate
+        this.q = dArr[4] / 100.0d;              // Annunal Yield
+        this.price = dArr[5];                   // Current Price
+        prepare();
     }
 }

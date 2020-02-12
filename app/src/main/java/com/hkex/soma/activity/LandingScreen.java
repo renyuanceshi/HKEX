@@ -9,6 +9,10 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import com.dipen.pricer.Calculations.American;
+import com.dipen.pricer.Calculations.BSM;
+import com.dipen.pricer.Calculations.ImpliedVol;
 import com.hkex.soma.JSONParser.BannerJSONParser;
 import com.hkex.soma.R;
 import com.hkex.soma.basic.CommonsDataHandler;
@@ -17,6 +21,7 @@ import com.hkex.soma.basic.MasterActivity;
 import com.hkex.soma.dataModel.Banner_Result;
 import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.SharedPrefsUtil;
+
 import java.util.Locale;
 
 public class LandingScreen extends MasterActivity {
@@ -156,6 +161,20 @@ public class LandingScreen extends MasterActivity {
         Commons.CommonsListRequireUpdate = false;
         super.onResume();
         setContentView(R.layout.landingscreen);
+        American america = new American(new double[]{58.65, 57.5, 16.0 / 365, 1.63, 0.0, 33.28});
+        Log.d("Options", "AmCallPrice:" + america.callPrice());
+        Log.d("Options", "AmCPPrice:" + america.callPerpetualPrice());
+        Log.d("Options", "AmPutPrice:" + america.putPrice());
+        Log.d("Options", "AmPPPrice" + america.putPerpetualPrice());
+        BSM bsm = new BSM(new double[]{58.65, 57.5, 16.0 / 365, 1.63, 0.0, 33.28});
+        Log.d("Options", "BSMCallPrice:" + bsm.callPrice());
+        Log.d("Options", "BSMPutPrice:" + bsm.putPrice());
+        ImpliedVol impliedVol = new ImpliedVol(new double[] {58.65, 57.5, 16.0/365, 1.63, 0, 2.27});
+        Log.d("Options", "Call AM:" + impliedVol.callAm());
+        Log.d("Options", "Put AM:" + impliedVol.putAm());
+        Log.d("Options", "Call EU:" + impliedVol.callEu());
+        Log.d("Options", "Put EU:" + impliedVol.putEu());
+
         initUI();
     }
 }
