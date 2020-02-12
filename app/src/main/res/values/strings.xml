@@ -128,6 +128,8 @@ Change(%)"</string>
     <string name="last_traded_price">Last Traded Price</string>
     <string name="lastupdate">Last Updated</string>
     <string name="less">Less</string>
+    <string name="target_price" translatable="false">Target Price</string>
+    <string name="target_date" translatable="false">Target Date</string>
     <string name="low">Low</string>
     <string name="margin">"Margin
 (HKD)"</string>
