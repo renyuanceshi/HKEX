@@ -27,7 +27,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
     private boolean isstock = true;
     private String ucode;
     private String wtype;
-    private SO_Result.underlyingInfo[] underlyingInfos;
+    private SO_Result.OptionsInfo[] optionsInfos = null;
 
     static class ViewHolder {
         private TextView change;
@@ -41,7 +41,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
         }
     }
 
-    public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, SO_Result.underlyingInfo[] underlyingInfosArr) {
+    public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, SO_Result.underlyingInfo[] underlyingInfosArr, SO_Result.OptionsInfo[] optionsInfo) {
         super(context2, i, maindata2Arr);
         this.context = context2;
         this.data = maindata2Arr;
@@ -49,7 +49,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
         this.wtype = str2;
         this.expiry = str3;
         this.atmIndex = i2;
-        this.underlyingInfos = underlyingInfosArr;
+        this.optionsInfos = optionsInfo;
     }
 
     public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, boolean z) {
@@ -97,8 +97,8 @@ public class SO_ResultAdapter extends ArrayAdapter {
         final String str4 = this.wtype.contains("C") ? "Call" : "Put";
         final String strike = this.data[i].getStrike();
         final String str5 = this.expiry;
-        viewHolder.strike.setText(this.data[i].getStrike() + "\n" + underlyingInfos[0].getUlast());
-        viewHolder.last.setText(this.data[i].getLast());
+        viewHolder.strike.setText(this.data[i].getStrike() + "\n" + optionsInfos[i].getIv());
+        viewHolder.last.setText(this.data[i].getLast() + "\n" + optionsInfos[i].getExpectPrice());
         TextView unused7 = viewHolder.change = StringFormatter.formatChng(viewHolder.change, this.data[i].getChng());
         viewHolder.vol.setText(this.data[i].getVol());
         viewHolder.icon.setOnClickListener(new View.OnClickListener() {
@@ -111,5 +111,10 @@ public class SO_ResultAdapter extends ArrayAdapter {
             }
         });
         return view;
+    }
+
+    public void setOptionsInfo(SO_Result.OptionsInfo [] optionsInfos) {
+        this.optionsInfos = optionsInfos;
+        this.notifyDataSetInvalidated();
     }
 }

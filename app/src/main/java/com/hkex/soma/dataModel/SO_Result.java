@@ -8,6 +8,27 @@ public class SO_Result {
     private String _engmsg;
     private String _stime;
 
+    public static class OptionsInfo {
+        private String _iv;
+        private String _expect_price;
+
+        public String getIv() {
+            return this._iv;
+        }
+
+        public String getExpectPrice() {
+            return this._expect_price;
+        }
+
+        public void setIv(String str) {
+            this._iv = str;
+        }
+
+        public void setExpectPrice(String str) {
+            this._expect_price = str;
+        }
+    }
+
     public static class expiryOption {
         private String _mdate;
 
