@@ -97,8 +97,14 @@ public class SO_ResultAdapter extends ArrayAdapter {
         final String str4 = this.wtype.contains("C") ? "Call" : "Put";
         final String strike = this.data[i].getStrike();
         final String str5 = this.expiry;
-        viewHolder.strike.setText(this.data[i].getStrike() + "\n" + optionsInfos[i].getIv());
-        viewHolder.last.setText(this.data[i].getLast() + "\n" + optionsInfos[i].getExpectPrice());
+        if (optionsInfos==null) {
+            viewHolder.strike.setText(this.data[i].getStrike());
+            viewHolder.last.setText(this.data[i].getLast());
+        }
+        else {
+            viewHolder.strike.setText(this.data[i].getStrike() + "\n" + optionsInfos[i].getIv());
+            viewHolder.last.setText(this.data[i].getLast() + "\n" + optionsInfos[i].getExpectPrice());
+        }
         TextView unused7 = viewHolder.change = StringFormatter.formatChng(viewHolder.change, this.data[i].getChng());
         viewHolder.vol.setText(this.data[i].getVol());
         viewHolder.icon.setOnClickListener(new View.OnClickListener() {
