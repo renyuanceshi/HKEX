@@ -80,6 +80,7 @@ public class Search_Options extends MasterFragment {
 
         final TextView target_date = (TextView) this.fragmentView.findViewById(R.id.target_date);
         final TextView target_price = (TextView) this.fragmentView.findViewById(R.id.target_price);
+
         target_price.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -111,6 +112,8 @@ public class Search_Options extends MasterFragment {
             textView.setText("-");
             textView2.setText("-");
             StringFormatter.formatChng(imageView, "-");
+            target_price.setText("-");
+            target_date.setText("-");
         }
         this.data2 = sO_Result.getmainData2();
         if (this.data2.length == 0) {
