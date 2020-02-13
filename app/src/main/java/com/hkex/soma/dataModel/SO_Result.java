@@ -11,6 +11,7 @@ public class SO_Result {
     public static class OptionsInfo {
         private String _iv;
         private String _expect_price;
+        private String _target_rate;
 
         public String getIv() {
             return this._iv;
@@ -20,6 +21,10 @@ public class SO_Result {
             return this._expect_price;
         }
 
+        public String getTargetRate() {
+            return this._target_rate;
+        }
+
         public void setIv(String str) {
             this._iv = str;
         }
@@ -27,6 +32,11 @@ public class SO_Result {
         public void setExpectPrice(String str) {
             this._expect_price = str;
         }
+
+        public void setTargetRate(String str) {
+            this._target_rate = str;
+        }
+
     }
 
     public static class expiryOption {

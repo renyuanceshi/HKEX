@@ -168,6 +168,7 @@ public class Search_Options extends MasterFragment {
             if (data2[i2].getVol().equals("0")) {
                 optionsInfos[i2].setIv("-");
                 optionsInfos[i2].setExpectPrice("-");
+                optionsInfos[i2].setTargetRate("-");
             } else {
                 ImpliedVol impliedVol = new ImpliedVol(new double[]{
                         Double.parseDouble(underlyingInfo[0].getUlast()),
@@ -185,7 +186,10 @@ public class Search_Options extends MasterFragment {
                         0,
                         iv});
                 optionsInfos[i2].setIv(new String().format("%.2f", iv));
-                optionsInfos[i2].setExpectPrice(new String().format("%.2f", wtype.equals("C") ? american.callPrice() : american.putPrice()));
+                double expect_price = wtype.equals("C") ? american.callPrice() : american.putPrice();
+                optionsInfos[i2].setExpectPrice(new String().format("%.2f", expect_price));
+                double target_rate = expect_price/Double.parseDouble(data2[i2].getLast());
+                optionsInfos[i2].setTargetRate(new String().format("%.2f", target_rate));
                 Log.d("updateOptionsInfos", targetPrice + ":" + data2[i2].getStrike() + ":" + targetDate);
             }
         }
