@@ -4,6 +4,8 @@ import android.app.Dialog;
 import android.content.Context;
 import android.view.WindowManager;
 
+import com.hkex.soma.R;
+
 public class CustomDialog extends Dialog {
     protected Context context;
     protected float dimAmount = 0.5f;
@@ -32,6 +34,7 @@ public class CustomDialog extends Dialog {
         attributes.width = -1;
         attributes.height = -1;
         getWindow().setAttributes(attributes);
-        getWindow().setBackgroundDrawableResource(android.R.color.holo_red_dark);
+//        getWindow().setBackgroundDrawableResource(android.R.color.holo_red_dark);
+        getWindow().setBackgroundDrawableResource(R.color.transparent);
     }
 }
