@@ -53,7 +53,7 @@ public class SS_ResultAdapter extends ArrayAdapter {
             TextView unused2 = viewHolder2.wtype = (TextView) view.findViewById(R.id.wtype);
             TextView unused3 = viewHolder2.expiry = (TextView) view.findViewById(R.id.expiry);
             TextView unused4 = viewHolder2.vol = (TextView) view.findViewById(R.id.oivol);
-            ImageView unused5 = viewHolder2.portfolioImg = (ImageView) view.findViewById(2131165401);// !LC
+            ImageView unused5 = viewHolder2.portfolioImg = (ImageView) view.findViewById(R.id.icon);
             RelativeLayout unused6 = viewHolder2.icon = (RelativeLayout) view.findViewById(R.id.iconlayout);
             view.setTag(viewHolder2);
             viewHolder = viewHolder2;

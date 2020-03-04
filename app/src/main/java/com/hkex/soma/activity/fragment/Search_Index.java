@@ -1,16 +1,26 @@
 package com.hkex.soma.activity.fragment;
 
+import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.dipen.pricer.Calculations.American;
+import com.dipen.pricer.Calculations.ImpliedVol;
 import com.hkex.soma.JSONParser.GenericJSONParser;
 import com.hkex.soma.R;
 import com.hkex.soma.activity.OptionDetail;
@@ -25,7 +35,13 @@ import com.hkex.soma.element.SelectionList;
 import com.hkex.soma.utils.Commons;
 import com.hkex.soma.utils.CommonsIndex;
 import com.hkex.soma.utils.StringFormatter;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.codehaus.jackson.util.MinimalPrettyPrinter;
 
 public class Search_Index extends MasterFragment {
@@ -52,8 +68,35 @@ public class Search_Index extends MasterFragment {
     private TextView underlying_name;
     private String wtype = "C";
 
+    private SO_Result.indexInfo[] indexInfo = null;
+    private SO_Result.OptionsInfo[] optionsInfos = null;
+    private SO_ResultAdapter resultAdapter = null;
+
     private void runUpdate(SO_Result sO_Result) {
-        SO_Result.indexInfo[] indexInfo = sO_Result.getmainData()[0].getIndexInfo();
+        indexInfo = sO_Result.getmainData()[0].getIndexInfo();
+        final TextView target_date = (TextView) this.fragmentView.findViewById(R.id.target_date);
+        final TextView target_price = (TextView) this.fragmentView.findViewById(R.id.target_price);
+        target_price.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                target_price.setText("");
+                return false;
+            }
+        });
+        target_price.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                // If the event is a key-down event on the "enter" button
+//                Toast.makeText(getContext(), "KeyCode"+keyCode, Toast.LENGTH_SHORT).show();
+                if (keyCode == KeyEvent.KEYCODE_ENTER) {
+                    ((InputMethodManager) getContext().getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(getActivity().getCurrentFocus().getWindowToken(), 2);
+                    updateOptionsInfos(target_price.getText().toString(), target_date.getText().toString());
+                    resultAdapter.setOptionsInfo(optionsInfos);
+                    return true;
+                }
+                return false;
+            }
+        });
+
         TextView textView = (TextView) this.fragmentView.findViewById(R.id.textView2);
         TextView textView2 = (TextView) this.fragmentView.findViewById(R.id.textView3);
         ImageView imageView = (ImageView) this.fragmentView.findViewById(R.id.updown);
@@ -62,10 +105,14 @@ public class Search_Index extends MasterFragment {
             this.underlyingLast = Float.parseFloat(indexInfo[0].getUlast().replace(",", ""));
             textView2.setText(indexInfo[0].getUchng() + "(" + indexInfo[0].getUpchng() + "%)");
             StringFormatter.formatChng(imageView, indexInfo[0].getUchng());
+            target_price.setText(indexInfo[0].getUlast());
+            target_date.setText("-");
         } else {
             textView.setText("-");
             textView2.setText("-");
             StringFormatter.formatChng(imageView, "-");
+            target_price.setText("-");
+            target_date.setText("-");
         }
         this.data2 = sO_Result.getmainData2();
         if (this.data2.length == 0) {
@@ -73,18 +120,113 @@ public class Search_Index extends MasterFragment {
         } else {
             int i = -1;
             float f = Float.MAX_VALUE;
+            this.optionsInfos = new SO_Result.OptionsInfo[data2.length];
+            updateOptionsInfos(indexInfo[0].getUlast(), null);
             for (int i2 = 0; i2 < this.data2.length; i2++) {
                 if (f != Math.min(f, Math.abs(Float.parseFloat(this.data2[i2].getStrike().replace(",", "")) - this.underlyingLast))) {
                     f = Math.abs(Float.parseFloat(this.data2[i2].getStrike().replace(",", "")) - this.underlyingLast);
                     i = i2;
                 }
             }
-            this.listView.setAdapter(new SO_ResultAdapter(this.searchFragmentActivity, R.layout.list_so_optionsresult, this.data2, this.ucode, this.wtype, this.expiry, i, false));
+            target_price.setText(indexInfo[0].getUlast());
+            target_date.setText(new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+            resultAdapter = new SO_ResultAdapter(this.searchFragmentActivity, R.layout.list_so_optionsresult, this.data2, this.ucode, this.wtype, this.expiry, i, false, optionsInfos);
+            this.listView.setAdapter(resultAdapter);
             this.listView.setOnItemClickListener(this.setOnItemClickListener);
             this.listView.setDividerHeight(0);
             this.searchFragmentActivity.updateFooterStime(sO_Result.getstime());
         }
+
+        final Calendar c = Calendar.getInstance();
+        final DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(),
+                new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year,
+                                          int monthOfYear, int dayOfMonth) {
+                        target_date.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
+                        if (resultAdapter != null) {
+                            updateOptionsInfos(target_price.getText().toString(), target_date.getText().toString());
+                            resultAdapter.setOptionsInfo(optionsInfos);
+                        }
+                    }
+
+                    ;
+                }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DAY_OF_MONTH));
+        target_date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePickerDialog.show();
+            }
+        });
+
         ((Search) getActivity()).dataLoaded();
+    }
+
+    /**
+     * upate optionsInfo base on the input targetPrice and targetDate
+     *
+     * @param targetPrice
+     * @param targetDate
+     */
+    private void updateOptionsInfos(String targetPrice, String targetDate) {
+        this.optionsInfos = new SO_Result.OptionsInfo[data2.length];
+        for (int i2 = 0; i2 < this.data2.length; i2++) {
+            optionsInfos[i2] = new SO_Result.OptionsInfo();
+            if (data2[i2].getVol().equals("0")) {
+                optionsInfos[i2].setIv("-");
+                optionsInfos[i2].setExpectPrice("-");
+                optionsInfos[i2].setTargetRate("-");
+            } else {
+                ImpliedVol impliedVol = new ImpliedVol(new double[]{
+                        Double.parseDouble(indexInfo[0].getUlast()),
+                        Double.parseDouble(data2[i2].getStrike()),
+                        getDaysDifference(null, expiry),
+                        0,
+                        0,
+                        Double.parseDouble(data2[i2].getLast())});
+                double iv = wtype.equals("C") ? impliedVol.callAm() : impliedVol.putAm();
+                American american = new American(new double[]{
+                        Double.parseDouble(targetPrice),
+                        Double.parseDouble(data2[i2].getStrike()),
+                        getDaysDifference(targetDate, expiry),
+                        0,
+                        0,
+                        iv});
+                optionsInfos[i2].setIv(new String().format("%.2f", iv));
+                double expect_price = wtype.equals("C") ? american.callPrice() : american.putPrice();
+                optionsInfos[i2].setExpectPrice(new String().format("%.2f", expect_price));
+                double target_rate = expect_price / Double.parseDouble(data2[i2].getLast());
+                optionsInfos[i2].setTargetRate(new String().format("%.2f", target_rate));
+                Log.d("updateOptionsInfos", targetPrice + ":" + data2[i2].getStrike() + ":" + targetDate);
+            }
+        }
+    }
+
+    /**
+     * @param from from date YYYY-MM-DD
+     * @param to   to date YYYY-MM-DD
+     * @return
+     */
+    public static double getDaysDifference(String from, String to) {
+        Date fromDate, toDate;
+        try {
+            if (from == null) {
+                fromDate = Calendar.getInstance().getTime();
+            } else {
+                fromDate = (new SimpleDateFormat("yyyy-MM-dd")).parse(from);
+            }
+            if (to == null) {
+                toDate = Calendar.getInstance().getTime();
+            } else {
+                toDate = (new SimpleDateFormat("yyyy-MM-dd")).parse(to);
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return 0;
+        }
+
+        double days = ((toDate.getTime() - fromDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+        return days / 365;
     }
 
     private void updateSelectionListCode(String str) {

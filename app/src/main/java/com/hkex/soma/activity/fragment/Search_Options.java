@@ -74,13 +74,13 @@ public class Search_Options extends MasterFragment {
 
     private void runUpdate(SO_Result sO_Result) {
         this.underlyingInfo = sO_Result.getmainData()[0].getUnderlyingInfo();
+
         TextView textView = (TextView) this.fragmentView.findViewById(R.id.textView2);
         TextView textView2 = (TextView) this.fragmentView.findViewById(R.id.textView3);
         ImageView imageView = (ImageView) this.fragmentView.findViewById(R.id.updown);
 
         final TextView target_date = (TextView) this.fragmentView.findViewById(R.id.target_date);
         final TextView target_price = (TextView) this.fragmentView.findViewById(R.id.target_price);
-
         target_price.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -164,6 +164,11 @@ public class Search_Options extends MasterFragment {
         ((Search) getActivity()).dataLoaded();
     }
 
+    /**
+     * upate optionsInfo base on the input targetPrice and targetDate
+     * @param targetPrice
+     * @param targetDate
+     */
     private void updateOptionsInfos(String targetPrice, String targetDate) {
         this.optionsInfos = new SO_Result.OptionsInfo[data2.length];
         for (int i2 = 0; i2 < this.data2.length; i2++) {

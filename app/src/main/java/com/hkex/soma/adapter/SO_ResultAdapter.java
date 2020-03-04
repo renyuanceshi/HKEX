@@ -52,7 +52,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
         this.optionsInfos = optionsInfo;
     }
 
-    public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, boolean z) {
+    public SO_ResultAdapter(Context context2, int i, SO_Result.mainData2[] maindata2Arr, String str, String str2, String str3, int i2, boolean z, SO_Result.OptionsInfo[] optionsInfo) {
         super(context2, i, maindata2Arr);
         this.context = context2;
         this.data = maindata2Arr;
@@ -61,6 +61,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
         this.expiry = str3;
         this.atmIndex = i2;
         this.isstock = z;
+        this.optionsInfos = optionsInfo;
     }
 
     public View getView(int i, View view, ViewGroup viewGroup) {
@@ -73,7 +74,7 @@ public class SO_ResultAdapter extends ArrayAdapter {
             TextView unused2 = viewHolder2.last = (TextView) view.findViewById(R.id.last);
             TextView unused3 = viewHolder2.change = (TextView) view.findViewById(R.id.change);
             TextView unused4 = viewHolder2.vol = (TextView) view.findViewById(R.id.oivol);
-            ImageView unused5 = viewHolder2.searchImg = (ImageView) view.findViewById(R.id.icon);  //!LC
+            ImageView unused5 = viewHolder2.searchImg = (ImageView) view.findViewById(R.id.icon);
             RelativeLayout unused6 = viewHolder2.icon = (RelativeLayout) view.findViewById(R.id.iconlayout);
             view.setTag(viewHolder2);
             viewHolder = viewHolder2;
